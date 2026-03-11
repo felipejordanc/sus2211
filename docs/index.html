@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUS2211 — Mapeando la (In)sustentabilidad</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", "Source Sans Pro", Helvetica, Arial, sans-serif;
+      background: #f5f7fa;
+      color: #2c2c2c;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1a3a5c;
+      color: white;
+      padding: 2.5rem 2rem 2rem;
+    }
+
+    header .inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    header p.course-code {
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 0.4rem;
+    }
+
+    header h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p.subtitle {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    section { margin-bottom: 2.5rem; }
+
+    section h2 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #1a3a5c;
+      border-bottom: 2px solid #c0d8ee;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #dde6f0;
+      border-radius: 8px;
+      padding: 1.2rem 1.4rem;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.15s, border-color 0.15s;
+      display: block;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 14px rgba(26,58,92,0.12);
+      border-color: #1a6ea8;
+    }
+
+    .card .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.55rem;
+      border-radius: 20px;
+      margin-bottom: 0.6rem;
+    }
+
+    .tag-tarea  { background: #eaf4fb; color: #1a6ea8; }
+    .tag-clase  { background: #eafaf1; color: #1e8449; }
+
+    .card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1a3a5c;
+      margin-bottom: 0.3rem;
+    }
+
+    .card p {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .coming-soon {
+      opacity: 0.45;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <p class="course-code">SUS2211 · Pontificia Universidad Católica de Chile</p>
+    <h1>Mapeando la (In)sustentabilidad</h1>
+    <p class="subtitle">Materiales del curso — Tareas y clases</p>
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <h2>Tareas</h2>
+    <div class="card-grid">
+
+      <a class="card" href="homeworks/tarea02.html">
+        <span class="tag tag-tarea">Tarea 2</span>
+        <h3>Explorando QGIS</h3>
+        <p>Justicia ambiental en el acceso a áreas verdes en Santiago</p>
+      </a>
+
+      <div class="card coming-soon">
+        <span class="tag tag-tarea">Tarea 3</span>
+        <h3>Próximamente</h3>
+        <p></p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Clases</h2>
+    <div class="card-grid">
+
+      <div class="card coming-soon">
+        <span class="tag tag-clase">Clase 1</span>
+        <h3>Próximamente</h3>
+        <p></p>
+      </div>
+
+      <a class="card" href="lectures/clase02.html">
+        <span class="tag tag-clase">Clase 2</span>
+        <h3>Fundamentos de SIG</h3>
+        <p>Conceptos básicos de sistemas de información geográfica</p>
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  SUS2211 · Mapeando la (In)sustentabilidad · PUC Chile
+</footer>
+
+</body>
+</html>

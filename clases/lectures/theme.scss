@@ -1,0 +1,36 @@
+/*-- scss:defaults --*/
+
+// SUS2211 theme
+
+$body-bg: #ffffff;
+$body-color: #1a1a1a;
+$link-color: #2a7f62;
+
+/*-- scss:rules --*/
+
+/* headings */
+
+.reveal h1 {
+  font-size: 2.4em;
+}
+
+.reveal h2 {
+  font-size: 1.8em;
+}
+
+/* section slides */
+
+.section-slide {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+/* figures */
+
+.reveal img {
+  max-height: 600px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

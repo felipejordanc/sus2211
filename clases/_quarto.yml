@@ -1,0 +1,13 @@
+project:
+  type: default
+  output-dir: ../docs
+
+format:
+  revealjs:
+    theme: [default, theme.scss]
+    slide-number: true
+    transition: fade
+    center-title-slide: true
+    width: 1280
+    height: 720
+    embed-resources: true

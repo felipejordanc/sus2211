@@ -1,0 +1,84 @@
+---
+title: "SUS 2211"
+subtitle: "Mapeando la (in)sustentabilidad"
+author: "Felipe Jordán"
+format: revealjs
+---
+
+## Plan para hoy
+
+### Primer bloque
+
+- Tema 1
+- Tema 2
+- Tema 3
+
+### Segundo bloque
+
+- Tema 4
+- Actividad
+- Cierre
+
+---
+
+# Título de sección
+{.section-slide}
+
+---
+
+## Slide de contenido
+
+- Punto 1
+- Punto 2
+- Punto 3
+
+---
+
+## Concepto clave
+
+Una idea breve que quieras destacar.
+
+::: columns
+::: {.column width="48%"}
+**Dimensión 1**
+
+- Punto A
+- Punto B
+- Punto C
+:::
+
+::: {.column width="48%"}
+**Dimensión 2**
+
+- Punto A
+- Punto B
+- Punto C
+:::
+:::
+
+---
+
+## Imagen o mapa
+{.map-slide}
+
+![](../figures/placeholder.png)
+
+::: {.caption}
+Fuente o descripción breve.
+:::
+
+---
+
+## Pregunta para discutir
+{.question-slide}
+
+¿Cómo cambia nuestra interpretación del territorio cuando lo representamos en un mapa?
+
+---
+
+## Actividad
+{.activity-slide}
+
+1. Revisar material.
+2. Discutir en grupos.
+3. Compartir en plenario.

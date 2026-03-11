@@ -1,0 +1,185 @@
+/*-- scss:defaults --*/
+
+$body-bg: #f5f7fa;
+$body-color: #2c2c2c;
+$link-color: #1a6ea8;
+$font-family-sans-serif: "Source Sans Pro", "Segoe UI", Helvetica, Arial, sans-serif;
+$presentation-heading-color: #1a3a5c;
+
+/*-- scss:rules --*/
+
+/*
+ * Layout tokens — change here to adjust everywhere.
+ * --slide-px : horizontal slide padding (drives h2 bleed math)
+ * --slide-py : vertical slide padding
+ */
+:root {
+  --slide-px: 2.5rem;
+  --slide-py: 0.8rem;
+}
+
+/* ── Slide padding ───────────────────────────────────────────── */
+/*
+ * Full-bleed h2 technique:
+ *   h2 uses negative margins equal to --slide-px on both sides
+ *   + width: calc(100% + 2 * --slide-px)
+ *   This expands h2 from padding-edge to padding-edge of the section
+ *   without any hardcoded pixel values, safe for auto-scaling.
+ */
+.reveal .slides section {
+  padding: var(--slide-py) var(--slide-px) !important;
+  box-sizing: border-box;
+}
+
+/* ── Title slide ─────────────────────────────────────────────── */
+.reveal .slides section.title-slide {
+  background-color: #1a3a5c !important;
+  color: white;
+  text-align: left;
+  padding: 4rem var(--slide-px) !important;
+}
+
+.reveal .title-slide h1.title {
+  color: white;
+  font-size: 2em;
+  font-weight: 700;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 0.3em;
+  margin-bottom: 0.4em;
+}
+
+.reveal .title-slide .subtitle {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1em;
+  font-style: italic;
+}
+
+.reveal .title-slide .author {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85em;
+  margin-top: 1.2em;
+}
+
+.reveal .title-slide .date {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.8em;
+}
+
+/* ── Regular slide: h2 = full-bleed navy header ───────────────── */
+.reveal h2 {
+  /* negative-margin bleed: spans the full section width */
+  margin: calc(-1 * var(--slide-py)) calc(-1 * var(--slide-px)) 0.8em calc(-1 * var(--slide-px));
+  width: calc(100% + 2 * var(--slide-px));
+  box-sizing: border-box;
+  /* padding matches --slide-px so text stays aligned with content */
+  padding: 0.45em var(--slide-px);
+  background: #1a3a5c;
+  color: white !important;
+  font-size: 1.15em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  /* auto height — grows if title wraps to two lines */
+  line-height: 1.3;
+}
+
+/* ── h3: medium-blue sub-headers ─────────────────────────────── */
+.reveal h3 {
+  color: #1a6ea8;
+  font-size: 1em;
+  font-weight: 600;
+  border-bottom: 1px solid #c0d8ee;
+  padding-bottom: 0.2em;
+  margin-top: 0.6em;
+}
+
+/* ── Section divider slides ──────────────────────────────────── */
+.section-slide {
+  background-color: #1a3a5c !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem var(--slide-px) !important;
+}
+
+/* Strip the bar style from h2 inside section slides */
+.section-slide h2 {
+  margin: 0 !important;
+  width: auto !important;
+  background: none !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-size: 1em;
+  font-weight: 400;
+  font-style: italic;
+  padding: 0.2em 0 0 0 !important;
+}
+
+.section-slide h1 {
+  color: white !important;
+  font-size: 0.9em !important;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Body text ────────────────────────────────────────────────── */
+.reveal p,
+.reveal li {
+  line-height: 1.55;
+  color: #2c2c2c;
+}
+
+.reveal ul,
+.reveal ol {
+  margin-left: 1.2em;
+}
+
+/* ── Links ────────────────────────────────────────────────────── */
+.reveal a {
+  color: #1a6ea8;
+  text-decoration: underline;
+}
+
+/* ── Code ─────────────────────────────────────────────────────── */
+.reveal pre {
+  box-shadow: none;
+  border: 1px solid #c0d8ee;
+  border-radius: 4px;
+}
+
+.reveal code {
+  color: #1a3a5c;
+  background: #eaf1f8;
+  border-radius: 3px;
+  padding: 0.1em 0.3em;
+}
+
+.reveal pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+
+/* ── Figures ──────────────────────────────────────────────────── */
+.reveal img {
+  max-height: 480px;
+  display: block;
+  margin: 0.4em auto;
+  border-radius: 5px;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* ── Slide number ─────────────────────────────────────────────── */
+.reveal .slide-number {
+  background: rgba(26, 58, 92, 0.75);
+  color: white;
+  border-radius: 4px;
+  font-size: 0.7em;
+  padding: 2px 7px;
+}
+
+/* ── Progress bar ─────────────────────────────────────────────── */
+.reveal .progress span {
+  background: #1a6ea8;
+}

@@ -1,0 +1,2 @@
+# Título de sección
+{.section-slide}

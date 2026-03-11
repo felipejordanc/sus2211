@@ -1,0 +1,4 @@
+## Pregunta
+{.question-slide}
+
+Escribe aquí la pregunta que quieres proyectar.

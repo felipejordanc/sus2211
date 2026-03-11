@@ -1,0 +1,23 @@
+## Comparación
+
+::: {.columns .two-col-tight}
+::: {.column width="48%"}
+::: {.box}
+**Concepto A**
+
+- Idea 1
+- Idea 2
+- Idea 3
+:::
+:::
+
+::: {.column width="48%"}
+::: {.box}
+**Concepto B**
+
+- Idea 1
+- Idea 2
+- Idea 3
+:::
+:::
+:::

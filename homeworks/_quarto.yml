@@ -1,0 +1,23 @@
+project:
+  type: default
+  output-dir: ../docs/homeworks
+
+format:
+  revealjs:
+    theme: [default, theme.scss]
+    slide-number: true
+    transition: fade
+    center-title-slide: true
+    width: 1280
+    height: 720
+  html:
+    theme: [default, templates/documento.scss]
+    toc: true
+    toc-depth: 3
+    toc-title: "Contenidos"
+    number-sections: false
+    embed-resources: true
+    lang: es
+    page-layout: full
+    grid:
+      body-width: 1200px

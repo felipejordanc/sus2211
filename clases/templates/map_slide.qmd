@@ -1,0 +1,8 @@
+## Título del mapa
+{.map-slide}
+
+![](../figures/nombre_imagen.png)
+
+::: {.caption}
+Fuente o descripción breve.
+:::

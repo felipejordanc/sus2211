@@ -1,0 +1,7 @@
+## Lectura / cita breve
+
+> Escribe aquí una cita corta o una idea central de la lectura.
+
+::: {.small .muted}
+Referencia breve.
+:::
