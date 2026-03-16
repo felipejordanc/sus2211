@@ -104,13 +104,13 @@ QGIS guarda las rutas a los datos **de forma relativa** al archivo de proyecto. 
 **Importante:** no muevas el archivo `.qgz` fuera de la carpeta `proyectos/`, ya que eso rompería las rutas relativas y QGIS no podría encontrar los datos.
 :::
 
-![Crear nuevo proyecto en QGIS](figures/tarea02/img-001-002.png){fig-align="center"}
+![Crear nuevo proyecto en QGIS](figures/tarea02/tarea2_001.png){fig-align="center"}
 
 **5.** Encuentra la conexión a la carpeta con el material necesario. Las capas con las que trabajaremos se encuentran en `datos/brutos/` dentro de la carpeta de esta clase. Conéctalas desde el Navegador de QGIS. Alternativamente, puedes arrastrar las capas que quieras importar a QGIS desde la carpeta al Canvas (si bien un shapefile consiste en varios archivos, basta con arrastrar el que tiene extención .shp).
 
-![Navegador de QGIS — explorar carpetas del sistema](figures/tarea02/img-002-003.png){fig-align="center"}
+![Navegador de QGIS — explorar carpetas del sistema](figures/tarea02/tarea2_002.png){fig-align="center"}
 
-![Navegador de QGIS — carpeta Curso SUS2211 con las capas disponibles](figures/tarea02/img-002-004.png){fig-align="center"}
+![Navegador de QGIS — carpeta Curso SUS2211 con las capas disponibles](figures/tarea02/tarea2_003.png){fig-align="center"}
 
 **6.** Añade al mapa las siguientes capas, en el siguiente orden:
 
@@ -122,7 +122,7 @@ Estas capas se visualizarán en el Canvas con colores automáticamente elegidos 
 ::: callout-note
 **PAUSA** — hasta ahora debería visualizarse algo así:
 
-![Vista del mapa con ambas capas cargadas](figures/tarea02/img-002-005.png){fig-align="center"}
+![Vista del mapa con ambas capas cargadas](figures/tarea02/tarea2_004.png){fig-align="center"}
 :::
 
 ------------------------------------------------------------------------
@@ -171,7 +171,7 @@ Antes de continuar, dedica unos minutos a explorar el mapa con estas tres herram
 
 **10.** A continuación, abre la tabla de atributos de "Comunas RM por ingresos" haciendo clic derecho sobre el nombre del *layer* y luego *\[Tabla de Atributos\]*. Observa toda la información disponible en los campos.
 
-![Menú contextual — Abrir tabla de atributos](figures/tarea02/img-003-006.png){fig-align="center"}
+![Menú contextual — Abrir tabla de atributos](figures/tarea02/tarea2_005.png){fig-align="center"}
 
 ::: {.callout-tip title="¿Qué es una tabla de atributos y para qué sirven?"}
 Una tabla de atributos es un conjunto de datos tabulares que almacena la información asociada a cada entidad geográfica en una capa vectorial, como los polígonos. Para los polígonos, la tabla de atributos actúa como una hoja de cálculo en la que cada fila corresponde a un polígono individual en el mapa, y cada columna contiene un atributo específico, como el área, el perímetro, el tipo de terreno, o cualquier otra característica relevante de ese polígono.
@@ -181,11 +181,11 @@ Estas tablas son esenciales para realizar análisis geoespaciales, ya que permit
 
 Entonces, en la tabla de atributos puedes visualizar distinta información por comunas: la región, coordenadas geográficas y el promedio de ingreso por hogar (columna **Hoja3\_Ingr**).
 
-![Tabla de atributos de Comunas RM por Ingresos](figures/tarea02/img-003-007.png){fig-align="center"}
+![Tabla de atributos de Comunas RM por Ingresos](figures/tarea02/tarea2_006.png){fig-align="center"}
 
 En la esquina inferior derecha de la tabla de atributos, puedes alterar entre la visualización tabular (la ilustrada en la imagen anterior) y una visualización alternativa, que presenta las filas en una pestaña a la izquierda en una lista, y los datos de la fila seleccionada en una pestaña a la derecha.
 
-[CHRYS: POR FAVOR TOMAR PANTALLASO DE LA VISUALIZACION ALTERNATIVA]
+![Tabla de atributos de Comunas RM por Ingresos](figures/tarea02/tarea2_007.png){fig-align="center"}
 
 ### ¿Por qué son importantes?
 
@@ -224,7 +224,7 @@ Puedes seleccionar **múltiples filas** manteniendo presionado `Ctrl` mientras h
 
 **13.** A continuación, abre las propiedades de "Comunas RM por ingresos" haciendo clic derecho sobre el nombre del *layer* y luego *\[Propiedades\]*. Observa toda la información disponible en los campos.
 
-![Menú contextual — opción Propiedades](figures/tarea02/img-005-009.png){fig-align="center"}
+![Menú contextual — opción Propiedades](figures/tarea02/tarea2_009.png){fig-align="center"}
 
 ::: {.callout-tip title="¿Qué operaciones se pueden realizar desde Propiedades?"}
 La opción de "Propiedades" de una capa es una herramienta fundamental que permite configurar y personalizar cómo se visualiza y maneja una capa en el proyecto. Aquí tienes un resumen de las principales funciones que ofrece:
@@ -240,13 +240,13 @@ La opción de "Propiedades" de una capa es una herramienta fundamental que permi
 
 **14.** En la ventana de propiedades de la capa, selecciona la pestaña **"Simbología"** en el lado izquierdo.
 
-![Ventana de Propiedades — pestaña Simbología seleccionada](figures/tarea02/img-006-010.png){fig-align="center"}
+![Ventana de Propiedades — pestaña Simbología seleccionada](figures/tarea02/tarea2_010.png){fig-align="center"}
 
 **15.** En la parte superior de la pestaña de simbología, encontrarás un menú desplegable que probablemente esté configurado en "Simbología Simple". Cambia esta opción a **"Graduado"**.
 
 **16.** En el campo **"Valor"**, selecciona la columna de la tabla de atributos que contiene los datos numéricos para aplicar la simbología graduada: **(Hoja3\_Ingr)**. Esta columna debe contener valores numéricos para que el método graduado funcione correctamente.
 
-![Simbología Graduada — selección del campo Hoja3\_Ingr como valor](figures/tarea02/img-006-011.png){fig-align="center"}
+![Simbología Graduada — selección del campo Hoja3\_Ingr como valor](figures/tarea02/tarea2_011.png){fig-align="center"}
 
 ::: callout-note
 **Recordemos:** la simbología es una herramienta poderosa para controlar cómo se visualizan los datos en el mapa, permitiendo hacer análisis más comprensibles y visualmente efectivos, adaptados a las necesidades específicas de cada proyecto. Queremos visualizar los promedios de ingreso por hogar de cada comuna, para poder compararlos entre ellos y ser capaces de ver cómo se relaciona espacialmente el ingreso con el acceso de área verde.
@@ -254,13 +254,13 @@ La opción de "Propiedades" de una capa es una herramienta fundamental que permi
 
 **17.** Selecciona una rampa de colores en el menú desplegable de **"Rampa de color"**. Puedes elegir entre las opciones predefinidas o crear una rampa personalizada.
 
-![Opciones de rampa de color disponibles en QGIS](figures/tarea02/img-007-013.png){fig-align="center"}
+![Opciones de rampa de color disponibles en QGIS](figures/tarea02/tarea2_012.png){fig-align="center"}
 
 **18.** En la sección de "Clasificación", QGIS generará automáticamente un número determinado de clases basadas en el método seleccionado. Si deseas ajustar el número de clases o los rangos manualmente, puedes hacerlo aquí. Haz clic en el botón **"Clasificar"** para que QGIS genere las clases automáticamente basadas en el método elegido.
 
 **19.** Haz clic en **"Aplicar"** y luego en **"Aceptar"** para cerrar la ventana de propiedades. La capa en el mapa se actualizará y mostrará los polígonos coloreados según los valores de la columna seleccionada, utilizando la rampa de colores graduados. Debería visualizarse algo así:
 
-![Mapa de Comunas RM con simbología graduada por ingreso de hogar](figures/tarea02/img-007-012.png){fig-align="center"}
+![Mapa de Comunas RM con simbología graduada por ingreso de hogar](figures/tarea02/tarea2_013.png){fig-align="center"}
 
 ::: callout-warning
 ¡Recuerda guardar el trabajo que hayas realizado hasta ahora para no perder el avance!
@@ -274,9 +274,9 @@ Ahora, se trabajará con la capa de "Áreas Verdes RM" y seguiremos ocupando la 
 
 **20.** A continuación, abre la tabla de atributos de "Áreas Verdes de Santiago" haciendo clic derecho sobre el nombre del *layer* y luego *\[Tabla de Atributos\]*. Observa toda la información disponible en la columna **"Tipo"**.
 
-![Menú contextual — Abrir tabla de atributos de Áreas Verdes](figures/tarea02/img-008-014.png){fig-align="center"}
+![Menú contextual — Abrir tabla de atributos de Áreas Verdes](figures/tarea02/tarea2_014.png){fig-align="center"}
 
-![Tabla de atributos de Áreas Verdes de Santiago — columna Tipo](figures/tarea02/img-008-015.png){fig-align="center"}
+![Tabla de atributos de Áreas Verdes de Santiago — columna Tipo](figures/tarea02/tarea2_015.png){fig-align="center"}
 
 En esta capa existen 3 clasificaciones de área verde:
 
@@ -290,23 +290,23 @@ En esta capa existen 3 clasificaciones de área verde:
 
 **21.** Cierra la tabla de atributos y abre las propiedades de "Áreas Verdes de Santiago" haciendo clic derecho sobre el nombre del *layer*, luego **\[Propiedades\]**, y posteriormente la opción de **\[Simbología\]**.
 
-![Menú contextual — Propiedades de Áreas Verdes](figures/tarea02/img-009-016.png){fig-align="center"}
+![Menú contextual — Propiedades de Áreas Verdes](figures/tarea02/tarea2_016.png){fig-align="center"}
 
-![Ventana de Propiedades — pestaña Simbología](figures/tarea02/img-009-017.png){fig-align="center"}
+![Ventana de Propiedades — pestaña Simbología](figures/tarea02/tarea2_017.png){fig-align="center"}
 
 **22.** En la parte superior de la pestaña de simbología, encontrarás un menú desplegable que probablemente esté configurado en "Simbología Simple". Cambia esta opción a **"Categorizado"**.
 
-![Menú desplegable de tipo de simbología — seleccionar Categorizado](figures/tarea02/img-009-018.png){fig-align="center"}
+![Menú desplegable de tipo de simbología — seleccionar Categorizado](figures/tarea02/tarea2_018.png){fig-align="center"}
 
 **23.** En el campo **"Valor"**, selecciona la columna de la tabla de atributos que contiene los datos para aplicar la simbología categorizada: **(Tipo)**.
 
-![Simbología Categorizado — selección del campo Tipo como valor](figures/tarea02/img-009-019.png){fig-align="center"}
+![Simbología Categorizado — selección del campo Tipo como valor](figures/tarea02/tarea2_019.png){fig-align="center"}
 
 **24.** Haz clic en **"Clasificar"**, **"Aplicar"** y luego en **"Aceptar"** para cerrar la ventana de propiedades. La capa en el mapa se actualizará y mostrará los polígonos coloreados según la selección realizada.
 
 Debería verse algo así:
 
-![Mapa con Áreas Verdes categorizadas por tipo (Campo Deportivo, Parque/Plaza, Vereda/Bandejón) sobre comunas por ingreso](figures/tarea02/img-010-020.png){fig-align="center"}
+![Mapa con Áreas Verdes categorizadas por tipo (Campo Deportivo, Parque/Plaza, Vereda/Bandejón) sobre comunas por ingreso](figures/tarea02/tarea2_020.png){fig-align="center"}
 
 **25.** Ahora puedes activar y desactivar estas "subcapas" para tener una visualización más detallada de las diversas áreas verdes existentes en las comunas. Por ejemplo, si queremos enfocarnos solo en el área verde "Parque/Plaza", puedes apretar la casilla a la izquierda de los otros tipos (Campo Deportivo y Vereda/Bandejon) en la pestaña capas, para así deseleccionar estos típos de áreas verdes de la visualización.
 
@@ -316,15 +316,15 @@ Debería verse algo así:
 
 **26.** Para visualizar el nombre de cada comuna, activa las etiquetas de la capa "Comunas RM por ingresos" haciendo clic derecho sobre el nombre del *layer* y luego **\[Mostrar Etiquetas\]**.
 
-![Menú contextual — Mostrar Etiquetas](figures/tarea02/img-010-021.png){fig-align="center"}
+![Menú contextual — Mostrar Etiquetas](figures/tarea02/tarea2_021.png){fig-align="center"}
 
 **27.** Ahora, cambiaremos la etiqueta del "ID" al nombre de cada comuna. En el **Panel de Capas**, haz clic derecho sobre la capa y selecciona **Propiedades**.
 
-![Menú contextual — Propiedades para editar etiquetas](figures/tarea02/img-011-022.png){fig-align="center"}
+![Menú contextual — Propiedades para editar etiquetas](figures/tarea02/tarea2_022.png){fig-align="center"}
 
 **28.** En la ventana que se abre, ve a la pestaña **Etiquetas**. Presiona la flecha que desplegará las opciones y selecciona el campo **"COMUNA"**. Haz clic en **Aceptar** para aplicar los cambios.
 
-![Pestaña Etiquetas — selección del campo COMUNA](figures/tarea02/img-011-023.png){fig-align="center"}
+![Pestaña Etiquetas — selección del campo COMUNA](figures/tarea02/tarea2_023.png){fig-align="center"}
 
 ::: callout-warning
 ¡Recuerda guardar el trabajo que hayas realizado hasta ahora para no perder el avance!
@@ -332,7 +332,7 @@ Debería verse algo así:
 
 Debería verse algo así:
 
-![Mapa final con etiquetas de nombre de comunas y áreas verdes categorizadas](figures/tarea02/img-012-024.png){fig-align="center"}
+![Mapa final con etiquetas de nombre de comunas y áreas verdes categorizadas](figures/tarea02/tarea2_024.png){fig-align="center"}
 
 ------------------------------------------------------------------------
 
@@ -342,15 +342,15 @@ Debería verse algo así:
 
 **30.** En la barra de menú superior haz clic en **"Proyecto"** → **Importar/Exportar** → **Exportar el mapa a imagen**.
 
-![Menú Proyecto → Importar/Exportar → Exportar mapa a imagen](figures/tarea02/img-013-026.png){fig-align="center"}
+![Menú Proyecto → Importar/Exportar → Exportar mapa a imagen](figures/tarea02/tarea2_025.png){fig-align="center"}
 
 **31.** Las extensiones se encuentran configuradas de manera automática, por lo que no es necesario cambiarlas. Presiona **"Guardar"**.
 
-![Diálogo de guardado — extensión y resolución del mapa](figures/tarea02/img-013-027.png){fig-align="center"}
+![Diálogo de guardado — extensión y resolución del mapa](figures/tarea02/tarea2_026.png){fig-align="center"}
 
 **32.** Elige la carpeta de destino, introduce un nombre para el archivo y haz clic en **"Guardar"**. Recuerda navegar al directorio **`resultados/mapas`** de tu proyecto antes de guardar el archivo, para que se guarde en el directorio indicado.
 
-![Selección de carpeta y nombre de archivo para guardar el mapa](figures/tarea02/img-013-028.png){fig-align="center"}
+![Selección de carpeta y nombre de archivo para guardar el mapa](figures/tarea02/tarea2_027.png){fig-align="center"}
 
 ::: callout-tip
 **¡Listo!** Has finalizado tu primer mapa. Recuerda completar esta actividad y subirla a **Canvas en el Mapa-Memo correspondiente**.
