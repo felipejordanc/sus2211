@@ -26,6 +26,17 @@ $link-color: #2a7f62;
   font-weight: 600;
 }
 
+/* slide numbers */
+
+.reveal .slide-number {
+  color: #1a1a1a;
+  background-color: transparent;
+}
+
+.reveal:has(.slides section.present.section-slide) .slide-number {
+  color: white;
+}
+
 /* captions */
 
 .caption {
