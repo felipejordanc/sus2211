@@ -1,8 +1,8 @@
 ---
-title: "Fundamentos de SIG"
+title: "Justicia Ambiental y Fundamentos de SIG"
 subtitle: "SUS 2211 — Mapeando la (in)sustentabilidad"
 author: "Felipe Jordán"
-date: "2025"
+date: "2026-03-16"
 format:
   revealjs:
     theme: [default, theme.scss]
@@ -25,7 +25,7 @@ format:
 ### Segundo bloque
 
 - CT: Fundamentos de SIG
-- A: Intro a proyectos reproducibles en QGIS
+- A: Inducción a proyectos reproducibles en QGIS
 
 
 # CT: Justicia Ambiental {.section-slide}
@@ -53,13 +53,13 @@ Agencia de Protección Ambiental de EE.UU. (EPA)
 ## No todos respiramos el mismo aire
 
 ::: columns
-::: {.column width="55%"}
+::: {.column width="50%"}
 - Las fuentes de contaminación **no se distribuyen al azar** en el territorio
 - Tienden a concentrarse en comunidades con **menos recursos** y **menor poder político**
 - Esto no es una coincidencia: es el resultado de decisiones, mercados y estructuras sociales
 :::
-::: {.column width="43%"}
-![](../figures/inputs/image11.png)
+::: {.column width="45%"}
+![](../figures/clase02/image11_2.png)
 
 ::: {.caption}
 Plantas industriales y vertederos rara vez se instalan en barrios de altos ingresos.
@@ -69,9 +69,9 @@ Plantas industriales y vertederos rara vez se instalan en barrios de altos ingre
 
 ---
 
-## Un ejemplo concreto: Carolina del Norte {.map-slide}
+## Ejemplo: Carolina del Norte {.map-slide}
 
-![](../figures/inputs/image2.png)
+![](../figures/clase02/image2_2.png){width="250%"}
 
 ::: {.caption}
 Emisiones de grandes contaminadores y nivel de ingreso per cápita, Carolina del Norte (2010). Los puntos más grandes representan mayores emisiones. Fuente: EPA TRI.
@@ -98,7 +98,7 @@ Emisiones de grandes contaminadores y nivel de ingreso per cápita, Carolina del
 
 ---
 
-## Santiago: quién contamina y quién sufre
+## Stgo: quién contamina y quién sufre
 
 - Los sectores ricos (oriente) concentran los automóviles — la principal fuente de contaminación en Santiago
 - Sin embargo, las peores concentraciones de material particulado se registran en los sectores pobres del poniente y las zonas bajas
@@ -111,12 +111,12 @@ Romero, Fuentes y Smith (2010).
 
 ---
 
-## Dos tipos de injusticia ambiental
+## Dos tipos de justicia ambiental
 
 ::: columns
 ::: {.column width="48%"}
 ::: {.box}
-**Justicia distributiva**
+**Justicia distributiva (JD)**
 
 ¿Quién carga con el daño?
 
@@ -127,11 +127,11 @@ Romero, Fuentes y Smith (2010).
 :::
 ::: {.column width="48%"}
 ::: {.box}
-**Justicia procedimental**
+**Justicia procedimental (JP)**
 
 ¿Quién tiene voz?
 
-- Participación en decisiones de política
+- Participación en decisiones
 - Acceso a información y recursos legales
 - Representación en espacios de poder
 :::
@@ -140,17 +140,17 @@ Romero, Fuentes y Smith (2010).
 
 # ¿Por qué emerge? {.section-slide}
 
-## El daño va donde la resistencia es menor
+## Daño va donde resistencia es menor
 
 ::: columns
-::: {.column width="55%"}
-- Las industrias contaminantes buscan **terrenos baratos** y **poca oposición**
+::: {.column width="49%"}
+- Industrias contaminantes buscan **terrenos baratos** y **poca oposición**
 - Los barrios pobres y con menor organización ofrecen ambas cosas
 - Decisiones de zonificación y regulación también pueden favorecer esta lógica
-- Resultado: la carga ambiental se acumula donde hay menos poder
 :::
-::: {.column width="43%"}
-![](../figures/inputs/image12.png)
+::: {.column width="49%"}
+- Resultado: la carga ambiental se acumula donde hay menos poder
+![](../figures/clase02/image12_2.png){width="80%" style="padding: 0.5em"}
 
 ::: {.caption}
 Los vertederos e instalaciones de residuos peligrosos tienden a ubicarse en comunidades de bajos ingresos.
@@ -164,17 +164,17 @@ Los vertederos e instalaciones de residuos peligrosos tienden a ubicarse en comu
 
 ::: columns
 ::: {.column width="48%"}
-![](../figures/inputs/image9.png)
+![](../figures/clase02/image9_2.png){width="78%" style="padding: 0.5em"}
 
 ::: {.caption}
-Vivienda en zonas contaminadas: la única opción accesible para muchos.
+Vivienda en zonas contaminadas: única opción para muchos.
 :::
 :::
 ::: {.column width="48%"}
-![](../figures/inputs/image10.png)
+![](../figures/clase02/image10_2.png){width="86%" style="padding: 0.5em"}
 
 ::: {.caption}
-Acceso a entornos limpios y verdes: fuertemente correlacionado con el ingreso.
+Barrios limpios y con areas verdes tienden a ser acomodados.
 :::
 :::
 :::
@@ -185,7 +185,7 @@ El medioambiente limpio cuesta dinero. Quienes no pueden pagarlo terminan vivien
 
 ## Los ciclos se refuerzan {.map-slide}
 
-![](../figures/inputs/image15.png)
+![](../figures/clase02/image15_2.png){width="150%" style="padding: 0.5em"}
 
 ::: {.caption}
 "Pirámide de la gentrificación ambiental": la calidad ambiental, los precios del suelo y la demografía se influyen mutuamente en ciclos que pueden perpetuar la injusticia. Fuente: Banzhaf & McCormick (2012).
@@ -193,32 +193,31 @@ El medioambiente limpio cuesta dinero. Quienes no pueden pagarlo terminan vivien
 
 ---
 
-## La justicia procedimental alimenta la distributiva
+## JP alimenta la JD, y viceversa
 
 - Quienes más sufren el daño son frecuentemente los que **menos participan** en las decisiones que lo generan
 - Barreras: idioma, tiempo, recursos legales, acceso a información, representación política
 - Sin voz en el proceso, los resultados distributivos raramente cambian
 - **La injusticia procedimental es una causa, no solo una consecuencia**
+- ¿Cómo es una consecuencia?
 
-## Los riesgos "naturales" también son injustos
+## JA para riesgos "naturales" 
 
 ::: columns
-::: {.column width="60%"}
-- En Santiago, condominios de altos ingresos se instalaron en los **piedemontes andinos** — zonas de origen de aluviones
-- Sus construcciones impermeabilizan el suelo → más escorrentía → más inundaciones **aguas abajo**
-- Las obras de mitigación (canales, gaviones) se concentran donde viven los ricos
-- Los pobres, aguas abajo, quedan **desprotegidos**
-- Los "desastres naturales" son también el resultado de decisiones sociales y políticas
+::: {.column width="56%"}
+- En Stgo, barrios ricos en **precordillera** — origen de aluviones
+- \+ construcciones → + escorrentía → + inundaciones **aguas abajo**
+- Obras de mitigación se concentran en barrios ricos
+- Pobres, aguas abajo, quedan **desprotegidos**
+- "Desastres naturales" también resultan de decisiones de política
+:::
+::: {.column width="43%"}
 
-::: {.small .muted}
-Romero, Fuentes y Smith (2010).
-:::
-:::
-::: {.column width="38%"}
-![](../figures/clase02/image1.png)
+
+![](../figures/clase02/stgo_ingresos.jpg){width="80%" style="padding: 0.2em"}
 
 ::: {.caption}
-Distribución del ingreso en el Área Metropolitana de Santiago. El oriente concentra los sectores de mayores ingresos.
+El oriente concentra los sectores de mayores ingresos en Stgo. Fuente: Vergara, Parra, Núñez. (2020), “Contra el urbanismo de la desigualdad: propuestas para el futuro de nuestras ciudades”, CIPER Académico.
 :::
 :::
 :::
@@ -234,7 +233,7 @@ Distribución del ingreso en el Área Metropolitana de Santiago. El oriente conc
 
 ---
 
-## Los efectos se perpetúan entre generaciones
+## Efectos intergeneracionales
 
 - La exposición ambiental afecta la **salud, el desarrollo cognitivo y los ingresos futuros**
 - Efectos documentados desde la exposición *in utero*
@@ -247,31 +246,48 @@ Distribución del ingreso en el Área Metropolitana de Santiago. El oriente conc
 
 - No podemos corregir lo que no podemos ver ni medir
 - **Mapear la injusticia ambiental** es el primer paso para intervenirla
-- Romero et al. (2010) concluyen que en Chile faltan:
+- Romero et al. (2010) concluyen que en Chile falta:
   - Evaluación ambiental estratégica de los planes urbanos
   - Participación ciudadana **vinculante** en decisiones territoriales
-  - Reconocimiento del valor social de los bienes ambientales comunes
-- Las herramientas que estamos aprendiendo en este curso son exactamente las que se necesitan para hacer visible lo que hoy permanece invisible
+  - Reconocimiento del valor de los bienes ambientales comunes
+- Las herramientas que estamos aprendiendo en este curso son exactamente las que se necesitan para hacer visibles las injusticias ambientales
 
-# A+R: Justicia Ambiental en Chile {.section-slide}
+# A+R: Herramientas para mapear la JA {.section-slide}
 
-## Justicia ambiental en Chile {.question-slide}
+## Herramientas para mapear la JA {.question-slide}
 
-Visita el sitio **mapaconflictos.indh.cl**
+En la clase anterior revisaste junto a tus compañeros una de tres herramientas de visualización de problemáticas de JA:
 
-Elige con tu pareja un conflicto ambiental y responde:
+-  <a href="https://experience.arcgis.com/experience/ed5953d89038431dbf4f22ab9abfe40d/p
+age/Indicators/?views=PM2.5" target="_blank">CalEnvironScreen</a>  
+-  <a href="https://mapaconflictos.indh.cl/#/" target="_blank">Mapa de Conflictos Socioambientales de Chile</a>  
+-  <a href=" https://arclim.mma.gob.cl/
+" target="_blank">Atlas de Risgos Climáticos</a>  
 
-- ¿Existe un problema de justicia ambiental? ¿De qué tipo?
-- ¿Qué canal o canales podrían explicarlo?
-- ¿Quién tiene voz en este conflicto y quién no?
+## Herramientas para mapear la JA {.question-slide}
 
----
+Y contestaron las siguientes preguntas guías:
+
+- ¿Qué temáticas abordan la herramienta web en cuestión?
+- ¿Qué rol juegan los mapas en ella?
+- ¿Cómo puede la herramienta apoyar la gestión de los desafíos
+socioecológicos que aborda?
+- ¿Puede la herramienta empoderar a grupos desaventajados?
+
+## Caso de JA {.question-slide}
+
+Vuelvan a juntarse en los mismos grupos, escojar un caso de JA ilustrado por la herramienta, y respondan las siguientes perguntas guías.
+
+  - ¿Es un caso de justicia distributiva, procedimental o ambos?
+  - ¿Qué factores pueden explicar la injusticia en el caso elegido?
+  - ¿Qué consecuencias tiene para las comunidades afectadas?
+- ¿Es efectiva la herramienta web para visualizar el caso de JA? ¿Cómo podría mejorarse?
+
 
 ## Discusión en plenario {.activity-slide}
 
-1. Cada pareja presenta su conflicto en 2 minutos.
-2. Identificamos patrones comunes entre los casos.
-3. ¿Qué herramientas necesitaríamos para analizar esto con datos?
+  1. Un grupo de cada herrameinta presenta en 2 minutos su caso, utilizando la herramienta para ilustrarlo.
+  2. Discutimos en conjunto
 
 # CT: Fundamentos de SIG {.section-slide}
 
@@ -279,21 +295,11 @@ Elige con tu pareja un conflicto ambiental y responde:
 
 ## ¿Qué es un datum?
 
-::: columns
-::: {.column width="55%"}
+
 - La Tierra **no es una esfera perfecta**: es un geoide irregular
-- Un **datum** es una elipse matemática que aproxima su superficie
+- Un **datum** es un modelo matemático que aproxima su superficie
 - Permite describir la posición de cualquier punto con coordenadas
 - Es la base de todo sistema de coordenadas geográficas
-:::
-::: {.column width="45%"}
-![](../figures/clase02/image2.gif)
-
-::: {.caption}
-La Tierra como geoide. Fuente: ESRI.
-:::
-:::
-:::
 
 ---
 
@@ -320,6 +326,17 @@ La Tierra como geoide. Fuente: ESRI.
 :::
 :::
 
+## Datum global y datum local
+
+![](../figures/clase02/image2.gif){width="100%"}
+
+::: {.caption}
+La Tierra como geoide. Ilustración de datum global (WGS84) y local (NAD27) superpuesto al geoide real. Fuente: ESRI.
+:::
+
+
+
+
 # Proyecciones cartográficas {.section-slide}
 
 ## ¿Qué es una proyección?
@@ -327,7 +344,7 @@ La Tierra como geoide. Fuente: ESRI.
 ::: columns
 ::: {.column width="60%"}
 - Para hacer un mapa plano, debemos **"aplanar"** la superficie curva
-- Una proyección es un **modelo matemático** que relaciona cada punto de la elipse con un punto en un plano
+- Una proyección es un **modelo matemático** que relaciona cada punto en el datum con un punto en un plano
 - Gerardus Mercator (1512–1594) desarrolló la proyección más famosa del mundo
 :::
 ::: {.column width="38%"}
@@ -343,10 +360,10 @@ Gerardus Mercator.
 
 ## Familias de proyecciones {.map-slide}
 
-![](../figures/clase02/image9.png)
+![](../figures/clase02/image9.png){width="100%"}
 
 ::: {.caption}
-Tres familias: cilíndrica (a), cónica (b) y plana/acimutal (c).
+Tres familias: cilíndrica (a), cónica (b) y plana/acimutal (c). Fuente: ESRI
 :::
 
 ---
@@ -356,7 +373,7 @@ Tres familias: cilíndrica (a), cónica (b) y plana/acimutal (c).
 ![](../figures/clase02/image4.jpeg)
 
 ::: {.caption}
-La proyección cilíndrica simple da origen a la proyección Mercator. Fuente: Encyclopædia Britannica.
+La proyección cilíndrica simple da origen a la proyección Mercator. Fuente: ESRI.
 :::
 
 ---
@@ -364,24 +381,24 @@ La proyección cilíndrica simple da origen a la proyección Mercator. Fuente: E
 ## Mercator distorsiona el área
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="55%"}
 - Los paralelos y meridianos son **líneas rectas**
 - Preserva **ángulos y formas** → útil para navegación
 - Pero **distorsiona el área** hacia los polos
 - Groenlandia aparece tan grande como África... ¡pero África es 14× mayor!
 :::
-::: {.column width="50%"}
+::: {.column width="44%"}
 ![](../figures/clase02/image6.jpeg)
 
 ::: {.caption}
-Groenlandia (circuito rojo) aparece tan grande como África en Mercator.
+Groenlandia aparece tan grande como África en Mercator.
 :::
 :::
 :::
 
 ---
 
-## ¿Qué tan grande es Groenlandia realmente? {.map-slide}
+## ¿Qué tan grande es Groenlandia? {.map-slide}
 
 ![](../figures/clase02/image7.jpeg)
 
@@ -394,15 +411,14 @@ Groenlandia a escala real superpuesta sobre África. Fuente: Google Maps.
 ## Ninguna proyección es perfecta
 
 ::: columns
-::: {.column width="55%"}
+::: {.column width="58%"}
 - Toda proyección **distorsiona** al menos uno de:
   - **Área** (superficies)
   - **Forma** (ángulos)
   - **Distancia**
-- No existe una proyección que preserve los tres simultáneamente
-- La elección depende de **qué se quiere comunicar**
+- Elección depende de **qué se quiere comunicar**
 :::
-::: {.column width="43%"}
+::: {.column width="40%"}
 ![](../figures/clase02/image5.jpeg)
 
 ::: {.caption}
@@ -604,4 +620,51 @@ Grilla regular de celdas (píxeles). Representa fenómenos continuos.
 :::
 :::
 :::
+
+# A: Inducción a proyectos reproducibles en QGIS {.section-slide}
+
+## ¿Por qué un proyecto reproducible?
+
+- Tu análisis debe poder **ser retomado** por ti en otra sesión o en otro computador
+- Debe poder **ser comprendido y replicado** por otra persona
+- Las **rutas relativas** permiten mover toda la carpeta sin romper nada
+
+::: {.box}
+**Regla de oro:** los datos originales nunca se modifican — se trabaja siempre con copias en `procesados/`
+:::
+
+---
+
+## Estructura de carpetas
+
+```{mermaid}
+flowchart TD
+    A["📁 clase2/"] --> B["📁 datos/"]
+    A --> C["📁 documentos/"]
+    A --> D["📁 proyectos/"]
+    A --> E["📁 resultados/"]
+
+    B --> F["📁 brutos/<br>🔒 datos originales<br>(no modificar)"]
+    B --> G["📁 intermedios/<br>datos de geoprocesamiento"]
+    B --> H["📁 procesados/<br>capas finales para mapeo"]
+
+    E --> I["📁 mapas/<br>mapas exportados"]
+    E --> J["📁 figuras/<br>gráficos y tablas"]
+
+    style F fill:#fde8e8,stroke:#c0392b
+    style G fill:#fef9e7,stroke:#f39c12
+    style H fill:#eafaf1,stroke:#27ae60
+    style D fill:#eaf4fb,stroke:#2980b9
+    style C fill:#f4f6f7,stroke:#7f8c8d
+```
+
+---
+
+## Abrir el proyecto en QGIS
+
+1. Descarga y descomprime el `.zip` Tarea 2 de los materiales de la clase
+2. Abre la <a href="https://felipejordanc.github.io/sus2211" target="_blank">página web del curso</a> y navega a la Tarea 2
+3. Iniciaremos juntos esta primera guía
+
+
 
