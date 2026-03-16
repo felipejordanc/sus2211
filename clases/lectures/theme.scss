@@ -14,8 +14,14 @@ $link-color: #2a7f62;
   font-size: 2.4em;
 }
 
-.reveal h2 {
-  font-size: 1.8em;
+.reveal h2,
+html:not(.print-pdf) .reveal h2 {
+  font-size: 1.2em !important;
+}
+
+.reveal h3,
+html:not(.print-pdf) .reveal h3 {
+  font-size: 1em !important;
 }
 
 /* section slides */
