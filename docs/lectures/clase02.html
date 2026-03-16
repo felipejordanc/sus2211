@@ -4687,23 +4687,23 @@ age/Indicators/?views=PM2.5" target="_blank">CalEnvironScreen</a><br>
 </section>
 <section id="estructura-de-carpetas" class="slide level2">
 <h2>Estructura de carpetas</h2>
-<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell" data-reveal="true" data-fig-width="10" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class><p></p>
 <div>
-<pre class="mermaid mermaid-js">flowchart TD
+<pre class="mermaid mermaid-js">flowchart LR
     A[&quot;📁 clase2/&quot;] --&gt; B[&quot;📁 datos/&quot;]
     A --&gt; C[&quot;📁 documentos/&quot;]
     A --&gt; D[&quot;📁 proyectos/&quot;]
     A --&gt; E[&quot;📁 resultados/&quot;]
 
-    B --&gt; F[&quot;📁 brutos/&lt;br&gt;🔒 datos originales&lt;br&gt;(no modificar)&quot;]
-    B --&gt; G[&quot;📁 intermedios/&lt;br&gt;datos de geoprocesamiento&quot;]
-    B --&gt; H[&quot;📁 procesados/&lt;br&gt;capas finales para mapeo&quot;]
+    B --&gt; F[&quot;📁 brutos/ 🔒&quot;]
+    B --&gt; G[&quot;📁 intermedios/&quot;]
+    B --&gt; H[&quot;📁 procesados/&quot;]
 
-    E --&gt; I[&quot;📁 mapas/&lt;br&gt;mapas exportados&quot;]
-    E --&gt; J[&quot;📁 figuras/&lt;br&gt;gráficos y tablas&quot;]
+    E --&gt; I[&quot;📁 mapas/&quot;]
+    E --&gt; J[&quot;📁 figuras/&quot;]
 
     style F fill:#fde8e8,stroke:#c0392b
     style G fill:#fef9e7,stroke:#f39c12

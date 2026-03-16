@@ -638,18 +638,19 @@ Grilla regular de celdas (píxeles). Representa fenómenos continuos.
 ## Estructura de carpetas
 
 ```{mermaid}
-flowchart TD
+%%| fig-width: 10
+flowchart LR
     A["📁 clase2/"] --> B["📁 datos/"]
     A --> C["📁 documentos/"]
     A --> D["📁 proyectos/"]
     A --> E["📁 resultados/"]
 
-    B --> F["📁 brutos/<br>🔒 datos originales<br>(no modificar)"]
-    B --> G["📁 intermedios/<br>datos de geoprocesamiento"]
-    B --> H["📁 procesados/<br>capas finales para mapeo"]
+    B --> F["📁 brutos/ 🔒"]
+    B --> G["📁 intermedios/"]
+    B --> H["📁 procesados/"]
 
-    E --> I["📁 mapas/<br>mapas exportados"]
-    E --> J["📁 figuras/<br>gráficos y tablas"]
+    E --> I["📁 mapas/"]
+    E --> J["📁 figuras/"]
 
     style F fill:#fde8e8,stroke:#c0392b
     style G fill:#fef9e7,stroke:#f39c12
