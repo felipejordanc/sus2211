@@ -50,16 +50,46 @@ Agencia de Protección Ambiental de EE.UU. (EPA)
 
 ---
 
+## Dos tipos de justicia ambiental
+
+::: columns
+::: {.column width="48%"}
+::: {.box}
+**Justicia distributiva (JD)**
+
+¿Quién carga con el daño?
+
+- Distribución de contaminación
+- Acceso a áreas verdes y amenidades
+- Exposición a riesgos ambientales
+:::
+:::
+::: {.column width="48%"}
+::: {.box}
+**Justicia procedimental (JP)**
+
+¿Quién tiene voz?
+
+- Participación en decisiones
+- Acceso a información y recursos legales
+- Representación en espacios de poder
+:::
+:::
+:::
+
+
+---
+
 ## No todos respiramos el mismo aire
 
 ::: columns
 ::: {.column width="50%"}
-- Las fuentes de contaminación **no se distribuyen al azar** en el territorio
-- Tienden a concentrarse en comunidades con **menos recursos** y **menor poder político**
-- Esto no es una coincidencia: es el resultado de decisiones, mercados y estructuras sociales
+- Las contaminación **no se distribuye al azar**
+- Tiende a concentrarse en comunidades con **menos recursos** y **menor poder político**
+- No es una coincidencia: es el resultado de decisiones e interacciones de mercado
 :::
 ::: {.column width="45%"}
-![](../figures/clase02/image11_2.png)
+![](../figures/clase02/image11_2.png){width="100%"}
 
 ::: {.caption}
 Plantas industriales y vertederos rara vez se instalan en barrios de altos ingresos.
@@ -98,7 +128,10 @@ Emisiones de grandes contaminadores y nivel de ingreso per cápita, Carolina del
 
 ---
 
-## Stgo: quién contamina y quién sufre
+
+
+
+## Ejemplo - Stgo: quién contamina y quién sufre
 
 - Los sectores ricos (oriente) concentran los automóviles — la principal fuente de contaminación en Santiago
 - Sin embargo, las peores concentraciones de material particulado se registran en los sectores pobres del poniente y las zonas bajas
@@ -109,34 +142,8 @@ Emisiones de grandes contaminadores y nivel de ingreso per cápita, Carolina del
 Romero, Fuentes y Smith (2010).
 :::
 
----
 
-## Dos tipos de justicia ambiental
 
-::: columns
-::: {.column width="48%"}
-::: {.box}
-**Justicia distributiva (JD)**
-
-¿Quién carga con el daño?
-
-- Distribución de contaminación
-- Acceso a áreas verdes y amenidades
-- Exposición a riesgos ambientales
-:::
-:::
-::: {.column width="48%"}
-::: {.box}
-**Justicia procedimental (JP)**
-
-¿Quién tiene voz?
-
-- Participación en decisiones
-- Acceso a información y recursos legales
-- Representación en espacios de poder
-:::
-:::
-:::
 
 # ¿Por qué emerge? {.section-slide}
 
@@ -144,16 +151,16 @@ Romero, Fuentes y Smith (2010).
 
 ::: columns
 ::: {.column width="49%"}
-- Industrias contaminantes buscan **terrenos baratos** y **poca oposición**
-- Los barrios pobres y con menor organización ofrecen ambas cosas
-- Decisiones de zonificación y regulación también pueden favorecer esta lógica
+- Industrias buscan **terrenos baratos** y **poca oposición**
+- Barrios pobres y con menor organización ofrecen ambas cosas
+- Decisiones de zonificación y regulación pueden reforzar esta lógica
 :::
 ::: {.column width="49%"}
-- Resultado: la carga ambiental se acumula donde hay menos poder
+- Carga ambiental se acumula donde hay menos poder
 ![](../figures/clase02/image12_2.png){width="80%" style="padding: 0.5em"}
 
 ::: {.caption}
-Los vertederos e instalaciones de residuos peligrosos tienden a ubicarse en comunidades de bajos ingresos.
+Vertederos e instalaciones de residuos peligrosos tienden a ubicarse en comunidades de bajos ingresos
 :::
 :::
 :::
@@ -201,23 +208,23 @@ El medioambiente limpio cuesta dinero. Quienes no pueden pagarlo terminan vivien
 - **La injusticia procedimental es una causa, no solo una consecuencia**
 - ¿Cómo es una consecuencia?
 
-## JA para riesgos "naturales" 
+## JA para riesgos "naturales" - Un caso en Stgo 
 
 ::: columns
-::: {.column width="56%"}
-- En Stgo, barrios ricos en **precordillera** — origen de aluviones
+::: {.column width="60%"}
+- Nuevos barrios ricos en **precordillera**
 - \+ construcciones → + escorrentía → + inundaciones **aguas abajo**
-- Obras de mitigación se concentran en barrios ricos
-- Pobres, aguas abajo, quedan **desprotegidos**
+- Mitigación se concentra en barrios ricos
+- Pobres, aguas abajo, **desprotegidos**
 - "Desastres naturales" también resultan de decisiones de política
 :::
-::: {.column width="43%"}
+::: {.column width="38%"}
 
 
 ![](../figures/clase02/stgo_ingresos.jpg){width="80%" style="padding: 0.2em"}
 
 ::: {.caption}
-El oriente concentra los sectores de mayores ingresos en Stgo. Fuente: Vergara, Parra, Núñez. (2020), “Contra el urbanismo de la desigualdad: propuestas para el futuro de nuestras ciudades”, CIPER Académico.
+Stgo oriente concentra los sectores de mayores ingresos. 
 :::
 :::
 :::
@@ -246,11 +253,8 @@ El oriente concentra los sectores de mayores ingresos en Stgo. Fuente: Vergara, 
 
 - No podemos corregir lo que no podemos ver ni medir
 - **Mapear la injusticia ambiental** es el primer paso para intervenirla
-- Romero et al. (2010) concluyen que en Chile falta:
-  - Evaluación ambiental estratégica de los planes urbanos
-  - Participación ciudadana **vinculante** en decisiones territoriales
-  - Reconocimiento del valor de los bienes ambientales comunes
 - Las herramientas que estamos aprendiendo en este curso son exactamente las que se necesitan para hacer visibles las injusticias ambientales
+
 
 # A+R: Herramientas para mapear la JA {.section-slide}
 
@@ -276,7 +280,7 @@ socioecológicos que aborda?
 
 ## Caso de JA {.question-slide}
 
-Vuelvan a juntarse en los mismos grupos, escojar un caso de JA ilustrado por la herramienta, y respondan las siguientes perguntas guías.
+Juntense en nuevas parejas que hayan visto la misma herramienta, escojan un caso de JA ilustrado por la herramienta, y respondan las siguientes perguntas:
 
   - ¿Es un caso de justicia distributiva, procedimental o ambos?
   - ¿Qué factores pueden explicar la injusticia en el caso elegido?
@@ -286,7 +290,7 @@ Vuelvan a juntarse en los mismos grupos, escojar un caso de JA ilustrado por la 
 
 ## Discusión en plenario {.activity-slide}
 
-  1. Un grupo de cada herrameinta presenta en 2 minutos su caso, utilizando la herramienta para ilustrarlo.
+  1. Un grupo de cada herramienta presenta en 2 minutos su caso, utilizando la herramienta para ilustrarlo.
   2. Discutimos en conjunto
 
 # CT: Fundamentos de SIG {.section-slide}
@@ -382,9 +386,9 @@ La proyección cilíndrica simple da origen a la proyección Mercator. Fuente: E
 
 ::: columns
 ::: {.column width="55%"}
-- Los paralelos y meridianos son **líneas rectas**
+- Paralelos y meridianos son **líneas rectas**
 - Preserva **ángulos y formas** → útil para navegación
-- Pero **distorsiona el área** hacia los polos
+- **Distorsiona el área** hacia los polos
 - Groenlandia aparece tan grande como África... ¡pero África es 14× mayor!
 :::
 ::: {.column width="44%"}
