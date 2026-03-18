@@ -24,21 +24,30 @@ format:
 ### Segundo bloque
 
 - CT: La encrucijada de la insustentabilidad
-- A&R: Mapas y sustentabilidad
-- Instalar QGIS!
+- A+R: Mapas y sustentabilidad
 
 # Equipo Docente {.section-slide background-color="#2a7f62"}
 
 ## Felipe Jordán, Ph.D.
 
+::: columns
+::: {.column width="65%"}
 ::: {.two-level}
-- Ingeniería Comercial con mención en economía, Universidad de Chile
-- Ph.D. Political Economy and Government, Harvard University
-- Profesor asistente con jornada compartida entre Instituto de Economía e Instituto para el Desarrollo Sustentable, PUC
+- Ing. Comercial y M.S. economía, U. de Chile, Ph.D. Pol. Economy & Gov., Harvard
+- Profesor asistente Inst. Economía e Inst. para el Desarrollo Sustentable, PUC
 - Área de interés:
-  - Desarrollo sostenible en territorios rurales de Latino América (foco en Pueblo Mapuche)
-  - Determinantes de deforestación, a escala global y local
+  - Desarrollo sostenible en territorios rurales de LATAM
+  - Deforestación, a escala global y local
+- <a href="https://www.felipejordanc.com/" target="_blank">Página web</a>
 :::
+:::
+::: {.column width="33%"}
+![](../figures/clase01/HeadShot.png){width="100%"}
+:::
+:::
+
+
+
 
 ---
 
@@ -95,7 +104,7 @@ Introducir temáticas y conceptos relevantes para comprender y abordar los desaf
 
 ---
 
-## Estructura — Unidad 1
+## Estructura
 
 ::: {.two-level}
 - **Unidad 1: La (in)sustentabilidad a través de QGIS**
@@ -106,7 +115,7 @@ Introducir temáticas y conceptos relevantes para comprender y abordar los desaf
 
 ---
 
-## Estructura — Unidad 2
+## Estructura
 
 ::: {.two-level}
 - **Unidad 2: Datos vectoriales**
@@ -117,7 +126,7 @@ Introducir temáticas y conceptos relevantes para comprender y abordar los desaf
 
 ---
 
-## Estructura — Unidad 3
+## Estructura
 
 ::: {.two-level}
 - **Unidad 3: Datos raster y teledetección**
@@ -196,14 +205,14 @@ Cada semana está estructurada de la siguiente forma:
 
 - **Lunes bloque 4:** Cátedra 1
 - **Lunes bloque 5:** Cátedra 2
-- **Lunes siguiente, bloque 3:** Taller resolución guía *(comienza el lunes 23)*
+- **Lunes siguiente, bloque 3:** Taller guía *(comienza el lunes 23)*
 
 ---
 
 ## Política de IA
 
 ::: {.two-level}
-- El uso de Inteligencia Artificial Generativa (IAG) **está permitido** en el curso
+- El uso de Inteligencia Artificial Generativa (IAG) **está permitido**
 - Puede utilizarse para explorar ideas, apoyar el análisis o mejorar la redacción
 - El trabajo final debe reflejar **elaboración intelectual propia**
 - Debe **declararse** si se utilizó IAG y para qué fines
@@ -298,28 +307,32 @@ Ebstorf Mappa Mundi — 1235 DC.
 
 ![](../figures/clase01/slide_27_img_1.jpg){width="70%"}
 
+
+## ¿Nos restringe la geografía? {.question-slide}
+
+![](../figures/clase01/slide_28_img_1.png){width="70%"}
+
+
+
 # CT: La Encrucijada de la Insustentabilidad {.section-slide background-color="#2a7f62"}
 
-## Algo cambió en el Siglo XIX
+## El choque con la finitud
 
 - Hemos explotado los recursos naturales y dispuesto nuestros desechos en el medio ambiente desde tiempos inmemoriales
 - Pero algo cambió en el Siglo XIX
 
 ---
 
-## La revolución científica e industrial {.map-slide}
+## Crecimiento sin precedentes  {.map-slide}
 
-![](../figures/clase01/slide_32_img_1.png){width="80%"}
-
-::: {.caption}
-Las revoluciones científica e industrial cambiaron nuestra relación con el mundo natural, aumentando nuestra población y producción a un nivel sin precedentes.
+::: columns
+::: {.column width="48%"}
+![](../figures/clase01/slide_31_img_1.png){width="100%"}
 :::
-
----
-
-## Crecimiento sin precedentes {.map-slide}
-
-![](../figures/clase01/slide_33_img_1.png){width="80%"}
+::: {.column width="48%"}
+![](../figures/clase01/slide_32_img_1.png){width="100%"}
+:::
+:::
 
 ::: {.caption}
 Aumento exponencial de la población y la producción desde la Revolución Industrial.
@@ -329,7 +342,7 @@ Aumento exponencial de la población y la producción desde la Revolución Indus
 
 ## Mejorando las condiciones de vida {.map-slide}
 
-![](../figures/clase01/slide_34_img_1.jpg){width="80%"}
+![](../figures/clase01/slide_33_img_1.png){width="100%"}
 
 ::: {.caption}
 El crecimiento económico mejoró las condiciones de vida promedio de la población.
@@ -339,7 +352,7 @@ El crecimiento económico mejoró las condiciones de vida promedio de la poblaci
 
 ## El costo: deterioro del sistema natural {.map-slide}
 
-![](../figures/clase01/slide_35_img_1.png){width="80%"}
+![](../figures/clase01/slide_34_img_1.jpg){width="100%"}
 
 ::: {.caption}
 Sin embargo, el crecimiento demográfico y económico exponencial ha sido acompañado por un deterioro exponencial del sistema natural que nos soporta.
@@ -349,7 +362,17 @@ Sin embargo, el crecimiento demográfico y económico exponencial ha sido acompa
 
 ## El Antropoceno {.map-slide}
 
-![](../figures/clase01/slide_36_img_1.png){width="80%"}
+::: columns
+::: {.column width="48%"}
+![](../figures/clase01/slide_35_img_1.png){width="100%"}
+:::
+::: {.column width="48%"}
+![](../figures/clase01/slide_36_img_1.png){width="100%"}
+:::
+:::
+
+
+
 
 ::: {.caption}
 El impacto de la modernidad sobre el planeta ha sido tan profundo que merece una nueva era geológica: el Antropoceno.
@@ -360,11 +383,17 @@ El impacto de la modernidad sobre el planeta ha sido tan profundo que merece una
 ## Límites planetarios
 
 - La comunidad científica ha convergido a un consenso respecto a la existencia de **Límites Planetarios**
-- …que no responden a leyes humanas, sino que a la inexorable finitud de nuestro único hogar: La Tierra
+- …que no responden a leyes humanas, sino que a la **inexorable finitud** de nuestro único hogar: La Tierra
 
 ---
 
-## Límites planetarios {.map-slide}
+## Nuestro hogar... {.map-slide}
+
+![](../figures/clase01/slide_38_img_1.png){width="85%"}
+
+---
+
+## ...pequeño punto azul en el espacio inconmesurable {.map-slide}
 
 ![](../figures/clase01/slide_39_img_1.png){width="85%"}
 
@@ -372,92 +401,76 @@ El impacto de la modernidad sobre el planeta ha sido tan profundo que merece una
 
 ## Los 9 límites planetarios {.map-slide}
 
+::: columns
+::: {.column width="50%"}
+Los límites planetarios son **9 procesos ecológicos esenciales** para la estabilidad de la Tierra y dentro de los cuales podemos habitar un espacio seguro para la humanidad. Concepto propuesto desde el Instituto de Estocolmo en 2009.
+:::
+::: {.column width="48%"}
 ![](../figures/clase01/slide_40_img_1.png){width="85%"}
-
----
-
-## Los 9 procesos esenciales
-
-![](../figures/clase01/slide_41_img_1.png){width="55%"}
-
-::: {.caption}
-Los límites planetarios son 9 procesos ecológicos esenciales para la estabilidad de la Tierra y dentro de los cuales podemos habitar un espacio seguro para la humanidad. Concepto propuesto desde el Instituto de Estocolmo en 2009.
+:::
 :::
 
 ---
 
 ## Necesitamos actuar ahora {.map-slide}
 
-![](../figures/clase01/slide_42_img_1.png){width="80%"}
-
+::: columns
+::: {.column width="32%"}
+![](../figures/clase01/slide_43_img_1.png){width="100%"}
+:::
+::: {.column width="32%"}
+![](../figures/clase01/slide_43_img_2.png){width="100%"}
+:::
+::: {.column width="32%"}
+![](../figures/clase01/slide_43_img_3.png){width="100%"}
+:::
+:::
 ::: {.caption}
 Los impactos del cambio climático ya no son solo una preocupación del futuro: los vivimos ahora.
 :::
 
 ---
 
-## Impactos concretos I {.map-slide}
-
-::: columns
-::: {.column width="50%"}
-![](../figures/clase01/slide_43_img_1.png){width="100%"}
-:::
-::: {.column width="48%"}
-![](../figures/clase01/slide_43_img_2.png){width="100%"}
-:::
-:::
-
----
-
-## Impactos concretos II {.map-slide}
-
-::: columns
-::: {.column width="48%"}
-![](../figures/clase01/slide_43_img_1.png){width="100%"}
-:::
-::: {.column width="48%"}
-![](../figures/clase01/slide_43_img_3.png){width="100%"}
-:::
-:::
-
----
-
 ## El doble desafío {.map-slide}
 
-![](../figures/clase01/slide_45_img_1.png){width="75%"}
+::: columns
+::: {.column width="35%"}
+A la vez que actuamos para recuperar la estabilidad del sistema Tierra, debemos superar definitivamente la pobreza y cerrar desigualdades crónicas
+:::
+::: {.column width="63%"}
+![](../figures/clase01/slide_44_img_1.png){width="100%"}
 
 ::: {.caption}
-A la vez que actuamos para recuperar la estabilidad del sistema Tierra, debemos actuar para superar definitivamente la pobreza y cerrar desigualdades crónicas.
+Bastas regiones del mundo aun viven en la pobreza.
 :::
+
+:::
+:::
+
 
 ---
 
 ## Más de lo mismo no funcionará
 
+::: columns
+::: {.column width="40%"}
 - **Doble desafío:** ¿Cómo alcanzar la prosperidad para todos y todas respetando los límites planetarios?
 - Más de lo mismo no funcionará…
+:::
+::: {.column width="58%"}
+![](../figures/clase01/slide_45_img_1.png){width="80%"}
 
-![](../figures/clase01/slide_46_img_1.png){width="55%"}
+::: {.caption}
+La mayoría de los paises han alcanzado mayores niveles de desarrollo humano a costa del deterioro ambiental
+:::
+
+:::
+:::
+
 
 ---
 
 ## Razones para el optimismo
-
-- Hay razones para ser optimistas: la humanidad ha superado desafíos inmensos en el pasado
-
-::: columns
-::: {.column width="50%"}
-![](../figures/clase01/slide_47_img_1.png){width="100%"}
-:::
-::: {.column width="48%"}
-![](../figures/clase01/slide_47_img_2.png){width="100%"}
-:::
-:::
-
----
-
-## Ejemplos de progreso
-
 ::: columns
 ::: {.column width="32%"}
 ![](../figures/clase01/slide_48_img_1.png){width="100%"}
@@ -468,6 +481,10 @@ A la vez que actuamos para recuperar la estabilidad del sistema Tierra, debemos 
 ::: {.column width="32%"}
 ![](../figures/clase01/slide_48_img_3.png){width="100%"}
 :::
+:::
+
+::: {.caption}
+la humanidad ha superado desafíos inmensos en el pasado
 :::
 
 ---
