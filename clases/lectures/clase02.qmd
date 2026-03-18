@@ -28,7 +28,7 @@ format:
 - A: Inducción a proyectos reproducibles en QGIS
 
 
-# CT: Justicia Ambiental {.section-slide}
+# CT: Justicia Ambiental {.section-slide background-color="#2a7f62"}
 
 ## Lectura de la clase
 
@@ -145,7 +145,7 @@ Romero, Fuentes y Smith (2010).
 
 
 
-# ¿Por qué emerge? {.section-slide}
+# ¿Por qué emerge? {.section-slide background-color="#2a7f62"}
 
 ## Daño va donde resistencia es menor
 
@@ -229,7 +229,7 @@ Stgo oriente concentra los sectores de mayores ingresos.
 :::
 :::
 
-# Implicancias éticas {.section-slide}
+# Implicancias éticas {.section-slide background-color="#2a7f62"}
 
 ## ¿Y si es solo el mercado funcionando?
 
@@ -256,7 +256,7 @@ Stgo oriente concentra los sectores de mayores ingresos.
 - Las herramientas que estamos aprendiendo en este curso son exactamente las que se necesitan para hacer visibles las injusticias ambientales
 
 
-# A+R: Herramientas para mapear la JA {.section-slide}
+# A+R: Herramientas para mapear la JA {.section-slide background-color="#2a7f62"}
 
 ## Herramientas para mapear la JA {.question-slide}
 
@@ -293,9 +293,9 @@ Juntense en nuevas parejas que hayan visto la misma herramienta, escojan un caso
   1. Un grupo de cada herramienta presenta en 2 minutos su caso, utilizando la herramienta para ilustrarlo.
   2. Discutimos en conjunto
 
-# CT: Fundamentos de SIG {.section-slide}
+# CT: Fundamentos de SIG {.section-slide background-color="#2a7f62"}
 
-# Datum {.section-slide}
+# Datum {.section-slide background-color="#2a7f62"}
 
 ## ¿Qué es un datum?
 
@@ -341,7 +341,7 @@ La Tierra como geoide. Ilustración de datum global (WGS84) y local (NAD27) supe
 
 
 
-# Proyecciones cartográficas {.section-slide}
+# Proyecciones cartográficas {.section-slide background-color="#2a7f62"}
 
 ## ¿Qué es una proyección?
 
@@ -506,7 +506,7 @@ Equilibrio entre distorsiones de área, forma y distancia.
 :::
 :::
 
-# Proyecciones locales y CRS {.section-slide}
+# Proyecciones locales y CRS {.section-slide background-color="#2a7f62"}
 
 ## Proyecciones locales
 
@@ -600,7 +600,7 @@ Grilla UTM mundial. Chile se extiende entre las zonas 18 y 19.
 :::
 :::
 
-# Tipos de datos espaciales {.section-slide}
+# Tipos de datos espaciales {.section-slide background-color="#2a7f62"}
 
 ## Vector y Raster
 
@@ -625,7 +625,7 @@ Grilla regular de celdas (píxeles). Representa fenómenos continuos.
 :::
 :::
 
-# A: Inducción a proyectos reproducibles en QGIS {.section-slide}
+# A: Inducción a proyectos reproducibles en QGIS {.section-slide background-color="#2a7f62"}
 
 ## ¿Por qué un proyecto reproducible?
 

@@ -46,3 +46,25 @@ html:not(.print-pdf) .reveal h3 {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* slide numbers */
+
+.reveal .slide-number {
+  color: #1a1a1a;
+}
+
+/* compact slides — reduce font size for content-heavy slides */
+
+.compact {
+  font-size: 0.78em;
+}
+
+/* two-level lists — larger top-level items, smaller nested items */
+
+.two-level ul > li {
+  font-size: 1em;
+}
+
+.two-level ul ul > li {
+  font-size: 0.78em;
+}
