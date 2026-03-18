@@ -24,7 +24,7 @@ format:
 ### Segundo bloque
 
 - CT: La encrucijada de la insustentabilidad
-- A+R: Mapas y sustentabilidad
+- A&R: Mapas y sustentabilidad
 
 # Equipo Docente {.section-slide background-color="#2a7f62"}
 
@@ -436,16 +436,16 @@ Los impactos del cambio climático ya no son solo una preocupación del futuro: 
 ::: columns
 ::: {.column width="35%"}
 A la vez que actuamos para recuperar la estabilidad del sistema Tierra, debemos superar definitivamente la pobreza y cerrar desigualdades crónicas
-:::
+::: 
 ::: {.column width="63%"}
 ![](../figures/clase01/slide_44_img_1.png){width="100%"}
 
 ::: {.caption}
 Bastas regiones del mundo aun viven en la pobreza.
-:::
+::: 
 
-:::
-:::
+::: 
+::: 
 
 
 ---
@@ -462,7 +462,7 @@ Bastas regiones del mundo aun viven en la pobreza.
 
 ::: {.caption}
 La mayoría de los paises han alcanzado mayores niveles de desarrollo humano a costa del deterioro ambiental
-:::
+::: 
 
 :::
 :::
@@ -484,8 +484,8 @@ La mayoría de los paises han alcanzado mayores niveles de desarrollo humano a c
 :::
 
 ::: {.caption}
-la humanidad ha superado desafíos inmensos en el pasado
-:::
+La humanidad ha superado desafíos inmensos en el pasado
+::: 
 
 ---
 
@@ -507,42 +507,10 @@ El desarrollo sustentable se suele describir en términos de tres pilares: ambie
 Agencia de Protección Ambiental de EE.UU. (EPA)
 :::
 
----
-
-## Dos dimensiones de la Justicia Ambiental {.compact}
-
-::: columns
-::: {.column width="48%"}
-::: {.box}
-**JA Procedimental**
-
-¿Cómo se toman las decisiones ambientales?
-
-- ¿Quién participa en las decisiones?
-- ¿Quién tiene voz en los procesos de planificación?
-- ¿Las comunidades afectadas son escuchadas?
-
-*Ejemplo: participación de comunidades locales en la aprobación de un proyecto minero.*
-:::
-:::
-::: {.column width="48%"}
-::: {.box}
-**JA Distributiva**
-
-¿Cómo se distribuyen los impactos ambientales?
-
-- ¿Quién recibe los beneficios del desarrollo?
-- ¿Quién soporta los costos ambientales?
-- ¿Existen grupos más expuestos a contaminación o riesgos?
-
-*Ejemplo: barrios de menores ingresos con mayor exposición a contaminación del aire.*
-:::
-:::
-:::
 
 # A&R: Mapas y Sustentabilidad {.section-slide background-color="#2a7f62"}
 
-## Paso 1: Revisar herramientas {.activity-slide}
+## Visualización de Justicia Ambiental {.activity-slide}
 
 Cada estudiante tiene asignado un número. Tómense **20 minutos** para revisar el material correspondiente con el grupo que tiene el mismo número:
 
@@ -554,18 +522,12 @@ Cada estudiante tiene asignado un número. Tómense **20 minutos** para revisar 
 
 ---
 
-## Paso 2: Comparar y discutir {.question-slide}
+## Visualización de Justicia Ambiental {.activity-slide}
 
-Formen 5 grupos más grandes juntando grupos 1–3, 4–6, 7–9, 10–12, 13–15. Comparen las herramientas respondiendo:
+Respondan las siguientes preguntas
 
 - ¿Qué temáticas aborda la herramienta?
 - ¿Qué rol juegan los mapas en ella?
 - ¿Cómo puede la herramienta apoyar la gestión de los desafíos socioecológicos que aborda?
 - ¿Puede la herramienta empoderar a grupos desaventajados?
 
----
-
-## Paso 3: Plenario {.activity-slide}
-
-1. Un grupo de cada herramienta presenta en 2 minutos su discusión, utilizando la herramienta para ilustrarla
-2. Discutimos en conjunto
