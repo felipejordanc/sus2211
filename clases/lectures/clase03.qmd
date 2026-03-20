@@ -1,8 +1,8 @@
 ---
-title: "Exclusión, Pobreza y Mapas Efectivos"
+title: "Pueblos Indígenas, Sustentabilidad y Mapas Efectivos"
 subtitle: "SUS 2211 — Mapeando la (in)sustentabilidad"
 author: "Felipe Jordán"
-date: today
+date: "2026-03-23"
 format:
   revealjs:
     theme: [default, theme.scss]
@@ -17,17 +17,144 @@ format:
 
 ### Primer bloque
 
-- CT: Exclusión, pobreza y conflicto
-- A+R: La raíz del conflicto
-- CT: Fundamentos para la elaboración de mapas efectivos en QGIS
-- A+R: Revisión crítica de mapas
+- CT: Pueblos Indígenas, derechos y sustentabilidad
+- CT: El caso del Pueblo Mapuche
 
 ### Segundo bloque
 
-- Taller: Pobreza y comunidades Mapuche en la Araucanía
+- CT: Mapas efectivos
+- Actividad: Proyecto semestral
 
 
-# CT: Exclusión, pobreza y conflicto {.section-slide background-color="#2a7f62"}
+# CT: Pueblos Indígenas, Derechos y Sustentabilidad {.section-slide background-color="#2a7f62"}
+
+## El (des)encuentro de dos mundos
+
+- El 12 de octubre de 1492 se suele celebrar como el "Encuentro de Dos Mundos"
+- Para los pueblos que habitaban el continente, fue el inicio de **cinco siglos de conquista, despojo y resistencia**
+- Se estima que entre **50 y 100 millones** de personas indígenas murieron o fallecieron prematuramente como consecuencia de la colonización europea
+
+::: {.small .muted}
+Smith (2017). *Native American Symposium.*
+:::
+
+---
+
+## De la conquista al siglo XX: asimilación forzada {.compact}
+
+::: {.two-level}
+- **Era colonial:** derechos nominales, esclavitud en la práctica
+  - Bartolomé de las Casas convenció al rey Carlos I de prohibir la esclavitud indígena (Las Nuevas Leyes, 1542)
+  - En la práctica, la semi-esclavitud persistió a través del período colonial
+- **Post-independencia:** derechos individuales condicionados a la sumisión política
+  - Los que no se sometían eran tratados como enemigos internos
+  - Políticas asimilacionistas ("civilizadoras") dominaron durante casi todo el siglo XX
+  - Bajo estándares modernos: **genocidios culturales**
+:::
+
+---
+
+## Marco internacional de derechos
+
+::: columns
+::: {.column width="32%"}
+::: {.box}
+**Convenio 107 OIT (1957)**
+
+Primer reconocimiento de derechos específicos
+
+Orientación asimilacionista: se busca "integrar" a los pueblos al desarrollo nacional
+:::
+:::
+::: {.column width="32%"}
+::: {.box}
+**Convenio 169 OIT (1989)**
+
+Reconoce el derecho al desarrollo propio y a la consulta previa
+
+Chile lo ratificó en **2009**
+:::
+:::
+::: {.column width="32%"}
+::: {.box}
+**DNUDPI (2007)**
+
+Declaración de la ONU sobre los Derechos de los Pueblos Indígenas
+
+Reconoce la libre determinación y los derechos sobre tierras y territorios ancestrales
+:::
+:::
+:::
+
+---
+
+## Dos visiones del desarrollo
+
+::: columns
+::: {.column width="48%"}
+::: {.box}
+**Visión desarrollista**
+
+El desarrollo económico es universal; las formas "primitivas" deben superarse
+
+Los rasgos culturales pueden preservarse solo si no obstaculizan el desarrollo
+:::
+:::
+::: {.column width="48%"}
+::: {.box}
+**Visión moderna**
+
+El desarrollo debe entenderse como parte del desarrollo social y cultural propio
+
+**Desarrollo con identidad:** cada pueblo define sus propias metas y métodos, con apoyo del Estado si lo desea
+:::
+:::
+:::
+
+::: {.small .muted}
+Fuente: Clase 25, EAE2223.
+:::
+
+---
+
+## Custodios del territorio: la evidencia {.compact}
+
+- Los pueblos indígenas gestionan hasta el **25% de la superficie terrestre** del planeta
+- Sus territorios se superponen con el **40% de las áreas protegidas** del mundo
+- La evidencia científica es contundente: cuando se les otorgan derechos seguros, los pueblos indígenas son **más efectivos conservando sus territorios** que los colonos no indígenas
+
+::: {.two-level}
+- Nepstad et al. (2006): territorios indígenas en Brasil = "la barrera más importante a la deforestación amazónica"
+- Baragwanath & Bayi (2020): el reconocimiento formal (no solo la demarcación) reduce drásticamente la deforestación
+- Alejo et al. (2021): mayor stock de carbono dentro de territorios indígenas en Colombia, Perú, Ecuador, Brasil y Panamá
+:::
+
+::: {.small .muted}
+Fuente: elaboración propia en base a Garnett et al. (2018) y revisión de literatura IDB (Jordán, 2024).
+:::
+
+---
+
+## El papel de los derechos formales {.compact}
+
+- **La demarcación sola no es suficiente:** solo el reconocimiento formal pleno desencadena el efecto conservacionista
+- El mecanismo: los derechos formales dan acceso a recursos del Estado para hacer cumplir la ley y empoderar la gobernanza colectiva
+- Los territorios indígenas reconocidos también muestran mayor **regeneración forestal** con bosques nativos más maduros — mayor captura de carbono y servicios ecosistémicos
+
+> Los pueblos mejor posicionados para proteger la naturaleza son precisamente aquellos a quienes históricamente se les han negado los derechos sobre sus tierras.
+
+---
+
+## ¿Por qué importa para la sustentabilidad? {.question-slide}
+
+La desigualdad histórica no es solo una injusticia del pasado — es una **barrera presente** para enfrentar la crisis ambiental:
+
+- Sin derechos seguros, los pueblos indígenas no pueden ejercer su rol de custodios
+- La pobreza y la marginalización reducen su capacidad de resistir presiones extractivistas externas
+- Corregir las desigualdades históricas no es solo un imperativo ético: es una **estrategia de sustentabilidad**
+
+
+# CT: El caso del Pueblo Mapuche {.section-slide background-color="#2a7f62"}
 
 ## ¿Cuáles son las raíces del conflicto Estado Chileno-Pueblo Mapuche? {.question-slide}
 
@@ -46,7 +173,7 @@ format:
 
 ---
 
-## Pueblo Mapuche: una historia de despojo
+## Pueblo Mapuche: una historia de despojo {.compact}
 
 - Pueblo Mapuche vivía de la ganadería a gran escala antes de la ocupación de su territorio
 - Único pueblo originario de gran población que mantuvo independencia del Imperio Español
@@ -91,7 +218,7 @@ Fuente: Jordán & Heilmayr (2024)
 
 ---
 
-## Ventas fraudulentas (1943–1946)
+## Ventas fraudulentas (1943–1946) {.compact}
 
 - Entre 1943 y 1946 se levantan las restricciones para comprar parcelas en TDM
 - El número de ventas explota durante el periodo
@@ -177,19 +304,90 @@ Fuente: Cayul et al. (2022)
 Fuente: Cayul et al. (2022)
 :::
 
+---
 
-# A+R: La raíz del conflicto {.section-slide background-color="#2a7f62"}
+## Un territorio transformado: el legado ambiental del despojo {.compact}
 
-## A+R: La raíz del conflicto {.question-slide}
+- La colonización no solo desplazó a las personas — **transformó radicalmente el paisaje** del sur de Chile
+- **Deforestación masiva:** los bosques nativos fueron talados para producción maderera y apertura de tierras agrícolas en pocas décadas
+- **Erosión severa:** la producción intensiva de trigo en laderas desnudas generó pérdida masiva de suelos en la región
+- **Plantaciones forestales:** el reemplazo de bosque nativo por pino y eucalipto trajo escasez hídrica y contaminación por herbicidas y pesticidas — tecnologías ajenas a las comunidades y frecuentemente impuestas sobre sus reclamos territoriales
 
-En base a la lectura y el material realizado hasta ahora, reflexionen en parejas respecto a las siguientes preguntas:
+> Las tierras que se reclaman hoy son una fracción pequeña y profundamente degradada de lo que alguna vez fue el territorio Mapuche.
 
-- ¿Cuáles son las raíces históricas del rezago económico del pueblo Mapuche?
-- ¿Qué relación guarda el rezago con el conflicto?
-- ¿Se solucionaría el conflicto corrigiendo las desigualdades económicas?
+::: {.small .muted}
+Klubock, T.M. (2014). *La Frontera: Forests and Ecological Conflict in Chile's Frontier Territory.* Duke University Press.
+:::
+
+---
+
+## El círculo vicioso {.compact}
+
+- El despojo histórico generó pobreza y marginalización
+- La pobreza y marginalización alimentan el conflicto
+- El conflicto dificulta la inversión y el desarrollo en la región
+- Las políticas de desarrollo sin reconocimiento de derechos profundizan la desconfianza
+- La desconfianza agrava el conflicto
+
+> ¿Puede romperse este ciclo sin abordar los derechos territoriales y el reconocimiento político?
+
+---
+
+## La Ley Indígena de 1993 y el FTAI {.compact}
+
+- Con el retorno a la democracia, Chile aprueba la **Ley Indígena 19.253 (1993)**, creando CONADI y el Fondo de Tierras y Aguas Indígenas (**FTAI**)
+- El programa FTAI-20B establece la restitución de tierras a comunidades Mapuche como mecanismo de reparación histórica
+- Entre 1994 y 2023: más de **200.000 ha restituidas** a 493 comunidades, con una inversión superior a US$850 millones
+- El objetivo declarado: reparar el despojo y apoyar el desarrollo con uso **ecológicamente equilibrado** de las tierras
+
+::: {.box}
+**La pregunta que surge:** ¿puede la restitución de tierras profundamente degradadas revertir siglos de transformación ecológica — y es justo pedirlo?
+:::
+
+---
+
+## Restitución y medio ambiente: ¿qué dice la evidencia? {.compact}
+
+- Jaimovich, Jordán, Black & Heilmayr (*Nature Sustainability*, en revisión) estudia el impacto ambiental del FTAI-20B: más de 200.000 ha restituidas a comunidades Mapuche entre 1994 y 2023
+- **Resultado en uso de suelo:** la restitución llevó a más praderas y menos plantaciones de pino/eucalipto — las comunidades ejercieron su preferencia cultural por la ganadería
+- **Resultado ambiental:** sin cambios significativos en carbono, biodiversidad ni erosión
+- **¿Por qué?** Las tierras restituidas eran paisajes profundamente modificados — décadas de plantaciones e intensificación agropecuaria habían transformado el baseline ecológico
+
+::: {.small .muted}
+Jaimovich, Jordán, Black & Heilmayr (2026, en revisión). *Environmental impacts of Indigenous land restitution in Chile.*
+:::
+
+---
+
+## Mucho pedir {.compact}
+
+- La literatura muestra grandes beneficios ambientales cuando se protegen tierras indígenas **intactas**: menos deforestación, más carbono
+- La restitución opera en un escenario distinto: paisajes devastados por décadas de despojo, plantaciones y agricultura intensiva
+
+> Esperar que la restitución sola genere restauración ecológica es pedirle al despojado que repare lo que el despojador destruyó.
+
+- Pero hay además una consideración ética más profunda: **la libre determinación significa que las comunidades no tienen obligación de ser "verdes"**
+- El despojo transformó sus economías, sus instituciones y su relación con el territorio
+- El primer derecho es decidir — sin condicionarlo a una agenda ambiental impuesta desde fuera
+
+---
+
+## Si quieren restaurar, necesitan apoyo {.compact}
+
+- Si las comunidades Mapuche quieren restaurar sus territorios, el Estado debe acompañar activamente ese proceso — con financiamiento, asistencia técnica y reconocimiento del conocimiento tradicional
+- Políticas que transfieren tierra sin conectar con restauración ecológica ni con los saberes territoriales de las comunidades difícilmente generarán co-beneficios ambientales
+- La gobernanza conjunta — Estado y comunidades — es condición necesaria para que la restitución tenga impacto ambiental
+
+::: {.box}
+**La lección:** prevenir el despojo es incomparablemente más eficaz que intentar revertirlo. Y cuando la restitución ocurre en paisajes degradados, necesita ir acompañada de inversión en restauración — no como condición, sino como apoyo.
+:::
+
+::: {.small .muted}
+Jaimovich, Jordán, Black & Heilmayr (2026, en revisión).
+:::
 
 
-# CT: Mapas efectivos {.section-slide background-color="#2a7f62"}
+# CT: Mapas Efectivos {.section-slide background-color="#2a7f62"}
 
 ## Mapas efectivos
 
@@ -634,20 +832,75 @@ Mapa simplificado: más legible y efectivo.
 :::
 
 
-# A+R: Revisión Crítica de Mapas {.section-slide background-color="#2a7f62"}
+# Actividad: Proyecto Semestral {.section-slide background-color="#2a7f62"}
 
-## A+R: Revisión Crítica de Mapas {.activity-slide}
+## El trabajo semestral
 
-1. Vuelvan a la lectura asignada para la clase de hoy
-2. Revisen los mapas del artículo
-3. En base a lo visto hoy, sugieran **mejoras** para los mapas del artículo
+- Grupos de **4–5 estudiantes** (ya asignados)
+- Seleccionar un **territorio** y analizar un **problema socioambiental** que afecte a quienes lo habitan o utilizan
+- El territorio puede ser cualquier escala: barrio, ciudad, cuenca, región, país u otro
+- El objetivo es usar mapas para comprender **cómo se manifiesta espacialmente** el problema y **cómo afecta a las personas**
 
+::: {.box}
+**Primera entrega:** Viernes 24 de abril — Seleccionar, investigar y planificar
+:::
 
-# Taller: Pobreza y comunidades Mapuche {.section-slide background-color="#2a7f62"}
+---
 
-## Taller {.activity-slide}
+## ¿Qué tipo de problema? {.compact}
 
-1. Descarguen el material de la clase en una carpeta. Recuerden al final de la clase subir todo a su OneDrive
-2. Descarguen la guía de apoyo
-3. Desarrollen la guía en parejas
-4. El equipo docente estará disponible para apoyarlos
+El problema puede ser de muy distinta naturaleza:
+
+::: {.two-level}
+- **Amenazas ambientales:** contaminación atmosférica, hídrica o de suelos; escasez hídrica; incendios forestales; deforestación; erosión
+- **Presiones extractivas:** minería, monocultivos, sobreexplotación de recursos marinos
+- **Riesgos:** inundaciones, sequías, exposición a residuos o relaves
+- **Transformaciones del territorio:** expansión urbana, cambio de uso de suelo, desplazamiento de comunidades
+:::
+
+Lo importante es que el problema **tenga una dimensión espacial clara** y que pueda analizarse con mapas. También importa que afecte a personas — ¿a quiénes? ¿dónde? ¿por qué ahí?
+
+---
+
+## Primera reunión del grupo {.activity-slide}
+
+**Paso 1 — Ronda de ideas** (10 min)
+
+Cada integrante comparte brevemente:
+
+- Un problema socioambiental que le llame la atención, y por qué
+- Un territorio donde le gustaría trabajar (puede ser diferente)
+
+---
+
+## Primera reunión del grupo {.activity-slide}
+
+**Paso 2 — Evaluar candidatos** (15 min)
+
+Como grupo, seleccionen **2 o 3 combinaciones territorio-problema** y discutan para cada una:
+
+- ¿Cómo se manifiesta espacialmente? ¿Se puede ver en un mapa?
+- ¿A quiénes afecta y dónde?
+- ¿Existen datos disponibles para mapearlo?
+
+---
+
+## Primera reunión del grupo {.activity-slide}
+
+**Paso 3 — Decidir y asignar tareas** (10 min)
+
+- Elijan una opción (o dejen dos finalistas para investigar)
+- Dividan la investigación antes de la próxima clase:
+  - ¿Qué se sabe del problema? (fuentes académicas)
+  - ¿Qué datos existen para mapearlo?
+  - ¿Cuál es el contexto del territorio?
+
+---
+
+## Plenario {.activity-slide}
+
+Cada grupo comparte en **1 minuto**:
+
+1. El territorio elegido (o los dos finalistas)
+2. El problema socioambiental que quieren analizar
+3. Una primera idea de qué podría mostrar el mapa
