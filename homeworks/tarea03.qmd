@@ -122,7 +122,7 @@ Para añadir las capas, conéctalas desde el Navegador de QGIS navegando a la ca
 ::: callout-note
 **¡Detente un segundo!** Este debería ser el mapa que puedes visualizar al cargar las dos capas — comunas en color uniforme y comunidades indígenas como puntos superpuestos:
 
-![Mapa con Comunas de La Araucanía y Comunidades Indígenas cargadas](figures/tarea03/tarea3_002.png){fig-align="center"}
+![Mapa con Comunas de La Araucanía y Comunidades Indígenas cargadas](figures/tarea03/tarea3_003.png){fig-align="center"}
 :::
 
 ------------------------------------------------------------------------
@@ -137,31 +137,45 @@ La teoría del color es fundamental para la representación espacial. Los colore
 
 **7.** En la capa **"Comunas La Araucanía con PM"**, haz clic derecho → **Propiedades**.
 
-![Menú contextual — opción Propiedades de la capa](figures/tarea03/tarea3_003.png){fig-align="center"}
+![Menú contextual — opción Propiedades de la capa](figures/tarea03/tarea3_004.png){fig-align="center"}
 
 **8.** En la ventana de propiedades, selecciona la pestaña **Simbología**. Verás que la capa viene con un "Símbolo Único" de color uniforme.
 
-![Ventana de Propiedades — pestaña Simbología con Símbolo Único](figures/tarea03/tarea3_004.png){fig-align="center"}
+![Ventana de Propiedades — pestaña Simbología con Símbolo Único](figures/tarea03/tarea3_005.png){fig-align="center"}
 
 **9.** Cambia el tipo de simbología de "Símbolo Único" a **"Graduado"**. En el campo **"Valor"**, selecciona la variable **`Pobreza_1`** (Pobreza Multidimensional normalizada).
 
-![Simbología Graduada — selección de la variable Pobreza\_1 desde el menú desplegable](figures/tarea03/tarea3_005.png){fig-align="center"}
+![Simbología Graduada — selección de la variable Pobreza\_1 desde el menú desplegable](figures/tarea03/tarea3_006.png){fig-align="center"}
 
 ::: {.callout-tip title="¿Por qué Pobreza_1 y no Pobreza Mu?"}
 La columna `Pobreza Mu` contiene el conteo bruto de comunas con pobreza similar. En cambio, `Pobreza_1` es la versión **normalizada** del índice, lo que permite comparar comunas de distinto tamaño en una misma escala. Para el análisis espacial de esta actividad usaremos siempre la variable normalizada.
 :::
 
-**10.** Elige una **Rampa de color** en el menú desplegable. Puedes usar las opciones predefinidas de QGIS o explorar "Todas las rampas de color". No hay colores obligatorios: experimenta con rampas que transmitan bien la variación en pobreza multidimensional.
+**10.** Elige una **Rampa de color** en el menú desplegable. Puedes usar las opciones predefinidas de QGIS o explorar "Todas las rampas de color". No hay colores obligatorios: experimenta con rampas que transmitan bien la variación en pobreza multidimensional. Se recomienda una rampa que transmita la información cuantitativa de una valor que va "de menos a más", por ejemplo, que va desde colores blancos a colores oscuros en una tonalidad.
+
+![Simbología Graduada - elección de rampa de color](figures/tarea03/tarea3_007.png){fig-align="center"}
 
 **11.** Define **5 clases** en el campo "Clases" y haz clic en **"Clasificar"** para que QGIS genere los intervalos automáticamente. Luego haz clic en **"Aplicar"** y **"Aceptar"**.
+
+::: {.callout-tip title="Métodos de clasificación en QGIS"}
+El menú desplegable "Modo" define cómo se dividen los datos en clases. Los métodos principales son:
+
+- **Intervalos iguales:** divide el rango total de los datos en clases del mismo ancho. Útil cuando los datos están distribuidos uniformemente, pero puede generar clases vacías si hay valores extremos.
+- **Cuantiles (cuenta igual):** asigna el mismo número de observaciones a cada clase. Permite comparar la distribución espacial de forma equilibrada, pero las clases pueden tener rangos muy distintos.
+- **Rupturas naturales (Jenks):** agrupa los valores minimizando la varianza dentro de cada clase y maximizando las diferencias entre ellas. Es el método más recomendado para representar datos con agrupaciones naturales.
+- **Desviación estándar:** define los límites de clase en función de la desviación estándar respecto a la media. Útil para identificar valores atípicos, pero requiere que los datos se distribuyan aproximadamente de forma normal.
+- **Bonito:** genera intervalos "redondos" fáciles de leer. Prioriza la legibilidad sobre la precisión estadística.
+
+El botón **"Clasificar"** aplica el método seleccionado a los datos actuales y genera los intervalos. Debe presionarse cada vez que se cambie el método, el número de clases o la variable, para que QGIS recalcule los rangos.
+:::
 
 ::: callout-note
 Recuerda que debes hacer clic en **"Clasificar"** cada vez que cambies la rampa de colores para que los valores se redistribuyan correctamente en los intervalos.
 :::
 
-El mapa debería verse así, con las comunas coloreadas según nivel de pobreza y los puntos de comunidades superpuestos:
+El mapa debería verse así (con la rampa de color de tu elección), con las comunas coloreadas según nivel de pobreza y los puntos de comunidades superpuestos:
 
-![Mapa con simbología graduada en 5 clases para Pobreza Multidimensional y comunidades indígenas](figures/tarea03/tarea3_006.png){fig-align="center"}
+![Mapa con simbología graduada en 5 clases para Pobreza Multidimensional y comunidades indígenas](figures/tarea03/tarea3_009.png){fig-align="center"}
 
 ::: callout-warning
 ¡Recuerda guardar el trabajo que hayas realizado hasta ahora para no perder el avance!
@@ -173,7 +187,7 @@ El mapa debería verse así, con las comunas coloreadas según nivel de pobreza 
 
 **12.** En la capa **"Comunidades Indígenas La Araucanía"**, abre las Propiedades → **Simbología**. Aquí podrás personalizar la forma, el tamaño y el color del marcador que representa cada comunidad.
 
-![Simbología de marcador — opciones de forma, color, tamaño y opacidad para Comunidades Indígenas](figures/tarea03/tarea3_007.png){fig-align="center"}
+![Simbología de marcador — opciones de forma, color, tamaño y opacidad para Comunidades Indígenas](figures/tarea03/tarea3_010.png){fig-align="center"}
 
 ::: {.callout-tip title="Opciones de personalización del marcador"}
 Dentro de la simbología de marcadores, puedes modificar:
@@ -197,7 +211,7 @@ Cabe destacar que cada punto posee una **ubicación geoespacial única**, ademá
 
 **14.** Para consultar la información de un punto sin abrir la tabla de atributos, activa la herramienta **"Identificar objetos espaciales"** (ícono con flecha y letra **"i"** en la barra de herramientas principal). Con esta herramienta activa, haz clic sobre cualquier punto en el mapa. Aparecerá un panel lateral con todos los atributos de esa comunidad.
 
-![Herramienta Identificar — panel de resultados con atributos de una comunidad indígena](figures/tarea03/tarea3_008.png){fig-align="center"}
+![Herramienta Identificar — panel de resultados con atributos de una comunidad indígena](figures/tarea03/tarea3_013.png){fig-align="center"}
 
 ::: {.callout-tip title="¿Por qué es útil esto?"}
 En análisis de justicia ambiental y derechos territoriales, pasar de la visualización espacial a los datos concretos es fundamental. La herramienta de identificación te permite hacerlo instantáneamente: cada punto en el mapa *es* una comunidad con historia, territorio y datos asociados — como su nombre, comuna, fuente legal, estado y coordenadas.
@@ -215,15 +229,15 @@ Hasta ahora has trabajado en la Vista de Mapa de QGIS. Para producir un mapa lis
 
 **15.** Ve al menú **Proyecto → Nueva composición de impresión**.
 
-![Menú Proyecto → Nueva composición de impresión (Ctrl+P)](figures/tarea03/tarea3_009.png){fig-align="center"}
+![Menú Proyecto → Nueva composición de impresión (Ctrl+P)](figures/tarea03/tarea3_014.png){fig-align="center"}
 
 Asigna un nombre a la composición en el diálogo que aparece (por ejemplo, `Proyecto clase 3`) y haz clic en **Aceptar**.
 
-![Diálogo para nombrar la nueva composición de impresión](figures/tarea03/tarea3_010.png){fig-align="center"}
+![Diálogo para nombrar la nueva composición de impresión](figures/tarea03/tarea3_015.png){fig-align="center"}
 
 Se abrirá el editor de composiciones con un lienzo en blanco y una barra de herramientas lateral:
 
-![Lienzo vacío del editor de composiciones](figures/tarea03/tarea3_011.png){fig-align="center"}
+![Lienzo vacío del editor de composiciones](figures/tarea03/tarea3_016.png){fig-align="center"}
 
 ::: {.callout-tip title="Elementos que puedes añadir"}
 Desde la barra lateral y el menú **Añadir elemento** puedes insertar:
@@ -235,25 +249,35 @@ Desde la barra lateral y el menú **Añadir elemento** puedes insertar:
 -   **Etiqueta** — para títulos y textos
 :::
 
-**16.** Selecciona **"Agregar mapa"** (ícono de rectángulo con lupa) y dibuja un rectángulo en el lienzo. QGIS insertará automáticamente la vista actual del mapa.
+**16.** Selecciona **"Añadir mapa"** (ícono de rectángulo con lupa) y dibuja un rectángulo en el lienzo. QGIS insertará automáticamente la vista actual del mapa.
 
-**17.** **Agregar la leyenda.** Selecciona **"Agregar leyenda"** y dibuja un rectángulo donde deseas que aparezca. En el panel **"Propiedades del elemento"** puedes ajustar los títulos, mostrar u ocultar capas y cambiar el orden de los elementos.
+![Composición de mapa - añadir mapa](figures/tarea03/tarea3_017.png){fig-align="center"}
+
+**17.** **Agregar la leyenda.** Selecciona **"Añadir leyenda"** y dibuja un rectángulo donde deseas que aparezca. En el panel **"Propiedades del elemento"** puedes ajustar los títulos, mostrar u ocultar capas y cambiar el orden de los elementos.
+
+![Composición de mapa - añadir leyenda](figures/tarea03/tarea3_023.png){fig-align="center"}
 
 **18.** **Agregar una barra de escala.** Selecciona **"Agregar barra de escala"** y dibuja un rectángulo. En las propiedades puedes ajustar la unidad de medida y el estilo.
 
+![Composición de mapa - añadir escala](figures/tarea03/tarea3_025.png){fig-align="center"}
+
 **19.** **Agregar una rosa de los vientos.** Selecciona **"Agregar imagen"**, dibuja un rectángulo y en **"Propiedades del elemento"** haz clic en **"..."** junto a **"Fuente de imagen"** para seleccionar una rosa de los vientos prediseñada de QGIS.
+
+![Composición de mapa - añadir rosa de los vientos](figures/tarea03/tarea3_026.png){fig-align="center"}
 
 ::: callout-note
 Si al exportar aparece una advertencia indicando que la flecha del norte no está vinculada a un mapa, puedes vincularla desde las propiedades del elemento o simplemente hacer clic en **Aceptar** para continuar con la exportación.
 :::
 
-**20.** **Agregar un título.** Selecciona **"Agregar etiqueta"** (ícono **"T"**), dibuja un cuadro y escribe el texto del título. Ajusta el tamaño, fuente y alineación desde las propiedades.
+**20.** **Agregar un título.** Selecciona **"Añadir etiqueta"** (ícono **"T"**), dibuja un cuadro y escribe el texto del título. Ajusta el tamaño, fuente y alineación desde las propiedades.
+
+![Composición de mapa - añadir título](figures/tarea03/tarea3_020.png){fig-align="center"}
 
 **21.** **Ajustar el diseño final.** Mueve y redimensiona todos los elementos hasta lograr una composición equilibrada. Si necesitas cambiar la orientación o el tamaño de la página, ve a **Diseño → Configuración de página...**.
 
 Al completar todos los elementos, la composición debería verse así:
 
-![Composición de impresión completa con mapa, leyenda, escala, norte y título](figures/tarea03/tarea3_012.png){fig-align="center"}
+![Composición de impresión completa con mapa, leyenda, escala, norte y título](figures/tarea03/tarea3_028.png){fig-align="center"}
 
 ------------------------------------------------------------------------
 
@@ -271,7 +295,7 @@ A mayor resolución (dpi), mayor calidad de imagen, pero también mayor tiempo d
 
 El mapa final exportado debería verse así:
 
-![Mapa exportado — Pobreza Multidimensional y Asentamiento de Comunidades Indígenas en La Araucanía](figures/tarea03/tarea3_013.png){fig-align="center"}
+![Mapa exportado — Pobreza Multidimensional y Asentamiento de Comunidades Indígenas en La Araucanía](figures/tarea03/tarea3_029.png){fig-align="center"}
 
 ::: callout-tip
 **¡Listo!** Has finalizado tu segundo mapa. Recuerda completar esta actividad y subirla a **Canvas en el Mapa-Memo correspondiente**.
