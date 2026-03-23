@@ -19,10 +19,10 @@ format:
 
 - CT: Pueblos Indígenas, derechos y sustentabilidad
 - CT: El caso del Pueblo Mapuche
+- CT: Mapas efectivos
 
 ### Segundo bloque
-
-- CT: Mapas efectivos
+- CT: Color
 - Actividad: Proyecto semestral
 
 
@@ -198,22 +198,20 @@ Pobreza indígena vs. no indígena en América Latina (promedio ponderado: Boliv
 
 ---
 
-## Custodios del territorio: la evidencia
-
+## Custodios del territorio: la evidencia {.compact}
+::: {.two-level}
 - Los pueblos indígenas gestionan hasta el **25% de la superficie terrestre** del planeta
 - Sus territorios se superponen con el **40% de las áreas protegidas** del mundo
 - La evidencia científica es contundente: con derechos seguros, los pueblos indígenas son **más efectivos conservando sus territorios** que los colonos no indígenas
-
-::: {.two-level}
-- Nepstad et al. (2006): territorios indígenas en Brasil = "la barrera más importante a la deforestación amazónica"
-- Baragwanath & Bayi (2020): el reconocimiento formal (no solo la demarcación) reduce drásticamente la deforestación
-- Alejo et al. (2021): mayor stock de carbono dentro de territorios indígenas en Colombia, Perú, Ecuador, Brasil y Panamá
+  - Nepstad et al. (2006): territorios indígenas en Brasil = "la barrera más importante a la deforestación amazónica"
+  - Baragwanath et al. (2020, 2023): el reconocimiento formal (no solo la demarcación) reduce drásticamente la deforestación y aumenta la reforestacion
+  - Alejo et al. (2021): mayor stock de carbono dentro de territorios indígenas en Colombia, Perú, Ecuador, Brasil y Panamá
 :::
 
 
 ---
 
-## ¿Por qué importa para la sustentabilidad? {.question-slide}
+## ¿Por qué importa para la sustentabilidad?
 
 La desigualdad histórica no es solo una injusticia del pasado — es una **barrera presente** para enfrentar la crisis ambiental:
 
@@ -233,9 +231,9 @@ La desigualdad histórica no es solo una injusticia del pasado — es una **barr
 ![](../figures/clase03/slide_03_img_3.png){width="80%"}
 :::
 ::: {.column width="48%"}
-![](../figures/clase03/slide_03_img_2.png){width="80%"}
+![](../figures/clase03/slide_03_img_2.png){width="60%"}
 
-![](../figures/clase03/slide_03_img_4.png){width="80%"}
+![](../figures/clase03/slide_03_img_4.png){width="60%"}
 :::
 :::
 
@@ -243,28 +241,32 @@ La desigualdad histórica no es solo una injusticia del pasado — es una **barr
 
 ## Pueblo Mapuche: una historia de despojo {.compact}
 
+::: columns
+::: {.column width="58%"}
 - Pueblo Mapuche vivía de la ganadería a gran escala antes de la ocupación de su territorio
 - Único pueblo originario de gran población que mantuvo independencia del Imperio Español
 - Entre 1860 y 1883, su territorio es incorporado a la fuerza a Chile y Argentina
 - Chile define legislación específica para conformar la propiedad privada en el nuevo territorio (Leyes de 1866 y 1874)
-
-::: {.caption}
-![](../figures/clase03/slide_05_img_1.png){width="80%"}
 :::
+::: {.column width="39%"}
+![](../figures/clase03/slide_05_img_1.png){width="100%"}
+:::
+:::
+
 
 ---
 
-## Títulos de Merced (1884–1929)
+## Títulos de Merced (1884–1929) {.compact}
 
+::: columns
+::: {.column width="59%"}
 - Entre 1884 y 1929, el Estado otorgó derechos de propiedad colectivos al pueblo Mapuche a través de "Títulos de Merced" (TDM)
 - En teoría, el Estado respetaría los derechos de propiedad ya establecidos por el uso continuo de los Mapuche
 - En la práctica, abundaron los abusos para despojar a los Mapuche de sus tierras: solo un **10% del territorio** fue asignado a los TDM
-
-::: columns
-::: {.column width="60%"}
-![](../figures/clase03/slide_06_img_1.png){width="100%"}
 :::
-::: {.column width="38%"}
+::: {.column width="39%"}
+![](../figures/clase03/slide_06_img_1.png){width="100%"}
+
 ::: {.small .muted}
 Fuente: Jordán & Heilmayr (2024)
 :::
@@ -273,30 +275,41 @@ Fuente: Jordán & Heilmayr (2024)
 
 ---
 
-## División de comunidades (1930)
+## División de comunidades (1930-1952)
 
+::: columns
+::: {.column width="59%"}
 - Mientras se asignaban los últimos TDM, se desarrollaba una nueva ley para dividir las tierras comunitarias en parcelas individuales
 - Así, hacia 1930, se crean cinco "Juzgados de Indios" para dividir a las comunidades
-
+:::
+::: {.column width="39%"}
 ![](../figures/clase03/slide_07_img_1.png){width="80%"}
 
 ::: {.small .muted}
 Fuente: Jordán & Heilmayr (2024)
+:::
+:::
 :::
 
 ---
 
 ## Ventas fraudulentas (1943–1946) {.compact}
 
+::: columns
+::: {.column width="59%"}
 - Entre 1943 y 1946 se levantan las restricciones para comprar parcelas en TDM
 - El número de ventas explota durante el periodo
 - Muchas de estas ventas fueron fraudulentas
 - Al reestablecer las restricciones en 1947, el Congreso Nacional declaró las ventas del periodo nulas, pero la Corte Suprema declaró inconstitucional el efecto retroactivo
 
+:::
+::: {.column width="39%"}
 ![](../figures/clase03/slide_08_img_1.png){width="80%"}
 
 ::: {.small .muted}
-Fuente: Jordán y Heilmayr (2024)
+Fuente: Jordán & Heilmayr (2024)
+:::
+:::
 :::
 
 ---
@@ -306,9 +319,9 @@ Fuente: Jordán y Heilmayr (2024)
 - Los Mapuche fueron beneficiarios de la Reforma Agraria, sobre todo de las expropiaciones de la Unidad Popular
 - Sin embargo, toda esta ganancia fue revertida en la contra-reforma durante la dictadura militar
 
-![](../figures/clase03/slide_09_img_1.png){width="80%"}
+![](../figures/clase03/slide_09_img_1.png){width="100%"}
 
-::: {.small .muted}
+::: {.caption}
 Fuente: Jaimovich y Jordán (2024)
 :::
 
@@ -316,11 +329,11 @@ Fuente: Jaimovich y Jordán (2024)
 
 ## División de los TDM restantes (1980s)
 
-- Luego, en la década de 1980, casi todos los TDM que quedaban indivisos fueron divididos
+Luego, en la década de 1980, casi todos los TDM que quedaban indivisos fueron divididos
 
 ![](../figures/clase03/slide_10_img_1.png){width="80%"}
 
-::: {.small .muted}
+::: {.caption}
 Fuente: Jordán y Heilmayr (2024)
 :::
 
@@ -328,18 +341,19 @@ Fuente: Jordán y Heilmayr (2024)
 
 ## Pobreza Mapuche persistente
 
-- La división no trajo las mejoras que se esperaban de ella...
-- Los mapuche siguen siendo de las poblaciones **más pobres de Chile**
+::: {.caption}
+La división no trajo las mejoras que se esperaban de ella... los mapuche siguen siendo de las poblaciones **más pobres de Chile**
+:::
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="40%"}
 ![](../figures/clase03/slide_11_img_1.png){width="100%"}
 
 ::: {.caption}
 Fuente: Agostini et al. (2010). Figura refleja pobreza e indigencia en 2002.
 :::
 :::
-::: {.column width="48%"}
+::: {.column width="58%"}
 ![](../figures/clase03/slide_12_img_1.png){width="100%"}
 
 ::: {.caption}
@@ -350,13 +364,14 @@ Fuente: Elaboración propia a partir de las encuestas CASEN.
 
 ---
 
+
 ## El conflicto ha aumentado en el tiempo
 
-- Y los eventos de conflicto han aumentado en el tiempo
+Y los eventos de conflicto han aumentado en el tiempo
 
 ![](../figures/clase03/slide_13_img_1.png){width="80%"}
 
-::: {.small .muted}
+::: {.caption}
 Fuente: Cayul et al. (2022)
 :::
 
@@ -364,40 +379,35 @@ Fuente: Cayul et al. (2022)
 
 ## Concentración en la IX Región
 
-- Los eventos de conflicto se han concentrado en la IX Región
-
+::: columns
+::: {.column width="50%"}
+Los eventos de conflicto se han concentrado en la IX Región
+:::
+::: {.column width="28%"}
 ![](../figures/clase03/slide_14_img_1.png){width="80%"}
 
-::: {.small .muted}
+::: {.caption}
 Fuente: Cayul et al. (2022)
 :::
+:::
+:::
+
+
 
 ---
 
 ## Un territorio transformado: el legado ambiental del despojo {.compact}
 
-- La colonización no solo desplazó a las personas — **transformó radicalmente el paisaje** del sur de Chile
+- La colonización no solo desplazó personas — **transformó el paisaje**
 - **Deforestación masiva:** los bosques nativos fueron talados para producción maderera y apertura de tierras agrícolas en pocas décadas
 - **Erosión severa:** la producción intensiva de trigo en laderas desnudas generó pérdida masiva de suelos en la región
-- **Plantaciones forestales:** el reemplazo de bosque nativo por pino y eucalipto trajo escasez hídrica y contaminación por herbicidas y pesticidas — tecnologías ajenas a las comunidades y frecuentemente impuestas sobre sus reclamos territoriales
+- **Plantaciones forestales:** representan para muchos una continuación de una historia de despojo y sobreexplotación del territorio ancestral
 
-> Las tierras que se reclaman hoy son una fracción pequeña y profundamente degradada de lo que alguna vez fue el territorio Mapuche.
+> Las tierras reclamadas son una fracción pequeña y degradada del territorio ancestral
 
-::: {.small .muted}
+::: {.caption}
 Klubock, T.M. (2014). *La Frontera: Forests and Ecological Conflict in Chile's Frontier Territory.* Duke University Press.
 :::
-
----
-
-## El círculo vicioso {.compact}
-
-- El despojo histórico generó pobreza y marginalización
-- La pobreza y marginalización alimentan el conflicto
-- El conflicto dificulta la inversión y el desarrollo en la región
-- Las políticas de desarrollo sin reconocimiento de derechos profundizan la desconfianza
-- La desconfianza agrava el conflicto
-
-> ¿Puede romperse este ciclo sin abordar los derechos territoriales y el reconocimiento político?
 
 ---
 
@@ -416,8 +426,8 @@ Klubock, T.M. (2014). *La Frontera: Forests and Ecological Conflict in Chile's F
 
 ## Restitución y medio ambiente: ¿qué dice la evidencia? {.compact}
 
-- Jaimovich, Jordán, Black & Heilmayr (*Nature Sustainability*, en revisión) estudia el impacto ambiental del FTAI-20B: más de 200.000 ha restituidas a comunidades Mapuche entre 1994 y 2023
-- **Resultado en uso de suelo:** la restitución llevó a más praderas y menos plantaciones de pino/eucalipto — las comunidades ejercieron su preferencia cultural por la ganadería
+- Jaimovich, Jordán, Black & Heilmayr (2026) estudia el impacto ambiental del FTAI-20B
+- **Resultado en uso de suelo:** la restitución llevó a más praderas y menos plantaciones de pino/eucalipto — las comunidades ejercieron su preferencia por la ganadería
 - **Resultado ambiental:** sin cambios significativos en carbono, biodiversidad ni erosión
 - **¿Por qué?** Las tierras restituidas eran paisajes profundamente modificados — décadas de plantaciones e intensificación agropecuaria habían transformado el baseline ecológico
 
@@ -427,12 +437,16 @@ Jaimovich, Jordán, Black & Heilmayr (2026, en revisión). *Environmental impact
 
 ---
 
-## Mucho pedir {.compact}
+## ¿Mucho pedir? {.compact}
 
 - La literatura muestra grandes beneficios ambientales cuando se protegen tierras indígenas **intactas**: menos deforestación, más carbono
 - La restitución opera en un escenario distinto: paisajes devastados por décadas de despojo, plantaciones y agricultura intensiva
 
-> Esperar que la restitución sola genere restauración ecológica es pedirle al despojado que repare lo que el despojador destruyó.
+> Esperar que la restitución genere restauración ecológica es pedirle al despojado que repare lo que el despojador degradó
+
+---
+
+## ¿Indígena = Ecologista? {.compact .question-slide}
 
 - Pero hay además una consideración ética más profunda: **la libre determinación significa que las comunidades no tienen obligación de ser "verdes"**
 - El despojo transformó sus economías, sus instituciones y su relación con el territorio
@@ -440,17 +454,16 @@ Jaimovich, Jordán, Black & Heilmayr (2026, en revisión). *Environmental impact
 
 ---
 
-## Si quieren restaurar, necesitan apoyo {.compact}
+## Restitución no basta para restaurar {.compact}
 
 - Si las comunidades Mapuche quieren restaurar sus territorios, el Estado debe acompañar activamente ese proceso — con financiamiento, asistencia técnica y reconocimiento del conocimiento tradicional
 - Políticas que transfieren tierra sin conectar con restauración ecológica ni con los saberes territoriales de las comunidades difícilmente generarán co-beneficios ambientales
-- La gobernanza conjunta — Estado y comunidades — es condición necesaria para que la restitución tenga impacto ambiental
 
 ::: {.box}
-**La lección:** prevenir el despojo es incomparablemente más eficaz que intentar revertirlo. Y cuando la restitución ocurre en paisajes degradados, necesita ir acompañada de inversión en restauración — no como condición, sino como apoyo.
+**La lección:** prevenir el despojo es más eficaz que intentar revertirlo. Y cuando la restitución ocurre en paisajes degradados, necesita ir acompañada de inversión en restauración — no como condición, sino como apoyo.
 :::
 
-::: {.small .muted}
+::: {.caption}
 Jaimovich, Jordán, Black & Heilmayr (2026, en revisión).
 :::
 
@@ -655,19 +668,29 @@ Datos vectoriales combinados con **mapa base o fondo (raster)**. Fuente: https:/
 
 ---
 
-## Puntos: con opacidad inadecuada {.map-slide}
 
-![](../figures/clase03/slide_33_img_1.png){width="80%"}
+
+## Puntos: con transparencia inadecuada {.map-slide .compact}
+
+::: columns
+::: {.column width="55%"}
+![](../figures/clase03/slide_34_img_1.png){width="100%"}
 
 ::: {.caption}
 Cada punto representa un Tweet sobre la maratón de Boston. La opacidad dificulta apreciar la densidad. Fuente: https://jeffreymorgan.io/articles/information-density-visualization/
 :::
-
-Los puntos son útiles para mostrar hitos en el espacio. Si son muchos puntos, hay que tener cuidado en no saturar el mapa. **La transparencia puede ayudar.**
+:::
+::: {.column width="43%"}
+- Los puntos son útiles para mostrar hitos en el espacio
+- Si son muchos puntos, la **transparencia puede ayudar**
+- Cuando son de distintos tipos, se pueden elegir colores distintos o símbolos
+- También se puede utilizar el **tamaño** para visualizar un valor continuo
+:::
+:::
 
 ---
 
-## Puntos: con transparencia adecuada {.map-slide}
+## Puntos: con transparencia adecuada {.map-slide .compact}
 
 ::: columns
 ::: {.column width="55%"}
@@ -687,27 +710,49 @@ La transparencia revela la densidad con claridad. Fuente: https://jeffreymorgan.
 
 ---
 
-## Puntos: tamaño proporcional {.map-slide}
 
-![](../figures/clase03/slide_35_img_1.png){width="80%"}
+## Puntos: distintos símbolos {.map-slide .compact}
+
+::: columns
+::: {.column width="55%"}
+![](../figures/clase03/slide_35_img_1.png){width="100%"}
 
 ::: {.caption}
-El tamaño de los puntos puede representar un valor continuo. Fuente: Jordán and Di Gregorio (2024)
+Distintos tipos de puntos para representar categorías. Fuente: Jordán and Di Gregorio (2024)
+:::
+:::
+::: {.column width="43%"}
+- Los puntos son útiles para mostrar hitos en el espacio
+- Si son muchos puntos, la **transparencia puede ayudar**
+- Cuando son de distintos tipos, se pueden elegir colores distintos o símbolos
+- También se puede utilizar el **tamaño** para visualizar un valor continuo
+:::
 :::
 
 ---
 
-## Puntos: colores y símbolos {.map-slide}
+## Puntos: distintos tamaños {.map-slide .compact}
 
-![](../figures/clase03/slide_34_img_1.png){width="80%"}
+::: columns
+::: {.column width="55%"}
+![](../figures/clase03/slide_36_img_1.png){width="100%"}
 
 ::: {.caption}
-Cuando los puntos son de distintos tipos, se pueden elegir colores distintos o símbolos.
+El tamaño del punto puede variar para representar magnitudes. Fuente: World city population
+:::
+:::
+::: {.column width="43%"}
+- Los puntos son útiles para mostrar hitos en el espacio
+- Si son muchos puntos, la **transparencia puede ayudar**
+- Cuando son de distintos tipos, se pueden elegir colores distintos o símbolos
+- También se puede utilizar el **tamaño** para visualizar un valor continuo
+:::
 :::
 
 ---
 
-## Líneas {.map-slide}
+
+## Líneas {.map-slide .compact}
 
 ::: columns
 ::: {.column width="55%"}
@@ -724,15 +769,27 @@ Fuente: https://escenarioshidricos.cl/nuestro-trabajo/cuenca-del-rio-maipo/
 :::
 :::
 
----
+## Líneas {.map-slide .compact}
 
-## Líneas: ejemplos {.map-slide}
-
+::: columns
+::: {.column width="55%"}
+- Las líneas se utilizan para representar elementos que ocupan una disposición lineal en el espacio, tanto reales (e.g., ríos, caminos, trenes) como ficticios (e.g., límites jurisdiccionales)
+- Se pueden utilizar el color y la forma para mostrar distintos tipos
+- Hay formas y colores convencionales — se deben usar cuando sea posible
+:::
+::: {.column width="43%"}
 ![](../figures/clase03/slide_38_img_1.png){width="100%"}
 
+::: {.caption}
+Fuente: Leyenda mapa rutero histórico de Chile
+:::
+:::
+:::
+
+
 ---
 
-## Polígonos: territorios indígenas {.map-slide}
+## Polígonos {.map-slide .compact}
 
 ::: columns
 ::: {.column width="55%"}
@@ -744,136 +801,28 @@ Fuente: https://escenarioshidricos.cl/nuestro-trabajo/cuenca-del-rio-maipo/
 ![](../figures/clase03/slide_39_img_1.png){width="100%"}
 
 ::: {.caption}
-Fuente: Jordán & Heilmayr (2024)
+Transparencia, textura y color para representar capas superpuestas. Fuente: Jordán & Heilmayr (2024)
 :::
 :::
 :::
 
 ---
 
-## Polígonos: choropleth {.map-slide}
+## Polígonos {.map-slide .compact}
 
+::: columns
+::: {.column width="55%"}
+- Los polígonos se utilizan para demarcar elementos en el espacio que usan un área determinada (e.g., comuna, parcela, ciudad)
+- Pueden representar una partición del espacio (e.g., comunas) o elementos repartidos en el espacio (e.g. territorios indígenas)
+- Es fundamental utilizar adecuadamente el **color** para representar la información deseada
+:::
+::: {.column width="43%"}
 ![](../figures/clase03/slide_40_img_1.png){width="80%"}
 
 ::: {.caption}
 Mapa choropleth: el color de cada polígono representa un valor. Fuente: Wikipedia, GDP per capita by Indian state.
 :::
-
----
-
-## Color: el espectro visible {.map-slide}
-
-![](../figures/clase03/slide_41_img_1.png){width="100%"}
-
-::: {.caption}
-El espectro de luz visible. Fuente: iStockphoto.
 :::
-
----
-
-## Color: percepción humana {.map-slide}
-
-::: columns
-::: {.column width="55%"}
-- No todas las personas perciben el color de la misma manera
-- La percepción del color depende de los **fotorreceptores** del ojo
-
-![](../figures/clase03/slide_42_img_1.png){width="100%"}
-
-::: {.caption}
-Fuente: https://www.datacolor.com/business-solutions/blog/why-we-cant-agree-color-perception/
-:::
-:::
-::: {.column width="43%"}
-::: columns
-::: {.column width="48%"}
-![](../figures/clase03/slide_43_img_1.png){width="100%"}
-
-::: {.caption}
-Estructura de cono (fotorreceptor de color).
-:::
-:::
-::: {.column width="48%"}
-![](../figures/clase03/slide_43_img_2.png){width="100%"}
-
-::: {.caption}
-Anatomía de un bastón (fotorreceptor de luz/oscuridad).
-:::
-:::
-:::
-
-![](../figures/clase03/slide_43_img_3.png){width="100%"}
-
-::: {.caption}
-Fuente: Wikipedia, Photoreceptor cell.
-:::
-:::
-:::
-
----
-
-## Color: representación digital RGB
-
-::: columns
-::: {.column width="55%"}
-**Representación digital RGB:**
-
-- Cada color es representado por **8 bits**: 2⁸ = 256 valores
-- Se utiliza el sistema **hexadecimal** (base 16) para expresar los 8 bits con dos símbolos:
-  - `0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f`
-- En decimal: 125 = 1×10² + 2×10¹ + 5×10⁰
-- En hexadecimal: `7d` = 7×16¹ + 13×16⁰
-- Con tres canales (RGB): **256³ = 16,777,216** colores posibles
-- El rojo puro se escribe: **`#ff0000`**
-:::
-::: {.column width="43%"}
-![](../figures/clase03/slide_44_img_1.png){width="100%"}
-
-::: {.caption}
-Crédito imagen: Yi et al. (2022). *Sensors*. 22. 2021.
-:::
-:::
-:::
-
----
-
-## Color: teoría del color {.map-slide}
-
-![](../figures/clase03/slide_46_img_1.png){width="80%"}
-
-::: {.caption}
-Rueda de color: colores primarios, secundarios y terciarios. Fuente: https://easyedit.pro/blog/the-basic-color-theory-with-examples/
-:::
-
----
-
-## Color: daltonismo {.map-slide}
-
-::: columns
-::: {.column width="55%"}
-![](../figures/clase03/slide_47_img_1.png){width="100%"}
-
-::: {.caption}
-Percepción del color según distintos tipos de visión. Fuente: https://webvision.med.utah.edu/
-:::
-:::
-::: {.column width="43%"}
-![](../figures/clase03/slide_47_img_2.png){width="100%"}
-
-::: {.caption}
-Los colores que ven quienes tienen daltonismo rojo-verde, azul-amarillo y daltonismo completo, versus la rueda de color normal. Fuente: https://www.healthdirect.gov.au/colour-blindness
-:::
-:::
-:::
-
----
-
-## Color: ColorBrewer {.map-slide}
-
-![](../figures/clase03/slide_48_img_1.png){width="80%"}
-
-::: {.caption}
-Explora <a href="https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3" target="_blank">ColorBrewer</a> — paletas de colores diseñadas para mapas, con opciones para daltonismo.
 :::
 
 ---
@@ -899,10 +848,102 @@ Mapa simplificado: más legible y efectivo.
 :::
 :::
 
+# CT: Color {.section-slide background-color="#2a7f62"}
+
+## El espectro electromagnético {.map-slide}
+
+![](../figures/clase03/slide_41_img_1.png){width="100%"}
+
+::: {.caption}
+El espectro de luz visible es una fracción pequeña del espectro electromagnético. Fuente: iStockphoto.
+:::
+
+---
+
+## Lo que vemos {.map-slide}
+
+![](../figures/clase03/slide_42_img_1.png){width="100%"}
+
+::: {.caption}
+El color que vemos en un objeto depende de cuanta energía refleja de cada segmento del espectro electromagnético.
+:::
+
+---
+
+## Nuestra cámara (el ojo) {.map-slide}
+
+::: columns
+::: {.column width="25%"}
+![](../figures/clase03/slide_43_img_2.png){width="100%"}
+:::
+::: {.column width="25%"}
+![](../figures/clase03/slide_43_img_1.png){width="100%"}
+:::
+::: {.column width="48%"}
+![](../figures/clase03/slide_43_img_3.png){width="100%"}
+:::
+:::
+
+---
+
+## Representación digital RGB {.compact}
+
+- Cada color es representado por **8 bits**: 2⁸ = 256 valores
+- Se utiliza el sistema **hexadecimal** (base 16) para expresar los 8 bits con dos símbolos:
+  - `0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f`
+- En decimal: 125 = 1×10² + 2×10¹ + 5×10⁰
+- En hexadecimal: `7d` = 7×16¹ + 13×16⁰
+- Con tres canales (RGB): **256³ = 16,777,216** colores posibles
+- El rojo puro se escribe: **`#ff0000`**
+
+---
+
+## Teoría del color {.map-slide}
+
+![](../figures/clase03/slide_46_img_1.png){width="80%"}
+
+::: {.caption}
+Rueda de color: colores primarios, secundarios y terciarios. Fuente: https://easyedit.pro/blog/the-basic-color-theory-with-examples/
+:::
+
+---
+
+## Daltonismo {.map-slide}
+
+::: columns
+::: {.column width="55%"}
+![](../figures/clase03/slide_47_img_1.png){width="100%"}
+
+::: {.caption}
+Percepción del color según distintos tipos de visión. Fuente: https://webvision.med.utah.edu/
+:::
+:::
+::: {.column width="43%"}
+![](../figures/clase03/slide_47_img_2.png){width="100%"}
+
+::: {.caption}
+Los colores que ven quienes tienen daltonismo rojo-verde, azul-amarillo y daltonismo completo, versus la rueda de color normal. Fuente: https://www.healthdirect.gov.au/colour-blindness
+:::
+:::
+:::
+
+---
+
+## ColorBrewer {.map-slide}
+
+![](../figures/clase03/slide_48_img_1.png){width="80%"}
+
+::: {.caption}
+Explora <a href="https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3" target="_blank">ColorBrewer</a> — paletas de colores diseñadas para mapas, con opciones para daltonismo.
+:::
+
+---
+
+
 
 # Actividad: Proyecto Semestral {.section-slide background-color="#2a7f62"}
 
-## El trabajo semestral
+## El trabajo semestral {.compact}
 
 - Grupos de **4–5 estudiantes** (ya asignados)
 - Seleccionar un **territorio** y analizar un **problema socioambiental** que afecte a quienes lo habitan o utilizan
