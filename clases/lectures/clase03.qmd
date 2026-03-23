@@ -28,28 +28,110 @@ format:
 
 # CT: Pueblos Indígenas, Derechos y Sustentabilidad {.section-slide background-color="#2a7f62"}
 
-## El (des)encuentro de dos mundos
+## El "encuentro" de dos mundos
 
-- El 12 de octubre de 1492 se suele celebrar como el "Encuentro de Dos Mundos"
-- Para los pueblos que habitaban el continente, fue el inicio de **cinco siglos de conquista, despojo y resistencia**
-- Se estima que entre **50 y 100 millones** de personas indígenas murieron o fallecieron prematuramente como consecuencia de la colonización europea
+::: columns
+::: {.column width="48%"}
+![](../figures/clase03/Picture1.png){width="100%"}
 
-::: {.small .muted}
-Smith (2017). *Native American Symposium.*
+::: {.caption}
+"El Día de la Hispanidad... conmemorar este hecho tan importante para la humanidad." — Escuela Mundopalabra
+:::
+:::
+::: {.column width="48%"}
+![](../figures/clase03/Picture2.png){width="100%"}
+
+::: {.caption}
+La Conquista de Cholula, Félix Parra (1877)
+:::
+:::
 :::
 
 ---
 
-## De la conquista al siglo XX: asimilación forzada {.compact}
+## El mayor holocausto de la historia
 
+::: columns
+::: {.column width="60%"}
+> "Stannard ha estimado que casi 100 millones de indígenas en el hemisferio occidental murieron o fallecieron prematuramente a causa de los europeos y sus descendientes durante los últimos cinco siglos."
+
+::: {.small .muted}
+Smith, D. M. (2017). *Counting the dead: Estimating the loss of life in the Indigenous Holocaust.* Native American Symposium.
+:::
+:::
+::: {.column width="38%"}
+![](../figures/clase03/Picture3.png){width="100%"}
+:::
+:::
+
+---
+
+## La huella en el registro climático
+
+::: columns
+::: {.column width="50%"}
+![](../figures/clase03/Picture4.png){width="100%"}
+:::
+::: {.column width="48%"}
+![](../figures/clase03/Picture5.png){width="100%"}
+
+::: {.caption}
+El colapso demográfico redujo la presión sobre la tierra, permitiendo la regeneración forestal — registrada como una caída en el CO₂ atmosférico hacia 1610 (Koch et al., 2019).
+:::
+:::
+:::
+
+---
+
+## Del 12 de octubre al 21 de junio
+
+::: columns
+::: {.column width="33%"}
+![](../figures/clase03/Picture6.png){width="100%"}
+
+::: {.caption}
+Chile celebraba el 12 de octubre como "Día del Encuentro de Dos Mundos"
+:::
+:::
+::: {.column width="33%"}
+![](../figures/clase03/Picture7.png){width="100%"}
+
+::: {.caption}
+En 2021 se reemplazó por el "Día Nacional de los Pueblos Indígenas", el 21 de junio
+:::
+:::
+::: {.column width="33%"}
+![](../figures/clase03/Picture8.png){width="100%"}
+
+::: {.caption}
+We Tripantu — el Año Nuevo Mapuche, celebrado en el solsticio de invierno
+:::
+:::
+:::
+
+---
+
+## Derechos de los PP.OO: de la colonia al siglo XX
+
+::: columns
+::: {.column width="28%"}
+![](../figures/clase03/Picture9.png){width="100%"}
+
+::: {.caption}
+Fray Bartolomé de las Casas, primer "Protector de Indios"
+:::
+:::
+::: {.column width="68%"}
 ::: {.two-level}
-- **Era colonial:** derechos nominales, esclavitud en la práctica
+- **Era colonial:** primer reconocimiento formal de derechos
   - Bartolomé de las Casas convenció al rey Carlos I de prohibir la esclavitud indígena (Las Nuevas Leyes, 1542)
-  - En la práctica, la semi-esclavitud persistió a través del período colonial
+  - En la práctica, la semi-esclavitud persistió hasta el fin de la colonia
 - **Post-independencia:** derechos individuales condicionados a la sumisión política
   - Los que no se sometían eran tratados como enemigos internos
   - Políticas asimilacionistas ("civilizadoras") dominaron durante casi todo el siglo XX
   - Bajo estándares modernos: **genocidios culturales**
+:::
+:::
 :::
 
 ---
@@ -57,32 +139,13 @@ Smith (2017). *Native American Symposium.*
 ## Marco internacional de derechos
 
 ::: columns
-::: {.column width="32%"}
-::: {.box}
-**Convenio 107 OIT (1957)**
-
-Primer reconocimiento de derechos específicos
-
-Orientación asimilacionista: se busca "integrar" a los pueblos al desarrollo nacional
+::: {.column width="26%"}
+![](../figures/clase03/Picture10.png){width="100%"}
 :::
-:::
-::: {.column width="32%"}
-::: {.box}
-**Convenio 169 OIT (1989)**
-
-Reconoce el derecho al desarrollo propio y a la consulta previa
-
-Chile lo ratificó en **2009**
-:::
-:::
-::: {.column width="32%"}
-::: {.box}
-**DNUDPI (2007)**
-
-Declaración de la ONU sobre los Derechos de los Pueblos Indígenas
-
-Reconoce la libre determinación y los derechos sobre tierras y territorios ancestrales
-:::
+::: {.column width="70%"}
+- **Convenio 107 OIT (1957):** primer instrumento internacional con derechos específicos para PP.OO; orientación asimilacionista, buscaba "integrar" a los pueblos al desarrollo nacional
+- **Convenio 169 OIT (1989):** reemplazó al 107; reconoce el derecho al desarrollo propio y la consulta previa — Chile lo ratificó en **2009**
+- **DNUDPI (2007):** reconoce la libre determinación y los derechos sobre tierras y territorios ancestrales
 :::
 :::
 
@@ -95,24 +158,43 @@ Reconoce la libre determinación y los derechos sobre tierras y territorios ance
 ::: {.box}
 **Visión desarrollista**
 
-El desarrollo económico es universal; las formas "primitivas" deben superarse
+El proceso de desarrollo es universal; las "formas primitivas" de los PP.OO lo obstaculizan
 
-Los rasgos culturales pueden preservarse solo si no obstaculizan el desarrollo
+Los rasgos culturales pueden preservarse solo si no son un obstáculo para el progreso
 :::
 :::
 ::: {.column width="48%"}
 ::: {.box}
 **Visión moderna**
 
-El desarrollo debe entenderse como parte del desarrollo social y cultural propio
+El desarrollo se entiende como parte del desarrollo social y cultural propio de cada pueblo
 
-**Desarrollo con identidad:** cada pueblo define sus propias metas y métodos, con apoyo del Estado si lo desea
+**Desarrollo con identidad:** corresponde a cada PP.OO definir sus objetivos y cómo alcanzarlos, con el apoyo (si lo desean) del Estado
 :::
 :::
 :::
+
+---
+
+## Los PP.OO y el desarrollo: ¿por qué importa?
+
+::: columns
+::: {.column width="50%"}
+- Los PP.OO están **sobrerrepresentados entre los más pobres** de América Latina
+- Sus territorios se superponen con regiones clave para la **preservación de la biodiversidad y el cambio climático**
+- Estas preguntas son centrales para el cumplimiento de los ODS
 
 ::: {.small .muted}
-Fuente: Clase 25, EAE2223.
+The World Bank (2015). *Indigenous Latin America in the Twenty-First Century.*
+:::
+:::
+::: {.column width="48%"}
+![](../figures/clase03/Picture11.png){width="100%"}
+
+::: {.caption}
+Tasas de pobreza indígena vs. no indígena en América Latina (promedio ponderado: Bolivia, Brasil, Ecuador, Guatemala, México y Perú, fines de los 2000s)
+:::
+:::
 :::
 
 ---
