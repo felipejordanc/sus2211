@@ -20,7 +20,11 @@
       "Read(//c/Users/felip/AppData/Local/**)",
       "Bash(unzip:*)",
       "Bash(cat:*)",
-      "Bash(xmllint:*)"
+      "Bash(xmllint:*)",
+      "Bash(pip install:*)",
+      "Bash(which pdfimages:*)",
+      "Bash(pip3 install:*)",
+      "Bash(cd /Users/felipe/projects/sus2211/homeworks/figures/tarea03 && cp img-002.png tarea3_001.png && cp img-005.png tarea3_002.png && cp img-006.png tarea3_003.png && cp img-007.png tarea3_004.png && cp img-009.png tarea3_005.png && cp img-010.png tarea3_006.png && cp img-012.png tarea3_007.png && cp img-013.png tarea3_008.png && cp img-014.png tarea3_009.png && cp img-015.png tarea3_010.png && cp img-016.png tarea3_011.png && cp img-017.png tarea3_012.png && cp img-018.png tarea3_013.png && echo \"done\")"
     ]
   }
 }
