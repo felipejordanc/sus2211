@@ -267,7 +267,7 @@ La desigualdad histórica no es solo una injusticia del pasado — es una **barr
 ::: {.column width="39%"}
 ![](../figures/clase03/slide_06_img_1.png){width="100%"}
 
-::: {.small .muted}
+::: {.caption}
 Fuente: Jordán & Heilmayr (2024)
 :::
 :::
@@ -285,7 +285,7 @@ Fuente: Jordán & Heilmayr (2024)
 ::: {.column width="39%"}
 ![](../figures/clase03/slide_07_img_1.png){width="80%"}
 
-::: {.small .muted}
+::: {.caption}
 Fuente: Jordán & Heilmayr (2024)
 :::
 :::
@@ -306,7 +306,7 @@ Fuente: Jordán & Heilmayr (2024)
 ::: {.column width="39%"}
 ![](../figures/clase03/slide_08_img_1.png){width="80%"}
 
-::: {.small .muted}
+::: {.caption}
 Fuente: Jordán & Heilmayr (2024)
 :::
 :::
