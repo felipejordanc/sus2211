@@ -259,11 +259,11 @@ Desde la barra lateral y el menú **Añadir elemento** puedes insertar:
 
 **18.** **Agregar una barra de escala.** Selecciona **"Agregar barra de escala"** y dibuja un rectángulo. En las propiedades puedes ajustar la unidad de medida y el estilo.
 
-![Composición de mapa - añadir escala](figures/tarea03/tarea3_025.png){fig-align="center"}
+![Composición de mapa - añadir escala](figures/tarea03/tarea3_024.png){fig-align="center"}
 
 **19.** **Agregar una rosa de los vientos.** Selecciona **"Agregar imagen"**, dibuja un rectángulo y en **"Propiedades del elemento"** haz clic en **"..."** junto a **"Fuente de imagen"** para seleccionar una rosa de los vientos prediseñada de QGIS.
 
-![Composición de mapa - añadir rosa de los vientos](figures/tarea03/tarea3_026.png){fig-align="center"}
+![Composición de mapa - añadir rosa de los vientos](figures/tarea03/tarea3_023.png){fig-align="center"}
 
 ::: callout-note
 Si al exportar aparece una advertencia indicando que la flecha del norte no está vinculada a un mapa, puedes vincularla desde las propiedades del elemento o simplemente hacer clic en **Aceptar** para continuar con la exportación.
@@ -277,13 +277,29 @@ Si al exportar aparece una advertencia indicando que la flecha del norte no est�
 
 Al completar todos los elementos, la composición debería verse así:
 
-![Composición de impresión completa con mapa, leyenda, escala, norte y título](figures/tarea03/tarea3_028.png){fig-align="center"}
+![Composición de impresión completa con mapa, leyenda, escala, norte y título](figures/tarea03/tarea3_024.png){fig-align="center"}
 
 ------------------------------------------------------------------------
 
 ## Exportación del mapa
 
 **22.** Exporta el mapa desde el menú **Diseño → Exportar como imagen** (o **Exportar como PDF**).
+
+::: callout-tip
+## ¿Imagen o PDF?
+
+Ambos formatos tienen ventajas y desventajas según el uso que le darás al mapa:
+
+| | **Imagen (PNG/JPG)** | **PDF** |
+|---|---|---|
+| **Ventajas** | Compatible con cualquier programa; fácil de insertar en Word, PowerPoint o documentos web | Vectorial: escala sin perder calidad; ideal para impresión profesional |
+| **Desventajas** | Resolución fija: si se amplía, pierde nitidez | Más difícil de insertar directamente en algunos programas |
+| **Cuándo usarlo** | Presentaciones, sitios web, informes digitales | Impresión de alta calidad, entrega de mapas finales |
+
+Para las entregas del curso, **PNG a 300 dpi** es el formato recomendado.
+:::
+
+![Exportación de composición a PDF](figures/tarea03/tarea3_028.png){fig-align="center"}
 
 **23.** En el diálogo de exportación, configura la resolución a **300 dpi** para obtener una imagen de alta calidad.
 
