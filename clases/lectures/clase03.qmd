@@ -49,7 +49,7 @@ La Conquista de Cholula, Félix Parra (1877)
 
 ---
 
-## El mayor holocausto de la historia
+## El mayor holocausto de la historia {.compact}
 
 ::: columns
 ::: {.column width="60%"}
@@ -111,17 +111,17 @@ We Tripantu — el Año Nuevo Mapuche, celebrado en el solsticio de invierno
 
 ---
 
-## Derechos de los PP.OO: de la colonia al siglo XX
+## Derechos de los PP.OO: de la colonia al siglo XX {.compact}
 
 ::: columns
-::: {.column width="28%"}
+::: {.column width="18%"}
 ![](../figures/clase03/Picture9.png){width="100%"}
 
 ::: {.caption}
 Fray Bartolomé de las Casas, primer "Protector de Indios"
 :::
 :::
-::: {.column width="68%"}
+::: {.column width="78%"}
 ::: {.two-level}
 - **Era colonial:** primer reconocimiento formal de derechos
   - Bartolomé de las Casas convenció al rey Carlos I de prohibir la esclavitud indígena (Las Nuevas Leyes, 1542)
@@ -136,7 +136,7 @@ Fray Bartolomé de las Casas, primer "Protector de Indios"
 
 ---
 
-## Marco internacional de derechos
+## Marco internacional de derechos {.compact}
 
 ::: columns
 ::: {.column width="26%"}
@@ -151,7 +151,7 @@ Fray Bartolomé de las Casas, primer "Protector de Indios"
 
 ---
 
-## Dos visiones del desarrollo
+## Dos visiones del desarrollo {.compact}
 
 ::: columns
 ::: {.column width="48%"}
@@ -176,13 +176,12 @@ El desarrollo se entiende como parte del desarrollo social y cultural propio de 
 
 ---
 
-## Los PP.OO y el desarrollo: ¿por qué importa?
+## Los PP.OO y el desarrollo sustentable {.compact}
 
 ::: columns
 ::: {.column width="50%"}
 - Los PP.OO están **sobrerrepresentados entre los más pobres** de América Latina
 - Sus territorios se superponen con regiones clave para la **preservación de la biodiversidad y el cambio climático**
-- Estas preguntas son centrales para el cumplimiento de los ODS
 
 ::: {.small .muted}
 The World Bank (2015). *Indigenous Latin America in the Twenty-First Century.*
@@ -192,18 +191,18 @@ The World Bank (2015). *Indigenous Latin America in the Twenty-First Century.*
 ![](../figures/clase03/Picture11.png){width="100%"}
 
 ::: {.caption}
-Tasas de pobreza indígena vs. no indígena en América Latina (promedio ponderado: Bolivia, Brasil, Ecuador, Guatemala, México y Perú, fines de los 2000s)
+Pobreza indígena vs. no indígena en América Latina (promedio ponderado: Bolivia, Brasil, Ecuador, Guatemala, México y Perú, fines de los 2000s)
 :::
 :::
 :::
 
 ---
 
-## Custodios del territorio: la evidencia {.compact}
+## Custodios del territorio: la evidencia
 
 - Los pueblos indígenas gestionan hasta el **25% de la superficie terrestre** del planeta
 - Sus territorios se superponen con el **40% de las áreas protegidas** del mundo
-- La evidencia científica es contundente: cuando se les otorgan derechos seguros, los pueblos indígenas son **más efectivos conservando sus territorios** que los colonos no indígenas
+- La evidencia científica es contundente: con derechos seguros, los pueblos indígenas son **más efectivos conservando sus territorios** que los colonos no indígenas
 
 ::: {.two-level}
 - Nepstad et al. (2006): territorios indígenas en Brasil = "la barrera más importante a la deforestación amazónica"
@@ -211,19 +210,6 @@ Tasas de pobreza indígena vs. no indígena en América Latina (promedio pondera
 - Alejo et al. (2021): mayor stock de carbono dentro de territorios indígenas en Colombia, Perú, Ecuador, Brasil y Panamá
 :::
 
-::: {.small .muted}
-Fuente: elaboración propia en base a Garnett et al. (2018) y revisión de literatura IDB (Jordán, 2024).
-:::
-
----
-
-## El papel de los derechos formales {.compact}
-
-- **La demarcación sola no es suficiente:** solo el reconocimiento formal pleno desencadena el efecto conservacionista
-- El mecanismo: los derechos formales dan acceso a recursos del Estado para hacer cumplir la ley y empoderar la gobernanza colectiva
-- Los territorios indígenas reconocidos también muestran mayor **regeneración forestal** con bosques nativos más maduros — mayor captura de carbono y servicios ecosistémicos
-
-> Los pueblos mejor posicionados para proteger la naturaleza son precisamente aquellos a quienes históricamente se les han negado los derechos sobre sus tierras.
 
 ---
 
@@ -242,14 +228,14 @@ La desigualdad histórica no es solo una injusticia del pasado — es una **barr
 
 ::: columns
 ::: {.column width="48%"}
-![](../figures/clase03/slide_03_img_1.png){width="100%"}
+![](../figures/clase03/slide_03_img_1.png){width="80%"}
 
-![](../figures/clase03/slide_03_img_3.png){width="100%"}
+![](../figures/clase03/slide_03_img_3.png){width="80%"}
 :::
 ::: {.column width="48%"}
-![](../figures/clase03/slide_03_img_2.png){width="100%"}
+![](../figures/clase03/slide_03_img_2.png){width="80%"}
 
-![](../figures/clase03/slide_03_img_4.png){width="100%"}
+![](../figures/clase03/slide_03_img_4.png){width="80%"}
 :::
 :::
 
