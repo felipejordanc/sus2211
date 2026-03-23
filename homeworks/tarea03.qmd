@@ -285,6 +285,8 @@ Al completar todos los elementos, la composición debería verse así:
 
 **22.** Exporta el mapa desde el menú **Diseño → Exportar como imagen** (o **Exportar como PDF**).
 
+![Exportación de composición a PDF](figures/tarea03/tarea3_028.png){fig-align="center"}
+
 ::: callout-tip
 ## ¿Imagen o PDF?
 
@@ -296,16 +298,9 @@ Ambos formatos tienen ventajas y desventajas según el uso que le darás al mapa
 | **Desventajas** | Resolución fija: si se amplía, pierde nitidez | Más difícil de insertar directamente en algunos programas |
 | **Cuándo usarlo** | Presentaciones, sitios web, informes digitales | Impresión de alta calidad, entrega de mapas finales |
 
-Para las entregas del curso, **PNG a 300 dpi** es el formato recomendado.
+Para las entregas del curso, se recomienda exportar como **imágen PNG a 300 dpi**. La resolución (dpi = dots per pixel) se selecciona en en el dialogo de exportación que se abre al seleccionar "Exportar como Imagen". Si bien una mayor resolución otorga una imágen que pierde menos nitidez al hacer zoom, tiene como contrapartida mayor peso: 300 dpi entrega un buen compromiso entre resolución y peso. Al exportar como PDF no es necesario seleccionar la resolución, ya que la imagen se escala.
 :::
 
-![Exportación de composición a PDF](figures/tarea03/tarea3_028.png){fig-align="center"}
-
-**23.** En el diálogo de exportación, configura la resolución a **300 dpi** para obtener una imagen de alta calidad.
-
-::: callout-note
-A mayor resolución (dpi), mayor calidad de imagen, pero también mayor tiempo de exportación y tamaño de archivo. Para entregas del curso, 300 dpi es el estándar recomendado.
-:::
 
 **24.** Guarda el archivo en la carpeta **`resultados/mapas/`** de tu proyecto.
 
@@ -314,7 +309,7 @@ El mapa final exportado debería verse así:
 ![Mapa exportado — Pobreza Multidimensional y Asentamiento de Comunidades Indígenas en La Araucanía](figures/tarea03/tarea3_029.png){fig-align="center"}
 
 ::: callout-tip
-**¡Listo!** Has finalizado tu segundo mapa. Recuerda completar esta actividad y subirla a **Canvas en el Mapa-Memo correspondiente**.
+**¡Listo!** Has finalizado tu segundo mapa. Recuerda guardar tu trabajo para poder utilizarlo en la entrega de tu próximo portafolio.
 :::
 
 ------------------------------------------------------------------------

@@ -353,7 +353,7 @@ Debería verse algo así:
 ![Selección de carpeta y nombre de archivo para guardar el mapa](figures/tarea02/tarea2_027.png){fig-align="center"}
 
 ::: callout-tip
-**¡Listo!** Has finalizado tu primer mapa. Recuerda completar esta actividad y subirla a **Canvas en el Mapa-Memo correspondiente**.
+**¡Listo!** Has finalizado tu segundo mapa. Recuerda guardar tu trabajo para poder utilizarlo en la entrega de tu próximo portafolio.
 :::
 
 ------------------------------------------------------------------------
