@@ -95,13 +95,10 @@ flowchart TD
 
 ![Pantalla de inicio de QGIS — crear un nuevo proyecto](figures/tarea04/tarea4_002.png){fig-align="center"}
 
-**5.** Encuentra la conexión a la carpeta con el material necesario. Las capas con las que trabajaremos se encuentran en la carpeta en Canvas "Clase 4" en un archivo zip, por lo que previamente deberás descomprimir la carpeta.
+**5.** Encuentra la conexión a la carpeta con el material necesario. Las capas con las que trabajaremos se encuentran en la carpeta en Canvas "Clase 4" en un archivo zip, por lo que previamente deberás descomprimir la carpeta. Recuerda dejar las bases de datos originales en el directirio  `datos/brutos `.
 
-![Navegador de QGIS — explorar carpetas del sistema](figures/tarea04/tarea4_001.png){fig-align="center"}
 
-![Navegador de QGIS — carpeta Curso SUS2211 con las capas disponibles](figures/tarea04/tarea4_003.png){fig-align="center"}
-
-**6.** Añade al mapa las siguientes capas:
+**6.1** Añade al mapa las siguientes capas:
 
 ✓ "Mapamundi climático"\
 ✓ "Océanos"
@@ -112,9 +109,7 @@ flowchart TD
 ![Vista del mapa con las capas Mapamundi climático y Océanos cargadas](figures/tarea04/tarea4_004.png){fig-align="center"}
 :::
 
-**6.1.** Como ya hemos aprendido, modifica el color de la capa de Océanos. De esta manera, tendremos una muestra más realista del planeta (colores acuosos, azulados, etc).
-
-------------------------------------------------------------------------
+**6.2.** Como ya hemos aprendido, modifica el color de la capa de Océanos. De esta manera, tendremos una muestra más realista del planeta (colores acuosos, azulados, etc).
 
 **7.** A continuación, abre la tabla de atributos de "Mapamundi climático", haciendo clic derecho sobre el nombre del *layer* y luego *Tabla de Atributos*, y observa toda la información disponible en los campos.
 
@@ -132,7 +127,7 @@ Aquí se visualizan los datos con los que trabajaremos. Las últimas 4 columnas 
 :::
 
 ::: {.callout-note title="¿Qué nos está diciendo esto?"}
-Con esta información podremos analizar la diferencia entre las emisiones de CO₂ en el año 2020 y el total acumulado desde 1990, donde el total acumulado es un indicador del impacto histórico en el clima. Al cruzar los datos de emisiones con el ingreso económico de cada país, podemos explorar la relación entre desarrollo económico y emisiones de carbono — permitiéndonos identificar patrones de justicia climática y analizar cómo las responsabilidades y los impactos se distribuyen globalmente en función de la riqueza.
+Con esta información podremos analizar la diferencia entre las emisiones de CO₂ en el año 2020 y el total acumulado desde 1990, donde el total acumulado se relaciona más cercanamente con el concepto de *responsabilidad climática* visto en clases. Al cruzar los datos de emisiones con el ingreso económico de cada país, podemos explorar la relación entre desarrollo económico y emisiones de carbono — permitiéndonos identificar patrones de justicia climática y analizar cómo las responsabilidades y los ingresos se asocian a escala global.
 :::
 
 ------------------------------------------------------------------------
@@ -151,7 +146,7 @@ Es un sistema que define cómo se proyectan y representan las coordenadas geogr�
 
 ![Propiedades del proyecto — pestaña SRS con proyección World Robinson seleccionada](figures/tarea04/tarea4_008.png){fig-align="center"}
 
-Una vez que hayas aplicado el cambio de CRS, el mapa se actualizará automáticamente para reflejar la proyección **"World_Robinson"**. Puedes notar cómo cambian las formas de los continentes y los océanos, logrando una representación más equilibrada y estéticamente agradable del mundo.
+Una vez que hayas aplicado el cambio de CRS, el mapa se actualizará automáticamente para reflejar la proyección **"World_Robinson"**. Puedes notar cómo cambian las formas de los continentes y los océanos, logrando una representación más equilibrada y estéticamente agradable del mundo. Experimenta con distintas CRS globales (puedes probar las proyecciones vistas en la <a href="https://felipejordanc.github.io/sus2211/lectures/clase02.html#/proyecciones-cartogr%C3%A1ficas">Clase 2</a>), apreciando como las forma y tamaños relativos de los continentes cambian de una CRS a otra.
 
 ------------------------------------------------------------------------
 
@@ -192,7 +187,7 @@ Ahora exportaremos estas geografías filtradas a una nueva capa.
 
 ![Menú contextual — Exportar > Guardar objetos seleccionados como...](figures/tarea04/tarea4_012.png){fig-align="center"}
 
-**14.** En la ventana de exportación, elige un nombre y ubicación para la nueva capa y asegúrate de seleccionar el mismo CRS (World_Robinson) que la capa original. Recuerda cerciorarte que esté marcado **"solo entidades seleccionadas"** para que solo los registros con valor 0 se guarden en esta nueva capa.
+**14.** En la ventana de exportación, elige un nombre para la nueva capa y guardala en la carpeta `datos/intermedios` (para seleccionar la carpeta en que se guardará la capa, debes hacer click en los tres puntos a la derecha del campo "Nombre de archivo"). Asegúrate de seleccionar el mismo CRS (World_Robinson) que la capa original. Recuerda cerciorarte que esté marcado **"solo entidades seleccionadas"** para que solo los registros con valor 0 se guarden en esta nueva capa.
 
 ![Ventana de exportación — guardar capa vectorial con CRS World Robinson](figures/tarea04/tarea4_013.png){fig-align="center"}
 
@@ -236,13 +231,31 @@ CASE WHEN "Datos Em_4" != 0 THEN "Datos Em_4" ELSE NULL END
 
 ![Constructor de expresiones — expresión CASE para excluir valores 0](figures/tarea04/tarea4_017.png){fig-align="center"}
 
+::: callout-tip
+## ¿Qué es SQL?
+
+SQL (Structured Query Language) es un lenguaje estándar para consultar y manipular datos. Aunque su nombre suene técnico, su lógica es bastante intuitiva — se parece mucho a dar instrucciones en lenguaje natural.
+
+La expresión que acabamos de usar se lee casi como una oración en inglés:
+
+```
+CASE WHEN "Datos Em_4" != 0 THEN "Datos Em_4" ELSE NULL END
+```
+
+Traducida, dice: ***"EN EL CASO** de que el valor de Datos Em_4 sea **distinto de** 0, **ENTONCES** usa ese valor. **SI NO**, déjalo vacío (NULL)."*
+
+Así filtramos los países con valor 0 para que no interfieran en la clasificación de colores del mapa.
+
+Además, puedes usar herramientas de inteligencia artificial (como ChatGPT, Gemini o Claude) para traducir fácilmente tus instrucciones en lenguaje natural a expresiones SQL. Por ejemplo, basta con pedirle: *"Escríbeme una expresión SQL que excluya los valores iguales a 0 de la columna Datos Em_4"* y obtendrás la expresión lista para copiar y pegar.
+:::
+
 **21.** Haz clic en Aceptar para aplicar la expresión.
 
 **22.** Selecciona una rampa de colores en el menú desplegable de **"Rampa de color"**. Puedes elegir entre las opciones predefinidas o crear una rampa personalizada.
 
 ![Selección de rampa de colores — opciones predefinidas disponibles](figures/tarea04/tarea4_019.png){fig-align="center"}
 
-**23.** En la sección de "Clasificación", QGIS generará automáticamente un número determinado de clases basadas en el método seleccionado. Si deseas ajustar el número de clases o los rangos manualmente, puedes hacerlo aquí. Haz clic en el botón **"Clasificar"** para que QGIS genere las clases automáticamente basadas en el método que elegiste.
+**23.** En la sección de "Clasificación", QGIS generará automáticamente un número determinado de clases basadas en el método seleccionado (en la <a href="https://felipejordanc.github.io/sus2211/homeworks/tarea03.html">Tarea 3</a> revisamos los distintos métodos). Aquí, estamos usando el método de cuantiles, que brinda una visualización intuitiva y balanceada. Si deseas ajustar el número de clases o los rangos manualmente, puedes hacerlo aquí. Haz clic en el botón **"Clasificar"** para que QGIS genere las clases automáticamente basadas en el método que elegiste.
 
 ::: callout-note
 **Debería aparecer algo así:**
@@ -352,11 +365,11 @@ Luego, regresa al panel anterior, sigue bajando por el mismo y activa la opción
 
 -   Si necesitas cambiar la orientación o el tamaño de la página, ve a **"Diseño"** en la barra de menú y selecciona **"Configuración de página..."**.
 
-**33.** Una vez terminado todos los elementos, puedes exportar el trabajo realizado en imagen o PDF. Presionando estas casillas:
+**33.** Una vez terminado todos los elementos, puedes exportar el trabajo realizado en imagen o PDF. Presionando las casillas entre el dibujo de la impresora y la flecha a la izquierda:
 
 ![Barra de herramientas — botones de exportación a imagen y PDF](figures/tarea04/tarea4_031.png){fig-align="center"}
 
-Se recomienda resolución de **150–300 ppp** para una buena visualización:
+Se recomienda resolución de **150–300 ppp** para una buena visualización al exportar como imágen:
 
 ![Opciones de Exportación de Imagen — resolución recomendada 150-300 ppp](figures/tarea04/tarea4_032.png){fig-align="center"}
 
@@ -364,7 +377,7 @@ Se recomienda resolución de **150–300 ppp** para una buena visualización:
 
 ## Resultado final
 
-Los mapas finales deberían verse así:
+Los mapas finales deberían verse algo así (con tu propia elección de colores y CRS):
 
 ![Mapa final — CO₂ per cápita acumulado (kg), 1990–2020](figures/tarea04/tarea4_033.png){fig-align="center"}
 
@@ -372,16 +385,15 @@ Los mapas finales deberían verse así:
 
 ![Mapa final — Grupo de ingreso por país](figures/tarea04/tarea4_035.png){fig-align="center"}
 
-¡Listo! Has finalizado tus mapas. Recuerda completar esta actividad y subirla a **Canvas en el Mapa-Memo correspondiente**.
+¡Listo! Has finalizado tus mapas. Recuerda guardar tu trabajo para poder utilizarlo en la entrega de tu próximo portafolio.
 
 ------------------------------------------------------------------------
 
-## Preguntas guía para Mapa-Memo
+## Preguntas guía para reflexión
 
-::: callout-note
-Estas preguntas te ayudarán a reflexionar sobre lo que aprendiste en esta actividad:
-
--   A partir de los mapas generados, ¿qué patrones puedes identificar en la distribución de emisiones de CO₂ a nivel global? ¿Cómo se relacionan estos patrones con la clasificación económica de los países?
--   ¿Crees que la categorización de los países según su nivel de ingresos es suficiente para entender la relación entre desarrollo y emisiones de carbono? ¿Qué otras variables podríamos incluir para un análisis más completo?
--   ¿Cómo influye la acumulación histórica de emisiones en la discusión sobre responsabilidad climática? ¿Qué diferencias observas entre los países con mayores emisiones históricas y aquellos con altas emisiones actuales?
+::: {.callout-important title="Preguntas guía para reflexión"}
+-   **Emisiones actuales vs. acumuladas:** Comparando tus mapas de emisiones actuales y acumuladas, ¿qué países aparecen como grandes emisores en uno pero no en el otro? ¿Qué implica esto para la discusión sobre **responsabilidad histórica** vs. responsabilidad actual en las negociaciones climáticas?
+-   **Ingreso y emisiones:** Observando tus tres mapas en conjunto, ¿qué relación puedes identificar entre el nivel de ingreso de un país y sus emisiones de CO₂? ¿Existen excepciones a este patrón? ¿Qué nos dice esto sobre la relación entre **desarrollo económico y huella de carbono**?
+-   **Justicia climática:** El artículo de [*Our World in Data*](https://ourworldindata.org/co2-emissions) plantea distintas formas de medir las emisiones (totales, per cápita, acumuladas, basadas en consumo). ¿Cómo cambia la narrativa de **quién es responsable** dependiendo de la métrica que se use? ¿Cuál te parece más justa y por qué?
+-   **Desigualdad y vulnerabilidad:** Como vimos en la clase, quienes menos contribuyen al cambio climático suelen ser los más afectados. A partir de tus mapas, ¿puedes identificar esta paradoja entre los países del **Sur y Norte Global**?
 :::
