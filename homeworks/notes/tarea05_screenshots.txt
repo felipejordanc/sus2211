@@ -1,0 +1,22 @@
+Screenshots needed for tarea05
+Save to: homeworks/figures/tarea05/
+==============================
+
+tarea5_001.png — QGIS with paises_mundo.shp loaded
+tarea5_002.png — Attribute table of paises_mundo showing Pais and ISO_A3 columns
+tarea5_003.png — Menu: Capa > Añadir capa de texto delimitado
+tarea5_004.png — CSV import dialog for energia_renovable_mundo_2023.csv — "sin geometria" selected
+tarea5_005.png — Properties > Uniones tab
+tarea5_006.png — Join dialog: iso_code <-> ISO_A3
+tarea5_007.png — Attribute table after join — scrolled right to show new columns
+tarea5_008.png — Right-click > Exportar > Guardar objetos como
+tarea5_009.png — Symbology dialog: graduated by renewables_share_elec, green ramp
+tarea5_010.png — Map view: world colored by renewable energy share (PAUSE checkpoint)
+tarea5_011.png — Attribute table of sudamerica_admin1 showing GID_1, NAME_1
+tarea5_012.png — Symbology dialog + map view: South America colored by water stress (red/orange ramp)
+tarea5_013.png — CSV import dialog for minas_litio_sudamerica.csv — with coordinates (Longitud=X, Latitud=Y, EPSG:4326)
+tarea5_014.png — Map view: water stress + lithium mines overlaid (PAUSE checkpoint)
+tarea5_015.png — Print layout: page properties set to horizontal
+tarea5_016.png — Print layout: "Lock layers" option checked in map frame properties
+tarea5_017.png — Print layout: both maps side by side with titles and legends
+tarea5_018.png — Final exported diptych image (300 ppp)

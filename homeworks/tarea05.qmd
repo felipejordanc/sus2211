@@ -1,0 +1,386 @@
+---
+title: "Clase 5: Energías Renovables — Control y Descontrol"
+subtitle: "Mapeando la (In)sustentabilidad · SUS2211 · Pontificia Universidad Católica de Chile"
+format: html
+---
+
+## Objetivo
+
+El objetivo de esta práctica es que adquieras las habilidades de importación de datos a QGIS, unión de tablas (join no espacial), y confección de mapas temáticos. La idea es que logres crear dos mapas que cuenten una historia de **Control y Descontrol**: el primero muestra el avance de las energías renovables en el mundo; el segundo muestra el costo oculto de esta transición — la extracción de litio en zonas con alto estrés hídrico en Sudamérica.
+
+**Herramientas por aprender:**
+
+-   Importación de datos a QGIS (CSV con y sin coordenadas)
+-   Conversión de Excel a CSV
+-   Tabla de atributos: exploración, filtrado y edición
+-   Join no espacial para combinar tablas
+-   Exportación de capas a shapefile
+-   Composición de impresión con **dos mapas** (díptico)
+
+------------------------------------------------------------------------
+
+## Preparación: descarga y organización del material
+
+### Descarga desde Canvas
+
+**1.** Descarga el archivo `.zip` de esta tarea desde la página del curso en **Canvas** (carpeta "Clase 5"). El archivo contiene todas las capas necesarias para el ejercicio.
+
+**2.** Descomprime el archivo en una ubicación dedicada a este curso. Algunas opciones:
+
+-   **Computador personal:** descomprime dentro de tu carpeta `SUS2211/`.
+-   **Computador de la sala:** descomprime en el escritorio o en Documentos, pero **antes de terminar la sesión**, copia toda la carpeta a OneDrive, un pendrive u otro servicio en la nube.
+
+::: callout-warning
+**¡Importante!** Los computadores de la sala de clases se **borran automáticamente cada semana**. Si trabajas en un computador de la universidad, guarda siempre una copia en **OneDrive** (u otro servicio en la nube) o en un pendrive antes de salir. De lo contrario, perderás todo tu avance.
+:::
+
+------------------------------------------------------------------------
+
+### Material descargado
+
+Al descomprimir el archivo, encontrarás los siguientes archivos:
+
+| Archivo | Descripción |
+|---|---|
+| `paises_mundo.shp` (+ .shx, .dbf, .prj, .cpg) | Shapefile de los países del mundo |
+| `energia_renovable_mundo_2023.csv` | Porcentaje de electricidad renovable por país (2023) |
+| `sudamerica_admin1.shp` (+ .shx, .dbf, .prj, .cpg) | Shapefile de regiones/provincias de Sudamérica |
+| `estres_hidrico_sudamerica.csv` | Índice de estrés hídrico por región (WRI Aqueduct 4.0) |
+| `minas_litio_sudamerica.csv` | Ubicación de minas de litio en Sudamérica (con coordenadas) |
+
+Recuerda dejar los archivos originales en la carpeta `datos/brutos/` y trabajar siempre sobre copias.
+
+::: {.callout-tip title="¿De dónde vienen estos datos?"}
+-   **Países del mundo:** [Natural Earth](https://www.naturalearthdata.com/) — mapa simplificado a escala 1:110 millones.
+-   **Energía renovable:** [Our World in Data](https://ourworldindata.org/renewable-energy) — datos del año 2023.
+-   **Regiones de Sudamérica:** [GADM](https://gadm.org/) v4.1 — divisiones administrativas nivel 1 (regiones, provincias, estados).
+-   **Estrés hídrico:** [WRI Aqueduct 4.0](https://www.wri.org/aqueduct) — índice de estrés hídrico basal, que mide la proporción de agua dulce extraída respecto al agua disponible.
+-   **Minas de litio:** [ICMM Global Mining Dataset](https://www.icmm.com/) (2025) — ubicaciones de minas y plantas de procesamiento de litio.
+:::
+
+------------------------------------------------------------------------
+
+## ¡Empecemos! {.unnumbered .unlisted}
+
+# Mapa 1: "Control" — Energías renovables en el mundo {.unnumbered .unlisted}
+
+En este primer mapa visualizaremos qué proporción de la electricidad de cada país proviene de fuentes renovables (solar, eólica, hidroeléctrica, etc.). Este es el lado del **"Control"**: la humanidad avanzando hacia un futuro energético más limpio.
+
+## Paso 1 | Crear el proyecto y cargar el shapefile base
+
+**3.** Inicia QGIS y crea un proyecto nuevo. Guárdalo en la carpeta `proyectos/` con un nombre adecuado (por ejemplo, `clase5`).
+
+**4.** Añade al mapa el shapefile `paises_mundo.shp` arrastrándolo al panel de capas o usando **Capa > Añadir Capa > Añadir capa vectorial**.
+
+![Carga del shapefile de países del mundo](figures/tarea05/tarea5_001.png){fig-align="center"}
+
+**5.** Abre la **tabla de atributos** de la capa `paises_mundo` (clic derecho > Abrir tabla de atributos). Observa las columnas disponibles:
+
+-   `Pais`: nombre del país
+-   `ISO_A3`: código ISO de 3 letras (por ejemplo, `CHL` para Chile, `BRA` para Brasil)
+
+![Tabla de atributos de paises_mundo — columnas Pais e ISO_A3](figures/tarea05/tarea5_002.png){fig-align="center"}
+
+::: callout-note
+Fíjate en la columna `ISO_A3` — este será el campo clave para unir los datos de energía renovable a los países.
+:::
+
+------------------------------------------------------------------------
+
+## Paso 2 | Importar los datos de energía renovable (CSV sin coordenadas)
+
+Ahora importaremos la base de datos de energía renovable. Este archivo CSV **no tiene coordenadas** — contiene solo datos tabulares que uniremos al shapefile usando un campo en común.
+
+**6.** Ve a **Capa > Añadir Capa > Añadir capa de texto delimitado**.
+
+![Menú Capa > Añadir capa de texto delimitado](figures/tarea05/tarea5_003.png){fig-align="center"}
+
+**7.** En la ventana que se abre:
+
+-   Busca y selecciona el archivo `energia_renovable_mundo_2023.csv`.
+-   En **Formato de archivo**, asegúrate de que esté seleccionado **CSV (valores separados por coma)**.
+-   En **Definición de geometría**, selecciona **"Ninguna geometría (tabla solo de atributos)"** — porque este archivo no tiene coordenadas.
+-   Revisa en **Datos de ejemplo** que las columnas se vean correctamente separadas.
+
+![Configuración de importación del CSV de energía renovable — sin geometría](figures/tarea05/tarea5_004.png){fig-align="center"}
+
+**8.** Haz clic en **Añadir**. La tabla aparecerá en el panel de capas, pero no se visualizará en el mapa (porque no tiene geometría).
+
+**9.** Abre la tabla de atributos de esta nueva capa y explora las columnas:
+
+-   `country`: nombre del país
+-   `iso_code`: código ISO de 3 letras
+-   `year`: año (2023)
+-   `renewables_share_elec`: porcentaje de electricidad proveniente de fuentes renovables
+-   `solar_share_elec`, `wind_share_elec`, `hydro_share_elec`: desglose por tipo
+
+::: {.callout-tip title="¿Qué nos dicen estos datos?"}
+El campo `renewables_share_elec` indica el porcentaje de la electricidad de un país que proviene de fuentes renovables. Por ejemplo, Chile tiene un **64,4%**, mientras que Islandia alcanza el **100%**. Estos datos provienen de [Our World in Data](https://ourworldindata.org/renewable-energy) y son del año 2023.
+:::
+
+------------------------------------------------------------------------
+
+## Paso 3 | Join no espacial: unir energía renovable a los países
+
+Ahora realizaremos una **unión no espacial** (table join) entre el shapefile de países y la tabla de energía renovable. Esto vinculará los datos de energía a cada polígono de país, permitiéndonos crear un mapa temático.
+
+**10.** Haz clic derecho sobre la capa `paises_mundo` y selecciona **Propiedades > Uniones**.
+
+![Propiedades de la capa > pestaña Uniones](figures/tarea05/tarea5_005.png){fig-align="center"}
+
+**11.** Haz clic en el botón **"+"** (Añadir una nueva unión). En la ventana que aparece:
+
+-   **Capa de unión:** selecciona `energia_renovable_mundo_2023`
+-   **Campo de unión:** selecciona `iso_code`
+-   **Campo del objeto:** selecciona `ISO_A3`
+
+Estas dos columnas contienen el mismo código ISO de 3 letras, lo que permite a QGIS vincular cada fila de la tabla CSV con el polígono del país correspondiente.
+
+![Configuración de la unión — campos iso_code e ISO_A3](figures/tarea05/tarea5_006.png){fig-align="center"}
+
+**12.** Haz clic en **Aceptar** dos veces.
+
+**13.** Abre la tabla de atributos de `paises_mundo` y desplázate hacia la derecha. Deberías ver las nuevas columnas provenientes de la tabla de energía (con prefijo del nombre de la capa).
+
+![Tabla de atributos después del join — nuevas columnas de energía renovable](figures/tarea05/tarea5_007.png){fig-align="center"}
+
+::: {.callout-tip title="¿Qué es un join no espacial?"}
+Un **join no espacial** (o table join) vincula dos tablas de datos utilizando un campo en común — en este caso, el código ISO del país. A diferencia de un join espacial (que veremos más adelante), no se basa en la ubicación geográfica sino en un identificador compartido. Es análogo a un `VLOOKUP` en Excel o un `JOIN` en SQL.
+:::
+
+------------------------------------------------------------------------
+
+## Paso 4 | Exportar la capa unida como shapefile
+
+El join que acabamos de hacer es **temporal** — si cierras el proyecto, se perderá. Para hacerlo permanente, exportaremos la capa a un nuevo shapefile.
+
+**14.** Haz clic derecho sobre `paises_mundo` y selecciona **Exportar > Guardar objetos como...**
+
+![Exportar > Guardar objetos como](figures/tarea05/tarea5_008.png){fig-align="center"}
+
+**15.** En la ventana de exportación:
+
+-   **Formato:** Archivo shape de Esri
+-   **Nombre de archivo:** navega a tu carpeta `datos/procesados/` y nómbralo `paises_renovables.shp`
+-   Haz clic en **Aceptar**.
+
+La nueva capa aparecerá automáticamente en el panel de capas con los datos de energía integrados permanentemente.
+
+------------------------------------------------------------------------
+
+## Paso 5 | Simbología graduada: porcentaje de energía renovable
+
+**16.** Haz clic derecho sobre la nueva capa `paises_renovables` y selecciona **Propiedades > Simbología**.
+
+**17.** Cambia la simbología de "Símbolo único" a **"Graduado"**.
+
+**18.** En el campo **Valor**, selecciona la columna que contiene el porcentaje de electricidad renovable. Debido a la restricción de 10 caracteres del formato shapefile, el nombre de la columna habrá sido recortado — búscala revisando los datos en la tabla de atributos.
+
+::: callout-note
+Es importante señalar que, al exportar la unión entre shapefiles y tablas, el formato shapefile impone una restricción de **10 caracteres** al nombre de las columnas. Por ello, los nombres originales se recortarán. Sin embargo, las columnas mantendrán el mismo orden que las originales.
+:::
+
+**19.** Selecciona una **rampa de color** apropiada (se sugiere una rampa de verdes, dado que representamos energía "limpia").
+
+**20.** Haz clic en **Clasificar** y luego en **Aceptar**.
+
+![Simbología graduada — porcentaje de electricidad renovable por país](figures/tarea05/tarea5_009.png){fig-align="center"}
+
+::: callout-note
+**PAUSA** — hasta ahora debería visualizarse algo así:
+
+![Vista del mapa mundial con simbología graduada de energías renovables](figures/tarea05/tarea5_010.png){fig-align="center"}
+:::
+
+**21.** Para una mejor visualización, instala el complemento de mapa base: ve a **Complementos > Administrar e instalar complementos**, busca **QuickMapServices**, e instálalo. Luego, ve a **Web > QuickMapServices > OSM > OSM Standard** para añadir un mapa base.
+
+------------------------------------------------------------------------
+
+# Mapa 2: "Descontrol" — Litio y estrés hídrico en Sudamérica {.unnumbered .unlisted}
+
+Ahora pasamos al lado del **"Descontrol"**. La transición hacia energías renovables requiere baterías de litio — y la extracción de litio consume enormes cantidades de agua en zonas que ya enfrentan escasez hídrica. En este mapa visualizaremos la coincidencia entre minas de litio y estrés hídrico en Sudamérica.
+
+::: {.callout-tip title="¿Por qué litio y agua?"}
+Chile, Argentina y Bolivia conforman el llamado **"triángulo del litio"**, que concentra más de la mitad de las reservas mundiales. La extracción de litio de salmueras (el método predominante en esta región) requiere bombear salmuera subterránea y evaporarla al sol — un proceso que consume aproximadamente **2 millones de litros de agua por tonelada de litio**. Esto ocurre precisamente en el Desierto de Atacama, uno de los lugares más áridos del planeta.
+
+La paradoja es clara: el mineral que necesitamos para la transición energética limpia se extrae en los lugares que menos pueden permitirse el gasto de agua.
+:::
+
+------------------------------------------------------------------------
+
+## Paso 6 | Cargar el shapefile de regiones de Sudamérica
+
+**22.** Añade al mapa el shapefile `sudamerica_admin1.shp`.
+
+**23.** Abre la tabla de atributos y observa las columnas:
+
+-   `GID_0`: código ISO del país (por ejemplo, `CHL`)
+-   `GID_1`: código único de la región (por ejemplo, `CHL.2_1` para Antofagasta)
+-   `COUNTRY`: nombre del país
+-   `NAME_1`: nombre de la región/provincia/estado
+
+![Tabla de atributos de sudamerica_admin1 — columnas GID_1 y NAME_1](figures/tarea05/tarea5_011.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+## Paso 7 | Importar y unir los datos de estrés hídrico
+
+**24.** Importa el archivo `estres_hidrico_sudamerica.csv` como capa de texto delimitado **sin geometría** (misma operación que en el paso 6–8).
+
+**25.** Abre la tabla de atributos de esta nueva tabla y observa las columnas:
+
+-   `GID_1`: código de la región (coincide con el shapefile)
+-   `GID_0`: código del país
+-   `Pais`: nombre del país
+-   `Region`: nombre de la región
+-   `Estres_Hidrico`: índice de estrés hídrico (escala de 0 a 5)
+-   `Categoria`: categoría del estrés hídrico
+
+::: {.callout-tip title="¿Qué significa el índice de estrés hídrico?"}
+El índice proviene del [WRI Aqueduct 4.0](https://www.wri.org/aqueduct) y mide la proporción de agua dulce que se extrae respecto al agua disponible. Las categorías son:
+
+| Puntaje | Categoría | Significado |
+|---|---|---|
+| 0–1 | Low (<10%) | Baja extracción relativa al recurso disponible |
+| 1–2 | Low-Medium (10–20%) | Estrés moderado |
+| 2–3 | Medium-High (20–40%) | Estrés significativo |
+| 3–4 | High (40–80%) | Alta presión sobre el recurso |
+| 4–5 | Extremely High (>80%) | Extracción mayor al 80% del agua disponible |
+:::
+
+**26.** Realiza un **join no espacial** entre `sudamerica_admin1` y `estres_hidrico_sudamerica`:
+
+-   **Capa de unión:** `estres_hidrico_sudamerica`
+-   **Campo de unión:** `GID_1`
+-   **Campo del objeto:** `GID_1`
+
+**27.** Verifica el join abriendo la tabla de atributos de `sudamerica_admin1`. Deberías ver las columnas de estrés hídrico añadidas.
+
+**28.** Exporta la capa unida como shapefile a `datos/procesados/` con el nombre `sudamerica_estres.shp` (mismo procedimiento que en el paso 14–15).
+
+------------------------------------------------------------------------
+
+## Paso 8 | Simbología graduada: estrés hídrico por región
+
+**29.** En la nueva capa `sudamerica_estres`, configura la simbología:
+
+-   Tipo: **Graduado**
+-   Valor: la columna de estrés hídrico (busca la columna correspondiente, recortada a 10 caracteres)
+-   **5 clases** (para corresponder a las 5 categorías de estrés)
+-   Rampa de color: se sugiere una rampa de **rojos o naranjas** (donde más oscuro = más estrés)
+
+**30.** Haz clic en **Clasificar** y luego en **Aceptar**.
+
+::: callout-note
+Algunas regiones pueden tener valor **-9999** (sin datos). Para excluirlas, puedes usar una expresión como hemos visto en la Tarea 4:
+
+```
+CASE WHEN "Estres_Hi" > 0 THEN "Estres_Hi" ELSE NULL END
+```
+
+(Ajusta el nombre de la columna según como haya quedado después de la exportación.)
+:::
+
+![Simbología graduada — estrés hídrico por región en Sudamérica](figures/tarea05/tarea5_012.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+## Paso 9 | Importar las minas de litio (CSV con coordenadas)
+
+Ahora importaremos la ubicación de las minas de litio. A diferencia de los CSV anteriores, **este archivo sí tiene coordenadas** (latitud y longitud), por lo que lo importaremos como una capa de puntos.
+
+**31.** Ve a **Capa > Añadir Capa > Añadir capa de texto delimitado**.
+
+**32.** En la ventana que se abre:
+
+-   Busca y selecciona el archivo `minas_litio_sudamerica.csv`.
+-   En **Definición de geometría**, selecciona **"Coordenadas del punto"**:
+    -   **Campo X:** `Longitud`
+    -   **Campo Y:** `Latitud`
+-   En **SRC de la geometría**, asegúrate de que diga **EPSG:4326 – WGS 84**.
+
+![Importación de CSV con coordenadas — minas de litio](figures/tarea05/tarea5_013.png){fig-align="center"}
+
+::: callout-warning
+Revisa siempre los **Datos de ejemplo** en la parte inferior de la ventana. Si las columnas se ven mezcladas en una sola, prueba cambiar el delimitador (coma, punto y coma, etc.). Además, verifica que la opción **"El separador decimal es la coma"** esté activada si tus coordenadas usan comas como separador decimal.
+:::
+
+**33.** Haz clic en **Añadir**.
+
+**34.** Exporta la capa como shapefile a `datos/procesados/` con el nombre `minas_litio.shp`.
+
+::: callout-note
+**PAUSA** — deberías ver las minas de litio sobre el mapa de estrés hídrico. Observa cómo se concentran en las zonas de mayor estrés:
+
+![Mapa de estrés hídrico con minas de litio superpuestas](figures/tarea05/tarea5_014.png){fig-align="center"}
+:::
+
+**35.** Para que las minas se visualicen claramente sobre el mapa coroplético, ve a la simbología de la capa de minas y elige un **símbolo único** llamativo (se sugiere un triángulo o rombo en color contrastante, como amarillo o blanco con borde negro).
+
+------------------------------------------------------------------------
+
+## Paso 10 | Composición de impresión: díptico "Control y Descontrol"
+
+Ahora crearemos una composición de impresión con **dos mapas lado a lado**: el Mapa 1 ("Control") a la izquierda y el Mapa 2 ("Descontrol") a la derecha.
+
+**36.** Ve a **Proyecto > Nueva composición de impresión**. Asígnale un nombre (por ejemplo, `control_descontrol`).
+
+**37.** Configura la orientación de la página: haz clic derecho sobre la hoja en blanco > **Propiedades de la página** > cambia la orientación a **horizontal** (apaisado). Esto permitirá que los dos mapas quepan lado a lado.
+
+![Propiedades de la página — orientación horizontal](figures/tarea05/tarea5_015.png){fig-align="center"}
+
+**38.** Añade el **primer mapa** (Control — energías renovables):
+
+-   Selecciona **Añadir mapa** en la barra de herramientas.
+-   Dibuja un rectángulo en la **mitad izquierda** de la hoja.
+-   Antes de añadir este mapa, asegúrate de que en la ventana principal de QGIS estén visibles solo las capas del Mapa 1 (países con simbología de energía renovable + mapa base).
+
+::: {.callout-tip title="Dos mapas en una composición"}
+Para que cada marco de mapa muestre capas diferentes, debes **controlar qué capas están visibles** en la ventana principal de QGIS antes de dibujar cada marco. El truco es:
+
+1.  Activa solo las capas del Mapa 1 en el panel de capas.
+2.  Añade el primer marco de mapa en la composición.
+3.  En las propiedades del marco, marca **"Bloquear capas"** y **"Bloquear estilos de capa"** — así este marco quedará fijo con las capas actuales.
+4.  Vuelve a la ventana principal, desactiva las capas del Mapa 1 y activa las del Mapa 2.
+5.  Añade el segundo marco de mapa.
+:::
+
+**39.** En las propiedades del primer marco de mapa (panel derecho), marca la opción **"Bloquear capas"** para que este mapa no cambie al modificar la vista principal.
+
+![Propiedades del elemento mapa — opción Bloquear capas](figures/tarea05/tarea5_016.png){fig-align="center"}
+
+**40.** Ahora vuelve a la ventana principal de QGIS. Desactiva las capas del Mapa 1 y activa las capas del Mapa 2 (estrés hídrico + minas de litio).
+
+**41.** Regresa a la composición de impresión y añade el **segundo mapa** dibujando un rectángulo en la **mitad derecha** de la hoja.
+
+**42.** Completa la composición añadiendo:
+
+-   **Títulos:** "Control" sobre el mapa izquierdo, "Descontrol" sobre el derecho (usa **Añadir etiqueta**).
+-   **Leyendas:** una para cada mapa. Recuerda editar las leyendas manualmente para mostrar solo la información relevante (elimina capas innecesarias con el botón **"-"**).
+-   **Barra de escala:** al menos para el mapa de Sudamérica.
+-   **Flecha del Norte:** al menos para el mapa de Sudamérica.
+
+![Composición final — díptico Control y Descontrol](figures/tarea05/tarea5_017.png){fig-align="center"}
+
+**43.** Exporta la composición como imagen a `resultados/mapas/` con resolución de **300 ppp**.
+
+------------------------------------------------------------------------
+
+## Resultado final
+
+Tu composición final debería verse algo así (con tu propia elección de colores):
+
+![Resultado final — díptico: energías renovables (mundo) + estrés hídrico y litio (Sudamérica)](figures/tarea05/tarea5_018.png){fig-align="center"}
+
+¡Listo! Has finalizado tu mapa. Recuerda completar esta actividad y subirla a Canvas en el Mapa-Memo correspondiente.
+
+------------------------------------------------------------------------
+
+## Preguntas guía para reflexión
+
+::: {.callout-important title="Preguntas guía para reflexión"}
+-   **Control:** ¿En qué regiones del mundo la transición energética está más avanzada? ¿Dónde se encuentra Chile en el panorama global de energías renovables? ¿Te sorprende?
+-   **Descontrol:** Observando tu mapa de Sudamérica, ¿dónde se concentran las minas de litio? ¿Coinciden con zonas de alto estrés hídrico? ¿Qué implicancias tiene esto para las comunidades locales?
+-   **La paradoja:** La transición hacia energías limpias requiere minerales cuya extracción tiene impactos ambientales significativos. ¿Cómo se relaciona esto con el concepto de **"Control y Descontrol"** discutido en clases? ¿Podemos decir que las energías renovables son completamente "limpias"?
+-   **Justicia ambiental:** ¿Quiénes se benefician de la transición energética (usuarios de autos eléctricos, países desarrollados) y quiénes asumen los costos ambientales (comunidades del Salar de Atacama, pueblos originarios)? ¿Ves un paralelo con la discusión de justicia climática de la tarea anterior?
+:::
