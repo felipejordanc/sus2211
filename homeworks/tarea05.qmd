@@ -14,8 +14,9 @@ El objetivo de esta práctica es que adquieras las habilidades de importación d
 -   Conversión de Excel a CSV
 -   Tabla de atributos: exploración, filtrado y edición
 -   Join no espacial para combinar tablas
--   Exportación de capas a shapefile
+-   Exportación de capas a GeoPackage
 -   Composición de impresión con **dos mapas** (díptico)
+-   Edición avanzada de leyendas
 
 ------------------------------------------------------------------------
 
@@ -36,9 +37,55 @@ El objetivo de esta práctica es que adquieras las habilidades de importación d
 
 ------------------------------------------------------------------------
 
+### Estructura de carpetas del proyecto
+
+Al descomprimir el archivo, encontrarás la siguiente estructura de carpetas. Esta organización es la misma que hemos usado en las clases anteriores y será estándar para **todas las tareas del curso**.
+
+```{mermaid}
+flowchart TD
+    A["📁 clase5/"] --> B["📁 datos/"]
+    A --> C["📁 documentos/"]
+    A --> D["📁 proyectos/"]
+    A --> E["📁 resultados/"]
+
+    B --> F["📁 brutos/<br>🔒 datos originales<br>(no modificar)"]
+    B --> G["📁 intermedios/<br>datos de geoprocesamiento"]
+    B --> H["📁 procesados/<br>capas finales para mapeo"]
+
+    E --> I["📁 mapas/<br>mapas exportados"]
+    E --> J["📁 figuras/<br>gráficos y tablas"]
+
+    style F fill:#fde8e8,stroke:#c0392b
+    style G fill:#fef9e7,stroke:#f39c12
+    style H fill:#eafaf1,stroke:#27ae60
+    style D fill:#eaf4fb,stroke:#2980b9
+    style C fill:#f4f6f7,stroke:#7f8c8d
+```
+
+::: {.callout-tip title="¿Para qué sirve cada carpeta?"}
+
+**`datos/`** — Todo lo relacionado con los datos geoespaciales, organizado en tres subcarpetas:
+
+-   **`brutos/`** 🔒 Datos originales tal como fueron descargados. **Nunca se modifican ni se sobreescriben.**
+-   **`intermedios/`** Resultados de operaciones de geoprocesamiento (recortes, uniones, reproyecciones, etc.).
+-   **`procesados/`** Capas finales listas para confeccionar el mapa.
+
+**`documentos/`** — Documentación de respaldo. Se recomienda incluir una bitácora (`bitacora.txt` o `pasos.md`) que describa cómo transformaste los datos.
+
+**`proyectos/`** — Archivos de proyecto QGIS (`.qgz`).
+
+**`resultados/`** — Productos finales:
+
+-   **`mapas/`** Mapas exportados (imágenes, PDF).
+-   **`figuras/`** Gráficos, tablas u otros outputs.
+
+:::
+
+------------------------------------------------------------------------
+
 ### Material descargado
 
-Al descomprimir el archivo, encontrarás los siguientes archivos:
+Al descomprimir el archivo, encontrarás los siguientes archivos dentro de la carpeta **`datos/brutos`**:
 
 | Archivo | Descripción |
 |---|---|
@@ -47,8 +94,6 @@ Al descomprimir el archivo, encontrarás los siguientes archivos:
 | `sudamerica_admin1.shp` (+ .shx, .dbf, .prj, .cpg) | Shapefile de regiones/provincias de Sudamérica |
 | `estres_hidrico_sudamerica.csv` | Índice de estrés hídrico por región (WRI Aqueduct 4.0) |
 | `minas_litio_sudamerica.csv` | Ubicación de minas de litio en Sudamérica (con coordenadas) |
-
-Recuerda dejar los archivos originales en la carpeta `datos/brutos/` y trabajar siempre sobre copias.
 
 ::: {.callout-tip title="¿De dónde vienen estos datos?"}
 -   **Países del mundo:** [Natural Earth](https://www.naturalearthdata.com/) — mapa simplificado a escala 1:110 millones.
@@ -62,7 +107,7 @@ Recuerda dejar los archivos originales en la carpeta `datos/brutos/` y trabajar 
 
 ## ¡Empecemos! {.unnumbered .unlisted}
 
-# Mapa 1: "Control" — Energías renovables en el mundo {.unnumbered .unlisted}
+## Mapa 1: "Control" — Energías renovables en el mundo {.unnumbered .unlisted}
 
 En este primer mapa visualizaremos qué proporción de la electricidad de cada país proviene de fuentes renovables (solar, eólica, hidroeléctrica, etc.). Este es el lado del **"Control"**: la humanidad avanzando hacia un futuro energético más limpio.
 
@@ -74,7 +119,22 @@ En este primer mapa visualizaremos qué proporción de la electricidad de cada p
 
 ![Carga del shapefile de países del mundo](figures/tarea05/tarea5_001.png){fig-align="center"}
 
-**5.** Abre la **tabla de atributos** de la capa `paises_mundo` (clic derecho > Abrir tabla de atributos). Observa las columnas disponibles:
+**5.** Ve al menú **Proyecto > Propiedades** y selecciona la pestaña **"SRS"** (Sistema de Referencia de Coordenadas).
+
+::: {.callout-tip title="¿Qué es un Sistema de Referencia de Coordenadas (CRS)?"}
+Es un sistema que define cómo se proyectan y representan las coordenadas geográficas en un mapa. Para un mapamundi, la proyección **Robinson** ofrece una representación equilibrada de formas y tamaños — es la misma que usamos en la Clase 4.
+:::
+
+**6.** En la barra de búsqueda, escribe "Robinson". Selecciona **"World_Robinson"** de la lista que aparece. Haz clic en **Aplicar** y luego en **Aceptar**.
+
+Una vez que hayas aplicado el cambio de CRS, el mapa se actualizará automáticamente para reflejar la proyección **"World_Robinson"**. Notarás cómo las formas de los continentes y los océanos cambian, logrando una representación más equilibrada y estéticamente agradable del mundo.
+
+![Paises del mundo con CRS World Robinson](figures/tarea05/tarea5_001b.png){fig-align="center"}
+------------------------------------------------------------------------
+
+## Paso 1b | Explorar la tabla de atributos
+
+**7.** Abre la **tabla de atributos** de la capa `paises_mundo` (clic derecho > Abrir tabla de atributos). Observa las columnas disponibles:
 
 -   `Pais`: nombre del país
 -   `ISO_A3`: código ISO de 3 letras (por ejemplo, `CHL` para Chile, `BRA` para Brasil)
@@ -91,11 +151,11 @@ Fíjate en la columna `ISO_A3` — este será el campo clave para unir los datos
 
 Ahora importaremos la base de datos de energía renovable. Este archivo CSV **no tiene coordenadas** — contiene solo datos tabulares que uniremos al shapefile usando un campo en común.
 
-**6.** Ve a **Capa > Añadir Capa > Añadir capa de texto delimitado**.
+**8.** Ve a **Capa > Añadir Capa > Añadir capa de texto delimitado**.
 
 ![Menú Capa > Añadir capa de texto delimitado](figures/tarea05/tarea5_003.png){fig-align="center"}
 
-**7.** En la ventana que se abre:
+**9.** En la ventana que se abre:
 
 -   Busca y selecciona el archivo `energia_renovable_mundo_2023.csv`.
 -   En **Formato de archivo**, asegúrate de que esté seleccionado **CSV (valores separados por coma)**.
@@ -104,9 +164,9 @@ Ahora importaremos la base de datos de energía renovable. Este archivo CSV **no
 
 ![Configuración de importación del CSV de energía renovable — sin geometría](figures/tarea05/tarea5_004.png){fig-align="center"}
 
-**8.** Haz clic en **Añadir**. La tabla aparecerá en el panel de capas, pero no se visualizará en el mapa (porque no tiene geometría).
+**10.** Haz clic en **Añadir**. La tabla aparecerá en el panel de capas, pero no se visualizará en el mapa (porque no tiene geometría).
 
-**9.** Abre la tabla de atributos de esta nueva capa y explora las columnas:
+**11.** Abre la tabla de atributos de esta nueva capa y explora las columnas:
 
 -   `country`: nombre del país
 -   `iso_code`: código ISO de 3 letras
@@ -124,11 +184,11 @@ El campo `renewables_share_elec` indica el porcentaje de la electricidad de un p
 
 Ahora realizaremos una **unión no espacial** (table join) entre el shapefile de países y la tabla de energía renovable. Esto vinculará los datos de energía a cada polígono de país, permitiéndonos crear un mapa temático.
 
-**10.** Haz clic derecho sobre la capa `paises_mundo` y selecciona **Propiedades > Uniones**.
+**12.** Haz clic derecho sobre la capa `paises_mundo` y selecciona **Propiedades > Uniones**.
 
 ![Propiedades de la capa > pestaña Uniones](figures/tarea05/tarea5_005.png){fig-align="center"}
 
-**11.** Haz clic en el botón **"+"** (Añadir una nueva unión). En la ventana que aparece:
+**13.** Haz clic en el botón **"+"** (Añadir una nueva unión). En la ventana que aparece:
 
 -   **Capa de unión:** selecciona `energia_renovable_mundo_2023`
 -   **Campo de unión:** selecciona `iso_code`
@@ -138,53 +198,110 @@ Estas dos columnas contienen el mismo código ISO de 3 letras, lo que permite a 
 
 ![Configuración de la unión — campos iso_code e ISO_A3](figures/tarea05/tarea5_006.png){fig-align="center"}
 
-**12.** Haz clic en **Aceptar** dos veces.
+**14.** Haz clic en **Aceptar** dos veces (una en el cuadro the configuración del join, luego en el cuadro de propiedades).
 
-**13.** Abre la tabla de atributos de `paises_mundo` y desplázate hacia la derecha. Deberías ver las nuevas columnas provenientes de la tabla de energía (con prefijo del nombre de la capa).
+**15.** Abre la tabla de atributos de `paises_mundo` y desplázate hacia la derecha. Deberías ver las nuevas columnas provenientes de la tabla de energía.
 
 ![Tabla de atributos después del join — nuevas columnas de energía renovable](figures/tarea05/tarea5_007.png){fig-align="center"}
+
+::: callout-important
+**¿Por qué las columnas nuevas tienen nombres tan largos?** Al realizar un join en QGIS, las columnas que provienen de la tabla unida se renombran automáticamente con el **prefijo del nombre de la capa de origen** — por ejemplo, `energia_renovable_mundo_2023_renewables_share_elec` en vez de solo `renewables_share_elec`. Esto ocurre siempre y es para evitar confusiones cuando hay columnas con el mismo nombre en ambas tablas. Tenlo en cuenta a lo largo de la tarea: cada vez que necesites seleccionar o escribir el nombre de una columna que vino de un join, debes usar el nombre completo tal como aparece en la tabla de atributos.
+:::
 
 ::: {.callout-tip title="¿Qué es un join no espacial?"}
 Un **join no espacial** (o table join) vincula dos tablas de datos utilizando un campo en común — en este caso, el código ISO del país. A diferencia de un join espacial (que veremos más adelante), no se basa en la ubicación geográfica sino en un identificador compartido. Es análogo a un `VLOOKUP` en Excel o un `JOIN` en SQL.
 :::
 
+::: {.callout-important title="¿Qué pasa con los países que no tienen datos de energía?"}
+Al hacer un join en QGIS, **la capa original siempre conserva todas sus filas** — no se pierde ningún país del mapa. Si un país del shapefile no tiene un código ISO que coincida en la tabla de energía, simplemente quedará con las columnas de energía **vacías** (sin valor). Esto significa que:
+
+-   Si el shapefile tiene 177 países, después del join seguirás teniendo 177 países.
+-   Los países que sí encontraron coincidencia tendrán sus datos de energía completos.
+-   Los países sin coincidencia aparecerán con valores vacíos en las columnas nuevas — y probablemente se mostrarán sin color en el mapa final.
+
+Es importante revisar la tabla de atributos después del join para identificar estos casos y decidir cómo manejarlos.
+:::
+
 ------------------------------------------------------------------------
 
-## Paso 4 | Exportar la capa unida como shapefile
+## Paso 4 | Exportar la capa unida como GeoPackage
 
-El join que acabamos de hacer es **temporal** — si cierras el proyecto, se perderá. Para hacerlo permanente, exportaremos la capa a un nuevo shapefile.
+El join que acabamos de hacer es **temporal** — si cierras el proyecto, se perderá. Para hacerlo permanente, exportaremos la capa a un nuevo archivo.
 
-**14.** Haz clic derecho sobre `paises_mundo` y selecciona **Exportar > Guardar objetos como...**
+**16.** Haz clic derecho sobre `paises_mundo` y selecciona **Exportar > Guardar objetos como...**
 
 ![Exportar > Guardar objetos como](figures/tarea05/tarea5_008.png){fig-align="center"}
 
-**15.** En la ventana de exportación:
+**17.** En la ventana de exportación:
 
--   **Formato:** Archivo shape de Esri
--   **Nombre de archivo:** navega a tu carpeta `datos/procesados/` y nómbralo `paises_renovables.shp`
+-   **Formato:** GeoPackage
+-   **Nombre de archivo:** navega a tu carpeta `datos/procesados/` y nómbralo `paises_renovables.gpkg`
 -   Haz clic en **Aceptar**.
 
-La nueva capa aparecerá automáticamente en el panel de capas con los datos de energía integrados permanentemente.
+![Exportar > Guardar objetos como](figures/tarea05/tarea5_008b.png){fig-align="center"}
+
+Al aceptar, la nueva capa aparecerá automáticamente en el panel de capas con los datos de energía integrados permanentemente.
+
+::: {.callout-tip title="¿Por qué usar el formato GeoPackage?"}
+
+Hasta ahora hemos trabajado importando archivos **Shapefile** (`.shp`), el formato más común en GIS. Sin embargo, a la hora de exportar y guardar nuestras propias capas, usaremos **GeoPackage** (`.gpkg`) como formato estándar del curso. ¿Por qué? Comparemos los formatos más comunes:
+
+| Formato | Extensión | Archivos | Límite nombres de columna | CRS | Tamaño máximo |
+|---|---|---|---|---|---|
+| **Shapefile** | `.shp` + `.shx` + `.dbf` + `.prj` + `.cpg` | 5–7 archivos | 10 caracteres | Cualquiera | 2 GB |
+| **GeoPackage** | `.gpkg` | 1 archivo | Sin límite | Cualquiera | Sin límite práctico |
+| **KML** | `.kml` / `.kmz` | 1 archivo | Sin límite | Solo WGS 84 | Sin límite |
+| **GeoJSON** | `.geojson` | 1 archivo | Sin límite | Solo WGS 84 | Sin límite práctico |
+| **GeoTIFF** | `.tif` | 1–2 archivos | — (formato ráster) | Cualquiera | 4 GB |
+| **File Geodatabase** | `.gdb` (carpeta) | Múltiples | 64 caracteres | Cualquiera | 1 TB |
+
+**¿Por qué GeoPackage es la mejor opción para nuestro trabajo?**
+
+-   **Un solo archivo:** a diferencia del Shapefile (que necesita 5 o más archivos que deben mantenerse juntos), un GeoPackage es un único archivo `.gpkg`. Esto hace mucho más fácil copiar, mover y compartir tus datos sin que se pierda ninguna pieza.
+-   **Sin truncar nombres de columna:** el Shapefile recorta los nombres de columna a 10 caracteres (por ejemplo, `renewables_share_elec` se convierte en `renewabl_1`), lo que dificulta saber qué contiene cada columna. GeoPackage conserva los nombres completos.
+-   **Soporta cualquier sistema de coordenadas:** a diferencia de KML y GeoJSON (que solo trabajan en WGS 84), GeoPackage puede almacenar datos en cualquier CRS, incluyendo proyecciones como Robinson.
+-   **Múltiples capas en un archivo:** un solo `.gpkg` puede contener varias capas (vectoriales y ráster), como una mini base de datos geoespacial.
+-   **Es el formato por defecto de QGIS** desde la versión 3.x, y es un estándar abierto del [Open Geospatial Consortium (OGC)](https://www.ogc.org/).
+
+En resumen: GeoPackage combina la versatilidad del Shapefile con la simplicidad de un archivo único, sin las limitaciones históricas. Por eso lo adoptaremos como formato estándar en las próximas tareas.
+:::
 
 ------------------------------------------------------------------------
 
 ## Paso 5 | Simbología graduada: porcentaje de energía renovable
 
-**16.** Haz clic derecho sobre la nueva capa `paises_renovables` y selecciona **Propiedades > Simbología**.
+**18.** Haz clic derecho sobre la nueva capa `paises_renovables` y selecciona **Propiedades > Simbología**.
 
-**17.** Cambia la simbología de "Símbolo único" a **"Graduado"**.
+**19.** Cambia la simbología de "Símbolo único" a **"Graduado"**.
 
-**18.** En el campo **Valor**, selecciona la columna que contiene el porcentaje de electricidad renovable. Debido a la restricción de 10 caracteres del formato shapefile, el nombre de la columna habrá sido recortado — búscala revisando los datos en la tabla de atributos.
+**20.** En el campo **Valor**, selecciona la columna que contiene el porcentaje de electricidad renovable. Recuerda que, después del join, las columnas llevan como prefijo el nombre de la capa de origen — busca una columna como `energia_renovable_mundo_2023_renewables_share_elec` (o similar) en la lista desplegable.
 
-::: callout-note
-Es importante señalar que, al exportar la unión entre shapefiles y tablas, el formato shapefile impone una restricción de **10 caracteres** al nombre de las columnas. Por ello, los nombres originales se recortarán. Sin embargo, las columnas mantendrán el mismo orden que las originales.
-:::
+**21.** Selecciona una **rampa de color** apropiada (se sugiere una rampa de verdes, dado que representamos energía "limpia").
 
-**19.** Selecciona una **rampa de color** apropiada (se sugiere una rampa de verdes, dado que representamos energía "limpia").
-
-**20.** Haz clic en **Clasificar** y luego en **Aceptar**.
+**22.** Haz clic en **Clasificar** y luego en **Aceptar**.
 
 ![Simbología graduada — porcentaje de electricidad renovable por país](figures/tarea05/tarea5_009.png){fig-align="center"}
+
+**23.** Notarás que los países sin datos de energía renovable aparecen **invisibles** (sin relleno), lo que puede confundirse con el fondo del mapa. Para solucionarlo, convertiremos la simbología graduada en una **simbología basada en reglas**, lo que nos permitirá añadir una clase especial para los valores sin datos — todo dentro de la misma capa y la misma leyenda.
+
+-   Abre nuevamente **Propiedades > Simbología** de la capa `paises_renovables`.
+-   Cambia el tipo de simbología de **"Graduado"** a **"Basado en reglas"**. Al hacerlo, QGIS convertirá automáticamente las clases graduadas que ya creaste en reglas individuales — no perderás nada de lo que hiciste.
+-   Ahora añade una nueva regla para capturar los países sin datos: haz clic en el botón **"+"** (añadir regla).
+-   En la ventana de edición de la regla, marca la casilla **"Else"** — esto hará que la regla capture todas las entidades que no coinciden con ninguna otra regla (es decir, los países sin datos de energía).
+-   En **Etiqueta**, escribe `Sin información`.
+-   Configura el color de relleno de esta regla: haz clic directamente **sobre el cuadro de color** (no sobre la flecha desplegable que está al lado — esa abre un menú rápido diferente). Se abrirá el diálogo completo de selección de color.
+-   En el diálogo de color, busca el campo **"Notación HTML"** (en la parte inferior). Escribe `#d9d9d9` (un gris claro) y presiona **Enter**.
+-   Haz clic en **Aceptar** para cerrar el selector de color, y luego en **Aceptar** nuevamente para aplicar la simbología.
+
+De esta forma, los países con datos se mostrarán con la rampa de verdes y los países sin datos aparecerán en gris — todo en una sola capa, con una leyenda limpia que incluye la categoría "Sin información".
+
+::: {.callout-tip title="Códigos de color HTML"}
+Los colores en QGIS (y en diseño web, cartografía digital, etc.) se pueden expresar con un código **hexadecimal** de 6 caracteres precedido por `#`. Cada par de caracteres representa la intensidad de **rojo**, **verde** y **azul** (RGB), en una escala de `00` (nada) a `ff` (máximo). Por ejemplo: `#ff0000` es rojo puro, `#00ff00` es verde puro, y `#d9d9d9` es un gris claro donde los tres canales tienen el mismo valor. Usar la notación HTML permite ingresar colores exactos de forma rápida y reproducible.
+:::
+
+::: {.callout-important title="¿Por qué basado en reglas y no una capa de fondo?"}
+En la Tarea 4, resolvimos el problema de los valores sin datos colocando una capa gris por detrás. Eso funciona, pero tiene una desventaja: la categoría "Sin información" no aparece en la leyenda del mapa, lo que puede confundir al lector. Al usar simbología **basada en reglas**, todas las categorías — incluyendo "Sin información" — quedan dentro de la misma capa y se muestran automáticamente en la leyenda. Este es un enfoque más robusto y profesional que usaremos de aquí en adelante.
+:::
 
 ::: callout-note
 **PAUSA** — hasta ahora debería visualizarse algo así:
@@ -192,11 +309,9 @@ Es importante señalar que, al exportar la unión entre shapefiles y tablas, el 
 ![Vista del mapa mundial con simbología graduada de energías renovables](figures/tarea05/tarea5_010.png){fig-align="center"}
 :::
 
-**21.** Para una mejor visualización, instala el complemento de mapa base: ve a **Complementos > Administrar e instalar complementos**, busca **QuickMapServices**, e instálalo. Luego, ve a **Web > QuickMapServices > OSM > OSM Standard** para añadir un mapa base.
-
 ------------------------------------------------------------------------
 
-# Mapa 2: "Descontrol" — Litio y estrés hídrico en Sudamérica {.unnumbered .unlisted}
+## Mapa 2: "Descontrol" — Litio y estrés hídrico en Sudamérica {.unnumbered .unlisted}
 
 Ahora pasamos al lado del **"Descontrol"**. La transición hacia energías renovables requiere baterías de litio — y la extracción de litio consume enormes cantidades de agua en zonas que ya enfrentan escasez hídrica. En este mapa visualizaremos la coincidencia entre minas de litio y estrés hídrico en Sudamérica.
 
@@ -210,9 +325,9 @@ La paradoja es clara: el mineral que necesitamos para la transición energética
 
 ## Paso 6 | Cargar el shapefile de regiones de Sudamérica
 
-**22.** Añade al mapa el shapefile `sudamerica_admin1.shp`.
+**24.** Añade al mapa el shapefile `sudamerica_admin1.shp`.
 
-**23.** Abre la tabla de atributos y observa las columnas:
+**25.** Abre la tabla de atributos y observa las columnas:
 
 -   `GID_0`: código ISO del país (por ejemplo, `CHL`)
 -   `GID_1`: código único de la región (por ejemplo, `CHL.2_1` para Antofagasta)
@@ -225,9 +340,9 @@ La paradoja es clara: el mineral que necesitamos para la transición energética
 
 ## Paso 7 | Importar y unir los datos de estrés hídrico
 
-**24.** Importa el archivo `estres_hidrico_sudamerica.csv` como capa de texto delimitado **sin geometría** (misma operación que en el paso 6–8).
+**26.** Importa el archivo `estres_hidrico_sudamerica.csv` como capa de texto delimitado **sin geometría** (misma operación que en el paso 8–10).
 
-**25.** Abre la tabla de atributos de esta nueva tabla y observa las columnas:
+**27.** Abre la tabla de atributos de esta nueva tabla y observa las columnas:
 
 -   `GID_1`: código de la región (coincide con el shapefile)
 -   `GID_0`: código del país
@@ -248,38 +363,39 @@ El índice proviene del [WRI Aqueduct 4.0](https://www.wri.org/aqueduct) y mide 
 | 4–5 | Extremely High (>80%) | Extracción mayor al 80% del agua disponible |
 :::
 
-**26.** Realiza un **join no espacial** entre `sudamerica_admin1` y `estres_hidrico_sudamerica`:
+**28.** Realiza un **join no espacial** entre `sudamerica_admin1` y `estres_hidrico_sudamerica`:
 
 -   **Capa de unión:** `estres_hidrico_sudamerica`
 -   **Campo de unión:** `GID_1`
 -   **Campo del objeto:** `GID_1`
 
-**27.** Verifica el join abriendo la tabla de atributos de `sudamerica_admin1`. Deberías ver las columnas de estrés hídrico añadidas.
+**29.** Verifica el join abriendo la tabla de atributos de `sudamerica_admin1`. Deberías ver las columnas de estrés hídrico añadidas.
 
-**28.** Exporta la capa unida como shapefile a `datos/procesados/` con el nombre `sudamerica_estres.shp` (mismo procedimiento que en el paso 14–15).
+**30.** Exporta la capa unida como GeoPackage a `datos/procesados/` con el nombre `sudamerica_estres.gpkg` (mismo procedimiento que en el paso 16–17).
 
 ------------------------------------------------------------------------
 
 ## Paso 8 | Simbología graduada: estrés hídrico por región
 
-**29.** En la nueva capa `sudamerica_estres`, configura la simbología:
+**31.** En la nueva capa `sudamerica_estres`, configura la simbología:
 
 -   Tipo: **Graduado**
--   Valor: la columna de estrés hídrico (busca la columna correspondiente, recortada a 10 caracteres)
+-   Valor: la columna que contiene el índice de estrés hídrico. Recuerda que llevará el prefijo del nombre de la capa de origen (por ejemplo, `estres_hidrico_sudamerica_Estres_Hidrico`). Búscala en la lista desplegable o revisa la tabla de atributos.
 -   **5 clases** (para corresponder a las 5 categorías de estrés)
 -   Rampa de color: se sugiere una rampa de **rojos o naranjas** (donde más oscuro = más estrés)
 
-**30.** Haz clic en **Clasificar** y luego en **Aceptar**.
+**32.** Haz clic en **Clasificar** y luego en **Aceptar**.
 
 ::: callout-note
-Algunas regiones pueden tener valor **-9999** (sin datos). Para excluirlas, puedes usar una expresión como hemos visto en la Tarea 4:
-
-```
-CASE WHEN "Estres_Hi" > 0 THEN "Estres_Hi" ELSE NULL END
-```
-
-(Ajusta el nombre de la columna según como haya quedado después de la exportación.)
+Algunas regiones tienen valor **-9999**, lo que indica que no hay datos disponibles de estrés hídrico para esa región. Estas regiones quedarán fuera de la clasificación graduada.
 :::
+
+**33.** Al igual que hicimos con el mapa mundial, convierte la simbología a **"Basado en reglas"** y añade una regla **Else** con etiqueta `Sin información` y color gris (`#d9d9d9`). Esto capturará las regiones con valor -9999 y las mostrará en la leyenda.
+
+**34.** Para visualizar correctamente el mapa de Sudamérica:
+
+-   **Desactiva las capas del Mapa 1** (paises_renovables) en el panel de capas para que no interfieran visualmente.
+-   **Haz clic derecho sobre `sudamerica_estres`** y selecciona **"Zum a la capa"** para centrar la vista en Sudamérica.
 
 ![Simbología graduada — estrés hídrico por región en Sudamérica](figures/tarea05/tarea5_012.png){fig-align="center"}
 
@@ -289,9 +405,9 @@ CASE WHEN "Estres_Hi" > 0 THEN "Estres_Hi" ELSE NULL END
 
 Ahora importaremos la ubicación de las minas de litio. A diferencia de los CSV anteriores, **este archivo sí tiene coordenadas** (latitud y longitud), por lo que lo importaremos como una capa de puntos.
 
-**31.** Ve a **Capa > Añadir Capa > Añadir capa de texto delimitado**.
+**35.** Ve a **Capa > Añadir Capa > Añadir capa de texto delimitado**.
 
-**32.** En la ventana que se abre:
+**36.** En la ventana que se abre:
 
 -   Busca y selecciona el archivo `minas_litio_sudamerica.csv`.
 -   En **Definición de geometría**, selecciona **"Coordenadas del punto"**:
@@ -305,35 +421,57 @@ Ahora importaremos la ubicación de las minas de litio. A diferencia de los CSV 
 Revisa siempre los **Datos de ejemplo** en la parte inferior de la ventana. Si las columnas se ven mezcladas en una sola, prueba cambiar el delimitador (coma, punto y coma, etc.). Además, verifica que la opción **"El separador decimal es la coma"** esté activada si tus coordenadas usan comas como separador decimal.
 :::
 
-**33.** Haz clic en **Añadir**.
+**37.** Haz clic en **Añadir**.
 
-**34.** Exporta la capa como shapefile a `datos/procesados/` con el nombre `minas_litio.shp`.
+**38.** Exporta la capa como GeoPackage a `datos/procesados/` con el nombre `minas_litio.gpkg`.
+
+**39.** Ahora configuraremos la simbología de las minas de litio para que se distingan claramente sobre el mapa coroplético de rojos. Haz clic derecho sobre la capa de minas > **Propiedades > Simbología**. La capa ya estará en modo **Símbolo único** — lo que haremos es personalizar el símbolo en detalle:
+
+-   Veras un cuadro donde se puede seleccionar el tipo de marcador. Cambia la forma a **triángulo** seleccionándolo de la galería de formas disponibles.
+-   Para configurar en detalle el aspecto del triángula, haz click en la flecha a la izquierda de la vista previa del marcador arriba, y luego sobre el nuevo marcador que se abre abajo a la derecha.
+-   **Color de relleno:** haz clic directamente **sobre el cuadro de color** del relleno (no sobre la flecha al lado). En el diálogo de color, escribe `#0000ff` (azul) en la **Notación HTML**. Antes de cerrar, busca el control deslizante de **Opacidad** y bájalo a **60%** — esto añade transparencia al relleno, lo que permite ver cuándo hay minas muy cercanas entre sí (las zonas de superposición se verán más oscuras).
+-   **Color del trazo (borde):** haz clic sobre el cuadro de color del trazo y selecciona **negro** (`#000000`). Deja la opacidad al 100%.
+-   **Tamaño:** ajusta el tamaño del marcador a un valor que permita ver las minas sin que tapen el mapa — se sugiere probar con **4–6 mm**, pero experimenta hasta encontrar un tamaño adecuado.
+-   **Ancho del trazo:** prueba con **0.4 mm** para un borde visible pero no dominante.
+
+Haz clic en **Aceptar** para aplicar.
+
+![Configuración del símbolo único](figures/tarea05/tarea5_013b.png){fig-align="center"}
+
+::: {.callout-tip title="Explorando el diálogo de simbología"}
+El diálogo de edición de símbolos de QGIS permite controlar muchos aspectos visuales de cada capa. Además de lo que acabamos de configurar (forma, color de relleno, color de borde, tamaño y opacidad), puedes ajustar:
+
+-   **Ángulo de rotación** del marcador (útil para flechas o símbolos direccionales).
+-   **Desplazamiento** horizontal y vertical (para mover el símbolo respecto al punto real).
+-   **Grosor del trazo** y estilo de línea (sólida, punteada, etc.).
+-   **Capas de símbolo** — puedes apilar múltiples formas para crear símbolos compuestos (por ejemplo, un círculo con un punto interior).
+
+Te recomendamos explorar estas opciones por tu cuenta — una buena simbología puede hacer la diferencia entre un mapa confuso y uno que comunica con claridad.
+:::
 
 ::: callout-note
 **PAUSA** — deberías ver las minas de litio sobre el mapa de estrés hídrico. Observa cómo se concentran en las zonas de mayor estrés:
 
 ![Mapa de estrés hídrico con minas de litio superpuestas](figures/tarea05/tarea5_014.png){fig-align="center"}
 :::
-
-**35.** Para que las minas se visualicen claramente sobre el mapa coroplético, ve a la simbología de la capa de minas y elige un **símbolo único** llamativo (se sugiere un triángulo o rombo en color contrastante, como amarillo o blanco con borde negro).
-
 ------------------------------------------------------------------------
 
 ## Paso 10 | Composición de impresión: díptico "Control y Descontrol"
 
 Ahora crearemos una composición de impresión con **dos mapas lado a lado**: el Mapa 1 ("Control") a la izquierda y el Mapa 2 ("Descontrol") a la derecha.
 
-**36.** Ve a **Proyecto > Nueva composición de impresión**. Asígnale un nombre (por ejemplo, `control_descontrol`).
+**40.** Ve a **Proyecto > Nueva composición de impresión**. Asígnale un nombre (por ejemplo, `control_descontrol`).
 
-**37.** Configura la orientación de la página: haz clic derecho sobre la hoja en blanco > **Propiedades de la página** > cambia la orientación a **horizontal** (apaisado). Esto permitirá que los dos mapas quepan lado a lado.
+**41.** Configura la orientación de la página: haz clic derecho sobre la hoja en blanco > **Propiedades de la página** > cambia la orientación a **horizontal** (apaisado). Esto permitirá que los dos mapas quepan lado a lado. Puedes ajustar la altura y el ancho de la pagina también, recomendamos un ancho de 250 milímetros y un alto de 150 milímetros para este mapa, pero siéntete libre de experimentar.
 
 ![Propiedades de la página — orientación horizontal](figures/tarea05/tarea5_015.png){fig-align="center"}
 
-**38.** Añade el **primer mapa** (Control — energías renovables):
+**42.** Añade el **primer mapa** (Control — energías renovables):
 
+-   Antes de añadir este mapa, asegúrate de que en la ventana principal de QGIS estén visibles solo las capas del Mapa 1 (`paises_renovables` con su simbología basada en reglas) y de hacer zoom a la capa.
 -   Selecciona **Añadir mapa** en la barra de herramientas.
--   Dibuja un rectángulo en la **mitad izquierda** de la hoja.
--   Antes de añadir este mapa, asegúrate de que en la ventana principal de QGIS estén visibles solo las capas del Mapa 1 (países con simbología de energía renovable + mapa base).
+-   Dibuja un rectángulo en la **mitad izquierda** de la hoja (cuando llegues a la mitad, QGIS automáticamente marcará una línea punteada vertical y te facilitará posicionar el extremo derecho del mapa exactamente en la mitad del lienzo). Dado que el mapa mundi tiene una disposición naturalmente más horizontal, mientras que sudamérica una disposición vertical, puedes ajustar el límite entre ambos mapas hacia la derecha para lograr una composición que minimice las áreas en blanco.
+
 
 ::: {.callout-tip title="Dos mapas en una composición"}
 Para que cada marco de mapa muestre capas diferentes, debes **controlar qué capas están visibles** en la ventana principal de QGIS antes de dibujar cada marco. El truco es:
@@ -345,24 +483,43 @@ Para que cada marco de mapa muestre capas diferentes, debes **controlar qué cap
 5.  Añade el segundo marco de mapa.
 :::
 
-**39.** En las propiedades del primer marco de mapa (panel derecho), marca la opción **"Bloquear capas"** para que este mapa no cambie al modificar la vista principal.
+**43.** Puedes ajustar el tamaño de cada mapa dentro del lienzo haciendo click en cada map, y luego ajustando el zoom con el mouse. Para un control más fino, ajusta el número en Escala en la pestaña de propiedades del mapa. Mientras más pequeño el número, más zoom. Una vez que encuentres el tamaño apropiado, puedes desplazarte dentrol del mapa con la opción de mover contenido del item (hoja con flechas hacia las cuatro cordenadas en la barra de herramientas). 
+
+
+**44.** En las propiedades del primer marco de mapa (panel derecho), marca la opción **"Bloquear capas"** para que este mapa no cambie al modificar la vista principal.
 
 ![Propiedades del elemento mapa — opción Bloquear capas](figures/tarea05/tarea5_016.png){fig-align="center"}
 
-**40.** Ahora vuelve a la ventana principal de QGIS. Desactiva las capas del Mapa 1 y activa las capas del Mapa 2 (estrés hídrico + minas de litio).
+**45.** Ahora vuelve a la ventana principal de QGIS. Desactiva las capas del Mapa 1 y activa las capas del Mapa 2 (estrés hídrico + minas de litio).
 
-**41.** Regresa a la composición de impresión y añade el **segundo mapa** dibujando un rectángulo en la **mitad derecha** de la hoja.
+**47.** Regresa a la composición de impresión y añade el **segundo mapa** dibujando un rectángulo en la **mitad derecha** de la hoja.
 
-**42.** Completa la composición añadiendo:
+**48.** Completa la composición añadiendo:
 
--   **Títulos:** "Control" sobre el mapa izquierdo, "Descontrol" sobre el derecho (usa **Añadir etiqueta**).
--   **Leyendas:** una para cada mapa. Recuerda editar las leyendas manualmente para mostrar solo la información relevante (elimina capas innecesarias con el botón **"-"**).
--   **Barra de escala:** al menos para el mapa de Sudamérica.
--   **Flecha del Norte:** al menos para el mapa de Sudamérica.
+-   **Títulos:** "Control" sobre el mapa izquierdo, "Descontrol" sobre el derecho (usa **Añadir etiqueta**). Los títulos pueden tener su propio marco si lo deseas. Ten en cuenta que si tu mapa será insertado dentro de un documento (por ejemplo, un informe o un artículo), el título puede ser innecesario — en ese caso, el título de la figura en el documento cumple esa función.
+-   **Leyendas:** una para cada mapa (ver instrucciones detalladas en el recuadro de abajo).
+-   **Barra de escala (opcional):** en este caso, dado que Sudamérica es una región cuya escala es conocida en nuestro contexto, la barra de escala no es estrictamente necesaria. Sin embargo, si tu mapa será presentado ante un público no familiarizado con la región (por ejemplo, en una conferencia en China), la barra de escala se vuelve indispensable para que el lector pueda interpretar las distancias correctamente.
+-   **Flecha del Norte (opcional):** aplica el mismo criterio — en un mapa de Sudamérica orientado al norte, la orientación es evidente para un público local, pero puede ser necesaria en otros contextos.
 
-![Composición final — díptico Control y Descontrol](figures/tarea05/tarea5_017.png){fig-align="center"}
+::: {.callout-tip title="Configuración detallada de la leyenda"}
 
-**43.** Exporta la composición como imagen a `resultados/mapas/` con resolución de **300 ppp**.
+Al añadir una leyenda (**Añadir leyenda** en la barra de herramientas), QGIS creará una leyenda automática que incluye todas las capas visibles. Para que quede profesional, sigue estos pasos en el panel de **Propiedades del elemento** (a la derecha):
+
+1.  **Desmarcar "Actualizar automáticamente":** esto te permite editar la leyenda manualmente. Usa el botón **"-"** para eliminar capas que no quieres mostrar (por ejemplo, el mapa base o capas auxiliares) y el botón de edición (lápiz) para renombrar las entradas.
+
+2.  **Título de la leyenda:** reemplaza el título genérico por uno informativo. Por ejemplo, para el Mapa 1: `% renovable en matriz energética`. Alternativamente, puedes dejar el título vacio y editar los nombres de las capas para que sirvan como título de sus ítems respectivos.
+
+3.  **Columnas:** en la sección de configuración de columnas, prueba con **3 columnas** para distribuir las clases horizontalmente en el mapa mundi. Marca las opciones **"Igual ancho de columna"** y **"Dividir capas"** — esto permite que las clases de una misma capa se repartan entre columnas. Esta configuración es especialmente útil si quieres que la leyenda sea más ancha que alta (por ejemplo, para que calce con el ancho del mapa mundi).
+
+4.  **Desmarcar "Redimensionar para ajustar al contenido":** esto te permite ajustar manualmente el tamaño de la caja de la leyenda, en vez de que QGIS lo haga automáticamente. Así puedes hacer que la leyenda tenga exactamente el mismo ancho que el mapa que está arriba.
+
+5.  **Desmarcar "Fondo":** desactiva la casilla de fondo (background) de la leyenda para que no aparezca un rectángulo blanco detrás que interfiera visualmente con el marco del mapa.
+
+6.  **Marco (opcional):** en la sección **Marco**, puedes activar la casilla para añadir un borde a la leyenda. En muchos casos la leyenda se ve más limpia **sin marco** — especialmente si ya está bien posicionada junto al mapa. Si decides añadirlo, ajusta el **grosor de la línea** a un valor más delgado que el marco del mapa (por ejemplo, **0.2 mm** si el mapa tiene **0.4 mm**) — esto establece una jerarquía visual donde el mapa es el elemento principal y la leyenda es un elemento secundario.
+
+:::
+
+**49.** Exporta la composición como imagen a `resultados/mapas/` con resolución de **300 ppp**.
 
 ------------------------------------------------------------------------
 
@@ -370,9 +527,9 @@ Para que cada marco de mapa muestre capas diferentes, debes **controlar qué cap
 
 Tu composición final debería verse algo así (con tu propia elección de colores):
 
-![Resultado final — díptico: energías renovables (mundo) + estrés hídrico y litio (Sudamérica)](figures/tarea05/tarea5_018.png){fig-align="center"}
+![Resultado final — díptico: energías renovables (mundo) + estrés hídrico y litio (Sudamérica)](figures/tarea05/tarea5_017.png){fig-align="center"}
 
-¡Listo! Has finalizado tu mapa. Recuerda completar esta actividad y subirla a Canvas en el Mapa-Memo correspondiente.
+¡Listo! Has finalizado tu mapa. Recuerda completar esta actividad y guardarla para la entrega de tu próximo portafolio.
 
 ------------------------------------------------------------------------
 
