@@ -8,15 +8,14 @@ format: html
 
 El objetivo de esta práctica es que adquieras las habilidades de importación de datos a QGIS, unión de tablas (join no espacial), y confección de mapas temáticos. La idea es que logres crear dos mapas que cuenten una historia de **Control y Descontrol**: el primero muestra el avance de las energías renovables en el mundo; el segundo muestra el costo oculto de esta transición — la extracción de litio en zonas con alto estrés hídrico en Sudamérica.
 
-**Herramientas por aprender:**
+**Herramientas nuevas:**
 
--   Importación de datos a QGIS (CSV con y sin coordenadas)
--   Conversión de Excel a CSV
--   Tabla de atributos: exploración, filtrado y edición
+-   Importación de datos CSV (con y sin coordenadas)
 -   Join no espacial para combinar tablas
 -   Exportación de capas a GeoPackage
+-   Simbología basada en reglas (con clase "Sin información")
 -   Composición de impresión con **dos mapas** (díptico)
--   Edición avanzada de leyendas
+-   Edición avanzada de leyendas (columnas, tamaño manual, sin fondo)
 
 ------------------------------------------------------------------------
 

@@ -61,15 +61,15 @@ Algunas parejas comparten sus reflexiones.
 
 # CT: Control y Descontrol {.section-slide background-color="#2a7f62"}
 
-## El poder de la ciencia moderna
+## El poder de la ciencia moderna {.compact}
 
 ::: columns
-::: {.column width="48%"}
+::: {.column width="45%"}
 Los avances de la ciencia y la tecnología nos han puesto en una posición única: somos la primera especie que tiene un **control consciente** del bioma
 
 Este tremendo poder ha sido utilizado para el beneficio de la humanidad, pero también contra ella
 :::
-::: {.column width="48%"}
+::: {.column width="45%"}
 En muchas ocasiones hemos adoptado los avances sin detenernos a reflexionar en las consecuencias: **efectos no deseados**
 
 Revisaremos 6 tecnologías que ilustran este patrón
@@ -100,7 +100,7 @@ Revisaremos 6 tecnologías que ilustran este patrón
 
 ---
 
-## Método Haber-Bosch {.compact}
+## Método Haber-Bosch: lo bueno {.compact}
 
 ::: columns
 ::: {.column width="48%"}
@@ -111,9 +111,17 @@ El método Haber-Bosch revolucionó la agricultura. Extrae el nitrógeno — un 
 
 Así, Haber y Bosch lograron hacer **"pan del aire"**
 :::
-
-![](../figures/clase05/slide_13_img_1.png){width="90%"}
 :::
+::: {.column width="48%"}
+![](../figures/clase05/slide_13_img_1.png){width="100%"}
+:::
+:::
+
+---
+
+## Método Haber-Bosch: lo malo {.compact}
+
+::: columns
 ::: {.column width="48%"}
 ::: {.box}
 **Lo malo**
@@ -122,14 +130,15 @@ El uso indiscriminado de fertilizantes ha desbalanceado el ciclo natural del nit
 
 La abundancia excesiva de nutrientes lleva a la **eutrofización** de los cuerpos de agua — no solo matando la vida acuática, sino haciendo el agua tóxica para los humanos
 :::
-
-![](../figures/clase05/slide_14_img_1.jpg){width="90%"}
+:::
+::: {.column width="48%"}
+![](../figures/clase05/slide_14_img_1.jpg){width="100%"}
 :::
 :::
 
 ---
 
-## Pesticidas {.compact}
+## Pesticidas: lo bueno {.compact}
 
 ::: columns
 ::: {.column width="48%"}
@@ -138,9 +147,17 @@ La abundancia excesiva de nutrientes lleva a la **eutrofización** de los cuerpo
 
 Los pesticidas han permitido aumentar la productividad agrícola industrial
 :::
-
-![](../figures/clase05/slide_15_img_1.jpg){width="90%"}
 :::
+::: {.column width="48%"}
+![](../figures/clase05/slide_15_img_1.jpg){width="100%"}
+:::
+:::
+
+---
+
+## Pesticidas: lo malo {.compact}
+
+::: columns
 ::: {.column width="48%"}
 ::: {.box}
 **Lo malo**
@@ -149,8 +166,9 @@ El uso indiscriminado de pesticidas no solo mata a la peste objetivo, sino a muc
 
 Los pesticidas se acumulan en el ambiente. Se transmiten a través de la **cadena trófica**, eventualmente exponiendo a los humanos
 :::
-
-![](../figures/clase05/slide_16_img_1.jpg){width="90%"}
+:::
+::: {.column width="48%"}
+![](../figures/clase05/slide_16_img_1.jpg){width="100%"}
 :::
 :::
 
@@ -166,7 +184,7 @@ La bioacumulación de pesticidas en la cadena trófica — el fenómeno central 
 
 ---
 
-## Combustibles fósiles {.compact}
+## Combustibles fósiles: lo bueno {.compact}
 
 ::: columns
 ::: {.column width="48%"}
@@ -175,9 +193,17 @@ La bioacumulación de pesticidas en la cadena trófica — el fenómeno central 
 
 Los combustibles fósiles han sido claves para el proceso de industrialización que ha sacado a millones de personas de la pobreza
 :::
-
-![](../figures/clase05/slide_18_img_1.jpg){width="90%"}
 :::
+::: {.column width="48%"}
+![](../figures/clase05/slide_18_img_1.jpg){width="100%"}
+:::
+:::
+
+---
+
+## Combustibles fósiles: lo malo {.compact}
+
+::: columns
 ::: {.column width="48%"}
 ::: {.box}
 **Lo malo**
@@ -186,16 +212,17 @@ El CO₂ es el principal responsable del **cambio climático**
 
 La contaminación atmosférica causa **7 millones de muertes prematuras** al año (OMS)
 :::
+:::
+::: {.column width="48%"}
+![](../figures/clase05/slide_19_img_1.jpg){width="100%"}
 
-![](../figures/clase05/slide_19_img_1.jpg){width="90%"}
-
-![](../figures/clase05/slide_20_img_1.jpg){width="90%"}
+![](../figures/clase05/slide_20_img_1.jpg){width="100%"}
 :::
 :::
 
 ---
 
-## Energía nuclear {.compact}
+## Energía nuclear: lo bueno {.compact}
 
 ::: columns
 ::: {.column width="48%"}
@@ -204,10 +231,16 @@ La contaminación atmosférica causa **7 millones de muertes prematuras** al añ
 
 La energía atómica es extremadamente eficiente y no genera emisiones de CO₂
 :::
-
-![](../figures/clase05/slide_21_img_1.jpg){width="90%"}
 :::
 ::: {.column width="48%"}
+![](../figures/clase05/slide_21_img_1.jpg){width="100%"}
+:::
+:::
+
+---
+
+## Energía nuclear: lo malo {.compact}
+
 ::: {.box}
 **Lo malo**
 
@@ -217,27 +250,26 @@ Los desechos nucleares son difíciles de gestionar, y durante décadas se tiraro
 
 Los accidentes nucleares, si bien infrecuentes, pueden dejar el ambiente contaminado con radiación por siglos
 :::
-:::
-:::
-
----
-
-## Energía nuclear: accidentes
 
 ::: columns
-::: {.column width="48%"}
+
+::: {.column width="33%"}
 ![](../figures/clase05/slide_22_img_1.jpg){width="100%"}
 :::
-::: {.column width="48%"}
-![](../figures/clase05/slide_23_img_1.jpg){width="100%"}
 
+::: {.column width="33%"}
+![](../figures/clase05/slide_23_img_1.jpg){width="100%"}
+:::
+
+::: {.column width="33%"}
 ![](../figures/clase05/slide_24_img_1.jpg){width="100%"}
 :::
+
 :::
 
 ---
 
-## Antibióticos {.compact}
+## Antibióticos: lo bueno {.compact}
 
 ::: columns
 ::: {.column width="48%"}
@@ -246,23 +278,32 @@ Los accidentes nucleares, si bien infrecuentes, pueden dejar el ambiente contami
 
 El descubrimiento accidental de la penicilina por Alexander Fleming ha salvado millones de vidas
 :::
-
-![](../figures/clase05/slide_25_img_1.jpg){width="90%"}
 :::
+::: {.column width="48%"}
+![](../figures/clase05/slide_25_img_1.jpg){width="100%"}
+:::
+:::
+
+---
+
+## Antibióticos: lo malo {.compact}
+
+::: columns
 ::: {.column width="48%"}
 ::: {.box}
 **Lo malo**
 
 El uso indiscriminado de los antibióticos ha llevado a una **"carrera armamentista"** contra las bacterias, que generan resistencia
 :::
-
-![](../figures/clase05/slide_26_img_1.jpg){width="90%"}
+:::
+::: {.column width="48%"}
+![](../figures/clase05/slide_26_img_1.jpg){width="100%"}
 :::
 :::
 
 ---
 
-## Plástico {.compact}
+## Plástico: lo bueno {.compact}
 
 ::: columns
 ::: {.column width="48%"}
@@ -271,9 +312,17 @@ El uso indiscriminado de los antibióticos ha llevado a una **"carrera armamenti
 
 El plástico es un material resistente pero flexible, y ha hecho posible gran parte de los bienes que usamos
 :::
-
-![](../figures/clase05/slide_27_img_1.jpg){width="90%"}
 :::
+::: {.column width="48%"}
+![](../figures/clase05/slide_27_img_1.jpg){width="100%"}
+:::
+:::
+
+---
+
+## Plástico: lo malo {.compact}
+
+::: columns
 ::: {.column width="48%"}
 ::: {.box}
 **Lo malo**
@@ -281,9 +330,12 @@ El plástico es un material resistente pero flexible, y ha hecho posible gran pa
 La deposición irresponsable de plásticos contamina el ambiente, afectando gravemente a la fauna
 
 Al degradarse, el plástico se convierte en **microplástico**, el cual se acumula en la cadena trófica
-:::
 
-![](../figures/clase05/slide_28_img_1.jpg){width="90%"}
+El documental [*Albatross*](https://www.albatrossthefilm.com/) muestra el impacto devastador del plástico en las aves marinas de Midway Atoll
+:::
+:::
+::: {.column width="48%"}
+![](../figures/clase05/slide_28_img_1.jpg){width="100%"}
 :::
 :::
 
@@ -320,7 +372,7 @@ Esto no nos debe llevar a paralizar el progreso, pero sí a avanzar con **precau
 
 # CT: La Gran Transición {.section-slide background-color="#2a7f62"}
 
-## Energía como "baterías"
+## Energía como "baterías" {.compact}
 
 ::: columns
 ::: {.column width="48%"}
@@ -390,7 +442,7 @@ Fuente: University of Georgia Research — "Earth's battery is running low."
 
 ---
 
-## Dos razones para la transición
+## Dos razones para la transición {.compact}
 
 ::: columns
 ::: {.column width="48%"}
@@ -491,17 +543,27 @@ Chile es el **mayor productor mundial de cobre** y el **segundo de litio**
 
 ---
 
+## Tensiones en el futuro verde del litio
+
+::: {.box}
+Las siguientes diapositivas están basadas en el artículo del CR2 (2025): ["¿Hacia una nueva zona de sacrificio? Fiebre del litio y desconfianza indígena"](https://www.cr2.cl/hacia-una-nueva-zona-de-sacrificio-fiebre-del-litio-y-desconfianza-indigena-tercera-dosis/)
+
+Una mirada crítica a las tensiones entre la transición energética y los derechos de las comunidades y ecosistemas del norte de Chile
+:::
+
+---
+
 ## La fiebre del litio {.compact}
 
 ::: columns
-::: {.column width="48%"}
+::: {.column width="40%"}
 El litio es esencial para las **baterías** de autos eléctricos, almacenamiento de energía y electrónica
 
 En Chile se extrae principalmente del **Salar de Atacama**, mediante evaporación de **salmuera** (brine)
 
 La Estrategia Nacional del Litio (2023) busca expandir la producción a nuevos salares: Maricunga, Pedernales, Aguilar
 :::
-::: {.column width="48%"}
+::: {.column width="58%"}
 ::: {.box}
 **El problema del agua**
 
@@ -519,26 +581,21 @@ La Estrategia Nacional del Litio (2023) busca expandir la producción a nuevos s
 
 ::: columns
 ::: {.column width="48%"}
-Los salares donde se extrae litio son **territorios ancestrales** de los pueblos Atacameño y Colla, protegidos por la Ley 19.253
+Los salares donde se extrae litio son **territorios ancestrales** de los pueblos Atacameño y Colla
 
-Chile ratificó el **Convenio 169 de la OIT** en 2008, que obliga a consultar a los pueblos indígenas afectados
+Chile ratificó el **Convenio OIT 169**, que obliga a consultar a los pueblos indígenas afectados. Sin embargo, la consulta:
 
-Sin embargo, la consulta:
-
-- No es vinculante (la Corte Suprema ha confirmado que no requiere **consentimiento**)
-- Tiene plazos comprimidos (la fase deliberativa del contrato ENAMI duró solo 3 meses)
-- Excluye a comunidades no directamente adyacentes a los salares
+- No es vinculante
+- Tiene plazos comprimidos
+- Excluye a comunidades no adyacentes a los salares
 :::
 ::: {.column width="48%"}
 ::: {.box}
-**La sombra del cobre**
-
-Las comunidades indígenas desconfían porque ya vivieron esto con el cobre:
+Las comunidades indígenas desconfían porque **ya vivieron esto con el cobre**:
 
 - En los 80, fueron desinformadas sobre el registro de derechos de agua
 - CODELCO canalizó completamente el Río San Pedro
-- Entre 1997–2000 hubo contaminación con plomo y arsénico en el Loa — nunca reconocida oficialmente
-- La expansión del tranque de relaves Talabre (2012) fragmentó a las comunidades
+- Entre 1997–2000 hubo contaminación con plomo y arsénico en el Loa
 :::
 
 ¿Se repetirá la historia con el litio?
@@ -570,36 +627,12 @@ Esto crea un punto ciego regulatorio: se extrae agua sin que cuente como extracc
 :::
 :::
 
-::: {.caption}
-Fuente: CR2 (2025). "¿Hacia una nueva zona de sacrificio? Fiebre del litio y desconfianza indígena." Álvarez Garretón et al. (2023). *Seguridad Hídrica en Chile*.
-:::
-
-
-## La historia del cobre: una advertencia {.compact}
-
-::: columns
-::: {.column width="48%"}
-La historia de la minería del cobre en el norte de Chile muestra qué pasa cuando la extracción avanza **sin participación efectiva** de las comunidades:
-
-- En los **años 80**, comunidades indígenas fueron desinformadas sobre el registro de derechos de agua — perdieron acceso legal a sus propias fuentes
-- **CODELCO** canalizó completamente el **Río San Pedro**, alterando un ecosistema del que dependían comunidades atacameñas
-:::
-::: {.column width="48%"}
-- Entre **1997–2000**, hubo contaminación con plomo y arsénico en el **Río Loa** — nunca reconocida oficialmente
-- La expansión del **tranque de relaves Talabre** (2012) fragmentó físicamente a comunidades, dividiendo territorios ancestrales
-
-::: {.box}
-El patrón: promesas de desarrollo → impactos ambientales → comunidades que cargan con los costos → desconfianza profunda
-:::
-:::
-:::
-
 ---
 
 ## ¿Puede ser diferente esta vez? {.compact}
 
 ::: columns
-::: {.column width="48%"}
+::: {.column width="55%"}
 ::: {.box}
 **Lo que es distinto hoy**
 
@@ -609,19 +642,16 @@ El patrón: promesas de desarrollo → impactos ambientales → comunidades que 
 - Mayor conciencia ambiental y herramientas de monitoreo (datos satelitales, SIG)
 :::
 :::
-::: {.column width="48%"}
+::: {.column width="45%"}
 ::: {.box}
 **Lo que sigue pendiente**
 
-- La consulta indígena **no es vinculante** — no requiere consentimiento
+- Persisten una interpretación restrictiva de las obligaciones de consulta indígena del Convenio 196
 - La salmuera sigue clasificada como **mineral**, no como agua
 - Solo el **30%** de los salares está protegido
 - Las DLE aún no están probadas a escala comercial en Chile
 :::
 
-::: {.caption}
-Para profundizar: CR2 (2025). ["¿Hacia una nueva zona de sacrificio? Fiebre del litio y desconfianza indígena."](https://www.cr2.cl/hacia-una-nueva-zona-de-sacrificio-fiebre-del-litio-y-desconfianza-indigena-tercera-dosis/)
-:::
 :::
 :::
 
@@ -631,7 +661,7 @@ Para profundizar: CR2 (2025). ["¿Hacia una nueva zona de sacrificio? Fiebre del
 ## Tarea 05: Energías Renovables — Control y Descontrol {.compact}
 
 ::: columns
-::: {.column width="48%"}
+::: {.column width="40%"}
 **¿Qué van a construir?**
 
 Un **díptico** con dos mapas:
@@ -641,15 +671,14 @@ Un **díptico** con dos mapas:
 
 Una historia de Control y Descontrol: el avance renovable... y su costo oculto
 :::
-::: {.column width="48%"}
+::: {.column width="60%"}
 **Herramientas nuevas:**
 
 - Importación de datos CSV (con y sin coordenadas)
-- Conversión de Excel a CSV
-- Tabla de atributos: exploración, filtrado, edición
 - Join no espacial (combinar tablas)
 - Exportación de capas a GeoPackage
-- Composición de impresión con dos mapas
+- Simbología basada en reglas (clase "Sin información")
+- Composición de impresión con dos mapas (díptico)
 - Edición avanzada de leyendas
 :::
 :::
@@ -666,7 +695,7 @@ La guía paso a paso y el archivo `.zip` con los datos están disponibles en Can
 
 ---
 
-## Próxima clase
+## Próxima clase {.compact}
 
 La próxima semana exploraremos:
 
