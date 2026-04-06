@@ -1,0 +1,45 @@
+---
+title: "¿Hacia una nueva zona de sacrificio?"
+subtitle: "Fiebre del litio y desconfianza indígena — Resumen para discusión en clase"
+format:
+  html:
+    theme: cosmo
+    embed-resources: true
+    toc: false
+    mainfont: "Source Sans Pro, sans-serif"
+    fontsize: "1.05em"
+    linestretch: 1.4
+    margin-left: 2.5cm
+    margin-right: 2.5cm
+---
+
+::: {.callout-note appearance="minimal"}
+Resumen basado en: Centro de Ciencia del Clima y la Resiliencia (CR2), Universidad de Chile. Noviembre 2025. [Artículo completo](https://www.cr2.cl/hacia-una-nueva-zona-de-sacrificio-fiebre-del-litio-y-desconfianza-indigena-tercera-dosis/).
+:::
+
+## El contexto
+
+En 2023, el presidente Gabriel Boric presentó la **Estrategia Nacional del Litio**, posicionando al litio como un nuevo pilar de desarrollo — similar a lo que ha sido el cobre históricamente. Chile es el segundo productor mundial de litio, extraído principalmente del **Salar de Atacama** mediante evaporación de salmuera. La estrategia busca expandir la producción a nuevos salares (Maricunga, Pedernales, Aguilar) a través de CODELCO y ENAMI.
+
+## El problema del agua
+
+La extracción de litio ocurre en una de las zonas más áridas del planeta. En la Región de Antofagasta, el **95% de los derechos de agua subterránea** están en manos de la minería. La cuenca del Río Loa fue declarada agotada en el año 2000. En 2022, 188 comunas chilenas (47,5% de la población) tenían decretos de escasez hídrica. Un vacío regulatorio agrava el problema: la salmuera está clasificada legalmente como **mineral, no como agua**, lo que permite extraerla sin las restricciones del Código de Aguas. Los humedales andinos — vegas y bofedales que dependen del mismo acuífero — tienen solo un 4,07% de protección en la región.
+
+## La desconfianza indígena
+
+Los salares son **territorios ancestrales** de los pueblos Atacameño y Colla. Las comunidades desconfían de las promesas del Estado porque ya vivieron un ciclo similar con el cobre:
+
+- En los años 80, fueron **deliberadamente desinformadas** sobre el registro de derechos de agua, llevándolas a registrar menos de lo que necesitaban para su agricultura.
+- **CODELCO canalizó completamente el Río San Pedro** para operaciones mineras.
+- Entre 1997 y 2000, hubo contaminación con plomo, arsénico y xantato en la cuenca del Loa — episodios **nunca reconocidos oficialmente**.
+- La expansión del tranque de relaves Talabre (2012) generó disputas que **fragmentaron** a las comunidades.
+
+Chile ratificó el **Convenio 169 de la OIT** en 2008, que obliga a consultar a los pueblos indígenas afectados por proyectos en sus territorios. Sin embargo, la consulta no es vinculante: la Corte Suprema ha confirmado que requiere buena fe, pero **no consentimiento**. En la práctica, los procesos tienen plazos comprimidos (la fase deliberativa del contrato ENAMI duró solo 3 meses), excluyen a comunidades no directamente adyacentes, y fragmentan las organizaciones indígenas al definir la participación de forma restrictiva.
+
+En mayo de 2024, comunidades Atacameñas **bloquearon una consulta** sobre el acuerdo SQM-CODELCO, denunciando falta de transparencia y consultas realizadas como mero trámite.
+
+## ¿Zona de sacrificio o nueva oportunidad?
+
+El artículo advierte que las comunidades temen que el litio creará otra **"zona de sacrificio"** — un territorio que absorbe los costos ambientales y sociales del desarrollo nacional sin recibir beneficios proporcionales. Los paralelos estructurales con el cobre son claros: información asimétrica, consentimiento fragmentado, degradación acumulativa y distribución desigual de beneficios.
+
+Sin embargo, el contexto actual también presenta **diferencias importantes**: existe un marco legal de consulta indígena (aunque imperfecto), mayor conciencia ambiental, tecnologías de extracción menos intensivas en agua en desarrollo, y una presión internacional por cadenas de suministro responsables. La pregunta central es si estas herramientas serán suficientes — o si quedarán, como hasta ahora, en el papel.

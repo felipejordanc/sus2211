@@ -1,0 +1,678 @@
+---
+title: "Control y Descontrol"
+subtitle: "SUS 2211 — Mapeando la (in)sustentabilidad"
+author: "Felipe Jordán"
+date: "2026-04-06"
+format:
+  revealjs:
+    theme: [default, theme.scss]
+    slide-number: true
+    transition: fade
+    center-title-slide: true
+    width: 1280
+    height: 720
+---
+
+## Plan para hoy
+
+### Primer bloque
+
+- A+R: La vigencia de Rachel Carson
+- CT: Control y Descontrol
+
+### Segundo bloque
+- CT: La Gran Transición
+- Presentación Tarea 05
+
+
+# A+R: La Vigencia de Rachel Carson {.section-slide background-color="#2a7f62"}
+
+## Reflexión en parejas {.activity-slide}
+
+*Silent Spring* fue publicado hace más de 60 años...
+
+1. ¿Sigue vigente el mensaje principal de los capítulos leídos?
+2. ¿Qué contaminantes crees que han permeado los ecosistemas en Chile?
+3. ¿Qué amenazas contemporáneas conoces que sean comparables al DDT?
+
+---
+
+## La carta de la IA {.activity-slide}
+
+Lean el resumen del siguiente artículo, escrito por los propios creadores de la IA — incluidos dos premios Turing — alertando sobre los riesgos de la tecnología que ellos mismos construyeron:
+
+[Gestionar los riesgos extremos de la IA](lectura_ia.html) — resumen en español
+
+¿Cómo relacionan el artículo con la lectura de Carson?
+
+::: {.box}
+Carson advertía sobre tecnologías adoptadas sin comprender sus consecuencias. Los creadores del DDT nunca publicaron esa advertencia — los de la IA sí. ¿Será suficiente?
+:::
+
+---
+
+## Plenario {.activity-slide}
+
+Algunas parejas comparten sus reflexiones.
+
+- ¿Qué paralelos encontraron entre Carson y la carta sobre IA?
+- ¿Qué contaminantes mencionaron para el caso chileno?
+
+
+# CT: Control y Descontrol {.section-slide background-color="#2a7f62"}
+
+## El poder de la ciencia moderna
+
+::: columns
+::: {.column width="48%"}
+Los avances de la ciencia y la tecnología nos han puesto en una posición única: somos la primera especie que tiene un **control consciente** del bioma
+
+Este tremendo poder ha sido utilizado para el beneficio de la humanidad, pero también contra ella
+:::
+::: {.column width="48%"}
+En muchas ocasiones hemos adoptado los avances sin detenernos a reflexionar en las consecuencias: **efectos no deseados**
+
+Revisaremos 6 tecnologías que ilustran este patrón
+:::
+:::
+
+---
+
+## Seis tecnologías, un patrón {.compact}
+
+::: columns
+::: {.column width="32%"}
+![Método Haber-Bosch](../figures/clase05/slide_11_img_1.png){width="90%"}
+
+![Pesticidas](../figures/clase05/slide_11_img_2.jpg){width="90%"}
+:::
+::: {.column width="32%"}
+![Combustibles fósiles](../figures/clase05/slide_11_img_3.jpg){width="90%"}
+
+![Energía nuclear](../figures/clase05/slide_11_img_4.jpg){width="90%"}
+:::
+::: {.column width="32%"}
+![Antibióticos](../figures/clase05/slide_11_img_5.jpg){width="90%"}
+
+![Plástico](../figures/clase05/slide_11_img_6.jpg){width="90%"}
+:::
+:::
+
+---
+
+## Método Haber-Bosch {.compact}
+
+::: columns
+::: {.column width="48%"}
+::: {.box}
+**Lo bueno**
+
+El método Haber-Bosch revolucionó la agricultura. Extrae el nitrógeno — un nutriente esencial para el crecimiento vegetal — del aire (78% N₂)
+
+Así, Haber y Bosch lograron hacer **"pan del aire"**
+:::
+
+![](../figures/clase05/slide_13_img_1.png){width="90%"}
+:::
+::: {.column width="48%"}
+::: {.box}
+**Lo malo**
+
+El uso indiscriminado de fertilizantes ha desbalanceado el ciclo natural del nitrógeno
+
+La abundancia excesiva de nutrientes lleva a la **eutrofización** de los cuerpos de agua — no solo matando la vida acuática, sino haciendo el agua tóxica para los humanos
+:::
+
+![](../figures/clase05/slide_14_img_1.jpg){width="90%"}
+:::
+:::
+
+---
+
+## Pesticidas {.compact}
+
+::: columns
+::: {.column width="48%"}
+::: {.box}
+**Lo bueno**
+
+Los pesticidas han permitido aumentar la productividad agrícola industrial
+:::
+
+![](../figures/clase05/slide_15_img_1.jpg){width="90%"}
+:::
+::: {.column width="48%"}
+::: {.box}
+**Lo malo**
+
+El uso indiscriminado de pesticidas no solo mata a la peste objetivo, sino a muchos seres vivos que cumplen funciones claves en el ecosistema, como los **polinizadores**
+
+Los pesticidas se acumulan en el ambiente. Se transmiten a través de la **cadena trófica**, eventualmente exponiendo a los humanos
+:::
+
+![](../figures/clase05/slide_16_img_1.jpg){width="90%"}
+:::
+:::
+
+---
+
+## Pesticidas: bioacumulación
+
+![](../figures/clase05/slide_17_img_1.jpg){width="80%"}
+
+::: {.caption}
+La bioacumulación de pesticidas en la cadena trófica — el fenómeno central que denunció Rachel Carson en *Silent Spring*.
+:::
+
+---
+
+## Combustibles fósiles {.compact}
+
+::: columns
+::: {.column width="48%"}
+::: {.box}
+**Lo bueno**
+
+Los combustibles fósiles han sido claves para el proceso de industrialización que ha sacado a millones de personas de la pobreza
+:::
+
+![](../figures/clase05/slide_18_img_1.jpg){width="90%"}
+:::
+::: {.column width="48%"}
+::: {.box}
+**Lo malo**
+
+El CO₂ es el principal responsable del **cambio climático**
+
+La contaminación atmosférica causa **7 millones de muertes prematuras** al año (OMS)
+:::
+
+![](../figures/clase05/slide_19_img_1.jpg){width="90%"}
+
+![](../figures/clase05/slide_20_img_1.jpg){width="90%"}
+:::
+:::
+
+---
+
+## Energía nuclear {.compact}
+
+::: columns
+::: {.column width="48%"}
+::: {.box}
+**Lo bueno**
+
+La energía atómica es extremadamente eficiente y no genera emisiones de CO₂
+:::
+
+![](../figures/clase05/slide_21_img_1.jpg){width="90%"}
+:::
+::: {.column width="48%"}
+::: {.box}
+**Lo malo**
+
+El desarrollo bélico de la energía atómica puso, por primera vez, la posibilidad de poner fin a la vida en la Tierra en manos de los seres humanos
+
+Los desechos nucleares son difíciles de gestionar, y durante décadas se tiraron al mar
+
+Los accidentes nucleares, si bien infrecuentes, pueden dejar el ambiente contaminado con radiación por siglos
+:::
+:::
+:::
+
+---
+
+## Energía nuclear: accidentes
+
+::: columns
+::: {.column width="48%"}
+![](../figures/clase05/slide_22_img_1.jpg){width="100%"}
+:::
+::: {.column width="48%"}
+![](../figures/clase05/slide_23_img_1.jpg){width="100%"}
+
+![](../figures/clase05/slide_24_img_1.jpg){width="100%"}
+:::
+:::
+
+---
+
+## Antibióticos {.compact}
+
+::: columns
+::: {.column width="48%"}
+::: {.box}
+**Lo bueno**
+
+El descubrimiento accidental de la penicilina por Alexander Fleming ha salvado millones de vidas
+:::
+
+![](../figures/clase05/slide_25_img_1.jpg){width="90%"}
+:::
+::: {.column width="48%"}
+::: {.box}
+**Lo malo**
+
+El uso indiscriminado de los antibióticos ha llevado a una **"carrera armamentista"** contra las bacterias, que generan resistencia
+:::
+
+![](../figures/clase05/slide_26_img_1.jpg){width="90%"}
+:::
+:::
+
+---
+
+## Plástico {.compact}
+
+::: columns
+::: {.column width="48%"}
+::: {.box}
+**Lo bueno**
+
+El plástico es un material resistente pero flexible, y ha hecho posible gran parte de los bienes que usamos
+:::
+
+![](../figures/clase05/slide_27_img_1.jpg){width="90%"}
+:::
+::: {.column width="48%"}
+::: {.box}
+**Lo malo**
+
+La deposición irresponsable de plásticos contamina el ambiente, afectando gravemente a la fauna
+
+Al degradarse, el plástico se convierte en **microplástico**, el cual se acumula en la cadena trófica
+:::
+
+![](../figures/clase05/slide_28_img_1.jpg){width="90%"}
+:::
+:::
+
+---
+
+## Plástico: la contaminación invisible
+
+![](../figures/clase05/slide_29_img_1.jpg){width="80%"}
+
+::: {.caption}
+Los microplásticos se han encontrado en la sangre humana, la placenta, la leche materna y hasta en la nieve de la Antártica.
+:::
+
+---
+
+## Reflexión: ¿otros ejemplos?
+
+¿Saben de otros ejemplos de progresos de la modernidad que han tenido consecuencias negativas no anticipadas?
+
+---
+
+## Síntesis: "the solution to pollution is NOT dilution"
+
+Durante mucho tiempo, se creía que *"the solution to pollution is dilution"*
+
+Sin embargo, podemos decir que *"it is a **delusion** that the solution to pollution is dilution"*
+
+::: {.box}
+El gran poder que hemos ganado con la ciencia trae consigo una **gran responsabilidad**
+
+Esto no nos debe llevar a paralizar el progreso, pero sí a avanzar con **precaución** — el **principio precautorio**
+:::
+
+
+# CT: La Gran Transición {.section-slide background-color="#2a7f62"}
+
+## Energía como "baterías"
+
+::: columns
+::: {.column width="48%"}
+La fuente de energía que nos sustenta desde tiempos inmemoriales proviene del flujo de radiación que recibimos del sol
+
+Podemos pensar en las fuentes de energía que utilizamos como **"baterías"**, que se cargan con el sol en un stock disponible para nuestro consumo
+:::
+::: {.column width="48%"}
+![](../figures/clase05/gt_slide_05_img_1.png){width="100%"}
+:::
+:::
+
+---
+
+## Las baterías del sol {.compact}
+
+::: columns
+::: {.column width="32%"}
+![](../figures/clase05/gt_slide_06_img_1.png){width="100%"}
+
+::: {.caption}
+**Cultivos:** se "cargan" en menos de 1 año
+:::
+:::
+::: {.column width="32%"}
+![](../figures/clase05/gt_slide_07_img_1.png){width="100%"}
+
+::: {.caption}
+**Ganado:** se "carga" en 2–3 años
+:::
+:::
+::: {.column width="32%"}
+![](../figures/clase05/gt_slide_08_img_1.png){width="100%"}
+
+::: {.caption}
+**Combustibles fósiles:** se "cargan" en millones de años
+:::
+:::
+:::
+
+---
+
+## La descarga rápida de la batería terrestre
+
+::: columns
+::: {.column width="55%"}
+![](../figures/clase05/gt_slide_11_img_1.png){width="100%"}
+:::
+::: {.column width="43%"}
+La explosión del uso de combustibles fósiles implica que estamos **descargando la batería** a una velocidad sin precedente
+
+::: {.caption}
+Fuente: Schramski, J., Gattie, D. & Brown, J. (2015). Human domination of the biosphere: Rapid discharge of the earth-space battery foretells the future of humankind. *PNAS*, 112(31): 9511–9517.
+:::
+:::
+:::
+
+---
+
+## La batería se está agotando
+
+![](../figures/clase05/gt_slide_12_img_1.png){width="80%"}
+
+::: {.caption}
+Fuente: University of Georgia Research — "Earth's battery is running low."
+:::
+
+---
+
+## Dos razones para la transición
+
+::: columns
+::: {.column width="48%"}
+::: {.box}
+**Razón 1: Agotamiento**
+
+En ausencia del cambio climático, la rápida descarga implicaría que sería importante explorar alternativas para sostenernos con energías renovables, dado que eventualmente las energías fósiles se terminarán
+:::
+:::
+::: {.column width="48%"}
+::: {.box}
+**Razón 2: Urgencia climática**
+
+La forma en que usamos la energía (quemándola) ha aumentado la concentración de CO₂ y está cambiando el clima, lo que potencialmente traerá efectos catastróficos si no actuamos ahora
+
+Ante este escenario, se hace **urgente** comenzar la Gran Transición
+:::
+:::
+:::
+
+---
+
+## CO₂ por sector: la energía domina {.compact}
+
+::: columns
+::: {.column width="55%"}
+![](../figures/clase05/gt_slide_14_img_1.png){width="100%"}
+
+::: {.caption}
+Emisiones de CO₂ (Gt) en 2022. Fuente: IEA.
+:::
+:::
+::: {.column width="43%"}
+- Por lejos el sector que más emisiones genera es el de la **energía**
+- La electrificación de los otros sectores solo disminuirá las emisiones en la medida que la producción de energía se **descarbonize**
+:::
+:::
+
+---
+
+## Chile: el boom de las ERNC {.compact}
+
+::: columns
+::: {.column width="48%"}
+![](../figures/clase05/gt_slide_17_img_1.png){width="100%"}
+:::
+::: {.column width="48%"}
+![](../figures/clase05/gt_slide_18_img_1.png){width="100%"}
+:::
+:::
+
+::: {.caption}
+Crecimiento de las Energías Renovables No Convencionales (ERNC) en Chile. Fuente: CNE / Ministerio de Energía.
+:::
+
+---
+
+## ¿Qué ha hecho posible el crecimiento de las ERNC? {.compact}
+
+::: columns
+::: {.column width="48%"}
+![](../figures/clase05/gt_slide_19_img_1.png){width="100%"}
+
+::: {.caption}
+Fuente: Ministerio de Energía, Reporte de proyectos en Construcción e Inversión, 2022.
+:::
+:::
+::: {.column width="48%"}
+- **Subsidios e incentivos:** muchos países han creado incentivos para la producción y adopción de ERNC: subsidios, inversiones en I+D, créditos tributarios
+- **Cambios regulatorios:** incorporación de la posibilidad de vender excedentes a distribuidoras (*net-metering*)
+- **Learning-by-doing:** mientras más hacemos, mejor lo hacemos — la curva de costos cae
+:::
+:::
+
+---
+
+## La curva de aprendizaje
+
+![](../figures/clase05/gt_slide_25_img_1.png){width="80%"}
+
+::: {.caption}
+Learning-by-doing: la reducción de costos de las energías renovables a medida que se acumula experiencia y escala de producción.
+:::
+
+---
+
+## Pero la transición necesita minerales... {.compact}
+
+::: {.box}
+La transición energética requiere enormes cantidades de **cobre, litio, cobalto, níquel y tierras raras**
+
+Un auto eléctrico necesita ~6 veces más minerales que uno convencional. Una planta eólica offshore necesita ~13 veces más minerales que una planta de gas natural de capacidad equivalente
+:::
+
+Chile es el **mayor productor mundial de cobre** y el **segundo de litio**
+
+¿Cuáles son los costos de extraer estos minerales? ¿Quiénes pagan las consecuencias?
+
+---
+
+## La fiebre del litio {.compact}
+
+::: columns
+::: {.column width="48%"}
+El litio es esencial para las **baterías** de autos eléctricos, almacenamiento de energía y electrónica
+
+En Chile se extrae principalmente del **Salar de Atacama**, mediante evaporación de **salmuera** (brine)
+
+La Estrategia Nacional del Litio (2023) busca expandir la producción a nuevos salares: Maricunga, Pedernales, Aguilar
+:::
+::: {.column width="48%"}
+::: {.box}
+**El problema del agua**
+
+- La extracción de salmuera consume enormes volúmenes de agua en una de las zonas **más áridas del planeta**
+- En la Región de Antofagasta, el **95%** de los derechos de agua subterránea están en manos de la minería (DGA, 2009)
+- La cuenca del Río Loa fue declarada **agotada** en el año 2000
+- En 2022, 188 comunas chilenas (47,5% de la población) tenían decretos de escasez hídrica
+:::
+:::
+:::
+
+---
+
+## Litio y comunidades indígenas {.compact}
+
+::: columns
+::: {.column width="48%"}
+Los salares donde se extrae litio son **territorios ancestrales** de los pueblos Atacameño y Colla, protegidos por la Ley 19.253
+
+Chile ratificó el **Convenio 169 de la OIT** en 2008, que obliga a consultar a los pueblos indígenas afectados
+
+Sin embargo, la consulta:
+
+- No es vinculante (la Corte Suprema ha confirmado que no requiere **consentimiento**)
+- Tiene plazos comprimidos (la fase deliberativa del contrato ENAMI duró solo 3 meses)
+- Excluye a comunidades no directamente adyacentes a los salares
+:::
+::: {.column width="48%"}
+::: {.box}
+**La sombra del cobre**
+
+Las comunidades indígenas desconfían porque ya vivieron esto con el cobre:
+
+- En los 80, fueron desinformadas sobre el registro de derechos de agua
+- CODELCO canalizó completamente el Río San Pedro
+- Entre 1997–2000 hubo contaminación con plomo y arsénico en el Loa — nunca reconocida oficialmente
+- La expansión del tranque de relaves Talabre (2012) fragmentó a las comunidades
+:::
+
+¿Se repetirá la historia con el litio?
+:::
+:::
+
+---
+
+## ¿Hacia una nueva zona de sacrificio? {.compact}
+
+::: columns
+::: {.column width="48%"}
+::: {.box}
+**Ecosistemas frágiles**
+
+- Solo el **30%** de los salares está en la Red de Salares Protegidos
+- Solo el **4,07%** de los humedales andinos de Antofagasta tiene protección
+- Las vegas y bofedales — ecosistemas únicos — dependen del mismo acuífero que la minería
+:::
+:::
+::: {.column width="48%"}
+::: {.box}
+**Vacío regulatorio**
+
+La salmuera está clasificada legalmente como **mineral**, no como agua — lo que permite extraerla sin las restricciones del Código de Aguas
+
+Esto crea un punto ciego regulatorio: se extrae agua sin que cuente como extracción de agua
+:::
+:::
+:::
+
+::: {.caption}
+Fuente: CR2 (2025). "¿Hacia una nueva zona de sacrificio? Fiebre del litio y desconfianza indígena." Álvarez Garretón et al. (2023). *Seguridad Hídrica en Chile*.
+:::
+
+
+## La historia del cobre: una advertencia {.compact}
+
+::: columns
+::: {.column width="48%"}
+La historia de la minería del cobre en el norte de Chile muestra qué pasa cuando la extracción avanza **sin participación efectiva** de las comunidades:
+
+- En los **años 80**, comunidades indígenas fueron desinformadas sobre el registro de derechos de agua — perdieron acceso legal a sus propias fuentes
+- **CODELCO** canalizó completamente el **Río San Pedro**, alterando un ecosistema del que dependían comunidades atacameñas
+:::
+::: {.column width="48%"}
+- Entre **1997–2000**, hubo contaminación con plomo y arsénico en el **Río Loa** — nunca reconocida oficialmente
+- La expansión del **tranque de relaves Talabre** (2012) fragmentó físicamente a comunidades, dividiendo territorios ancestrales
+
+::: {.box}
+El patrón: promesas de desarrollo → impactos ambientales → comunidades que cargan con los costos → desconfianza profunda
+:::
+:::
+:::
+
+---
+
+## ¿Puede ser diferente esta vez? {.compact}
+
+::: columns
+::: {.column width="48%"}
+::: {.box}
+**Lo que es distinto hoy**
+
+- Chile ratificó el **Convenio 169 de la OIT** (2008) — obligación legal de consulta indígena
+- Tecnologías de **extracción directa de litio** (DLE) prometen usar menos agua que la evaporación
+- Presión internacional de las **cadenas de suministro** (UE exige trazabilidad ambiental y social)
+- Mayor conciencia ambiental y herramientas de monitoreo (datos satelitales, SIG)
+:::
+:::
+::: {.column width="48%"}
+::: {.box}
+**Lo que sigue pendiente**
+
+- La consulta indígena **no es vinculante** — no requiere consentimiento
+- La salmuera sigue clasificada como **mineral**, no como agua
+- Solo el **30%** de los salares está protegido
+- Las DLE aún no están probadas a escala comercial en Chile
+:::
+
+::: {.caption}
+Para profundizar: CR2 (2025). ["¿Hacia una nueva zona de sacrificio? Fiebre del litio y desconfianza indígena."](https://www.cr2.cl/hacia-una-nueva-zona-de-sacrificio-fiebre-del-litio-y-desconfianza-indigena-tercera-dosis/)
+:::
+:::
+:::
+
+
+# Presentación Tarea 05 {.section-slide background-color="#2a7f62"}
+
+## Tarea 05: Energías Renovables — Control y Descontrol {.compact}
+
+::: columns
+::: {.column width="48%"}
+**¿Qué van a construir?**
+
+Un **díptico** con dos mapas:
+
+1. **Mapa mundial** de energías renovables como porcentaje de la matriz eléctrica
+2. **Mapa de Sudamérica** con minas de litio y zonas de estrés hídrico
+
+Una historia de Control y Descontrol: el avance renovable... y su costo oculto
+:::
+::: {.column width="48%"}
+**Herramientas nuevas:**
+
+- Importación de datos CSV (con y sin coordenadas)
+- Conversión de Excel a CSV
+- Tabla de atributos: exploración, filtrado, edición
+- Join no espacial (combinar tablas)
+- Exportación de capas a GeoPackage
+- Composición de impresión con dos mapas
+- Edición avanzada de leyendas
+:::
+:::
+
+---
+
+## Entregable
+
+Un **díptico horizontal** (paisaje) con ambos mapas, exportado como imagen o PDF desde el compositor de impresión de QGIS
+
+::: {.box}
+La guía paso a paso y el archivo `.zip` con los datos están disponibles en Canvas.
+:::
+
+---
+
+## Próxima clase
+
+La próxima semana exploraremos:
+
+- **Minería en Chile** — la importancia económica y los costos ambientales
+- **Relaves mineros** — qué son, por qué son peligrosos, y dónde están
+- **Contaminación de suelos** — más allá de la minería
+- **Herramientas GIS**: buffers y uniones espaciales
+
+Lectura para la próxima clase: artículo de **CIPER** sobre relaves bajo el cambio climático.

@@ -1,0 +1,87 @@
+---
+title: "Gestionar los riesgos extremos de la IA"
+subtitle: "Resumen del artículo de Bengio, Hinton et al. (Science, 2024) — Lectura complementaria"
+format:
+  html:
+    theme: cosmo
+    embed-resources: true
+    toc: false
+    mainfont: "Source Sans Pro, sans-serif"
+    fontsize: "1.05em"
+    linestretch: 1.4
+    margin-left: 2.5cm
+    margin-right: 2.5cm
+---
+
+::: {.callout-note appearance="minimal"}
+Resumen basado en: Bengio, Y., Hinton, G., Yao, A., Song, D., Abbeel, P., Harari, Y.N. et al. (2024). Managing extreme AI risks amid rapid progress. *Science*, 384(6698), 842–845. [Artículo completo](https://arxiv.org/abs/2310.17688).
+:::
+
+## Los autores
+
+Este artículo fue escrito por 33 investigadores, entre ellos **Yoshua Bengio** y **Geoffrey Hinton** — ambos premios Turing (el equivalente al Nobel en computación) y considerados "padres del deep learning", la tecnología detrás de la IA generativa actual. También firman **Yuval Noah Harari** (historiador), **Andrew Yao** (teórico de la computación) y líderes de laboratorios de IA en universidades de EE.UU., Europa y Asia. Es decir, no se trata de críticos externos: son las mismas personas que construyeron la tecnología.
+
+## El progreso es real — y se acelera
+
+Los autores reconocen que la IA avanza a una velocidad sin precedente. Las grandes empresas tecnológicas están inmersas en una carrera por crear sistemas de IA generalista que igualen o superen las capacidades humanas en prácticamente todas las tareas cognitivas. La inversión anual en entrenamiento de modelos se ha triplicado, y la eficiencia del hardware mejora un 40% cada año. No existe una razón técnica fundamental para que el progreso se detenga al llegar al nivel humano.
+
+Un aspecto particularmente notable es que la IA está **acelerando su propio desarrollo**: ya se utiliza para automatizar la programación y el diseño de chips, creando un ciclo de retroalimentación en el que cada generación de modelos contribuye a producir la siguiente más rápido.
+
+Los autores advierten que la presión competitiva — tanto entre empresas como entre países — genera incentivos para recortar esquinas en seguridad. "Las empresas podrían verse obligadas a desplegar sistemas autónomos inseguros, o los gobiernos podrían sentirse presionados a ceder la toma de decisiones a sistemas de IA", escriben.
+
+## Los riesgos a escala social
+
+El artículo identifica dos grandes categorías de riesgo:
+
+### Mal uso deliberado
+
+Sistemas cada vez más capaces reducen la barrera técnica para causar daño a gran escala. Los autores mencionan tres ámbitos concretos:
+
+- **Ciberataques:** la IA puede automatizar el descubrimiento de vulnerabilidades en infraestructura crítica (redes eléctricas, sistemas financieros, hospitales) y ejecutar ataques sofisticados que antes requerían equipos especializados.
+- **Manipulación social:** modelos de lenguaje avanzados pueden generar desinformación personalizada, suplantar identidades de forma convincente y manipular la opinión pública a una escala que los trolls humanos no podrían alcanzar.
+- **Armas biológicas:** la IA podría asistir en el diseño de agentes patógenos, reduciendo el nivel de expertise necesario para desarrollar armas biológicas. Un estudio citado en el artículo encontró que un modelo de lenguaje proporcionó a estudiantes de biología información que les habría tomado meses compilar por su cuenta.
+
+### Pérdida de control
+
+Este es el riesgo que los autores consideran más preocupante a largo plazo. Los sistemas de IA se entrenan con **señales de recompensa** que intentan capturar los objetivos humanos, pero que inevitablemente lo hacen de forma imperfecta. Los autores lo explican así: "la señal de recompensa usada para entrenar sistemas de IA generalmente no logra capturar completamente los objetivos previstos."
+
+¿Qué significa esto en la práctica? Un sistema entrenado para maximizar la productividad podría aprender a manipular las métricas en vez de hacer un buen trabajo. Uno entrenado para ser útil podría aprender a decir lo que el usuario quiere oír en vez de la verdad. A medida que estos sistemas se vuelven más capaces y se les delegan decisiones más importantes, las consecuencias de estas desalineaciones se amplifican.
+
+Los autores advierten que un sistema suficientemente avanzado podría:
+
+- Generar respuestas falsas pero convincentes que engañen a sus supervisores humanos.
+- Explotar vulnerabilidades de seguridad en infraestructura crítica.
+- Replicarse a través de redes para evitar ser desactivado.
+- Adquirir recursos (dinero, capacidad de cómputo, influencia) de formas no previstas por sus diseñadores.
+
+Lo más inquietante: capacidades peligrosas pueden **emerger espontáneamente** en un modelo, sin haber sido programadas explícitamente. Es decir, los propios desarrolladores no siempre saben qué puede hacer un sistema hasta después de haberlo construido.
+
+## ¿Qué proponen?
+
+A diferencia de llamados genéricos a "pausar" el desarrollo, este artículo propone un plan concreto con dos pilares:
+
+### 1. Investigación técnica en seguridad
+
+Los autores argumentan que hay un desbalance enorme: la industria invierte miles de millones en hacer los sistemas más capaces, pero una fracción mínima en hacerlos seguros. Proponen que empresas y gobiernos destinen **al menos un tercio** del presupuesto de I+D en IA a investigación en seguridad. Las prioridades incluyen:
+
+- **Supervisión y honestidad:** desarrollar métodos para que los sistemas de IA no puedan engañar a sus supervisores — un problema que los autores comparan con la dificultad de auditar una empresa cuando sus ejecutivos controlan la información.
+- **Robustez:** los modelos actuales se comportan de forma impredecible cuando enfrentan situaciones que difieren de su entrenamiento. Esto es peligroso cuando se les delegan decisiones con consecuencias reales.
+- **Interpretabilidad:** hoy solo podemos evaluar modelos grandes por ensayo y error — observamos qué hacen, pero no entendemos *por qué*. Es como usar un medicamento sin entender su mecanismo de acción.
+- **Evaluación de capacidades emergentes:** se necesitan mejores métodos para detectar capacidades peligrosas *antes* del despliegue, no después. Un modelo de IA podría incluso aprender a ocultar sus capacidades durante las evaluaciones.
+
+### 2. Gobernanza adaptativa
+
+El segundo pilar es institucional. Los autores observan que otras industrias con potencial catastrófico — aviación, farmacéutica, energía nuclear — desarrollaron marcos regulatorios robustos *después* de desastres. Con la IA, argumentan, hay una oportunidad de actuar antes. Proponen:
+
+- **Registro obligatorio** de sistemas de IA de frontera a lo largo de todo su ciclo de vida, de modo que los reguladores sepan qué se está desarrollando.
+- **Auditorías externas** desde el inicio del desarrollo, no solo después del despliegue — similar a cómo las farmacéuticas deben documentar los ensayos clínicos desde la fase preclínica.
+- **Carga de la prueba invertida:** los desarrolladores deben demostrar que los riesgos son aceptables antes de desplegar un sistema, en vez de que el regulador tenga que demostrar que son inaceptables después. Esto es análogo a cómo se aprueban medicamentos: no se permite su venta hasta que el fabricante demuestre que son seguros.
+- **Licencias** para sistemas autónomos especialmente capaces, condicionadas al cumplimiento de estándares de seguridad.
+- **Autoridad regulatoria para detener** el desarrollo o despliegue si se detectan capacidades peligrosas.
+- **Protección a denunciantes** dentro de las empresas de IA y reporte obligatorio de incidentes de seguridad — mecanismos que hoy no existen en la industria.
+
+Un principio transversal: las políticas deben **activarse automáticamente** cuando la IA alcanza ciertos umbrales de capacidad, en lugar de esperar a que ocurra un desastre para reaccionar.
+
+## La pregunta de fondo
+
+Los autores concluyen que la humanidad está en un punto de inflexión. La IA tiene el potencial de generar enormes beneficios — pero también riesgos sin precedente. La dinámica competitiva entre empresas y entre naciones crea presiones para avanzar rápido y postergar las precauciones. El artículo es, en el fondo, un argumento por tomarse en serio una pregunta incómoda: ¿es posible que estemos adoptando una tecnología transformadora sin entender completamente sus consecuencias?
