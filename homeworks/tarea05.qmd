@@ -275,6 +275,27 @@ En resumen: GeoPackage combina la versatilidad del Shapefile con la simplicidad 
 
 **20.** En el campo **Valor**, selecciona la columna que contiene el porcentaje de electricidad renovable. Recuerda que, después del join, las columnas llevan como prefijo el nombre de la capa de origen — busca una columna como `energia_renovable_mundo_2023_renewables_share_elec` (o similar) en la lista desplegable.
 
+::: callout-warning
+**¿La columna no aparece en la lista, o el mapa no se colorea correctamente?** Es posible que QGIS haya importado la columna de porcentaje de energía renovable como **texto** (string) en vez de como número. Esto ocurre a veces al importar archivos CSV, y hace que QGIS no pueda usarla para una simbología graduada.
+
+**¿Cómo verificar el tipo de dato de una columna?** Haz clic derecho sobre la capa > **Propiedades** > pestaña **"Campos"** (o **"Fields"**). Allí verás una tabla con todas las columnas de la capa. La columna **"Tipo"** (o **"Type name"**) te indica el tipo de dato de cada campo: `Real` o `double` significa número decimal, `Integer` significa número entero, y `String` significa texto. Si la columna `renewables_share_elec` aparece como `String`, ese es el problema.
+
+**¿Cómo solucionarlo?** Abre la **tabla de atributos** de la capa y activa la **Calculadora de campos** (botón del ábaco en la barra de herramientas de la tabla). Luego:
+
+1.  Marca **"Crear un campo nuevo"**.
+2.  En **Nombre del campo de salida**, escribe un nombre corto como `pct_renov`.
+3.  En **Tipo del campo de salida**, selecciona **Número decimal (real)**.
+4.  En el cuadro de **Expresión**, escribe `to_real(` y luego, en vez de escribir manualmente el nombre de la columna (lo que puede generar errores de tipeo), usa el panel central del editor de expresiones: busca la categoría **"Campos y valores"** (o **"Fields and Values"**), despliégala, y **haz doble clic** sobre la columna `energia_renovable_mundo_2023_renewables_share_elec`. El nombre se insertará automáticamente en el cuadro de expresión, con las comillas incluidas. Luego cierra el paréntesis `)`. La expresión final debería verse así:
+
+    ```
+    to_real("energia_renovable_mundo_2023_renewables_share_elec")
+    ```
+
+5.  Haz clic en **Aceptar**. Se creará una nueva columna numérica con los valores convertidos.
+
+Ahora podrás seleccionar esta nueva columna (`pct_renov`) en el campo **Valor** de la simbología graduada. La función `to_real()` convierte texto a número decimal — es parte del grupo de funciones de **Conversiones** en QGIS.
+:::
+
 **21.** Selecciona una **rampa de color** apropiada (se sugiere una rampa de verdes, dado que representamos energía "limpia").
 
 **22.** Haz clic en **Clasificar** y luego en **Aceptar**.
