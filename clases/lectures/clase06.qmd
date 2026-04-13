@@ -13,121 +13,107 @@ format:
     height: 720
 ---
 
-## Plan para hoy
+## Plan para hoy {.compact}
 
 ### Primer bloque
 
-- A+R: Relaves bajo el cambio climático
 - CT: Minería en Chile
+- A+R: Exploración de relaves
 
 ### Segundo bloque
+- A+R: Minería, relaves y sustentabilidad
 - CT: Contaminación de suelos
 - Cápsula GIS: Operaciones espaciales
 - Presentación Tarea 06
 
 
-# A+R: Relaves Bajo el Cambio Climático {.section-slide background-color="#2a7f62"}
-
-## Lectura CIPER: reflexión en parejas {.activity-slide}
-
-Sobre el artículo de CIPER acerca de los relaves mineros y el cambio climático:
-
-1. ¿Qué les sorprendió del artículo?
-2. ¿Qué riesgos **adicionales** añade el cambio climático a los depósitos de relaves?
-3. Con 742 depósitos en Chile — ¿quién debería ser responsable de los relaves abandonados?
-
----
-
-## Plenario {.activity-slide}
-
-Algunas parejas comparten sus reflexiones.
-
-- ¿Qué conexiones ven entre los relaves y lo discutido la clase pasada sobre la transición energética?
-- ¿Cómo se relaciona con la idea de "Control y Descontrol"?
-
-
 # CT: Minería en Chile {.section-slide background-color="#2a7f62"}
 
-## Importancia económica de la minería {.compact}
+## Importancia económica de la minería
 
-::: columns
-::: {.column width="48%"}
-![](../figures/clase06/slide_03_img_1.png){width="100%"}
+![](../figures/clase06/slide_03_img_1.png){width="70%"}
 
 ::: {.caption}
 Fuente: COCHILCO (2022). Análisis de Impacto Socioeconómico de la Minería a Nivel Regional.
-:::
-:::
-::: {.column width="48%"}
-![](../figures/clase06/slide_04_img_2.png){width="100%"}
-
-::: {.caption}
-Fuente: COCHILCO (2022). Análisis de Impacto Socioeconómico de la Minería a Nivel Regional.
-:::
-:::
 :::
 
 ---
 
-## Chile: economía minera {.compact}
+## Importancia económica de la minería
 
-::: columns
-::: {.column width="48%"}
-![](../figures/clase06/slide_05_img_3.png){width="100%"}
+![](../figures/clase06/slide_04_img_2.png){width="70%"}
+
+::: {.caption}
+Fuente: COCHILCO (2022). Análisis de Impacto Socioeconómico de la Minería a Nivel Regional.
+:::
+
+---
+
+## Importancia económica de la minería
+
+![](../figures/clase06/slide_05_img_3.png){width="70%"}
 
 ::: {.caption}
 Fuente: OEC — Exportaciones de Chile (2022).
 :::
-:::
-::: {.column width="48%"}
-![](../figures/clase06/slide_06_img_4.png){width="100%"}
+
+---
+
+## Importancia económica de la minería
+
+![](../figures/clase06/slide_06_img_4.png){width="70%"}
 
 ::: {.caption}
 Fuente: COCHILCO (2022). Análisis de Impacto Socioeconómico de la Minería a Nivel Regional.
 :::
-:::
-:::
+
+
+---
+
+## ¿Cómo se produce el cobre?
+
+{{< video https://www.youtube.com/watch?v=wplt2Ak-EtA width="80%" height="500" >}}
 
 ---
 
 ## La ley del mineral → 99% es relave
 
-::: columns
-::: {.column width="48%"}
 La ley del mineral es, por lo general, **menor a 1%**
 
 Esto quiere decir que por cada kilo de mineral, se producen **99 kilos de relave**
 
 Los relaves son tóxicos, por lo que es fundamental asegurar su **estabilidad química y física**
-:::
-::: {.column width="48%"}
-![](../figures/clase06/slide_09_img_1.png){width="100%"}
+
+---
+
+## ¿Cómo se deben construir los relaves?
+
+![](../figures/clase06/slide_09_img_1.png){width="70%"}
 
 ::: {.caption}
-Fuente: SERNAGEOMIN — Preguntas frecuentes sobre relaves.
-:::
-:::
+Fuente: SERNAGEOMIN — Preguntas frecuentes sobre relaves. El estandar de construcción moderno es aguas abajo. Sin embargo, muchos relaves históricos están construidos con la técnica "agus arriba" (más baratos de construir), que otorga menos estabilidad física
 :::
 
 ---
 
-## ¿Cómo se ven los relaves? {.compact}
 
-::: columns
-::: {.column width="48%"}
-![](../figures/clase06/slide_10_img_1.jpg){width="100%"}
+
+## ¿Cómo se ven los relaves?
+
+![](../figures/clase06/slide_10_img_1.jpg){width="70%"}
 
 ::: {.caption}
 Minera Los Pelambres — Embalse El Mauro. Fuente: Consejo Minero.
 :::
-:::
-::: {.column width="48%"}
-![](../figures/clase06/slide_11_img_1.jpg){width="100%"}
+
+---
+
+## ¿Cómo se ven los relaves?
+
+![](../figures/clase06/slide_11_img_1.jpg){width="70%"}
 
 ::: {.caption}
 Minera El Teniente — Embalse Carén. Fuente: Consejo Minero.
-:::
-:::
 :::
 
 ---
@@ -157,6 +143,28 @@ Fuente: SERNAGEOMIN — Preguntas frecuentes sobre relaves.
 
 ---
 
+## Cuando falla la estabilidad física: Brumadinho {.compact}
+
+::: columns
+::: {.column width="48%"}
+En enero de 2019, el depósito de relaves de la mina **Córrego do Feijão** (Brumadinho, Minas Gerais, Brasil) colapsó sin previo aviso
+
+- **272 personas** fallecieron
+- Una avalancha de **12 millones de m³** de lodo tóxico arrasó con todo a su paso
+- Contaminó el **río Paraopeba** a lo largo de cientos de kilómetros
+
+:::
+::: {.column width="45%"}
+![](../figures/clase06/brumadinho.gif){width="100%"}
+
+::: {.caption}
+Colapso del depósito de relaves en Brumadinho. Fuente: Wikimedia Commons.
+:::
+:::
+:::
+
+---
+
 ## ¿Por qué son tóxicos los relaves? {.compact}
 
 Si bien el relave no es considerado un Residuo Sólido Peligroso, dado que en un inicio es simplemente roca molida con agua, la roca contiene elementos tóxicos:
@@ -174,16 +182,15 @@ Fuente: SERNAGEOMIN — Preguntas frecuentes sobre relaves.
 
 ## ¿Quiénes son más susceptibles?
 
-::: columns
-::: {.column width="48%"}
 Si bien todas las personas pueden ver su salud adversamente afectada por estos contaminantes, el efecto es particularmente dañino para los **niños**, dado que se encuentran en una **fase crítica de su desarrollo**
-:::
-::: {.column width="48%"}
-![](../figures/clase06/slide_15_img_1.jpg){width="100%"}
 
-![](../figures/clase06/slide_15_img_2.png){width="100%"}
-:::
-:::
+![](../figures/clase06/slide_15_img_1.jpg){width="60%"}
+
+---
+
+## ¿Quiénes son más susceptibles?
+
+![](../figures/clase06/slide_15_img_2.png){width="70%"}
 
 ---
 
@@ -208,40 +215,82 @@ Fuente: DW — "Chile: resistirse a convivir con desechos mineros."
 
 ---
 
-## El nexo minería–transición energética {.compact}
+## Caso: Bahía de Chañaral {.compact}
 
 ::: columns
 ::: {.column width="48%"}
-La clase pasada vimos que la transición energética necesita **enormes cantidades de minerales**:
+Entre 1938 y 1990, la **Andes Copper Mining** y luego **Codelco** vertieron millones de toneladas de relaves directamente al **río Salado** y la **Bahía de Chañaral** durante **52 años**
 
-- **Cobre** — cableado eléctrico, motores, paneles solares
-- **Litio** — baterías de autos eléctricos y almacenamiento
-- **Cobalto y níquel** — cátodos de baterías
-
-Chile es el mayor productor mundial de cobre y el segundo de litio
+- El mar retrocedió **2 km**
+- Se creó una playa artificial tóxica de **6 km**
+- Concentraciones de cobre **3.000 veces** superiores a lo normal
 :::
 ::: {.column width="48%"}
-![](../figures/clase06/slide_20_img_1.png){width="100%"}
+La población de Chañaral presenta tasas elevadas de cáncer, enfermedades respiratorias y afecciones cutáneas por exposición al polvo tóxico
 
-![](../figures/clase06/slide_21_img_1.png){width="100%"}
+En 1990, la **Corte Suprema** ordenó construir un tranque de relaves, terminando el vertido directo
+
+Pero **no se ha realizado remediación alguna** — la contaminación subterránea persiste indefinidamente
 :::
+:::
+
+::: {.caption}
+Fuente: Derecho al Agua — "Andes Copper Company y Codelco destruyen el río Salado y la Bahía de Chañaral."
 :::
 
 ---
 
-## Minería... ¿sustentable? {.compact}
+## Chañaral: la respuesta política {.compact}
+
+En 2003, el presidente **Ricardo Lagos** se bañó en la playa de Chañaral para "demostrar" que la descontaminación había sido exitosa
+
+{{< video https://www.youtube.com/watch?v=-W7W-RZy3lo width="80%" height="400" >}}
+
+---
+
+## Chañaral: la evidencia científica {.compact}
+
+Más de **10 años después** del mediático baño, un estudio midió la exposición de niños que viven cerca de la playa contaminada:
+
+- El material particulado fino (PM 2.5) contenía **metales pesados** como cobre, zinc y cromo
+- Las concentraciones **dentro de las escuelas** eran hasta **4 veces superiores** a las del exterior — el polvo tóxico se acumula en espacios cerrados con poca ventilación
+- Los niños presentaron **disminución de la capacidad pulmonar** tras alzas en la concentración de PM 2.5 — una exposición crónica con efectos agudos medibles
+
+::: {.caption}
+Fuente: Cáceres, D. (2015). Evaluación de los efectos agudos en la función pulmonar por exposición a material particulado fino (MP 2.5) en niños que viven próximos a una playa contaminada con relaves mineros, Chañaral, Chile. Universitat Autònoma de Barcelona.
+:::
+
+---
+
+## Exploración: depósitos de relaves en Chile {.activity-slide .compact}
+
+Abran el [Dashboard de Relaves de SERNAGEOMIN](https://sernageomin.maps.arcgis.com/apps/dashboards/d1914078b496482c845c19c512276da0) en sus computadores
+
+Para ver la leyenda, hagan clic en el ícono debajo del zoom (parece una lista). Las banderas rojas son relaves **abandonados**
+
+En parejas, exploren visualmente:
+
+1. ¿Dónde se concentran los relaves en Chile?
+2. ¿Cuántos relaves abandonados ven en la Región de Coquimbo? (la región de la Tarea 06)
+3. ¿Qué les llama la atención de la distribución?
+4. Como herramienta de gestión ambiental: ¿qué valor tiene un dashboard como este? ¿Qué información le falta o cómo podría mejorarse?
+
+
+# A+R: Minería, Relaves y Sustentabilidad {.section-slide background-color="#2a7f62"}
+
+## Visiones contrapuestas {.compact}
+
+> "Una población mundial en constante crecimiento, junto con recursos no renovables limitados, está impulsando soluciones y tecnologías innovadoras en una variedad de industrias. Satisfacer las necesidades de transporte de las futuras generaciones de manera sostenible y ambientalmente responsable requiere una mayor dependencia de materiales y recursos naturales que sean duraderos, maleables y — en el caso de los autos eléctricos — capaces de ofrecer una conductividad eléctrica superior."
+
+— **International Copper Association** (2024)
+
+---
+
+## Visiones contrapuestas {.compact}
 
 > "Hemos tenido conversaciones sobre minería sostenible y minería verde. Y he dicho que prefiero no hablar en esos términos, que suenan a *greenwashing*, porque **la minería nunca es sostenible**. Necesitamos hablar de **minería responsable**. Sabemos que la minería tiene impactos importantes e irreversibles sobre la naturaleza. Necesitamos un acuerdo amplio sobre qué impactos estamos dispuestos a aceptar, y actuar con responsabilidad al respecto."
 
-— **Maisa Rojas**, Ministra del Medio Ambiente (2023)
-
----
-
-## Reflexión en parejas {.activity-slide}
-
-1. ¿Cuál es el rol de la minería en la transición hacia sociedades más sustentables?
-2. ¿Cómo puede la minería disminuir sus impactos ambientales?
-3. ¿Podría la minería considerarse sustentable?
+— **Maisa Rojas**, Ex Ministra del Medio Ambiente (2023)
 
 ---
 
@@ -264,21 +313,47 @@ Chile tiene la ventaja de tener enorme potencial solar — las mineras del norte
 :::
 :::
 
-Pero estos avances no resuelven el problema fundamental: la minería genera **residuos tóxicos** que deben ser gestionados **a perpetuidad**
+Pero estos avances no resuelven un problema fundamental: la minería genera **residuos tóxicos** que deben ser gestionados **a perpetuidad**
 
 ---
 
-## Transición: hacia la contaminación de suelos {.compact}
+## El nexo minería–transición energética {.compact}
 
-La minería es una fuente importante de contaminación de suelos, pero no es la única
+::: columns
+::: {.column width="48%"}
+La clase pasada vimos que la transición energética necesita **enormes cantidades de minerales**:
 
-Chile avanza hacia una **Ley Marco de Suelos** que regulará:
+- **Cobre** — cableado eléctrico, motores, paneles solares
+- **Litio** — baterías de autos eléctricos y almacenamiento
+- **Cobalto y níquel** — cátodos de baterías
 
-- Identificación de sitios contaminados
-- Responsabilidad por la remediación
-- Estándares de calidad de suelos
+Chile es el mayor productor mundial de cobre y el segundo de litio
+:::
+::: {.column width="48%"}
+![](../figures/clase06/slide_20_img_1.png){width="100%"}
 
-Veamos el panorama más amplio de la contaminación de suelos...
+![](../figures/clase06/slide_21_img_1.png){width="100%"}
+:::
+:::
+
+---
+
+## Reflexión en parejas {.activity-slide .compact}
+
+Considerando la lectura de CIPER y lo visto en clase:
+
+1. En el artículo de CIPER, ¿qué riesgos adicionales añade el cambio climático a los relaves? Considerando Brumadinho y Chañaral, ¿les parece que estamos preparados?
+2. La industria habla de minería sostenible; la ministra Rojas dice que la minería **nunca** es sostenible. ¿Con quién están más de acuerdo? ¿Por qué?
+3. Con 800+ depósitos en Chile — ¿quién debería hacerse responsable de los relaves abandonados?
+
+---
+
+## Plenario {.activity-slide}
+
+Algunas parejas comparten sus reflexiones.
+
+- ¿Qué conexiones ven entre los relaves y lo discutido la clase pasada sobre la transición energética?
+- ¿Cómo se relaciona con la idea de "Control y Descontrol"?
 
 
 # CT: Contaminación de Suelos {.section-slide background-color="#2a7f62"}
@@ -349,6 +424,56 @@ El caso de Arica muestra cómo la contaminación de suelos puede ser **invisible
 Este caso ilustra por qué Chile necesita una Ley Marco de Suelos con estándares claros y responsabilidades definidas.
 :::
 
+---
+
+## Ley Marco de Suelos en Chile {.compact}
+
+::: columns
+::: {.column width="48%"}
+Chile **no tiene** una ley que regule la contaminación de suelos. El proyecto de **Ley Marco de Suelos** lleva años en trámite legislativo y actualmente se encuentra en la Comisión de Hacienda del Senado (2026)
+
+Propone:
+
+- Reconocer el suelo como **bien estratégico nacional**
+- Crear un **Instituto Nacional de Suelos**
+- Establecer estándares de calidad y planes de restauración
+:::
+::: {.column width="48%"}
+::: {.box}
+**¿Qué falta?**
+
+El proyecto se enfoca en prevención y gestión sustentable, pero carece de un mecanismo claro de **asignación de responsabilidad** y **recuperación de costos** para sitios ya contaminados
+
+¿Quién paga la remediación de Chañaral? ¿De Arica?
+:::
+:::
+:::
+
+---
+
+## Referente: Superfund en EE.UU. {.compact}
+
+::: columns
+::: {.column width="48%"}
+En 1980, tras el escándalo de **Love Canal** (barrio construido sobre un vertedero tóxico), EE.UU. creó el programa **Superfund**
+
+Principio central: **"el que contamina, paga"**
+
+- La EPA identifica sitios contaminados y **obliga** a los responsables a remediar
+- Si no cooperan, el gobierno limpia y **demanda** por hasta el triple del costo
+- Más de 1.300 sitios en la lista nacional de prioridades
+:::
+::: {.column width="48%"}
+::: {.box}
+**Contraste con Chile**
+
+EE.UU. lleva **45+ años** con un régimen de responsabilidad estricta y retroactiva para suelos contaminados
+
+Chile aún no tiene una ley aprobada — los casos como Arica y Chañaral siguen sin un marco legal que obligue a los responsables a pagar la remediación
+:::
+:::
+:::
+
 
 # Cápsula GIS: Operaciones Espaciales {.section-slide background-color="#2a7f62"}
 
@@ -398,14 +523,16 @@ Ejemplo: ¿qué distritos censales están a menos de **5 km** de un relave?
 
 Una de las operaciones más poderosas de SIG es unir capas de información utilizando su **relación espacial**
 
-A la relación se le llama **predicado**:
-
 ::: columns
 ::: {.column width="48%"}
-- **Intersecta** — las geometrías se tocan o superponen
-- **Contiene** — TARGET encierra completamente a JOIN
+- **TARGET** — la capa que recibe los atributos (la que queremos enriquecer). En nuestro caso: **distritos censales**
+- **JOIN** — la capa cuyos atributos se transfieren. En nuestro caso: **buffers de relaves**
 :::
 ::: {.column width="48%"}
+A la relación se le llama **predicado**:
+
+- **Intersecta** — las geometrías se tocan o superponen
+- **Contiene** — TARGET encierra completamente a JOIN
 - **Está dentro** — TARGET está completamente dentro de JOIN
 - **Toca** — las geometrías comparten borde pero no interior
 :::
@@ -466,48 +593,89 @@ Toda geometría tiene un interior y un borde. Los predicados espaciales se defin
 ## Ejemplo: unión espacial por intersección {.compact}
 
 ::: columns
-::: {.column width="48%"}
-![](../figures/clase06/slide_31_img_1.png){width="100%"}
+::: {.column width="45%"}
+![](../figures/clase06/slide_31_map_color.png){width="100%"}
 :::
-::: {.column width="48%"}
-Queremos unir la capa de **distritos censales** con el **buffer de 5 km** de los relaves
+::: {.column width="55%"}
+Queremos unir los **distritos censales** con el **buffer de 5 km** de relaves
 
-Objetivo: identificar qué distritos están a menos de 5 km de un relave
+¿Qué distritos están a menos de 5 km?
 
-Resultado: cada distrito que intersecta *n* relaves aparece *n* veces en la tabla
+Noten que:
+
+- El distrito [**4202_7**]{style="background-color: #FFFF00; padding: 0 4px;"} no intersecta ningún relave
+- El distrito [**4202_9**]{style="background-color: #00DDDD; padding: 0 4px;"} intersecta 1 relave (0592-4N)
+- El distrito [**4202_12**]{style="background-color: #00CC00; padding: 0 4px;"} intersecta 2 relaves (0549-4N y 0593-4N)
+
+¿Qué pasa con la **tabla de atributos**?
 :::
 :::
 
 ---
 
-## ¿Qué pasa con la tabla de atributos? {.compact}
+## Distrito [4202_7]{style="background-color: #FFFF00; color: black; padding: 0 4px;"}: sin intersección {.compact}
 
 ::: columns
-::: {.column width="48%"}
-![](../figures/clase06/slide_32_img_1.png){width="80%"}
-
-::: {.caption}
-Distrito 4202_7: no intersecta ningún relave → aparece 1 vez, columnas de relaves con valores nulos.
+::: {.column width="40%"}
+![](../figures/clase06/slide_32_map_color.png){width="100%"}
 :::
+::: {.column width="60%"}
+El distrito **4202_7** no intersecta ningún relave
 
-![](../figures/clase06/slide_33_img_1.png){width="80%"}
+Aparece **1 vez** en la tabla de atributos, y las columnas de relaves quedan con valores **NULL**
 
-::: {.caption}
-Distrito 4202_9: intersecta 1 relave → aparece 1 vez con datos del relave.
+![](../figures/clase06/slide_32_img_2.png){width="100%"}
 :::
 :::
-::: {.column width="48%"}
-![](../figures/clase06/slide_34_img_1.png){width="80%"}
 
-::: {.caption}
-Distrito 4202_12: intersecta 2 relaves → aparece 2 veces.
+---
+
+## Distrito [4202_9]{style="background-color: #00DDDD; padding: 0 4px;"}: una intersección {.compact}
+
+::: columns
+::: {.column width="40%"}
+![](../figures/clase06/slide_33_map_color.png){width="100%"}
+:::
+::: {.column width="60%"}
+El distrito **4202_9** intersecta **1 relave** (0592-4N)
+
+Aparece **1 vez** en la tabla, y las columnas de relaves contienen la información del relave que intersecta
+
+![](../figures/clase06/slide_33_img_2.png){width="100%"}
+:::
 :::
 
-![](../figures/clase06/slide_35_img_1.png){width="80%"}
+---
 
-::: {.caption}
-Distrito 4201_5: intersecta 62 relaves → aparece 62 veces.
+## Distrito [4202_12]{style="background-color: #00CC00; padding: 0 4px;"}: dos intersecciones {.compact}
+
+::: columns
+::: {.column width="40%"}
+![](../figures/clase06/slide_34_map_color.png){width="100%"}
 :::
+::: {.column width="60%"}
+El distrito **4202_12** intersecta **2 relaves** (0549-4N y 0593-4N)
+
+Aparece **2 veces** en la tabla — los valores del distrito se repiten, pero cada fila contiene la información de un relave distinto
+
+![](../figures/clase06/slide_34_img_2.png){width="100%"}
+:::
+:::
+
+---
+
+## Distrito 4201_5: ¡62 intersecciones! {.compact}
+
+::: columns
+::: {.column width="40%"}
+![](../figures/clase06/slide_35_img_1.png){width="100%"}
+:::
+::: {.column width="60%"}
+El distrito **4201_5** intersecta **62 relaves**
+
+Aparece **62 veces** en la tabla — los valores del distrito se repiten en cada fila, cada una con la información de uno de los 62 relaves
+
+![](../figures/clase06/slide_35_img_2.png){width="100%"}
 :::
 :::
 
@@ -528,14 +696,14 @@ Un **díptico** con dos mapas de la Región de Coquimbo:
 ::: {.column width="48%"}
 **Herramientas nuevas:**
 
-- QuickMapServices + mapa base en escala de grises
+- QuickMapServices + mapa base
 - Selección por localización
-- Reproyección a CRS proyectado (EPSG:32719)
+- Reproyección a CRS proyectado
 - Buffer (zona de influencia)
-- Unión espacial (*Join Attributes by Location*)
-- Símbolos proporcionales con expresión SQL
+- Unión espacial 
+- Símbolos proporcionales
 - Calculadora de campos
-- Simbología categorizada con expresión
+- Simbología con expresión
 :::
 :::
 
@@ -557,8 +725,8 @@ Un **díptico** con dos mapas de la Región de Coquimbo:
 
 - Un **díptico horizontal** (paisaje) con ambos mapas
 - Exportado como imagen o PDF desde el compositor de impresión de QGIS
-- Subido a **Canvas** antes de la fecha límite
+- Listo para utilizar en entrega del próximo portafolio.
 
 ::: {.box}
-La guía paso a paso está disponible en Canvas. Descarguen también el archivo `.zip` con los datos.
+La guía paso a paso estará disponible en Canvas mañana. Descarguen también el archivo `.zip` con los datos.
 :::
