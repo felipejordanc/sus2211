@@ -15,10 +15,11 @@ El objetivo de esta práctica es analizar la **exposición de población vulnera
 -   Reproyección a un CRS proyectado (EPSG:32719 — UTM zona 19S)
 -   Zona de influencia (buffer)
 -   Unión espacial (Join Attributes by Location)
+-   Eliminación de duplicados por atributo (Delete Duplicates by Attribute)
 -   Símbolos proporcionales con expresión SQL (CASE)
 -   Calculadora de campos (Field Calculator)
 -   Simbología categorizada con expresión
--   Composición de impresión en díptico horizontal con extensión vinculada entre mapas
+-   Composición de impresión en díptico horizontal con extensión idéntica entre mapas
 
 ------------------------------------------------------------------------
 
@@ -151,10 +152,11 @@ Los complementos son uno de los motivos por los que QGIS compite con software co
 -   Haz clic derecho sobre la capa `OSM Standard` > **Propiedades**.
 -   Ve a la pestaña **Simbología**.
 -   En la sección **Representación de capas** (al final del panel), busca la opción **Escala de grises** y selecciona **"Por luminosidad"**.
+-   Ve a la pestaña **Opacidad**.
 -   Ajusta la **Opacidad global** a un valor entre **40% y 50%** (arrastra el deslizador o escribe el valor).
 -   Haz clic en **Aceptar**.
 
-![Configuración de escala de grises y opacidad del mapa base](figures/tarea06/tarea6_003.png){fig-align="center"}
+![Configuración de escala de grises y opacidad del mapa base](figures/tarea06/tarea6_004.png){fig-align="center"}
 
 ::: {.callout-tip title="¿Por qué escala de grises?"}
 Un mapa base a todo color compite visualmente con los datos temáticos — los colores del basemap se confunden con los colores de la simbología. Al convertirlo a escala de grises y reducir su opacidad, el mapa base **proporciona contexto** (carreteras, nombres de ciudades, relieve) **sin ruido visual**. Este es un principio fundamental de cartografía temática: los datos temáticos deben ser el elemento más prominente del mapa.
@@ -199,7 +201,8 @@ La capa `CDR 2023` contiene los relaves de **todo Chile** (795 puntos). Necesita
 -   **Comparándolas con las entidades de:** `Comunas de R.Coquimbo` (la capa de comunas que define el límite regional)
 -   **Modificar la selección actual por:** Crear nueva selección
 
-![Configuración de Seleccionar por localización](figures/tarea06/tarea6_004.png){fig-align="center"}
+![Configuración de seleccionar por localización](figures/tarea06/tarea6_008.png){fig-align="center"}
+
 
 **14.** Haz clic en **Ejecutar** y luego cierra la ventana. Verás que en el mapa se resaltaron los relaves que se encuentran dentro de la Región de Coquimbo (deberían ser **406 puntos** seleccionados — puedes verificarlo en la barra de título de la tabla de atributos).
 
@@ -221,6 +224,8 @@ En nuestro caso, estamos seleccionando los **puntos de relaves que intersectan**
 
 La nueva capa `Relaves_Coquimbo` aparecerá en el panel de capas con solo los 406 relaves de la región. Puedes desactivar o eliminar la capa `CDR 2023` original.
 
+![Exportación de relaves seleccionados destacados en amarillo](figures/tarea06/tarea6_009.png){fig-align="center"}
+
 ------------------------------------------------------------------------
 
 ## Paso 5 | Símbolos proporcionales: tamaño según volumen autorizado
@@ -229,10 +234,10 @@ Ahora haremos que cada punto de relave tenga un **tamaño proporcional** a su vo
 
 **16.** Haz clic derecho sobre `Relaves_Coquimbo` > **Propiedades > Simbología**.
 
-**17.** Mantén el tipo de simbología en **Símbolo único**. Haz clic sobre el símbolo para editarlo:
+**17.** Mantén el tipo de simbología en **Símbolo único**. Haz clic sobre el triángulo a la izquierda del símbolo, y luego sobre el segundo símbolo que se despliega abajo a la derecha, para editarlo:
 
--   Cambia el **color de relleno** a rojo (`#e31a1c`).
--   Cambia el **color del trazo** a rojo oscuro (`#99000d`).
+-   Cambia el **color de relleno** a rojo oscuro (`#990000 `) - puedes darle una opacidad del 50% para que se aprecien los relaves pequeños cercanos a relaves más grandes.
+-   Cambia el **color del trazo** a negro (`#000000`) - también puede ser un rojo más oscuro, experimenta.
 
 **18.** Ahora haremos que el **tamaño** del símbolo varíe según el volumen autorizado. Busca el campo **Tamaño** y haz clic en el botón de **Anulación definida por datos** (el pequeño icono a la derecha del campo de tamaño) > **Asistente**.
 
@@ -247,11 +252,11 @@ CASE
 END
 ```
 
--   **Valores desde:** `0` **hasta:** `1500000000`
--   **Tamaño desde:** `1` **hasta:** `12` (mm)
+-   **Valores desde:** `0` **hasta:** `1.500.000.000`
+-   **Tamaño desde:** `1` **hasta:** `12` (mm) - puedes aumentar o disminuir este valor hasta alcanzar un tamaño apropiado
 -   Selecciona el método de escala **"Flannery"** (diseñado específicamente para símbolos proporcionales — corrige la tendencia humana a subestimar el tamaño de los círculos).
 
-![Asistente de tamaño con expresión CASE para VOL_AUTORI](figures/tarea06/tarea6_005.png){fig-align="center"}
+![Asistente de tamaño con expresión CASE para VOL_AUTORI](figures/tarea06/tarea6_013.png){fig-align="center"}
 
 **19.** Haz clic en **Aceptar** para cerrar el asistente, y luego en **Aceptar** nuevamente para aplicar la simbología.
 
@@ -289,7 +294,7 @@ No existe una respuesta "perfecta" — cada método implica un compromiso. Pero 
 ::: callout-note
 **PAUSA** — deberías ver algo así: los relaves de Coquimbo con tamaños proporcionales a su volumen autorizado, sobre un mapa base en escala de grises.
 
-![Relaves de Coquimbo con símbolos proporcionales](figures/tarea06/tarea6_006.png){fig-align="center"}
+![Relaves de Coquimbo con símbolos proporcionales](figures/tarea06/tarea6_014.png){fig-align="center"}
 :::
 
 ------------------------------------------------------------------------
@@ -306,7 +311,7 @@ Para crear una zona de influencia (buffer) de **5 kilómetros**, necesitamos que
 -   **SRC de destino:** haz clic en el botón del globo y busca `32719`. Selecciona **EPSG:32719 – WGS 84 / UTM zone 19S**.
 -   **Reproyectado:** haz clic en los tres puntos (`...`), selecciona **Guardar en archivo**, navega a `datos/intermedios/` y guárdalo como `Relaves_Coquimbo_UTM.gpkg`.
 
-![Reproyección de la capa de relaves a EPSG:32719](figures/tarea06/tarea6_007.png){fig-align="center"}
+![Configuración de reproyección](figures/tarea06/tarea6_016.png){fig-align="center"}
 
 **22.** Haz clic en **Ejecutar**.
 
@@ -336,13 +341,13 @@ Ahora crearemos un **buffer** (zona de influencia) de 5 kilómetros alrededor de
 -   **Disolver resultado:** **Sí** (marca la casilla). Esto fusionará los buffers que se superponen en un solo polígono, en vez de tener 406 círculos individuales.
 -   **Buffer:** haz clic en los tres puntos (`...`), selecciona **Guardar en archivo**, navega a `datos/intermedios/` y guárdalo como `Buffer_5km_Relaves.gpkg`.
 
-![Configuración del buffer de 5 km](figures/tarea06/tarea6_008.png){fig-align="center"}
+![Configuración de buffer](figures/tarea06/tarea6_020.png){fig-align="center"}
 
 **25.** Haz clic en **Ejecutar**.
 
 **26.** Verás aparecer en el mapa una nueva capa con la zona de influencia — un polígono que rodea todos los relaves de Coquimbo a 5 km de distancia.
 
-![Zona de influencia de 5 km alrededor de los relaves](figures/tarea06/tarea6_009.png){fig-align="center"}
+![Zona de influencia de 5 km alrededor de los relaves](figures/tarea06/tarea6_021.png){fig-align="center"}
 
 ::: callout-note
 Si el buffer se ve deformado o no parece tener 5 km, verifica que usaste la capa **reproyectada** (EPSG:32719) como entrada. Si usaste la capa original en coordenadas geográficas, el buffer se calculará en grados y no en metros.
@@ -354,6 +359,12 @@ Si el buffer se ve deformado o no parece tener 5 km, verifica que usaste la capa
 
 Ahora identificaremos qué **distritos censales** se encuentran dentro (o tocan) la zona de influencia de 5 km. Para esto usaremos una **unión espacial** (spatial join), que vincula dos capas según su relación geográfica.
 
+::: {.callout-tip title="¿Qué es una unión espacial?"}
+Una **unión espacial** (spatial join) vincula dos capas según su **relación geográfica** — a diferencia del join no espacial de la Tarea 5, que usaba un campo en común (como el código ISO). Aquí estamos preguntando: "¿qué distritos censales **tocan o se superponen** con la zona de influencia de 5 km?"
+
+El resultado es una nueva capa donde cada distrito conserva todos sus atributos originales **más** los atributos de la capa con la que intersecta. Los distritos que no intersectan quedan con valores NULL en las columnas nuevas — esto es precisamente lo que nos permite clasificarlos como "expuestos" o "no expuestos".
+:::
+
 **27.** Ve a **Vector > Herramientas de gestión de datos > Unir atributos por localización** (Join Attributes by Location).
 
 **28.** En la ventana que se abre:
@@ -361,23 +372,39 @@ Ahora identificaremos qué **distritos censales** se encuentran dentro (o tocan)
 -   **Capa de entrada:** `Distritos Censales R.Coquimbo` (los polígonos de distritos)
 -   **Predicado geométrico:** marca **"intersectan"**
 -   **Unir capa:** `Buffer_5km_Relaves` (la zona de influencia)
--   **Campos a añadir:** puedes dejar vacío (se añadirán todos los campos del buffer)
--   **Tipo de unión:** Tomar los atributos solo del primer objeto localizado
+-   **Campos a añadir:** Selecciona solo la columna ID.
+-   **Tipo de unión:** Seleccionar la opción por defecto (one-to-many);
 -   **Unido:** haz clic en los tres puntos (`...`), selecciona **Guardar en archivo**, navega a `datos/intermedios/` y guárdalo como `Distritos_Join.gpkg`.
 
-![Configuración de la unión espacial](figures/tarea06/tarea6_010.png){fig-align="center"}
+![Configuración de unión por localización](figures/tarea06/tarea6_023.png){fig-align="center"}
+
+::: {.callout-warning title="Posibles problema al no seleccionar los campos a añadir"}
+
+Cuando nos interesa importar información adicional desde "Unir capa", puedes seleccionar las columnas que quieras en **Campos a añadir**. Si no seleccionas nada, se importarán por defecto todas las columnas. **Cuidado con la columna fid**, ya que es un índice espacial (feature identifier) y puede generar conflictos con el índice espacial que QGIS genera de forma automática para la capa resultante de la unión espacial (nota que la tabla de atributos de la capa resultante tiene como primera columna fid).
+:::
+
 
 **29.** Haz clic en **Ejecutar**.
 
-**30.** Abre la tabla de atributos de la nueva capa `Distritos_Join`. Observa que se han añadido columnas provenientes de la capa de buffer. Los distritos que **sí** intersectan la zona de influencia tendrán valores en estas columnas nuevas; los que **no** intersectan tendrán valores **NULL** (vacíos).
-
-**31.** Para verificar, ordena la tabla por una de las columnas nuevas (por ejemplo, `fid`) haciendo clic en el encabezado de la columna. Los distritos con valores numéricos son los expuestos; los que tienen NULL son los no expuestos.
-
-::: {.callout-tip title="¿Qué es una unión espacial?"}
-Una **unión espacial** (spatial join) vincula dos capas según su **relación geográfica** — a diferencia del join no espacial de la Tarea 5, que usaba un campo en común (como el código ISO). Aquí estamos preguntando: "¿qué distritos censales **tocan o se superponen** con la zona de influencia de 5 km?"
-
-El resultado es una nueva capa donde cada distrito conserva todos sus atributos originales **más** los atributos de la capa con la que intersecta. Los distritos que no intersectan quedan con valores NULL en las columnas nuevas — esto es precisamente lo que nos permite clasificarlos como "expuestos" o "no expuestos".
+::: {.callout-warning title="¿Por qué hay filas repetidas?"}
+Al unir por localización con el tipo de unión por defecto, QGIS crea **una fila por cada intersección** entre un distrito y el buffer (más las filas de los distritos que no tienen intersecciones). Si un distrito intersecta varios buffers, ese distrito aparecerá **repetido** en la tabla resultante. Esto es un problema para el mapa que estamos generando: cuando más adelante hagamos un mapa graduado con el número de niños por distrito, los distritos repetidos se contarán múltiples veces, **distorsionando los valores del mapa**. Por eso, antes de continuar debemos eliminar las filas duplicadas para quedarnos con **una sola fila por distrito**.
 :::
+
+**30.** Abre la **Caja de herramientas de procesamiento**: ve a **Procesamiento > Caja de herramientas** (o presiona `Ctrl+Alt+T`). Se abrirá un panel lateral con todas las herramientas de geoprocesamiento disponibles.
+
+**31.** En la barra de búsqueda de la Caja de herramientas, escribe `duplicados`. Haz doble clic sobre la herramienta **"Borrar geometrías duplicadas por atributo"** (Delete Duplicates by Attribute). En la ventana que se abre, configura:
+
+-   **Capa de entrada:** `Distritos_Join`
+-   **Campo de comparación de atributos:** selecciona `COM_DIS` (el identificador único de cada distrito censal)
+-   **Filtrados (sin duplicados):** haz clic en los tres puntos (`...`), selecciona **Guardar en archivo**, navega a `datos/intermedios/` y guárdalo como `Distritos_Join_Unicos.gpkg`
+
+**32.** Haz clic en **Ejecutar**. La nueva capa `Distritos_Join_Unicos` aparecerá en el panel de capas. Esta capa contiene **exactamente un registro por distrito**, preservando la información de la unión espacial (los distritos expuestos mantienen sus valores; los no expuestos mantienen NULL).
+
+**33.** Abre la tabla de atributos de la nueva capa `Distritos_Join_Unicos`. Observa que se han añadido la columna ID proveniente de la capa de buffer. Los distritos que **sí** intersectan la zona de influencia tendrán valores en esta columna nueva; los que **no** intersectan tendrán valor **NULL** (vacíos).
+
+**34.** Para verificar, ordena la tabla por la columna nueva (por ejemplo, `ID`) haciendo clic en el encabezado de la columna. Los distritos con valores numéricos son los expuestos; los que tienen NULL son los no expuestos.
+
+
 
 ------------------------------------------------------------------------
 
@@ -385,55 +412,55 @@ El resultado es una nueva capa donde cada distrito conserva todos sus atributos 
 
 Ahora crearemos una simbología que distinga claramente los distritos expuestos de los no expuestos, usando una **expresión** en vez de un campo simple.
 
-**32.** Haz clic derecho sobre `Distritos_Join` > **Propiedades > Simbología**.
+**35.** Haz clic derecho sobre `Distritos_Join_Unicos` > **Propiedades > Simbología**.
 
-**33.** Cambia el tipo de simbología de "Símbolo único" a **"Categorizado"**.
+**36.** Cambia el tipo de simbología de "Símbolo único" a **"Categorizado"**.
 
-**34.** En el campo **Valor**, no selecciones una columna de la lista desplegable. En su lugar, haz clic en el botón de **expresión** (ε) a la derecha del campo y escribe:
+**37.** En el campo **Valor**, no selecciones una columna de la lista desplegable. En su lugar, haz clic en el botón de **expresión** (ε) a la derecha del campo y escribe:
 
 ```sql
-"fid" IS NOT NULL
+"ID" IS NOT NULL
 ```
 
-Esta expresión evalúa si el distrito tiene un valor en la columna `fid` (proveniente del buffer) — es decir, si está expuesto o no. Devuelve `1` (verdadero) o `0` (falso).
+Esta expresión evalúa si el distrito tiene un valor en la columna `ID` (proveniente del buffer) — es decir, si está expuesto o no. Devuelve `1` (verdadero) o `0` (falso).
 
-**35.** Haz clic en **Clasificar**. Aparecerán dos categorías: `0` y `1`. Configura las etiquetas y colores:
+**38.** Haz clic en **Clasificar**. Aparecerán dos categorías: `0` y `1`. Configura las etiquetas y colores:
 
 -   `0` → Etiqueta: **"Sin exposición"** — Color de relleno: gris claro (`#d9d9d9`)
 -   `1` → Etiqueta: **"Expuesto a relaves (5 km)"** — Color de relleno: naranja (`#e6550d`)
 
 Para ambas categorías, ajusta el color del **trazo (borde)** a un tono más oscuro y reduce el **ancho del trazo** a `0.2 mm` para que los límites de los distritos sean visibles pero sutiles.
 
-![Simbología categorizada — distritos expuestos y no expuestos](figures/tarea06/tarea6_011.png){fig-align="center"}
+**39.** Haz clic en **Aceptar**.
 
-**36.** Haz clic en **Aceptar**.
+![Simbología categorizada — distritos expuestos y no expuestos](figures/tarea06/tarea6_026.png){fig-align="center"}
 
 ------------------------------------------------------------------------
 
 ## Paso 10 | Preparar las capas para el Mapa 1
 
-**37.** Organiza las capas en el panel de capas de arriba a abajo:
+**40.** Organiza las capas en el panel de capas de arriba a abajo:
 
 1.  `Relaves_Coquimbo` (puntos proporcionales — arriba de todo)
 2.  `Comunas de R.Coquimbo` (solo bordes, sin relleno — como referencia)
-3.  `Distritos_Join` (categorizado — expuestos/no expuestos)
+3.  `Distritos_Join_Unicos` (categorizado — expuestos/no expuestos)
 4.  `OSM Standard` (mapa base en gris — al fondo)
 
-**38.** Para que la capa de comunas muestre **solo los bordes** (sin relleno):
+**41.** Para que la capa de comunas muestre **solo los bordes** (sin relleno):
 
 -   Haz clic derecho sobre `Comunas de R.Coquimbo` > **Propiedades > Simbología**.
 -   En **Relleno simple**, cambia el **color de relleno** a **transparente** (haz clic en la flecha del color y selecciona "Relleno transparente").
 -   Cambia el **color del trazo** a negro (`#000000`) y el ancho a `0.5 mm`.
 -   Haz clic en **Aceptar**.
 
-**39.** Desactiva las capas que no necesitas (como `CDR 2023` original, `Relaves_Coquimbo_UTM` y `Buffer_5km_Relaves`) haciendo clic en la casilla de verificación junto a su nombre.
+**42.** Desactiva las capas que no necesitas (como `CDR 2023` original, `Relaves_Coquimbo_UTM`, `Buffer_5km_Relaves` y `Distritos_Join`) haciendo clic en la casilla de verificación junto a su nombre.
 
-**40.** Haz zoom a la Región de Coquimbo: clic derecho sobre `Comunas de R.Coquimbo` > **Zum a la capa**.
+**43.** Haz zoom a la Región de Coquimbo: clic derecho sobre `Comunas de R.Coquimbo` > **Zum a la capa**.
 
 ::: callout-note
 **PAUSA** — deberías ver algo así: los distritos clasificados por exposición, con los relaves proporcionales superpuestos y los límites comunales como referencia.
 
-![Vista previa del Mapa 1 — distritos expuestos y relaves proporcionales](figures/tarea06/tarea6_012.png){fig-align="center"}
+![Vista previa del Mapa 1 — distritos expuestos y relaves proporcionales](figures/tarea06/tarea6_029.png){fig-align="center"}
 :::
 
 ------------------------------------------------------------------------
@@ -446,15 +473,15 @@ En este segundo mapa cuantificaremos cuántos **niños de 0 a 5 años** viven en
 
 ## Paso 11 | Calculadora de campos: calcular el número de niños
 
-La capa `Distritos_Join` tiene la `Poblacion` total y el `Pct_Ninos` (porcentaje de niños de 0–5 años), pero no tiene el **número absoluto** de niños. Lo calcularemos con la **Calculadora de Campos**.
+La capa `Distritos_Join_Unicos` tiene la `Poblacion` total y el `Pct_Ninos` (porcentaje de niños de 0–5 años), pero no tiene el **número absoluto** de niños. Lo calcularemos con la **Calculadora de Campos**.
 
-**41.** Abre la tabla de atributos de `Distritos_Join`.
+**44.** Abre la tabla de atributos de `Distritos_Join_Unicos`.
 
-**42.** Haz clic en el botón **Calculadora de campos** (el icono del ábaco en la barra de herramientas de la tabla de atributos).
+**45.** Haz clic en el botón **Calculadora de campos** (el icono del ábaco en la barra de herramientas de la tabla de atributos).
 
-![Botón de la Calculadora de campos en la tabla de atributos](figures/tarea06/tarea6_013.png){fig-align="center"}
+![Botón de la Calculadora de campos en la tabla de atributos](figures/tarea06/tarea6_030.png){fig-align="center"}
 
-**43.** En la ventana de la Calculadora de campos:
+**46.** En la ventana de la Calculadora de campos:
 
 -   Marca **"Crear un nuevo campo"**.
 -   **Nombre del campo de salida:** `Ninos_0_5`
@@ -467,9 +494,9 @@ round("Poblacion" * "Pct_Ninos" / 100)
 
 Esta fórmula calcula: *población total × porcentaje de niños / 100*, y redondea al entero más cercano. Por ejemplo, si un distrito tiene 1.000 habitantes y 8% de niños, el resultado será 80 niños.
 
-![Calculadora de campos — expresión para Ninos_0_5](figures/tarea06/tarea6_014.png){fig-align="center"}
+![Calculadora de campos — expresión para Ninos_0_5](figures/tarea06/tarea6_031.png){fig-align="center"}
 
-**44.** Haz clic en **Aceptar**. Verás la nueva columna `Ninos_0_5` añadida a la tabla de atributos.
+**47.** Haz clic en **Aceptar**. Verás la nueva columna `Ninos_0_5` añadida a la tabla de atributos.
 
 ::: {.callout-tip title="¿Qué es la Calculadora de Campos?"}
 La **Calculadora de Campos** (Field Calculator) es una herramienta de QGIS que permite crear nuevas columnas o modificar columnas existentes mediante expresiones matemáticas y lógicas. Funciona de manera similar a escribir una fórmula en Excel, pero se aplica a **todas las filas** de la tabla de atributos simultáneamente.
@@ -484,7 +511,7 @@ Usos comunes:
 Es una de las herramientas más versátiles de QGIS y la usarás frecuentemente en análisis geoespacial.
 :::
 
-**45.** Una vez creada la columna, haz clic en el botón **Conmutar edición** (lápiz) en la barra de herramientas de la tabla de atributos y confirma que deseas **guardar los cambios**.
+**48.** Una vez creada la columna, haz clic en el botón **Conmutar edición** (lápiz) en la barra de herramientas de la tabla de atributos y confirma que deseas **guardar los cambios**.
 
 ------------------------------------------------------------------------
 
@@ -492,25 +519,30 @@ Es una de las herramientas más versátiles de QGIS y la usarás frecuentemente 
 
 Ahora crearemos la simbología para el segundo mapa, mostrando cuántos niños de 0–5 años viven en cada distrito expuesto. Para los distritos no expuestos, añadiremos una categoría gris — todo dentro de la misma capa, usando el mismo enfoque de **simbología basada en reglas** que aprendimos en la Tarea 5.
 
-**46.** Haz clic derecho sobre `Distritos_Join` > **Duplicar capa**. Renombra la copia como `Distritos_Ninos` (clic derecho > **Renombrar capa**). Trabajaremos sobre esta copia para no perder la simbología categorizada del Mapa 1.
+**49.** Haz clic derecho sobre `Distritos_Join_Unicos` > **Duplicar capa**. Renombra la copia como `Distritos_Ninos` (clic derecho > **Renombrar capa**). Trabajaremos sobre esta copia para no perder la simbología categorizada del Mapa 1.
 
-**47.** Configura la simbología graduada inicial de `Distritos_Ninos`:
+**50.** Configura la simbología graduada inicial de `Distritos_Ninos`:
 
 -   Haz clic derecho > **Propiedades > Simbología**.
 -   Cambia a **"Graduado"**.
--   **Valor:** `Ninos_0_5`
+-   **Valor:** en vez de seleccionar una columna directamente, haz clic en el botón de **expresión** (ε) a la derecha del campo y escribe:
+
+```sql
+CASE WHEN "ID" IS NOT NULL THEN "Ninos_0_5" END
+```
+
+Esta expresión devuelve el número de niños **solo para los distritos expuestos** (los que tienen un valor en la columna `ID` proveniente del buffer). Para los distritos no expuestos, devuelve NULL — así la clasificación graduada los ignora.
+
 -   **Rampa de color:** selecciona una rampa de **morados o azules** (que contraste con el naranja del Mapa 1).
 -   **Modo:** Rupturas naturales (Jenks) o Cuantiles — prueba ambos y elige el que mejor muestre las diferencias.
 -   Haz clic en **Clasificar** y luego en **Aceptar**.
 
-![Simbología graduada — número de niños por distrito](figures/tarea06/tarea6_015.png){fig-align="center"}
+Verás que los distritos **expuestos** se colorean según el número de niños, pero los **no expuestos** quedan sin simbología (transparentes). Queremos que aparezcan en gris. Para lograr esto, convertiremos la simbología a **basada en reglas** y añadiremos una categoría para los no expuestos (tal como hicimos en la Tarea 5 para los países sin datos de energía).
 
-Verás que todos los distritos se colorean según el número de niños — incluyendo los no expuestos. Pero queremos que solo los distritos **expuestos** tengan la rampa de colores, y los no expuestos aparezcan en gris. Para lograr esto, convertiremos la simbología a **basada en reglas** (tal como hicimos en la Tarea 5 para los países sin datos de energía).
-
-**48.** Abre nuevamente **Propiedades > Simbología** de `Distritos_Ninos`:
+**51.** Abre nuevamente **Propiedades > Simbología** de `Distritos_Ninos`:
 
 -   Cambia el tipo de simbología de **"Graduado"** a **"Basado en reglas"**. Al hacerlo, QGIS convertirá automáticamente las clases graduadas en reglas individuales — no perderás nada de lo que hiciste.
--   Observa que cada regla tiene un filtro con rangos de `Ninos_0_5` (por ejemplo, `"Ninos_0_5" >= 0 AND "Ninos_0_5" <= 15`). Estas reglas solo capturan los distritos **con valores** en `Ninos_0_5` — los distritos no expuestos (que tienen `Ninos_0_5` = NULL porque no se les calculó un valor significativo) quedan sin simbología.
+-   Observa que cada regla tiene un filtro con rangos que usan la expresión CASE (por ejemplo, `CASE WHEN "ID" IS NOT NULL THEN "Ninos_0_5" END >= 0 AND ...`). Como la expresión devuelve NULL para los distritos no expuestos, estos no coinciden con ninguna regla de rango.
 -   Ahora añade una regla para los distritos no expuestos: haz clic en el botón **"+"** (añadir regla).
 -   En la ventana de edición de la regla, marca la casilla **"Else"** — esto capturará todos los distritos que no coinciden con ninguna otra regla (es decir, los no expuestos).
 -   En **Etiqueta**, escribe `Sin exposición`.
@@ -528,13 +560,14 @@ Podríamos lograr el mismo efecto visual usando dos capas: una filtrada para los
 Este es el mismo principio que aplicamos en la Tarea 5: usar reglas para manejar todas las categorías dentro de una misma capa.
 :::
 
-**49.** Organiza las capas para el Mapa 2 de arriba a abajo:
+
+**52.** Organiza las capas para el Mapa 2 de arriba a abajo:
 
 1.  `Distritos_Ninos` (basado en reglas — expuestos con rampa + no expuestos en gris)
 2.  `Comunas de R.Coquimbo` (solo bordes)
 3.  `OSM Standard` (mapa base)
 
-![Vista previa del Mapa 2 — número de niños en distritos expuestos](figures/tarea06/tarea6_016.png){fig-align="center"}
+![Vista previa del Mapa 2 — número de niños en distritos expuestos](figures/tarea06/tarea6_101.png){fig-align="center"}
 
 ------------------------------------------------------------------------
 
@@ -542,69 +575,64 @@ Este es el mismo principio que aplicamos en la Tarea 5: usar reglas para manejar
 
 Ahora crearemos una composición de impresión con **dos mapas lado a lado** — un díptico en orientación horizontal, tal como hicimos en la Tarea 5. El Mapa 1 ("¿Dónde están las amenazas?") irá a la izquierda y el Mapa 2 ("¿Cuántos niños están expuestos?") a la derecha. Ambos mapas mostrarán **exactamente la misma extensión geográfica**, lo que permite al lector comparar directamente las dos capas de información.
 
-**50.** Ve a **Proyecto > Nueva composición de impresión**. Asígnale un nombre (por ejemplo, `relaves_coquimbo`).
+**53.** Ve a **Proyecto > Nueva composición de impresión**. Asígnale un nombre (por ejemplo, `relaves_coquimbo`).
 
-**51.** Configura la orientación de la página: haz clic derecho sobre la hoja en blanco > **Propiedades de la página** > cambia la orientación a **horizontal** (apaisado). Puedes ajustar el tamaño — se sugiere un ancho de **297 mm** y un alto de **210 mm** (A4 apaisado), pero experimenta según tu preferencia.
+**54.** Configura la orientación de la página: haz clic derecho sobre la hoja en blanco > **Propiedades de la página** > cambia la orientación a **horizontal** (apaisado). Puedes ajustar el tamaño — se sugiere un ancho de **297 mm** y un alto de **210 mm** (A4 apaisado), pero experimenta según tu preferencia.
 
 #### Añadir el Mapa 1 (izquierda)
 
-**52.** Antes de añadir el primer mapa, regresa a la ventana principal de QGIS y asegúrate de que estén visibles **solo las capas del Mapa 1**:
+**55.** Antes de añadir el primer mapa, regresa a la ventana principal de QGIS y asegúrate de que estén visibles **solo las capas del Mapa 1** (y asegúrate que estén en este orden):
 
-1.  `Relaves_Coquimbo` (puntos proporcionales)
-2.  `Comunas de R.Coquimbo` (solo bordes)
-3.  `Distritos_Join` (categorizado — expuestos/no expuestos)
+1.  `Comunas de R.Coquimbo` (solo bordes)
+2.  `Relaves_Coquimbo` (puntos proporcionales)
+3.  `Distritos_Join_Unicos` (categorizado — expuestos/no expuestos)
 4.  `OSM Standard` (mapa base)
 
 Desactiva `Distritos_Ninos` y cualquier otra capa que no corresponda al Mapa 1.
 
-**53.** Regresa a la composición de impresión. Selecciona **Añadir mapa** y dibuja un rectángulo en la **mitad izquierda** de la hoja. Ajusta la escala y posición con el botón **Mover contenido del elemento** (el icono de hoja con flechas) hasta que la Región de Coquimbo se vea bien encuadrada.
+**56.** Regresa a la composición de impresión. Selecciona **Añadir mapa** y dibuja un rectángulo en la **mitad izquierda** de la hoja. Ajusta la escala y posición con el botón **Mover contenido del elemento** (el icono de hoja con flechas) hasta que la Región de Coquimbo se vea bien encuadrada.
 
-**54.** En las propiedades del marco de mapa (panel derecho), marca las opciones **"Bloquear capas"** y **"Bloquear estilos de capa"** — así este marco quedará fijo con las capas del Mapa 1, incluso cuando cambies la visibilidad de las capas en la ventana principal.
+**57.** En las propiedades del marco de mapa (panel derecho), marca las opciones **"Bloquear capas"** y **"Bloquear estilos de capa"** — así este marco quedará fijo con las capas del Mapa 1, incluso cuando cambies la visibilidad de las capas en la ventana principal.
 
-![Propiedades del mapa — Bloquear capas y estilos](figures/tarea06/tarea6_017.png){fig-align="center"}
+#### Añadir el Mapa 2 (derecha) copiando el Mapa 1
 
-#### Añadir el Mapa 2 (derecha)
+En vez de dibujar un segundo mapa desde cero, **copiaremos el Mapa 1**. Esto garantiza que ambos mapas tengan exactamente la misma extensión geográfica y escala — requisito fundamental para un díptico comparativo.
 
-**55.** Vuelve a la ventana principal de QGIS. Ahora activa **solo las capas del Mapa 2**:
+**58.** Haz clic sobre el marco del Mapa 1 para seleccionarlo. Cópialo con `Ctrl+C` y pégalo con `Ctrl+V`. Aparecerá una copia exacta superpuesta sobre el original.
 
-1.  `Distritos_Ninos` (basado en reglas — expuestos con rampa + no expuestos en gris)
-2.  `Comunas de R.Coquimbo` (solo bordes)
+**59.** Arrastra la copia hacia la **mitad derecha** de la hoja, alineándola con el Mapa 1. Puedes cambiar el nombre haciendo doble click sobre el nombre en el panel de elementos. Recomendamos llamarlo Mapa 2, para evitar confusiones.
+
+**60.** Ahora necesitamos actualizar las capas de este segundo marco. En las propiedades del marco copiado (panel derecho), **desmarca** las opciones **"Bloquear capas"** y **"Bloquear estilos de capa"** para permitir que el mapa refleje las capas activas en la ventana principal.
+
+**61.** Vuelve a la ventana principal de QGIS. Ahora activa **solo las capas del Mapa 2** (y asegúrate que estén en este orden):
+
+1.  `Comunas de R.Coquimbo` (solo bordes)
+2.  `Distritos_Ninos` (basado en reglas — expuestos con rampa + no expuestos en gris)
 3.  `OSM Standard` (mapa base)
 
 Desactiva `Relaves_Coquimbo` y las demás capas que no correspondan.
 
-**56.** Regresa a la composición y añade un **segundo mapa** dibujando un rectángulo en la **mitad derecha** de la hoja.
+**62.** Regresa a la composición de impresión. Haz clic sobre el marco del Mapa 2 (derecha) y presiona el botón **Actualizar vista previa del mapa** (el icono de recarga en la barra de herramientas, o en el panel de propiedades del mapa). El marco ahora mostrará las capas del Mapa 2. Vuelve a marcar **"Bloquear capas"** y **"Bloquear estilos de capa"** para fijar estas capas.
 
-**57.** En las propiedades de este segundo marco de mapa, marca también **"Bloquear capas"** y **"Bloquear estilos de capa"**.
-
-#### Vincular la extensión de ambos mapas
-
-Para que ambos mapas muestren **exactamente la misma área geográfica** (misma escala y encuadre), vincularemos la extensión del Mapa 2 al Mapa 1.
-
-**58.** Haz clic sobre el **segundo marco de mapa** (Mapa 2, a la derecha) para seleccionarlo.
-
-**59.** En el panel de **Propiedades del elemento** (a la derecha), busca la sección **Extensión controlada por el Atlas** — más abajo encontrarás la opción **Controlado por elemento de mapa**. Actívala y selecciona **Mapa 1** (el primer marco) en la lista desplegable.
-
-![Extensión del Mapa 2 controlada por el Mapa 1](figures/tarea06/tarea6_018.png){fig-align="center"}
-
-Ahora, cualquier cambio de escala o posición que hagas en el Mapa 1 se replicará automáticamente en el Mapa 2. Esto garantiza que el lector pueda **comparar directamente** los dos mapas sin confusiones de encuadre o escala.
-
-::: {.callout-tip title="¿Por qué vincular las extensiones?"}
-Cuando presentas dos mapas de la misma región lado a lado, es fundamental que cubran **exactamente el mismo territorio** a la **misma escala**. Si uno está más ampliado o desplazado que el otro, el lector no puede superponer mentalmente la información de ambos mapas — pierde la capacidad de comparar. Vincular las extensiones garantiza coherencia visual y facilita la lectura comparativa: "este distrito que aparece en naranja (expuesto) en el mapa izquierdo tiene X niños (color oscuro) en el mapa derecho".
-:::
-
-::: callout-note
-Si necesitas ajustar el encuadre, hazlo **solo en el Mapa 1** — el Mapa 2 se actualizará automáticamente. Para mover el contenido dentro de un marco de mapa, usa el botón **Mover contenido del elemento** en la barra de herramientas de la composición. Para un control más fino de la escala, ajusta el valor de **Escala** en las propiedades del mapa.
+::: {.callout-tip title="¿Por qué copiar el Mapa 1 en vez de dibujar uno nuevo?"}
+Cuando presentas dos mapas de la misma región lado a lado, es fundamental que cubran **exactamente el mismo territorio** a la **misma escala**. Si uno está más ampliado o desplazado que el otro, el lector no puede superponer mentalmente la información de ambos mapas — pierde la capacidad de comparar. Al copiar el Mapa 1, la extensión y la escala se heredan automáticamente, garantizando coherencia visual y facilitando la lectura comparativa: "este distrito que aparece en naranja (expuesto) en el mapa izquierdo tiene X niños (color oscuro) en el mapa derecho".
 :::
 
 #### Completar la composición
 
-**60.** Añade los siguientes elementos:
+**63.** Añade los siguientes elementos:
 
--   **Títulos:** usa **Añadir etiqueta** para colocar un título sobre cada mapa. Por ejemplo: *"¿Dónde están las amenazas?"* sobre el izquierdo y *"¿Cuántos niños están expuestos?"* sobre el derecho. Opcionalmente, añade un título general arriba.
--   **Leyendas:** añade una leyenda para cada mapa. Desmarca **"Actualizar automáticamente"** en cada una, elimina las capas que no quieres mostrar (basemap, capas auxiliares) y edita los nombres para que sean descriptivos.
--   **Barra de escala:** añade **una sola** barra de escala, vinculada al Mapa 1. Como ambos mapas comparten la misma escala, una barra es suficiente — colócala centrada bajo los mapas o bajo uno de ellos.
--   **Flecha del Norte:** añade una flecha del norte en una posición discreta.
+-   **Títulos:** usa **Añadir etiqueta** para colocar un título sobre cada mapa. Por ejemplo: *"¿Dónde están las amenazas?"* sobre el izquierdo y *"¿Cuántos niños están expuestos?"* sobre el derecho. Opcionalmente, añade un título general arriba, o no añadas un título si anticipas utilizar el mapa en un documento o póster donde el título se presentará sobre el mapa.
+-   **Leyendas:** añade una leyenda para cada mapa. 
+
+	-	Desmarca **"Actualizar automáticamente"** en cada una, elimina las capas que no quieres mostrar (basemap, capas auxiliares) y edita los nombres para que sean descriptivos. 
+
+	-	**Para visualizar los relaves, deberas incorporar la capa de relaves que no tiene el tamaño proporcional a la leyenda con el botón +, dado que QGIS no despliega el símbolo proporcional de nuestro mapa en la layenda**. Asegúrate de asignarle el mismo color a los puntos de esa capa (la original), para que el símbolo sea el mismo. 
+	-	Desmarca la casilla "Ajustar al contenido" para lograr que la altura de las leyendas sea la misma en los dos mapas. 
+
+-   **Barra de escala:** añade **una sola** barra de escala, vinculada al Mapa 1. Como ambos mapas comparten la misma escala, una barra es suficiente. Puedes colocarla en la leyenda del mapa izquierdo, que quedará con espacio de sobra.
+
+-   **Flecha del Norte:** añade una flecha del norte en una posición discreta, solo en un mapa.
 
 ::: {.callout-tip title="Configuración detallada de la leyenda"}
 
@@ -616,12 +644,11 @@ Al añadir una leyenda, QGIS creará una leyenda automática que incluye todas l
 
 3.  **Desmarcar "Redimensionar para ajustar al contenido":** esto te permite ajustar manualmente el tamaño de la caja de la leyenda, controlando su posición con precisión.
 
-4.  **Desmarcar "Fondo":** desactiva la casilla de fondo de la leyenda para que no aparezca un rectángulo blanco que interfiera visualmente.
+4.  **Desmarcar "Fondo":** desactiva la casilla de fondo de la leyenda para que no aparezca un rectángulo blanco que interfiera visualmente. Si la leyenda no interfiere con el contenido, puedes dejar el fondo.
 :::
 
-![Composición final — díptico horizontal con extensión vinculada](figures/tarea06/tarea6_019.png){fig-align="center"}
 
-**61.** Exporta la composición como imagen a `resultados/mapas/` con resolución de **300 ppp** (**Composición > Exportar como imagen**).
+**64.** Exporta la composición como imagen a `resultados/mapas/` con resolución de **300 ppp** (**Composición > Exportar como imagen**).
 
 ------------------------------------------------------------------------
 
@@ -629,7 +656,11 @@ Al añadir una leyenda, QGIS creará una leyenda automática que incluye todas l
 
 Tu composición final debería verse algo así (con tu propia elección de colores): un díptico horizontal donde el mapa izquierdo muestra las amenazas (distritos expuestos + relaves proporcionales) y el mapa derecho muestra la población vulnerable (número de niños por distrito expuesto), ambos con la misma extensión geográfica.
 
-![Resultado final — díptico: amenazas (izquierda) + población expuesta (derecha)](figures/tarea06/tarea6_020.png){fig-align="center"}
+::: {#fig-resultado-final}
+![](figures/tarea06/tarea6_102.png){fig-align="center"}
+
+Resultado final — díptico: amenazas (izquierda) + población expuesta (derecha). Tu composición puede verse diferente según tu elección de colores, rampa y método de clasificación.
+:::
 
 ¡Listo! Has finalizado tu mapa. Recuerda completar la reflexión y guardar todo para la entrega de tu próximo portafolio.
 
@@ -639,8 +670,9 @@ Tu composición final debería verse algo así (con tu propia elección de color
 
 ::: {.callout-important title="Mapa-Memo: preguntas para reflexionar"}
 -   **Exposición:** ¿Qué proporción de los distritos censales de la Región de Coquimbo se encuentran dentro de la zona de influencia de 5 km? ¿Te parece mucho o poco?
--   **Vulnerabilidad:** ¿En qué distritos o comunas se concentra la mayor cantidad de niños expuestos? ¿Son zonas urbanas o rurales?
--   **Supuestos del buffer:** Usamos un buffer de 5 km como "zona de influencia". ¿Qué limitaciones tiene este enfoque? ¿La contaminación de un relave se dispersa de manera uniforme en todas las direcciones? ¿Qué otros factores podrían influir (viento, pendiente, tipo de suelo, estado del relave)?
+-   **Vulnerabilidad:** ¿En qué distritos o comunas se concentra la mayor cantidad de niños expuestos? ¿Hay distritos con alta exposición y gran número de niños?
+-   **Supuestos del buffer 1:** Usamos un buffer de 5 km como "zona de influencia". ¿Qué limitaciones tiene este enfoque? ¿La contaminación de un relave se dispersa de manera uniforme en todas las direcciones? ¿Qué otros factores podrían influir (viento, pendiente, tipo de suelo, estado del relave)?
 -   **Activos vs. abandonados:** La capa de relaves incluye depósitos activos, inactivos y abandonados. ¿Deberíamos tratarlos todos de la misma manera en un análisis de riesgo? ¿Por qué sí o por qué no?
+-   **Tamaño de los relaves:** El mapa de la izquierda resalta algunos relaves de mayor tamaño. Sin embargo, la medida de exposición construida (5 km) no distingue entre tamaños. ¿Es esto correcto? ¿Hay relaves de gran tamaño ubicados en comunas con muchos niños?
 -   **Población vulnerable:** Observa el Mapa 2. ¿Cuántos niños de 0 a 5 años viven en distritos expuestos a relaves? ¿Qué implicancias tiene esto para la salud pública y la planificación territorial? ¿Qué otras poblaciones vulnerables (adultos mayores, personas con enfermedades respiratorias) podrían verse afectadas de manera similar?
 :::
