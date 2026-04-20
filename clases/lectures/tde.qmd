@@ -44,5 +44,5 @@ Según la lectura de Yale e360, ¿cómo se relaciona la **paradoja de Jevons** c
 - **a)** Predice que intensificar la agricultura libera automáticamente tierra para la naturaleza, validando la estrategia *sparing*.
 - **c)** Indica que el *land sharing* es siempre más eficiente que el *land sparing* en términos energéticos.
 - **d)** Demuestra que la conservación privada es más efectiva que la pública en zonas tropicales.
-- **g)** Advierte que mayores rendimientos agrícolas abaratan la producción e incentivan **expandir** la frontera agrícola, en vez de liberar tierra.
+- **g)** Advierte que mayores rendimientos agrícolas abaratan la producción e incentivan expandir la frontera agrícola, en vez de liberar tierra.
 :::
