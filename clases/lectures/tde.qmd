@@ -5,7 +5,7 @@ author: "Felipe Jordán"
 date: "2026-04-20"
 format:
   revealjs:
-    theme: [default, ../../theme.scss]
+    theme: [default, theme.scss]
     slide-number: false
     transition: fade
     center-title-slide: true
