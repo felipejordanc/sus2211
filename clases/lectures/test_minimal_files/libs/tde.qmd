@@ -36,7 +36,7 @@ format:
         </script>
 ---
 
-## Pregunta 1 {.question-slide}
+## Pregunta 1 {.question-slide .compact}
 
 Según la lectura de Yale e360, ¿cómo se relaciona la **paradoja de Jevons** con el debate *sparing vs sharing*?
 
