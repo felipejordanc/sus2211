@@ -1,0 +1,48 @@
+---
+title: "Ticket de Entrada — Clase 07"
+subtitle: "Deforestación y Conservación"
+author: "Felipe Jordán"
+date: "2026-04-20"
+format:
+  revealjs:
+    theme: [default, ../../theme.scss]
+    slide-number: false
+    transition: fade
+    center-title-slide: true
+    width: 1280
+    height: 720
+    include-in-header:
+      text: |
+        <script>
+        if (sessionStorage.getItem('tde_ok') !== '1') {
+          document.documentElement.innerHTML = `
+            <body style="background:#000;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;font-family:sans-serif;">
+              <form id="pf" style="color:#fff;">
+                <input type="password" id="pw" autofocus
+                       style="padding:.5em;font-size:1.2em;border:1px solid #555;background:#111;color:#fff;">
+                <button style="padding:.5em 1em;font-size:1.2em;">Entrar</button>
+              </form>
+            </body>`;
+          document.getElementById('pf').onsubmit = function(e){
+            e.preventDefault();
+            if (document.getElementById('pw').value === "fjSUS22112026s1") {
+              sessionStorage.setItem('tde_ok','1');
+              location.reload();
+            } else {
+              document.getElementById('pw').value = '';
+            }
+          };
+        }
+        </script>
+---
+
+## Pregunta 1 {.question-slide}
+
+Según la lectura de Yale e360, ¿cómo se relaciona la **paradoja de Jevons** con el debate *sparing vs sharing*?
+
+::: {.two-level}
+- **a)** Predice que intensificar la agricultura libera automáticamente tierra para la naturaleza, validando la estrategia *sparing*.
+- **c)** Indica que el *land sharing* es siempre más eficiente que el *land sparing* en términos energéticos.
+- **d)** Demuestra que la conservación privada es más efectiva que la pública en zonas tropicales.
+- **g)** Advierte que mayores rendimientos agrícolas abaratan la producción e incentivan **expandir** la frontera agrícola, en vez de liberar tierra.
+:::
