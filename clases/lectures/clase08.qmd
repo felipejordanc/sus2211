@@ -1,0 +1,736 @@
+---
+title: "Océanos, Pesquerías y Gobernanza Marina"
+subtitle: "SUS 2211 — Mapeando la (in)sustentabilidad"
+author: "Felipe Jordán"
+date: "2026-04-27"
+format:
+  revealjs:
+    theme: [default, theme.scss]
+    slide-number: true
+    transition: fade
+    center-title-slide: true
+    width: 1280
+    height: 720
+---
+
+## Plan para hoy
+
+### Primer bloque
+
+- CT: Planeta Azul — el mar como fuente de vida y en crisis
+
+### Segundo bloque
+- CT: Gobernanza marina en Chile
+- Conceptos clave para la Tarea 08: Pesca industrial y ECMPO
+- A+R: El impacto de mi dieta marina
+
+
+---
+
+## ¿Cuál es el pulmón del planeta? {.compact}
+
+
+![](../figures/clase08/slide_05_img_1.jpeg){width="70%"}
+
+
+
+---
+
+## ¿Cuál es el pulmón del planeta? {.compact}
+
+::: columns
+::: {.column width="50%"}
+![](../figures/clase08/slide_06_img_1.jpeg){width="90%"}
+
+::: {.caption}
+Selvas tropicales: **~20%** del oxígeno atmosférico.
+:::
+:::
+
+::: {.column width="50%"}
+![](../figures/clase08/slide_06_img_2.jpeg){width="70%"}
+
+::: {.caption}
+Océanos (fitoplancton + cianobacterias): **~50%** del oxígeno atmosférico.
+:::
+:::
+:::
+
+---
+
+## ¿Cómo se oxigenó la atmósfera?
+
+![](../figures/clase08/slide_07_img_1.jpeg){width="65%"}
+
+::: {.caption}
+Hace más de 2.400 millones de años, durante el Paleoproterozoico, la Tierra no tenía oxígeno en su atmósfera. Fueron las **cianobacterias marinas** las que, mediante fotosíntesis, comenzaron a liberar oxígeno al océano y luego a la atmósfera — el **Gran Evento Oxidativo** que permitió la aparición de la vida compleja.
+:::
+
+---
+
+## El mar y las personas: alimentación {.compact}
+
+::: columns
+::: {.column width="45%"}
+- El consumo mundial per cápita de alimentos acuáticos (excluyendo algas) ha superado los **20,5 kg al año**, duplicándose desde 1961
+- Pescados y mariscos aportan **más del 20% de las proteínas animales** para 3.300 millones de personas
+- Más de **50 millones** de personas trabajan directamente en la producción pesquera
+:::
+
+::: {.column width="55%"}
+![](../figures/clase08/slide_08_img_1.png){width="100%"}
+
+::: {.caption}
+Fuente: FAO — *The State of World Fisheries and Aquaculture 2024*.
+:::
+:::
+:::
+
+---
+
+## El mar y las personas: alimentación {.compact}
+
+::: columns
+::: {.column width="45%"}
+- El consumo mundial per cápita de alimentos acuáticos (excluyendo algas) ha superado los **20,5 kg al año**, duplicándose desde 1961
+- Pescados y mariscos aportan **más del 20% de las proteínas animales** para 3.300 millones de personas
+- Más de **50 millones** de personas trabajan directamente en la producción pesquera
+:::
+
+::: {.column width="55%"}
+![](../figures/clase08/slide_09_img_1.png){width="100%"}
+
+::: {.caption}
+Fuente: FAO — *The State of World Fisheries and Aquaculture 2024*.
+:::
+:::
+:::
+
+---
+
+## El mar y las personas: alimentación {.compact}
+
+::: columns
+::: {.column width="45%"}
+- El consumo mundial per cápita de alimentos acuáticos (excluyendo algas) ha superado los **20,5 kg al año**, duplicándose desde 1961
+- Pescados y mariscos aportan **más del 20% de las proteínas animales** para 3.300 millones de personas
+- Más de **50 millones** de personas trabajan directamente en la producción pesquera
+:::
+
+::: {.column width="55%"}
+![](../figures/clase08/slide_10_img_1.png){width="100%"}
+
+::: {.caption}
+Fuente: FAO — *The State of World Fisheries and Aquaculture 2024*.
+:::
+:::
+:::
+
+---
+
+## El mar y las personas: historia larga
+
+![](../figures/clase08/slide_11_img_1.jpeg){width="65%"}
+
+::: {.caption}
+Desde hace más de 10.000 años, los seres humanos han recolectado moluscos, mariscos y algas en zonas costeras. Los **conchales** hallados a lo largo del Pacífico — desde Chile hasta Norteamérica — son evidencia de que los recursos bentónicos han sido clave para la alimentación, la cultura y el poblamiento de territorios litorales.
+:::
+
+---
+
+## El mar y los pueblos costeros {.compact}
+
+![](../figures/clase08/slide_12_img_1.jpeg){width="70%"}
+
+Para muchos pueblos indígenas y comunidades costeras, el océano **no es simplemente una fuente de alimentos**:
+
+- Es **territorio** ancestral
+- Es base de **soberanía alimentaria**
+- Es fuente de **espiritualidad** y cosmovisión
+
+
+# El mar está en crisis {.section-slide background-color="#2a7f62"}
+
+## Crisis: Sobrepesca {.compact}
+
+::: columns
+::: {.column width="45%"}
+- En 2021, **37,7%** de las poblaciones de peces evaluadas por la FAO estaban sobreexplotadas
+- En 1974 era solo el **10%**
+- Más de un tercio de las poblaciones está bajo niveles biológicamente sostenibles
+- Afecta la seguridad alimentaria, los medios de vida y la salud de los ecosistemas marinos
+:::
+
+::: {.column width="55%"}
+![](../figures/clase08/slide_14_img_1.png){width="100%"}
+
+::: {.caption}
+Fuente: FAO — *The State of World Fisheries and Aquaculture 2024*.
+:::
+:::
+:::
+
+---
+
+## Sobrepesca: un mapa global {.map-slide}
+
+![](../figures/clase08/slide_15_img_1.png){width="75%"}
+
+::: {.caption}
+Porcentaje de stocks pesqueros sostenibles vs. no sostenibles por gran zona pesquera FAO, 2021. Fuente: FAO (2024).
+:::
+
+---
+
+## Crisis: Calentamiento y acidificación {.compact}
+
+::: columns
+::: {.column width="45%"}
+- El océano ha absorbido **más del 90%** del exceso de calor del cambio climático
+- Blanqueamiento masivo: hasta el **84% de los arrecifes** afectados en 2024
+- Los arrecifes cubren <1% del fondo oceánico pero albergan **~25% de las especies marinas** conocidas
+- La **acidificación** (absorción de CO₂) debilita a moluscos y corales calcificadores
+:::
+
+::: {.column width="55%"}
+![](../figures/clase08/slide_16_img_1.jpeg){width="100%"}
+
+::: {.caption}
+Blanqueamiento de coral.
+:::
+:::
+:::
+
+---
+
+## Crisis: Contaminación {.compact}
+
+::: columns
+::: {.column width="55%"}
+- Cada año ingresan al océano **más de 8 millones de toneladas de plástico**, afectando a más de 800 especies marinas
+- La **contaminación por nutrientes** (agrícola y urbana) genera *zonas muertas* costeras
+- El **ruido submarino** del tráfico marítimo interfiere en la comunicación de ballenas y delfines
+:::
+
+::: {.column width="45%"}
+![](../figures/clase08/slide_17_img_1.jpeg){width="100%"}
+
+::: {.caption}
+Plástico ingerido por un albatros — impacto directo de la contaminación oceánica en la fauna.
+:::
+:::
+:::
+
+
+# Soluciones: ¿Cómo gestionamos las pesquerías? {.section-slide background-color="#2a7f62"}
+
+## Instrumentos de gestión pesquera {.compact}
+
+::: columns
+::: {.column width="33%"}
+::: {.box}
+**Regulación directa**
+
+- Vedas temporales
+- Tallas mínimas de captura
+- Límite de esfuerzo pesquero (nº de embarcaciones, días de faena)
+:::
+:::
+
+::: {.column width="33%"}
+::: {.box}
+**Derechos de uso**
+
+- Cuotas individuales transferibles (ITQs)
+- Asignación colectiva de derechos
+:::
+:::
+
+::: {.column width="33%"}
+::: {.box}
+**Conservación espacial**
+
+- Áreas Marinas Protegidas (AMP)
+- Reservas pesqueras
+:::
+:::
+:::
+
+---
+
+## Cuidado con la veda: una historia desde Perú {.compact}
+
+La **anchoveta peruana** es la pesquería más grande del mundo. Para proteger a las crías, el regulador **cierra temporalmente áreas** donde los barcos reportan un alto porcentaje de juveniles.
+
+::: columns
+::: {.column width="55%"}
+**Lo que se esperaba:** menos captura de juveniles.
+
+**Lo que pasó:** dentro del polígono cerrado y durante el cierre sí hay menos. **Pero** los barcos corren a pescar *antes* de que entre en vigor, *justo afuera* del polígono, y *después* de la apertura.
+
+Sumando todo, la captura total de juveniles **sube un 48%**.
+:::
+
+::: {.column width="45%"}
+::: {.box}
+**¿Por qué?** El **anuncio del cierre** actúa como una señal: "acá hay muchos peces". La propia regulación **revela información** que los regulados usan en su contra.
+
+Moraleja: una veda bien intencionada puede **empeorar el problema** si no se anticipa la reacción del regulado.
+:::
+:::
+:::
+
+::: {.caption}
+Fuente: Englander, G. (2022). *Information and Spillovers from Targeting Policy in Peru's Anchoveta Fishery*. World Bank Policy Research Working Paper 10248.
+:::
+
+---
+
+## ITQs — Cuotas individuales transferibles {.compact}
+
+::: columns
+::: {.column width="40%"}
+![](../figures/clase08/slide_20_img_1.jpeg){width="100%"}
+
+::: {.caption}
+Pesca industrial de cerco.
+:::
+:::
+
+::: {.column width="60%"}
+- Otorgan a pescadores o empresas el derecho a **capturar un porcentaje fijo** de la captura total permitida
+- Son **transferibles**: se pueden vender o arrendar entre actores
+- Se usan sobre todo en pesquerías industriales para **incentivar eficiencia** y prevenir sobrepesca
+
+**Su efectividad depende de:**
+
+- Un sistema robusto de monitoreo
+- Cuotas totales bien calculadas científicamente
+:::
+:::
+
+---
+
+## Asignación colectiva de derechos {.compact}
+
+::: columns
+::: {.column width="30%"}
+![](../figures/clase08/slide_21_img_1.jpeg){width="100%"}
+
+::: {.caption}
+Asamblea de una organización de pescadores artesanales.
+:::
+:::
+
+::: {.column width="70%"}
+El derecho se otorga **colectivamente** a una comunidad para gestionar un área o pesquería. Inspirado en los principios de **Elinor Ostrom** sobre manejo sostenible de bienes comunes:
+
+- Límites bien definidos
+- Reglas claras y legitimadas
+- Sanciones proporcionales
+- Mecanismos de resolución de conflictos
+
+**Ventajas:** fortalece el capital social, favorece la sostenibilidad ecológica y cultural, más adaptable a contextos con capacidad estatal limitada.
+:::
+:::
+
+
+---
+
+
+# CT: Gobernanza marina en Chile {.section-slide background-color="#2a7f62"}
+
+## El contexto chileno {.question-slide}
+
+> "50% de los productos marinos en Chile enfrentan riesgo de sustentabilidad."
+
+::: {.small .muted}
+El Mostrador, febrero 2025 — basado en el informe *Chile Sustentable del Mar* (Oceana, Fundación Terram y otras).
+:::
+
+¿Qué explica esta cifra? ¿Cómo está organizada la **gobernanza marina** en Chile?
+
+---
+
+## Sistema actual: cuotas y sectores {.compact}
+
+::: columns
+::: {.column width="55%"}
+- **Subpesca** fija la Cuota Global Anual de Captura (CGAC) por especie, con criterios técnicos
+- La CGAC se divide entre sector **industrial** y **artesanal**
+- **Sector industrial:** cuotas asignadas por pesca histórica, por 20 años renovables, **transferibles**
+- **Sector artesanal:** cuotas por caleta/sindicato, **no transferibles**, basadas en planes de manejo
+- Subpesca fiscaliza el cumplimiento
+:::
+
+::: {.column width="45%"}
+![](../figures/clase08/slide_25_img_1.jpeg){width="100%"}
+
+::: {.caption}
+Embarcación artesanal.
+:::
+
+![](../figures/clase08/slide_25_img_2.png){width="80%"}
+
+::: {.caption}
+Embarcación industrial.
+:::
+:::
+:::
+
+---
+
+## La reforma de la Ley de Pesca: una historia inconclusa {.compact}
+
+La Ley que definió el sistema actual ha sido ampliamente criticada: entre otras razones, porque se dieron casos de **cohecho**.
+
+El gobierno anterior envió un proyecto de **nueva Ley General de Pesca** que contemplaba:
+
+- Renovación de cuotas **no automática**
+- **Licitar hasta el 50%** de las cuotas industriales
+- **Límites a la transferencia** para reducir la concentración de la industria
+
+::: {.box}
+**Marzo de 2026:** el gobierno **retiró el proyecto**. En su lugar, trabajará en **modificaciones a la ley actual**, no en un cuerpo legal nuevo.
+:::
+
+::: {.caption}
+Fuente: Ministerio de Economía, Fomento y Turismo — Comunicado del 26 de marzo de 2026.
+:::
+
+---
+
+## Slippery Fish: fiscalizar la veda de la merluza {.compact}
+
+Chile prohíbe capturar y vender **merluza común** durante septiembre, cuando el pez se reproduce. **¿Funciona la veda?**
+
+**Andrés González-Lira** (hoy profesor en la UC) y **Mushfiq Mobarak** (Yale) hicieron un experimento con **Sernapesca**:
+
+- En un grupo aleatorio de mercados, enviaron fiscalizadores durante la veda; en otro, no.
+- En paralelo, corrieron una **campaña informativa a consumidores** sobre por qué la merluza está en crisis.
+- Midieron lo que **realmente** pasaba en cada puesto con **"mystery shoppers"** (compradores encubiertos que intentaban comprar merluza ilegal).
+
+::: {.caption}
+Fuente: González-Lira, A. & Mobarak, A. M. (2022). *Slippery Fish: Enforcing Regulation when Agents Learn and Adapt*. World Bank / AEA Registry AEARCTR-0000822.
+:::
+
+---
+
+## Slippery Fish: lo que encontraron {.compact}
+
+::: columns
+::: {.column width="50%"}
+**Los vendedores se adaptan:**
+
+- Esconden el pescado bajo el mesón
+- Lo guardan en hielo y afirman que fue capturado en agosto (legal)
+- Desplazan las ventas a mercados o días sin fiscalización
+
+Si las visitas son **predecibles** o **muy frecuentes**, los vendedores **aprenden más rápido** cómo esquivarlas → la fiscalización **pierde efectividad con el tiempo**.
+:::
+
+::: {.column width="50%"}
+**Qué funcionó mejor:**
+
+- Fiscalización **impredecible** y de **baja frecuencia** (el vendedor no puede aprender el patrón)
+- La **campaña de información al consumidor** fue casi **tan efectiva** como la fiscalización directa — y mucho **más barata**
+
+::: {.box}
+Tras el estudio, el Gobierno decidió **escalar la campaña informativa** al resto del país.
+:::
+:::
+:::
+
+
+---
+
+## AMERB: Áreas de Manejo y Explotación de Recursos Bentónicos {.compact}
+
+::: columns
+::: {.column width="40%"}
+![](../figures/clase08/slide_27_img_1.jpeg){width="100%"}
+
+::: {.caption}
+Buzo haciendo monitoreo bentónico en una AMERB.
+:::
+:::
+
+::: {.column width="60%"}
+**¿Qué son?** Zonas costeras donde una **organización de pescadores artesanales** recibe el **derecho exclusivo** para extraer ciertos recursos bentónicos.
+
+**¿Cómo funcionan?**
+
+- La organización presenta un **plan de manejo** basado en estudios científicos
+- Se establecen límites de extracción, vedas y monitoreo comunitario
+- Concesión estatal por plazo renovable
+:::
+:::
+
+---
+
+## AMERB: impactos heterogéneos {.compact}
+
+::: columns
+::: {.column width="65%"}
+**Objetivos:** Evitar la sobreexplotación; asegurar la sustentabilidad del recurso; empoderar a las comunidades pesqueras
+
+**Impacto en Chile:**
+
+- **Más de 400 AMERB operativas**
+- Cubren más de **100K hec** de borde costero
+- Resultados **heterogéneos**: en algunas hay una marcada recuperación de poblaciones y mejora en ingresos; en otras, la población se mantiene en niveles críticos y hay conflictos internos y entre comunidades
+:::
+
+::: {.column width="35%"}
+![](../figures/clase08/slide_27_img_2.jpeg){width="100%"}
+
+::: {.caption}
+Cosecha en una AMERB.
+:::
+:::
+:::
+
+---
+
+## ¿Por qué las AMERB funcionan en algunos lugares y no en otros? {.compact}
+
+**Carlos Chávez** (U. de Talca) y coautores han estudiado estas preguntas con **experimentos económicos** con pescadores reales. Algunas pistas:
+
+::: columns
+::: {.column width="50%"}
+::: {.box}
+**1. El furtivismo desde afuera importa**
+
+Las AMERB son zonas *exclusivas*, pero eso no impide que pescadores **no autorizados** entren a sacar recursos. La fiscalización **externa** (por parte del Estado) reduce el furtivismo, pero las comunidades **subinvierten** en vigilancia propia — es un problema clásico de polizón.
+
+::: {.small .muted}
+Chávez, Murphy & Stranlund (2018), *JEEM*.
+:::
+:::
+:::
+
+::: {.column width="50%"}
+::: {.box}
+**2. Las redes sociales internas importan**
+
+La **estructura organizacional** de la asociación — cómo están conectados los pescadores entre sí — predice el desempeño económico de la AMERB. Cohesión social ≠ tamaño de la organización.
+
+::: {.small .muted}
+Rosas, Dresdner, Chávez & Quiroga (2014), *Ocean & Coastal Management*.
+:::
+:::
+:::
+:::
+
+::: {.caption}
+La sostenibilidad del recurso no se decreta con el papel; depende de **capacidad de fiscalización** (interna y externa) y **capital social** de la comunidad.
+:::
+
+---
+
+## ECMPO: Ley Lafkenche {.compact}
+
+::: columns
+::: {.column width="40%"}
+![](../figures/clase08/slide_29_img_1.jpeg){width="100%"}
+
+::: {.caption}
+Ceremonia lafkenche en la costa.
+:::
+:::
+
+::: {.column width="60%"}
+**"Ley Lafkenche"** (2008): reconoce el derecho de los pueblos indígenas a solicitar la destinación de uso ancestral sobre espacios costeros marinos.
+
+**¿Qué es un ECMPO?** Espacio Costero Marino de Pueblos Originarios:
+
+- Un área delimitada del mar o borde costero solicitada por una **comunidad indígena**
+- Otorga un **derecho preferente de uso**, no propiedad
+- La comunidad puede participar en la regulación de actividades (pesca, acuicultura, turismo)
+:::
+:::
+
+---
+
+## ECMPO: avances y tensiones {.compact}
+
+::: columns
+::: {.column width="55%"}
+**Avance hasta hoy:**
+
+- Más de **80 ECMPO solicitados**
+- Cerca de **20 aprobados**
+- **Más de 600.000 hectáreas** en tramitación
+
+**Desafíos y tensiones:**
+
+- Superposición con zonas de **pesca industrial** y **concesiones acuícolas**
+- Largas demoras administrativas
+- Resistencia en algunas regiones
+:::
+
+::: {.column width="45%"}
+![](../figures/clase08/slide_30_img_1.jpeg){width="100%"}
+
+::: {.caption}
+Protesta contra los ECMPO en Aysén — "El mar es de todos".
+:::
+:::
+:::
+
+---
+
+## El borde costero como territorio en disputa {.compact}
+
+Cada solicitud de ECMPO cruza intereses de actores que ya están allí:
+
+::: columns
+::: {.column width="50%"}
+- **Concesiones acuícolas** otorgadas
+- **Pesca industrial** — caladeros históricos y zarpes desde puertos cercanos
+- **Pesca artesanal** — caletas y AMERB adyacentes
+- **Turismo y servicios portuarios**
+- **Gobiernos regionales y gremios** con capacidad de veto en las Comisiones Regionales (CRUBC)
+:::
+
+::: {.column width="50%"}
+::: {.box}
+**La consecuencia:** muchas solicitudes son **rechazadas por las CRUBC** con argumentos de "desproporcionalidad" — el área solicitada se considera demasiado grande respecto al uso ancestral que se busca proteger.
+
+Las demoras administrativas y los rechazos son, en la práctica, la **principal barrera** que enfrentan las comunidades.
+:::
+:::
+:::
+
+---
+
+## Fallo Corte Suprema, noviembre 2025 {.compact}
+
+**Pu Wapi** (Melinka) y **Antunen Rain** (Islas Huichas) recurrieron tras ser **rechazadas por la CRUBC de Aysén**.
+
+::: columns
+::: {.column width="55%"}
+**Qué decidió la Corte:**
+
+- Rechazos **"ilegales y arbitrarios"**
+- CRUBC debe **retomar** la tramitación
+- Argumentos **puramente económicos no bastan**
+- Decisión anclada en **Convenio OIT 169**
+- Toda negativa a un informe favorable de CONADI debe justificarse **técnicamente**
+:::
+
+::: {.column width="45%"}
+::: {.box}
+**Lectura del curso:** el fallo no crea un derecho nuevo — obliga al Estado a **tomarse en serio** el que ya existe desde la **Ley Lafkenche (2008)**.
+
+El conflicto entre **derechos indígenas** y **rentabilidad sectorial** se traslada de la CRUBC a los tribunales.
+:::
+:::
+:::
+
+::: {.caption}
+Fuente: Observatorio Ciudadano — Corte Suprema, Roles N°1.687/1.688-2025, 11 nov. 2025.
+:::
+
+
+# Conceptos clave para la Tarea 08 {.section-slide background-color="#2a7f62"}
+
+## ECMPO y Pesca Industrial: de qué vamos a hablar {.compact}
+
+En la **Tarea 08** van a cruzar espacialmente dos capas en conflicto en la costa chilena:
+
+1. Los **ECMPO** solicitados por comunidades indígenas
+2. Las **trayectorias de pesca industrial** (zarpes, lances, recaladas)
+
+::: {.box}
+Para interpretar los datos es importante manejar tres conceptos operativos:
+:::
+
+---
+
+## Concepto 1 — Viaje de pesca {.compact}
+
+Un **viaje** es el recorrido completo de una embarcación de pesca, desde el **zarpe** hasta la **recalada**.
+
+- El puerto de zarpe y el de recalada pueden ser distintos
+- Un viaje puede durar horas o varios días
+- Un viaje incluye varios **lances** de pesca
+
+::: {.caption}
+En los datos de la Tarea 08 cada viaje tiene un ID único y una serie de posiciones GPS que reconstruyen la trayectoria.
+:::
+
+---
+
+## Concepto 2 — Lance de pesca {.compact}
+
+Un **lance** es una instancia concreta de pesca **dentro de un viaje**:
+
+- El barco **se detiene** (o anda muy lento) para echar la red o el arte de pesca
+- Cada viaje puede tener **varios lances** en posiciones distintas
+
+::: {.caption}
+Identificar los lances nos permite distinguir **dónde efectivamente se pescó** vs. dónde solo hubo tránsito.
+:::
+
+---
+
+## Concepto 3 — Las 5 millas náuticas {.compact}
+
+Bajo la legislación chilena, las **embarcaciones industriales no pueden pescar dentro de las primeras 5 millas náuticas** (~9 km) de la costa — salvo excepciones.
+
+- Esa franja está reservada para la **pesca artesanal**
+- Coincide en gran medida con las zonas donde existen **AMERB** y **ECMPO**
+- Detectar lances industriales **dentro de las 5 millas** es, por tanto, una señal de posible incumplimiento
+
+::: {.box}
+**En la Tarea 08** van a construir un **buffer de 5 millas** desde la línea de costa e intersectarlo con los lances industriales para medir esta tensión.
+:::
+
+---
+
+## Las herramientas GIS que van a usar {.compact}
+
+Las operaciones espaciales son las mismas que vimos en la Tarea 07, ahora aplicadas al mar:
+
+- **Selección por expresión y por localización** — limpiar coordenadas y dejar solo los lances dentro de la ZEE y las ECMPO ya decretadas
+- **Buffer + Disolver + Diferencia** — construir un anillo externo de 5 km alrededor de cada ECMPO
+- **Intersección** — cruzar lances con (i) las ECMPO y (ii) el anillo externo
+- **Calculadora de Campos** — clasificar cada lance por **zona** (Dentro / Borde) y por **periodo** (Antes / Después del decreto)
+- **Composición de impresión** — dos mapas comparativos (antes vs. después)
+
+
+# A+R: El impacto de mi dieta marina {.section-slide background-color="#2a7f62"}
+
+## ¿Cuál es el impacto de mi dieta? {.activity-slide .compact}
+
+::: columns
+::: {.column width="35%"}
+![](../figures/clase08/slide_23_img_1.png){width="75%"}
+
+::: {.caption}
+www.futuroazul.org
+:::
+:::
+
+::: {.column width="65%"}
+**Instrucciones:**
+
+1. Revisen las **especies marinas** disponibles en la plataforma [www.futuroazul.org](https://www.futuroazul.org)
+2. Elijan una especie que **consuman habitualmente** o les interese
+3. Reflexionen:
+   - ¿Qué aprendieron? ¿Hay algo que les sorprendió?
+   - ¿Cambiarían algo en su consumo?
+   - ¿Qué información le faltaba al consumidor (a ustedes) antes de entrar a la plataforma?
+:::
+:::
+
+---
+
+## Plenario {.activity-slide}
+
+Pongamos en común:
+
+1. ¿Qué especie eligieron y cuál era su estado?
+2. ¿Qué instrumentos de los que vimos (cuotas, vedas, AMERB, etc.) están detrás del estado de esa especie?
+3. ¿Basta con **informar al consumidor** para cambiar la trayectoria de una pesquería?
