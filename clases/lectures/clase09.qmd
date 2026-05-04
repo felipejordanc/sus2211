@@ -1,0 +1,741 @@
+---
+title: "La Frontera: Mapeando la comodificación del territorio ancestral Mapuche "
+subtitle: "SUS 2211 — Mapeando la (in)sustentabilidad"
+author: "Felipe Jordán"
+date: "2026-05-04"
+format:
+  revealjs:
+    theme: [default, theme.scss]
+    slide-number: true
+    transition: fade
+    center-title-slide: true
+    width: 1280
+    height: 720
+---
+
+## Plan para hoy
+
+### Primer bloque
+
+- A+R: Planos y poder
+- CT: Planificación, incorporación y atomización (1810--1952)
+
+### Segundo bloque
+
+- CT: Empoderamiento, represión, y nuevo trato (1952--2025)
+- CT: Georeferenciación, centroides, matriz de distancia
+- A+R: Propiedad individual: ¿Empoderamiento o despojo?
+
+
+# A+R: Planos y poder {.section-slide background-color="#2a7f62"}
+
+## Planos y poder {.activity-slide .compact}
+
+**Reflexión en parejas:**
+
+::: {.box}
+1. ¿Son los planos el **reflejo** de la realidad de un territorio, o también **construyen** su realidad?
+2. ¿Son los planos **"neutros" políticamente**?
+3. ¿Importa **quiénes** desarrollan los planos?
+:::
+
+::: {.caption}
+Pongan ejemplos concretos. Vamos a discutirlos en plenario antes de mirar los mapas históricos de La Frontera.
+:::
+
+
+## ¿Por qué empezar con mapas? {.compact}
+
+Antes de hablar de **propiedad**, hablemos de **representación**.
+
+::: columns
+::: {.column width="55%"}
+- Hasta mediados del siglo XIX, **La Frontera** — el territorio entre el Biobío y el Toltén — era territorio **soberano mapuche**, reconocido por la Corona y por la naciente República
+- El Estado chileno **no controlaba** el territorio, pero sí lo **mapeaba**
+- Los mapas son **anteriores** a la ocupación efectiva: nombran, dibujan límites, fijan lugares
+:::
+
+::: {.column width="45%"}
+::: {.box}
+Mirar la secuencia de mapas (1845 → 1929) es ver cómo el Estado **se imagina** un territorio antes de tomarlo, y cómo lo **comodifica** una vez tomado.
+:::
+:::
+:::
+
+# Planificación e incorporación (1845–1883) {.section-slide background-color="#2a7f62"}
+
+
+---
+
+## La Frontera — 1845 {.map-slide}
+
+::: {style="height: 520px; display: flex; align-items: center; justify-content: center;"}
+![](../figures/clase09/slide_05_img_1.png){style="transform: rotate(90deg); height: 1280px; width: auto; max-width: none; max-height: none;"}
+:::
+
+::: {.caption}
+Claudio Gay (1845). *Mapa de Chile desde Copiapó a Chiloé.*
+:::
+
+---
+
+## La Frontera — 1845 (zoom) {.map-slide}
+
+::: columns
+::: {.column width="50%"}
+![](../figures/clase09/slide_06_img_1.png){width="100%"}
+:::
+
+::: {.column width="50%"}
+![](../figures/clase09/slide_07_img_1.png){width="100%"}
+:::
+:::
+
+::: {.caption}
+Detalle del mapa de Gay sobre La Frontera. La zona central era bien conocida, la frontera se especulaba
+:::
+
+
+---
+
+## La Frontera — 1866 {.map-slide}
+
+![](../figures/clase09/slide_08_img_1.png){width="100%"}
+
+::: {.caption}
+1866 — el Estado fija en la Ley de 1866 el plan maestro para ocupar La Frontera
+:::
+
+---
+
+## La Frontera — 1866 {.map-slide}
+
+![](../figures/clase09/slide_09_img_1.png){width="100%"}
+![](../figures/clase09/slide_10_img_1.png){width="100%"}
+
+---
+
+## La Frontera — 1866 {.map-slide}
+
+![](../figures/clase09/slide_10_img_2.png){width="100%"}
+![](../figures/clase09/slide_10_img_3.png){width="100%"}
+
+---
+
+## La Frontera — 1866 {.map-slide}
+
+![](../figures/clase09/slide_11_img_1.png){width="100%"}
+
+---
+
+## La Frontera — 1870 {.map-slide}
+
+::: {style="height: 520px; display: flex; align-items: center; justify-content: center;"}
+![](../figures/clase09/slide_12_img_1.jpeg){style="transform: rotate(90deg); height: 700px; width: auto; max-width: none; max-height: none;"}
+:::
+
+::: {.caption}
+Avance militar lento pero seguro---La Línea del Malleco
+:::
+
+---
+
+## La Frontera — 1874 {.map-slide}
+
+![](../figures/clase09/slide_13_img_1.png){width="65%"}
+
+
+---
+
+## La Frontera — 1874 {.map-slide}
+
+![](../figures/clase09/slide_14_img_1.png){width="65%"}
+
+
+---
+
+# El proceso de reducción (1884–1929) {.section-slide background-color="#2a7f62"}
+
+## La Frontera — 1883 {.map-slide}
+
+::: columns
+::: {.column width="50%"}
+![](../figures/clase09/slide_15_img_1.jpeg){width="100%"}
+:::
+
+::: {.column width="50%"}
+![](../figures/clase09/slide_16_img_1.jpeg){width="100%"}
+:::
+:::
+
+::: {.caption}
+1883 — fin de la **"Pacificación de la Araucanía"**. La conquista militar termina; comienza la administrativa.
+:::
+
+---
+
+## La Frontera — 1884 {.map-slide}
+
+::: columns
+::: {.column width="33%"}
+![](../figures/clase09/slide_17_img_1.jpeg){width="90%"}
+:::
+
+::: {.column width="33%"}
+![](../figures/clase09/slide_17_img_3.jpg){width="80%"}
+
+::: {.caption}
+1884 — La **Comisión Radicadora de Indígenas** empieza la entrega de **Títulos de Merced (TDM)**.
+:::
+
+:::
+
+::: {.column width="33%"}
+![](../figures/clase09/slide_17_img_2.jpeg){width="90%"}
+:::
+:::
+
+
+## La Frontera — 1884 {.map-slide}
+
+![](../figures/clase09/slide_17_img_4.png){width="100%"}
+
+
+## La Frontera — 1884 {.map-slide}
+
+![](../figures/clase09/slide_19_img_1.png){width="100%"}
+
+---
+
+## La Frontera — 1898 {.map-slide}
+
+
+::: columns
+
+::: {.column width="50%"}
+![](../figures/clase09/slide_20_img_1.jpeg){width="90%"}
+:::
+
+::: {.column width="50%"}
+![](../figures/clase09/slide_20_img_2.jpeg){width="90%"}
+:::
+
+:::
+
+---
+
+## La Frontera — 1900 {.map-slide}
+
+![](../figures/clase09/slide_21_img_1.jpeg){width="60%"}
+
+
+---
+
+## La Frontera — 1916 {.map-slide}
+
+![](../figures/clase09/slide_22_img_1.png){width="60%"}
+
+::: {.caption}
+Antivil Marinao, W. (2020). *Los planos de colonización de Cautín y Malleco (1916-1917): expresión de la morfología de la Araucanía.* Revista de Urbanismo 42, 134–150.
+:::
+
+---
+
+## La Frontera — 1916 {.map-slide}
+
+![](../figures/clase09/slide_23_img_1.png){width="60%"}
+
+::: {.caption}
+Antivil Marinao, W. (2020). *Los planos de colonización de Cautín y Malleco (1916-1917): expresión de la morfología de la Araucanía.* Revista de Urbanismo 42, 134–150.
+:::
+
+---
+
+## La Frontera — 1916 {.map-slide}
+
+![](../figures/clase09/slide_25_img_1.png){width="80%"}
+
+::: {.caption}
+Los **planos de 1916–1917** son la matriz de la propiedad rural actual: la cuadrícula que vemos hoy se decidió hace un siglo.
+:::
+
+---
+
+## La Frontera — 1929 {.map-slide}
+
+![](../figures/clase09/slide_27_img_1.png){width="65%"}
+
+::: {.caption}
+1929 — cierra la Comisión Radicadora. Cerca de **3.000 Títulos de Merced**, sobre ~**500.000 hectáreas**, en 45 años.
+:::
+
+
+
+# La primera ola de división (1930–1952) {.section-slide background-color="#2a7f62"}
+
+## El cambio de régimen — 1930 {.compact}
+
+En **1930**, el Estado cambia las reglas: se crean los **Juzgados de Indios**, tribunales especiales que pueden **dividir** un TDM en hijuelas individuales si una parte de la comunidad lo solicita.
+
+- Una vez dividida, la hijuela puede venderse con la autorización del Juez de Indios
+- Comienza la conversión de propiedad comunal en propiedad individual
+
+- 1930--1952: Alrededor de un cuarto de las comunidades se divide. La división requería iniciativa interna y consenso. El mecanismo existía, pero avanzaba lento.
+
+
+---
+
+## El mapa de los juzgados {.map-slide}
+
+![](../figures/clase09/paper_jh_tdm_juzgados.png){width="60%"}
+
+::: {.caption}
+TDM, Juzgados de Indios (1930) y la prohibición de venta a privados (1874). Fuente: Jordán & Heilmayr.
+:::
+
+---
+
+## El despojo legalizado: 1943--47 {.compact}
+
+::: columns
+::: {.column width="55%"}
+- En 1943,el Congreso **no renovó** las restricciones vigentes desde 1874
+- Se generó una ola masiva de ventas hasta 1947, cuando el Congreso vuelve a fijar las restricciones en una ley impulsada por el entonces diputado Venancio Coñuepán
+- Muchas ventas fueron fraudulentas (Comisión Verdad Histórica y Nuevo Trato, 2003). Si bien la ley de 1947 declaró las ventas sin autorización nulas, la corte suprema declaró inconstitucional dicho efecto retroactivo
+:::
+
+::: {.column width="45%"}
+
+![](../figures/clase09/paper_jh_ventas_1943.png){width="100%"}
+
+::: {.caption}
+Ventas registradas, 1943–1946. Fuente: Jordán & Heilmayr.
+:::
+:::
+:::
+
+
+# Empoderamiento (1952–1973) {.section-slide background-color="#2a7f62"}
+
+## Venancio Coñoepan: el freno {.compact}
+
+::: columns
+::: {.column width="55%"}
+**Venancio Coñoepan Huenchual** (1900–1968) — diputado mapuche por la Corporación Araucana.
+
+- En **1952** asume como **Ministro de Tierras y Colonización** del gobierno de Carlos Ibáñez
+- Luego dirige el **DASIN** (Dirección de Asuntos Indígenas)
+- **Frenó las divisiones** de TDM a través de la administración
+:::
+
+::: {.column width="45%"}
+::: {.box}
+- Quien controla la administración controla, en gran medida, el ritmo del cambio
+
+- Una misma ley puede dividir mucho o poco según quién la aplique
+:::
+
+
+:::
+:::
+
+---
+
+## Reforma Agraria (1962–1973) {.compact}
+
+::: columns
+::: {.column width="55%"}
+La **Reforma Agraria** expropió latifundios y los redistribuyó
+
+- Comunidades mapuche también **solicitaron y recibieron** restituciones de tierras
+- En paralelo, hubo **tomas de fundos** dirigidas por organizaciones mapuche (Cautinazo, 1971)
+- Por primera vez en el siglo XX, el flujo de tierras era **desde** los grandes propietarios **hacia** las comunidades
+:::
+
+::: {.column width="45%"}
+![](../figures/clase09/paper_jaimovich_cora.png){width="65%"}
+
+::: {.caption}
+Expropiaciones de la CORA (1962–1973), dentro y fuera de TDM. Fuente: Jaimovich y Toledo-Concha, 2026.
+:::
+
+:::
+:::
+
+
+
+
+# Segunda ola y asimilacionismo (1973–1989) {.section-slide background-color="#2a7f62"}
+
+
+## El golpe de estado y la vuelta al asimilacionismo {.compact}
+
+::: columns
+
+::: {.column width="50%"}
+
+![](../figures/clase09/roosevelt.jpeg){height="35%"}
+
+> "Kill the Indian, save the man"
+
+Theodore Roosevelt, Presidente de EE.UU (1901)
+
+
+
+
+
+:::
+
+::: {.column width="50%"}
+
+
+![](../figures/clase09/Alfonso_Marquez_de_la_Plata_(cropped).png){height="30%"}
+
+>"En Chile no hay indígenas, son todos chilenos"
+
+Alfonso Marquez de la Plata, Ministro de Agricultura de Chile (1984)
+
+
+
+
+:::
+:::
+
+
+
+
+## El DL 2.568 del 1979 {.compact}
+
+::: columns
+::: {.column width="55%"}
+Con el régimen militar, el discurso oficial cambia:
+
+> **"En Chile no hay indígenas — todos somos chilenos."**
+
+- La **condición indígena** debe **eliminarse**, no protegerse
+- La propiedad **comunal** se vuelve un obstáculo a remover
+- El instrumento legal: el **Decreto Ley 2.568 (1979)**
+:::
+
+::: {.column width="45%"}
+::: {.box}
+**DL 2.568 (1979):**
+
+Cualquier ocupante con un mínimo plazo puede **solicitar la división** del TDM. Basta con **un solicitante** para gatillar la división de toda la comunidad
+
+Los títulos de propiedad se le otorgan a los ocupantes, independiente de si tienen derechos colectivos sobre el TDM
+
+La división deja de ser excepción y pasa a ser **norma**.
+:::
+:::
+:::
+
+---
+
+## Las dos olas de division y la pérdida territorial {.compact}
+
+::: columns
+
+::: {.column width="50%"}
+
+![](../figures/clase09/paper_jh_olas_serie.png){height="35%"}
+
+:::
+
+::: {.column width="50%"}
+
+
+![](../figures/clase09/terrotorial_loss.png){height="30%"}
+
+:::
+:::
+
+::: {.caption}
+La segunda ola de división fue más rápida y masiva que la primera (izquierda). La primera ola generó más perdida territorial, dado el mayor tiempo de exposición al mercado sin protecciones (derecha). Fuente: Jaimovich y Jordán, 2025.
+:::
+
+---
+
+## Y al mismo tiempo… DL 701 {.compact}
+
+::: columns
+::: {.column width="55%"}
+**Decreto Ley 701 (1974)** — subsidio forestal:
+
+- El Estado **paga el 75%** del costo de plantar pino o eucalipto
+- El objetivo declarado: combatir la erosión y crear una industria exportadora
+- **El efecto territorial:** empresas forestales transforman los paisajes del territorio ancestral mapuche
+:::
+
+::: {.column width="45%"}
+![](../figures/clase09/paper_ssrn_estudio.png){width="65%"}
+
+::: {.caption}
+Área de estudio: TDM incluidos en análisis de crecimiento de plantaciones forestales. Fuente: Jordán & Heilmayr, 2021.
+:::
+:::
+:::
+
+
+---
+
+## La expansión forestal: 1986 → 2018 {.map-slide}
+
+::: columns
+::: {.column width="50%"}
+![](../figures/clase09/paper_ssrn_plantacion_1986.png){width="80%"}
+
+::: {.caption}
+**1986** — al inicio del DL 701.
+:::
+:::
+
+::: {.column width="50%"}
+![](../figures/clase09/paper_ssrn_plantacion_2018.png){width="80%"}
+
+::: {.caption}
+**2018** — la cobertura de plantaciones se multiplica.
+:::
+:::
+:::
+
+---
+
+## Transformación territorial **en el borde** de los TDM {.map-slide}
+
+![](../figures/clase09/plant_flow_map.png){width="90%"}
+
+::: {.caption}
+Fuente: Jordán & Heilmayr, 2021.
+:::
+
+---
+
+## ¿Qué pasó con las tierras ganadas en la reforma agraria? {.compact}
+
+
+
+Todas las tierras ganadas por mapuche fueron re-expropiadas.
+
+- Entragadas a sus dueños antiguos
+- Parceladas y entregadas a pequeños propietarios rurales (distintos a los beneficiarios de la Reforma Agraria)
+- Entragados a CONAF y luego transferido a empresas forestales
+
+Jaimovich y Toledo-Concha muestran que el conflicto contemporáneo entre el Estado y el Pueblo Mapuche se ve agravado en zonas se "dio y quitaron" tierras.
+
+
+
+# Democracia (1993—) {.section-slide background-color="#2a7f62"}
+
+## Ley Indígena 19.253 (1993) {.compact}
+
+::: columns
+::: {.column width="55%"}
+La **Ley Indígena**, aprobada al volver a la democracia, hace tres cosas a la vez:
+
+1. **Reconoce** a los pueblos indígenas y sus comunidades
+2. **Restringe** las transacciones de tierras indígenas: no pueden venderse a no indígenas (con excepciones)
+3. Crea el **FTAI** — Fondo de Tierras y Aguas Indígenas — para **restituir** tierras
+:::
+
+::: {.column width="45%"}
+::: {.box}
+**El régimen actual:**
+
+- Propiedad **individual** (en su mayoría) pero con **calidad indígena**
+- **Restricción** de transacciones
+- **Restitución** activa vía FTAI
+:::
+:::
+:::
+
+---
+
+## FTAI: la restitución, en el mapa {.map-slide}
+::: columns
+::: {.column width="30%"}
+![](../figures/clase09/M1a.png){width="75%"}
+:::
+
+::: {.column width="50%"}
+![](../figures/clase09/M1b.png){width="75%"}
+:::
+
+:::
+
+::: {.caption}
+Localización y momento de cada restitución FTAI-20B (1994–2022). Fuente: Jaimovich, Jordán, Black & Heilmayr.
+:::
+
+---
+
+## ¿Qué pasa con el suelo después de la restitución? {.map-slide}
+
+![](../figures/clase09/M2.png){width="70%"}
+
+::: {.caption}
+Cambios en el uso del suelo en propiedades restituidas, comparadas consigo mismas antes y después. Aumento sostenido de **praderas**; caída de **plantaciones forestales**. Fuente: Jaimovich, Jordán, Black & Heilmayr.
+:::
+
+---
+
+## El registro: PRIT {.compact}
+
+::: columns
+::: {.column width="55%"}
+La restricción de venta a no indígenas **solo sirve si se fiscaliza**. La herramienta es el **RPTI** (Registro Público de Tierras Indígenas):
+
+- CONADI **inscribe** cada propiedad indígena
+- Los conservadores **pueden consultar** el RPTI antes de autorizar una compraventa
+- Si la propiedad está inscrita, la venta a un no indígena **no se puede formalizar**
+:::
+
+::: {.column width="35%"}
+::: {.box}
+**La pregunta es operativa, no legal:**
+
+¿Está cada propiedad indígena efectivamente **inscrita** en el RPTI?
+
+¿Y se mantiene la inscripción a lo largo del tiempo?
+:::
+:::
+:::
+
+---
+
+## ¿Cuán bien se fiscaliza la restricción? {.map-slide}
+
+![](../figures/clase09/paper_prit_tendencia.png){width="60%"}
+
+::: {.caption}
+Porcentaje de hectáreas indígenas efectivamente inscritas en el RPTI a lo largo del tiempo. La cobertura del registro **decae**, debilitando la fiscalización de la restricción. Fuente: Jordán, Jaimovich, Barrera & Heilmayr.
+:::
+
+## ¿Cuánto protege la ley? {.map-slide}
+
+![](../figures/clase09/esp_temuco.png){width="60%"}
+
+::: {.caption}
+Un análisis de diferencias en diferencias revela que la ley ha tenido un efecto protector, aumentando la fracción de hectáreas Mapuche (eje y en el gráfico de arriba). Sin embargo, este efecto protector a disminuido en la medida que el RPTI pierde cobertura. Fuente: Jordán, Jaimovich, Barrera & Heilmayr.
+:::
+
+
+
+
+
+# Síntesis: cinco regímenes de propiedad {.section-slide background-color="#2a7f62"}
+
+## Seis regímenes, una sola Frontera {.compact}
+
+| Período | Régimen | Lógica dominante |
+|---|---|---|
+| **hasta 1884** | **Soberanía mapuche** | Estado **mapea** para planificar |
+| **1884–1929** | **Radicación** | Reducción, propiedad comunal |
+| **1930–1952** | **Primera división** | División regulada y poco frecuente |
+| **1952–1973** | **Empoderamiento** | Fin a divisiónnes; Reforma Agraria restituye |
+| **1973–1989** | **Segunda división** | Dictadura empuja asimilación |
+| **1993—** | **Democracia** | Expansion territorial y proteccion |
+
+::: {.caption}
+La pregunta de fondo, en cada régimen: **¿quién decide quién es dueño?** Y, sobre todo, **¿con qué consecuencias en el territorio?**
+:::
+
+
+# Cierre: herramientas GIS para la próxima tarea {.section-slide background-color="#2a7f62"}
+
+## Georeferenciación {.compact}
+
+::: columns
+::: {.column width="55%"}
+Muchos mapas históricos **no han sido digitalizados**. Para usarlos como capa GIS, hay que **ubicarlos en el espacio**: ese proceso se llama **georeferenciación**.
+
+- Una imagen digital es un **raster** — un tensor de dimensiones (alto, ancho, canales)
+- Elegimos **Ground Control Points (GCP)**: puntos del mapa cuya coordenada real conocemos
+- Cada GCP relaciona un pixel `(h, w)` con una coordenada `(lon, lat)`
+:::
+
+::: {.column width="45%"}
+::: {.box}
+**Tip clave:**
+
+Si el mapa es antiguo, hay que considerar el **datum** que se usó al construirlo. Si no se conoce, conviene probar con un **datum antiguo** (por ejemplo, el datum sudamericano antes de WGS84).
+:::
+:::
+:::
+
+---
+
+## Centroide {.compact}
+
+::: columns
+::: {.column width="40%"}
+![](../figures/clase09/slide_30_img_1.png){width="100%"}
+
+::: {.caption}
+Centroides de polígonos. Fuente: spatialanalysisonline.com.
+:::
+:::
+
+::: {.column width="60%"}
+El **centroide** de un polígono es el punto que minimiza la distancia promedio al resto del polígono. Útil para:
+
+- Reducir polígonos a puntos cuando el cálculo lo necesita
+- Etiquetar polígonos
+- Calcular **distancias** entre regiones representadas por su "centro"
+
+::: {.box}
+**Ojo:** el centroide puede caer **fuera** de un polígono cóncavo. Hay variantes (point-on-surface) para evitarlo.
+:::
+:::
+:::
+
+---
+
+## Matriz de distancia {.compact}
+
+Dadas dos capas de puntos, **A** y **B**, la **matriz de distancia de A a B** entrega una nueva capa con:
+
+- **Tantas filas como puntos tenga A**
+- **Tantas columnas como puntos tenga B**
+- Cada celda: la **distancia** entre el punto de la fila y el punto de la columna
+
+
+# A+R: ¿Empoderamiento o despojo? {.section-slide background-color="#2a7f62"}
+
+## El dilema de la propiedad individual {.activity-slide .compact}
+
+::: columns
+::: {.column width="50%"}
+::: {.box}
+**Posición A — Empoderamiento**
+
+La propiedad individual empodera a las familias:
+
+- Pueden vender y capitalizar su tierra
+- Pueden endeudarse con la tierra como garantía
+- Pueden migrar a la ciudad sin perderla
+:::
+:::
+
+::: {.column width="50%"}
+::: {.box}
+**Posición B — Despojo**
+
+La propiedad individual facilita la pérdida del territorio:
+
+- Rompe el lazo comunitario con la tierra
+- Abre la puerta a ventas fraudulentas y presiones
+- Convierte el territorio mapuche en mercado de tierra
+:::
+:::
+:::
+
+---
+
+## Plenario {.activity-slide}
+
+Pongamos en común — con la evidencia histórica que vimos hoy:
+
+- ¿Hay un **diseño de política** que reconcilie A y B, o el dilema es estructural?
+
+- ¿Que elementos relevantes no captura la clase de hoy, centrada en los regímenes de propiedad de la tierra?
