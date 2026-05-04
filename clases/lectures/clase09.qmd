@@ -70,7 +70,7 @@ Mirar la secuencia de mapas (1845 → 1929) es ver cómo el Estado **se imagina*
 ## La Frontera — 1845 {.map-slide}
 
 ::: {style="height: 520px; display: flex; align-items: center; justify-content: center;"}
-![](../figures/clase09/slide_05_img_1.png){style="transform: rotate(90deg); height: 1280px; width: auto; max-width: none; max-height: none;"}
+![](../figures/clase09/slide_05_img_1.jpg){style="transform: rotate(90deg); height: 1280px; width: auto; max-width: none; max-height: none;"}
 :::
 
 ::: {.caption}
@@ -83,11 +83,11 @@ Claudio Gay (1845). *Mapa de Chile desde Copiapó a Chiloé.*
 
 ::: columns
 ::: {.column width="50%"}
-![](../figures/clase09/slide_06_img_1.png){width="100%"}
+![](../figures/clase09/slide_06_img_1.jpg){width="100%"}
 :::
 
 ::: {.column width="50%"}
-![](../figures/clase09/slide_07_img_1.png){width="100%"}
+![](../figures/clase09/slide_07_img_1.jpg){width="100%"}
 :::
 :::
 
@@ -203,7 +203,7 @@ Avance militar lento pero seguro---La Línea del Malleco
 
 ## La Frontera — 1884 {.map-slide}
 
-![](../figures/clase09/slide_19_img_1.png){width="100%"}
+![](../figures/clase09/slide_19_img_1.jpg){width="100%"}
 
 ---
 
@@ -233,7 +233,7 @@ Avance militar lento pero seguro---La Línea del Malleco
 
 ## La Frontera — 1916 {.map-slide}
 
-![](../figures/clase09/slide_22_img_1.png){width="60%"}
+![](../figures/clase09/slide_22_img_1.jpg){width="60%"}
 
 ::: {.caption}
 Antivil Marinao, W. (2020). *Los planos de colonización de Cautín y Malleco (1916-1917): expresión de la morfología de la Araucanía.* Revista de Urbanismo 42, 134–150.
@@ -243,7 +243,7 @@ Antivil Marinao, W. (2020). *Los planos de colonización de Cautín y Malleco (1
 
 ## La Frontera — 1916 {.map-slide}
 
-![](../figures/clase09/slide_23_img_1.png){width="60%"}
+![](../figures/clase09/slide_23_img_1.jpg){width="60%"}
 
 ::: {.caption}
 Antivil Marinao, W. (2020). *Los planos de colonización de Cautín y Malleco (1916-1917): expresión de la morfología de la Araucanía.* Revista de Urbanismo 42, 134–150.
@@ -263,7 +263,7 @@ Los **planos de 1916–1917** son la matriz de la propiedad rural actual: la cua
 
 ## La Frontera — 1929 {.map-slide}
 
-![](../figures/clase09/slide_27_img_1.png){width="65%"}
+![](../figures/clase09/slide_27_img_1.jpg){width="65%"}
 
 ::: {.caption}
 1929 — cierra la Comisión Radicadora. Cerca de **3.000 Títulos de Merced**, sobre ~**500.000 hectáreas**, en 45 años.
