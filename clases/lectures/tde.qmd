@@ -76,3 +76,18 @@ Si **intersectamos** ambas capas y luego **disolvemos** el resultado por la vari
 <span>&nbsp;&nbsp;</span>
 <span><strong>i)</strong> 1</span>
 </div>
+
+
+## Pregunta Clase 09 {.question-slide .compact}
+
+En base a la lectura, ¿Cuál de las siguientes opciones **no representa** un fenómeno común en los procesos de colonización de las fronteras de EE.UU, Argentina y Chile?
+
+::: {.two-level}
+- **c)** El uso de la cartografía y los planos como dispositivo para imaginar, delimitar y homogeneizar el territorio nacional antes y durante su ocupación efectiva.
+- **d)** La aplicación de una grilla o cuadrícula ortogonal para subdividir el suelo rural en lotes y venderlos o asignarlos a colonos.
+- **g)**  La eliminación o desplazamiento de los pueblos indígenas como condición para consolidar el dominio del Estado-nación sobre el territorio.
+- **h)** El antecedente de las reformas borbónicas del siglo XVIII como base institucional sobre la cual se desplegaron las políticas de ocupación y modernización territorial del siglo XIX.  
+:::
+
+
+
