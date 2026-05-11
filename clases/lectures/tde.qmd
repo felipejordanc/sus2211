@@ -95,10 +95,10 @@ En base a la lectura, ¿Cuál de las siguientes opciones **no representa** un fe
 Según Gil et al. (2023), ¿cuál de las siguientes afirmaciones sobre el calor extremo en la Región Metropolitana **es correcta**?
 
 ::: {.two-level}
-- **b)** El umbral meteorológico de "ola de calor" coincide con el umbral epidemiológico, pues ambos buscan medir el daño a la salud.
+- **c)** El umbral meteorológico de "ola de calor" coincide con el umbral epidemiológico, pues ambos buscan medir el daño a la salud.
 - **e)** La principal causa de muerte durante una ola de calor es el agravamiento de patologías preexistentes (cardiovasculares, respiratorias), más que el golpe de calor en personas sanas.
-- **g)** Las zonas cordilleranas de altos ingresos (Vitacura, Las Condes, Lo Barnechea) son las que presentan mayor proyección de días sobre 34 °C, dado su menor arbolado.
-- **i)** El Código Rojo del Gobierno Regional Metropolitano define obligaciones legales claras para todos los organismos públicos involucrados en la respuesta al calor extremo.
+- **h)** Las zonas cordilleranas de altos ingresos (Vitacura, Las Condes, Lo Barnechea) son las que presentan mayor proyección de días sobre 34 °C, dado su menor arbolado.
+- **j)** El Código Rojo del Gobierno Regional Metropolitano define obligaciones legales claras para todos los organismos públicos involucrados en la respuesta al calor extremo.
 :::
 
 
