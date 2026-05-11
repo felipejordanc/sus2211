@@ -6,7 +6,7 @@ format: html
 
 ## Objetivo
 
-El objetivo de esta práctica es que **explores la relación entre la vegetación y el calor** en el Gran Santiago combinando dos fuentes de teledetección distintas: **Landsat 8** (NDVI y temperatura superficial, 30 m, NASA/USGS) y el **proyecto Santiago HOT** (temperatura ambiental modelada a 10 m, derivada de ciencia ciudadana + datos satelitales). Trabajarás con **datos ráster y vectoriales** para producir mapas comparativos del Gran Santiago y de una zona específica que tú elijas, e integrarás los resultados en un **Mapa-Memo** que reflexione sobre la distribución espacial del riesgo asociado al calor extremo.
+El objetivo de esta práctica es que **explores la relación entre la vegetación y el calor** en el Gran Santiago combinando dos fuentes de teledetección distintas: **Landsat 8** (NDVI y temperatura superficial, 30 m, NASA/USGS) y el **proyecto Santiago HOT** (temperatura ambiental modelada a 10 m, derivada de ciencia ciudadana + datos satelitales). Trabajarás con **datos ráster y vectoriales** para producir mapas comparativos del Gran Santiago y de una zona específica que tú elijas, que podrás usar luego en tu **portafolio** para reflexionar sobre la distribución espacial del riesgo asociado al calor extremo.
 
 **Herramientas por trabajar:**
 
@@ -45,7 +45,7 @@ El objetivo de esta práctica es que **explores la relación entre la vegetació
 5.  **Paso 8 — Comparación NDVI ↔ T° superficial.** Composición lado a lado en el Compositor de impresión: ¿dónde hay menos vegetación, hay más calor?
 6.  **Paso 9 — Comparación T° aire ↔ T° superficial.** Composición lado a lado: ¿qué tan distinta es la temperatura **que sentimos** (aire) de la temperatura **que ve el satélite** (superficie)?
 7.  **Paso 10 — Zoom a una zona elegida.** Acercarse al Parque O'Higgins (o **a tu propia comuna o barrio**) a escala 1:20.000 y producir tres pares de mapas para el análisis territorial fino.
-8.  **Mapa-Memo.** Integrar los resultados en una reflexión escrita con tres preguntas guía + una pregunta personal vinculada con la actividad en clase.
+8.  **Preguntas guía para el portafolio.** Reflexionar sobre los patrones observados, la relación NDVI ↔ temperatura, el aporte comparado de Landsat y Santiago HOT, y la vinculación con la actividad en clase.
 
 ------------------------------------------------------------------------
 
@@ -95,7 +95,7 @@ flowchart TD
 -   **`intermedios/`** Resultados de operaciones humanas o de geoprocesamiento sobre los datos brutos. En esta tarea vivirá aquí el **clip** del Landsat RGB que generarás en el paso 4 (`Landsat8_GS_RGB_clip.tif`) — pasó por una decisión humana (qué máscara usar) sobre los datos originales, por lo que no es bruto.
 -   **`procesados/`** Capas finales listas para confeccionar los mapas. En esta tarea no usaremos `procesados/`, ya que los mapas se construyen directamente sobre los rásters de `brutos/` e `intermedios/`.
 
-**`documentos/`** — Documentación de respaldo. Recomendado: un `Mapa-Memo.docx` o `bitacora.md` donde registres tus hallazgos y respondas las preguntas guía.
+**`documentos/`** — Documentación de respaldo. Recomendado: una `bitacora.md` donde registres tus hallazgos y notas para el portafolio.
 
 **`proyectos/`** — Archivos de proyecto QGIS (`.qgz`). Guarda aquí el proyecto de esta tarea, nómbralo `clase10.qgz`.
 
@@ -391,23 +391,15 @@ Ahora vamos a profundizar en un área específica para ver con detalle cómo la 
 
 ## ¡Listo! {.unnumbered .unlisted}
 
-Has completado el análisis de temperatura y vegetación. Ahora viene la parte más importante: **interpretar lo que viste y comunicarlo**.
+Has finalizado tus mapas y ejercicios. **Recuerda completar esta actividad y guardar tu carpeta para utilizarla en tu próximo portafolio.**
 
 ::: callout-important
-**Mapa-Memo — entrega final**
+**Elige una zona del Gran Santiago para tu portafolio** (tu comuna, tu barrio, el Parque O'Higgins o una de las comunas del taller) y construye una breve narrativa a partir de los mapas que produjiste — la comparación a escala del Gran Santiago y los tres pares del zoom a 1:20.000. Considera las siguientes preguntas guía:
 
-En **Canvas**, sube un documento (PDF o Word) con:
-
-1.  **Los tres mapas finales** (Gran Santiago: NDVI vs T° superficial; T° aire vs T° superficial; y los tres pares del zoom a tu zona elegida).
-2.  **Las respuestas a las cuatro preguntas guía** (texto breve, 1–2 párrafos por pregunta):
-
-**Pregunta 1.** ¿Qué patrones espaciales de temperatura pudiste observar en el Gran Santiago y en tu zona elegida? ¿Qué factores urbanos (arbolado, densidad construida, pavimento, distancia a la cordillera, etc.) crees que influyen en estas diferencias?
-
-**Pregunta 2.** ¿Cómo se relaciona la distribución de áreas verdes (NDVI) con la temperatura superficial? ¿Qué zonas se benefician más de la vegetación y cuáles se ven más afectadas por su ausencia?
-
-**Pregunta 3.** ¿Qué ventajas y limitaciones tiene el uso de imágenes satelitales como **Landsat 8** para este tipo de análisis urbano? Y, comparativamente, ¿qué aporta un producto como **Santiago HOT** (que combina ciencia ciudadana + satélites) frente a usar sólo datos satelitales?
-
-**Pregunta 4 — vinculación con la clase.** En la actividad **A+R "Plan Calor para tu comuna"** discutimos cuatro comunas con perfiles muy distintos: **Vitacura, Cerro Navia, Santiago Centro y La Pintana**. Si tu grupo trabajó una de ellas (o si tu zona elegida en el Paso 10 corresponde a alguna), ¿cómo se ve esa comuna en los mapas que construiste? ¿Las **tres medidas** que tu grupo eligió tienen sentido a la luz de los datos territoriales que ahora ves? ¿Cambiarías alguna ahora que tienes el mapa en mano?
+1.  ¿Qué patrones espaciales de temperatura observaste en el Gran Santiago y en tu zona elegida? ¿Qué factores urbanos (arbolado, densidad construida, pavimento, distancia a la cordillera, etc.) crees que influyen en estas diferencias?
+2.  ¿Cómo se relaciona la distribución de áreas verdes (NDVI) con la temperatura superficial y con la temperatura del aire? ¿Qué zonas se benefician más de la vegetación y cuáles se ven más afectadas por su ausencia?
+3.  ¿Qué ventajas y limitaciones tiene el uso de imágenes satelitales como **Landsat 8** para este tipo de análisis urbano? Comparativamente, ¿qué aporta un producto como **Santiago HOT** (ciencia ciudadana + satélites) frente a usar sólo datos satelitales?
+4.  **Vinculación con la clase.** En la actividad **A+R "Plan Calor para tu comuna"** discutimos cuatro comunas con perfiles muy distintos — **Vitacura, Cerro Navia, Santiago Centro y La Pintana**. Si tu grupo trabajó una de ellas (o si tu zona elegida corresponde a alguna), ¿cómo se ve esa comuna en los mapas que construiste? ¿Las **tres medidas** que tu grupo eligió tienen sentido a la luz de los datos territoriales que ahora ves?
 :::
 
 ::: callout-tip

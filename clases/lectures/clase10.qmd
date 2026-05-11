@@ -18,8 +18,8 @@ format:
 ### Primer bloque
 
 - CT: Datos raster y georreferencia
-- CT: Teledetección — los **ojos del planeta**
-- CT: Más allá de la Tierra — los **ojos del universo**
+- CT: Teledetección
+
 
 ### Segundo bloque
 
@@ -53,8 +53,8 @@ Fuente: Hunter College Geography
 ## Georreferencia: ubicar el raster en el espacio {.compact}
 
 ::: columns
-::: {.column width="55%"}
-El archivo (típicamente **`.tif`**) lleva metadata con:
+::: {.column width="60%"}
+El archivo (típicamente **`.tif`**) lleva metadata:
 
 - **Coordenada del origen** (esquina superior izquierda, en algún SRC)
 - **Resolución espacial** (ancho × alto del píxel, en unidades del SRC)
@@ -67,7 +67,7 @@ $$y = -4{,}234{,}330 - 30\cdot(4-1) = -4{,}234{,}420$$
 :::
 :::
 
-::: {.column width="45%"}
+::: {.column width="40%"}
 ![](../figures/clase10/slide_05_img_1.png){width="100%"}
 :::
 :::
@@ -100,8 +100,8 @@ Fuente: NASA Earthdata
 ## Imágenes multiespectrales {.compact}
 
 ::: columns
-::: {.column width="55%"}
-- La forma más común de raster: **imagen satelital multiespectral**
+::: {.column width="60%"}
+- Raster más común: **imagen satelital multiespectral**
 - Además del **R-G-B** visible, capturan otras bandas:
   - **Pancromática** (gris, mayor resolución espacial)
   - **Infrarroja cercana (NIR)** y **media (SWIR)**
@@ -110,7 +110,7 @@ Fuente: NASA Earthdata
 - Las bandas permiten ver **fenómenos invisibles** al ojo: humedad de la vegetación, temperatura, huella de un incendio
 :::
 
-::: {.column width="45%"}
+::: {.column width="40%"}
 ![](../figures/clase10/slide_07_img_1.png){width="100%"}
 
 ::: {.caption .small}
@@ -223,7 +223,7 @@ Fuente: NASA
 ![](../figures/clase10/slide_13_img_1.gif){width="50%"}
 
 ::: {.caption}
-NDVI mensual de la Tierra. Verde = vegetación sana, café = suelo desnudo. Fuente: Google Earth Engine
+GIF de NDVI en un año en América del Sur. ¡Nuestro continente respira!. Fuente: Construido por equipo docente en Google Earth Engine.
 :::
 
 
@@ -344,10 +344,8 @@ Eso es Planet. Y plantea preguntas serias sobre **vigilancia, privacidad y datos
 ::: {.box}
 **Datos satelitales gratuitos**
 
-- 🇺🇸 **NASA Earthdata Search** — `earthdata.nasa.gov/search`
 - 🇺🇸 **USGS EarthExplorer** — `earthexplorer.usgs.gov` (Landsat, ASTER, ICESat)
-- 🇪🇺 **Copernicus Data Space** — `dataspace.copernicus.eu` (Sentinel)
-- 🇨🇱 **CR2 / DGA** — datos climáticos chilenos
+- 🇪🇺 **Copernicus Data Space** — `browser.dataspace.copernicus.eu` (Sentinel)
 :::
 :::
 
@@ -357,7 +355,7 @@ Eso es Planet. Y plantea preguntas serias sobre **vigilancia, privacidad y datos
 
 - **MODIS / VIIRS productos** — incendios, NDVI, nieve, T°
 - **ARCLIM** (MMA Chile) — proyecciones climáticas comuna por comuna
-- **Climatología CR2** — series de estaciones
+- 🇨🇱 **CR2 ** — `cr2.cl` (datos climáticos chilenos)
 :::
 
 ::: {.caption}
@@ -369,35 +367,16 @@ La transición de "imágenes crudas" a "productos listos" es enorme. Hoy puedes 
 
 ## Google Earth Engine — la fábrica de teledetección a escala planetaria {.compact}
 
-::: columns
-::: {.column width="55%"}
+
 - **Plataforma de Google** (gratuita para uso académico/no-comercial)
 - ~**80 PB** de datos satelitales pre-cargados (Landsat completo, Sentinel, MODIS, etc.)
 - **Code Editor** en el navegador (JavaScript) o API en Python/R
 - En lugar de **bajar imágenes** → mandas el **código** a la nube y procesas en sus servidores
 - Permite hacer en minutos lo que antes tomaba semanas
+- En la última clase del semestre aprenderemos a acceder a este recurso
 
-::: {.box}
-**Demo**: en GEE puedes calcular el NDVI promedio de toda Sudamérica en los últimos 25 años. Sin descargar nada.
-:::
-:::
 
-::: {.column width="45%"}
-::: {.caption .small}
-**`code.earthengine.google.com`** → registrar cuenta institucional → Code Editor
 
-Ejemplo mínimo:
-
-```js
-var sentinel = ee.ImageCollection('COPERNICUS/S2')
-  .filterDate('2024-01-01', '2024-01-31')
-  .filterBounds(geometry)
-  .median();
-Map.addLayer(sentinel, {bands: ['B4','B3','B2'], min: 0, max: 3000});
-```
-:::
-:::
-:::
 
 
 # Índices, T° superficial, LIDAR {.section-slide background-color="#2a7f62"}
@@ -423,19 +402,21 @@ Idea: cada material refleja distinto en distintas bandas → la **diferencia** e
 ## NDVI: el índice más usado del mundo {.compact}
 
 ::: columns
-::: {.column width="50%"}
-- La vegetación **sana** **absorbe** rojo (clorofila) y **refleja** infrarrojo cercano (estructura de la hoja)
-- La vegetación **enferma** o seca refleja menos NIR y más rojo
+::: {.column width="60%"}
+La vegetación **sana** **absorbe** rojo (clorofila) y **refleja** infrarrojo cercano (estructura de la hoja)
+
+La vegetación **enferma** o seca refleja menos NIR y más rojo
 
 $$\text{NDVI} = \frac{\text{NIR} - \text{RED}}{\text{NIR} + \text{RED}}$$
 
-- Rango: **−1 a +1**
-- > 0.6 → vegetación densa y sana
+Rango: **−1 a +1**:
+
+- 0.6 → vegetación densa y sana
 - 0.2–0.5 → arbustos, pastos
-- < 0.1 → suelo desnudo, nieve, agua
+- 0.1 → suelo desnudo, nieve, agua
 :::
 
-::: {.column width="50%"}
+::: {.column width="40%"}
 ![](../figures/clase10/slide_17_img_1.png){width="80%"}
 
 ::: {.caption .small}
@@ -457,28 +438,31 @@ NDVI en un cultivo. Verde oscuro = vegetación vigorosa; café/amarillo = estré
 ## Temperatura superficial — la banda termal {.compact}
 
 ::: columns
-::: {.column width="60%"}
+::: {.column width="70%"}
 - Todo objeto con temperatura emite radiación en **frecuencias bajas** (infrarrojo lejano)
 - La intensidad de esa radiación → permite **inferir la temperatura**
-- Así funcionan los **termómetros infrarrojos** y la cámara térmica del oftalmólogo
+- Así funcionan los **termómetros infrarrojos**
 - Bandas termales en Landsat (TIRS) y MODIS
 
-::: {.box}
-**¡Ojo!** La **temperatura superficial** (LST) ≠ **temperatura ambiental** (la que miden las estaciones meteorológicas, a 2 m del suelo).
 
-Una calle de asfalto puede estar a 60 °C de **superficie** mientras el aire está a 32 °C.
-
-¿Cuál afecta la salud humana? **La ambiental.** Pero la superficial **predice** la ambiental → bloque 2.
-:::
 :::
 
-::: {.column width="40%"}
-![](../figures/clase10/slide_22_img_1.jpeg){width="100%"}
+::: {.column width="30%"}
+![](../figures/clase10/rome_heat.jpg){width="100%"}
 
 ::: {.caption .small}
 La banda termal mira el calor invisible. (NASA/JPL)
 :::
 :::
+
+::: {.box}
+**¡Ojo!: temperatura superficial**  ≠ **temperatura ambiental** (la que miden las estaciones meteorológicas, a 2 m del suelo).
+
+Una calle de asfalto puede estar a 60 °C de **superficie** mientras el aire está a 32 °C.
+
+¿Cuál es la temperatura relevante? -> Depende de la pregunta
+:::
+
 :::
 
 
@@ -643,7 +627,7 @@ Parker Solar Probe (NASA/JHUAPL)
 - **ESA + NASA**, lanzada **2020**
 - Sale del plano de la eclíptica → primera misión que ve los **polos del Sol**
 - Combina **teledetección remota** + **medición in-situ** del viento solar
-- ¡La misma combinación que usaremos en Santiago HOT!
+
 :::
 
 ::: {.column width="45%"}
@@ -662,7 +646,6 @@ Solar Orbiter (ESA)
 ::: {.column width="50%"}
 - En órbita marciana desde **2006**
 - Cámara **HiRISE**: resolución de **30 cm/píxel** desde 300 km de altura — ¡como ver una mesa de comedor desde el espacio!
-- Detectó **agua estacional** en pendientes
 - Sirvió de **scout** para escoger los sitios de aterrizaje de Curiosity y Perseverance
 :::
 
@@ -713,7 +696,6 @@ Cassini (NASA/JPL)
 - En órbita de Júpiter desde **2016**
 - Órbita polar elíptica que la lleva muy cerca del planeta
 - Mapea el **campo magnético**, el **interior** y la **gran mancha roja**
-- Imágenes procesadas por la comunidad ciudadana (¡teledetección con citizen science!)
 :::
 
 ::: {.column width="45%"}
@@ -793,7 +775,6 @@ Fuente: archivo del autor
 - Días con T° > 30 °C: **55 al año (1961–90)** → **79 hoy**
 - Récord 25 enero 2017: **37,4 °C**
 - Récord 27 enero 2019: **38,3 °C**
-- 3 al 13 diciembre 2022: la **ola de calor más larga** desde que hay registro
 :::
 
 ::: {.caption}
@@ -837,7 +818,7 @@ Fuente: Gil et al. (2023), datos DMCh.
 
 ## Riesgo no es lo mismo que amenaza {.compact}
 
-::: {.box style="font-size: 1.6em; text-align: center; padding: 1em;"}
+::: {.box style="font-size: 1.3em; text-align: center; padding: 1em;"}
 $$\text{Riesgo} = \frac{\text{Amenaza} \times \text{Exposición} \times \text{Vulnerabilidad}}{\text{Capacidades}}$$
 :::
 
@@ -912,7 +893,7 @@ Klinenberg, *Heat Wave* (2002).
 - **Hipertensión**: ~33 % de la población adulta de la RM
 - **Cardiovasculares**: 152 por 100.000 habitantes en RM (sobre el promedio nacional)
 - **Diabetes, EPOC, salud renal**: empeoran con la deshidratación
-- **Tabaquismo (23 %)** y **estrés** sobre el promedio nacional
+- **Tabaquismo** y **estrés**
 :::
 
 ::: {.column width="50%"}
@@ -954,7 +935,7 @@ Es el **agravamiento de patologías preexistentes**, especialmente cardiovascula
 
 - Antidepresivos alteran termorregulación
 - ↑ episodios de psicosis, lesiones autoinfligidas, suicidio
-- Hospitalizaciones psiquiátricas suben con T°
+- ↑ Hospitalizaciones psiquiátricas
 
 **Movilidad reducida**
 
@@ -1021,7 +1002,7 @@ Fuente: archivo del autor
 ::: {.column width="50%"}
 - Un árbol urbano puede bajar **1–4 °C** localmente
 - En Europa se ha medido hasta **8 °C** menos bajo dosel
-- Sombra + evapotranspiración + albedo
+- sombra y evapotranspiración
 - **Costo**: bajo. **Beneficio**: enorme.
 
 ::: {.box}
@@ -1032,9 +1013,6 @@ Pero el arbolado en Santiago está **muy desigualmente distribuido**: Vitacura, 
 ::: {.column width="50%"}
 ![](../figures/clase10/slide_26_img_1.jpeg){width="100%"}
 
-::: {.caption .small}
-Fuente: archivo del autor
-:::
 :::
 :::
 
@@ -1053,7 +1031,7 @@ Datos del **Atlas de Riesgos Climáticos (ARCLIM, MMA)** muestran:
 :::
 
 ::: {.caption}
-Fuente: Gil et al. (2023), Fig. 6, datos ARCLIM.
+Fuente: Gil et al. (2023).
 :::
 
 
@@ -1134,7 +1112,7 @@ Madrid **modifica** los horarios del trabajo municipal en olas de calor.
 
 ::: {.column width="45%"}
 ::: {.box}
-**La idea de Raquel**: combinar lo mejor de los dos mundos.
+**Programa Heat Watch**: combinar lo mejor de los dos mundos.
 
 - **Satélites** → cobertura espacial densa
 - **Mediciones in-situ** → temperatura ambiental real, alta calidad
@@ -1148,27 +1126,23 @@ Madrid **modifica** los horarios del trabajo municipal en olas de calor.
 ## Ciencia ciudadana: la campaña del 20 de enero 2024 {.compact}
 
 ::: columns
-::: {.column width="55%"}
+::: {.column width="60%"}
 - **Voluntarios** de distintas comunas, edades y ocupaciones
-- **18 rutas** estratégicamente diseñadas, atravesando todo el Gran Santiago
-- Sensores **montados en autos** (calibrados de última generación)
-- **3 ventanas horarias**:
-  - 7:00 – 8:00 am (mínima nocturna)
-  - 3:00 – 4:00 pm (máxima diurna)
-  - 7:00 – 8:00 pm (atardecer)
+- **18 rutas** estratégicamente diseñadas
+- Sensores **montados en autos**
+- **3 ventanas horarias**: 7:00 – 8:00 am (mínima nocturna), 3:00 – 4:00 pm (máxima diurna) y 7:00 – 8:00 pm (atardecer)
 - **Más de 64.000 mediciones** de temperatura y humedad relativa en un solo día
+- **El día elegido fue clave**: primer día de una de las olas de calor **más severas** del verano.
 :::
 
-::: {.column width="45%"}
+::: {.column width="40%"}
 ![](../figures/clase10/santiagohot_rutas.png){width="100%"}
 
 ::: {.caption .small}
 Cada punto = una medición de los voluntarios sobre una de las 18 rutas. Fuente: Santiago HOT.
 :::
 
-::: {.box}
-**El día elegido fue clave**: 20 de enero 2024 — el **primer día de una de las olas de calor más severas** del verano.
-:::
+
 :::
 :::
 
@@ -1246,20 +1220,15 @@ Es el primer mapa de calor de **alta resolución** para una ciudad latinoamerica
 :::
 
 
-## Lo que sigue: ustedes usan estos datos en el Taller {.compact}
+## Lo que sigue: ustedes usan estos datos en su tarea {.compact}
 
 ::: {.box}
-En el siguiente bloque (próxima clase) van a:
-
-1. Cargar el raster de Santiago HOT en QGIS
-2. Cruzarlo con el NDVI y la T° superficial de Landsat
-3. Estudiar la **relación** entre vegetación, T° superficial y T° ambiental
-4. Identificar **comunas o barrios** donde el riesgo es más alto
+1. Cargar en QGIS los rásters de **Landsat 8** (RGB, T° superficial, NDVI) y de **Santiago HOT** (T° aire), más el shapefile del Gran Santiago
+2. Aplicar simbología (rampa **Magma** para temperaturas, **blanco-verde** para NDVI) y **recortar** el RGB con el shapefile
+3. Armar **composiciones lado a lado** en el Compositor de impresión: **NDVI ↔ T° superficial** y **T° aire ↔ T° superficial**
+4. Hacer **zoom a una zona elegida** (tu comuna, tu barrio o una de las comunas del taller) a escala 1:20.000 y producir tres pares de mapas
 :::
 
-::: {.caption}
-La clase siguiente abre con eso. Por ahora, vamos a pensar políticas.
-:::
 
 
 # Capacidades y respuesta {.section-slide background-color="#c64b3a"}
@@ -1268,7 +1237,7 @@ La clase siguiente abre con eso. Por ahora, vamos a pensar políticas.
 
 ::: columns
 ::: {.column width="50%"}
-**Lanzado en diciembre 2022 por el Gobierno Regional Metropolitano**
+**Lanzado en diciembre 2022:**
 
 | Alerta | Umbral |
 |---|---|
@@ -1290,8 +1259,8 @@ La clase siguiente abre con eso. Por ahora, vamos a pensar políticas.
 | Roja / Emergencia | ≥ 35 °C, 1 día |
 | **Magenta / Crisis** | ≥ 38 °C, 1 día |
 
-- Sigue la **lógica del PPDA** (que la ciudadanía ya conoce)
-- Verde quitado (no es color de emergencia internacional)
+- Sigue la **lógica del PPDA**
+- Verde quitado 
 - Suma un nivel **magenta** para escenarios climáticos futuros
 :::
 :::
@@ -1312,7 +1281,7 @@ Gil et al. (2023) compararon 17 ciudades con clima similar a Santiago:
 ::: {.column width="50%"}
 **Patrones comunes:**
 
-- El **sector salud** (no emergencias) suele liderar
+- El **sector salud** suele liderar
 - **Cooling centers** identificados y comunicados
 - **Aseguramiento de agua potable** en plazas y espacios públicos
 - **Educación pública** sobre signos de golpe de calor
@@ -1334,16 +1303,12 @@ Gil et al. (2023) compararon 17 ciudades con clima similar a Santiago:
 8. **Restricciones a eventos masivos** al aire libre en alerta roja/magenta
 :::
 
-::: {.caption}
-Fuente: Gil et al. (2023). En la actividad van a tener que **elegir 3 de estas 8** para una comuna específica.
-:::
-
 
 # A+R: Plan Calor para tu comuna {.section-slide background-color="#2a7f62"}
 
 ## Plan Calor para tu comuna {.activity-slide .compact}
 
-**Formato**: 4 grupos. Cada grupo recibe **una comuna del Gran Santiago** y un **menú de 8 medidas** con costos. Tienen **15 puntos** para gastar.
+**Formato**: 3 grupos. Cada grupo recibe **una comuna del Gran Santiago** y un **menú de 8 medidas** con costos. Tienen **15 puntos** para gastar.
 
 ::: {.box}
 **Tarea**:
@@ -1351,10 +1316,6 @@ Fuente: Gil et al. (2023). En la actividad van a tener que **elegir 3 de estas 8
 1. **Diagnóstico** (3 min): ¿cuáles son los riesgos *específicos* de su comuna? (vulnerabilidad demográfica, exposición climática, capacidades existentes)
 2. **Decisión** (7 min): elijan **3 medidas** del menú que sumen ≤ 15 puntos. Justifíquenlas en función del diagnóstico.
 3. **Plenario** (10 min): cada grupo presenta en 2 min. Discutimos qué medidas se repiten, cuáles son únicas, y por qué.
-:::
-
-::: {.caption}
-La pregunta de fondo: **¿Por qué la misma medida no sirve igual en cada lugar?**
 :::
 
 
@@ -1415,7 +1376,7 @@ La pregunta de fondo: **¿Por qué la misma medida no sirve igual en cada lugar?
 - **Centro de la ciudad**, mucho concreto y asfalto
 - **Población flotante enorme**: 800.000 entran cada día (no viven ahí)
 - **Concentración de personas en situación de calle** de la RM
-- Alta densidad de **adultos mayores viviendo solos** (Santiago lidera la cifra: 4.962)
+- Alta densidad de **adultos mayores viviendo solos**
 - Edificios históricos sin aislación térmica
 - Muchos eventos masivos (ferias, conciertos, marchas)
 :::
@@ -1429,32 +1390,7 @@ La pregunta de fondo: **¿Por qué la misma medida no sirve igual en cada lugar?
 :::
 :::
 
-
-## Comuna D — La Pintana {.activity-slide .compact}
-
-::: columns
-::: {.column width="60%"}
-**Perfil**:
-
-- **Sur de Santiago**, periferia
-- **Bajo ingreso**, alto desempleo
-- Arbolado: bajo, pero hay sitios disponibles para plantar
-- Adultos mayores con **alta dependencia** y baja movilidad
-- **Pocos cooling centers** públicos (sin malls grandes ni edificios institucionales con AC)
-- Algunos campamentos con **acceso irregular al agua potable**
-:::
-
-::: {.column width="40%"}
-::: {.box}
-**Pregunta clave**:
-
-¿Es viable replicar un plan tipo "Las Condes" en La Pintana, o requiere un plan **estructuralmente distinto**?
-:::
-:::
-:::
-
-
-## El menú de medidas {.activity-slide .compact}
+## El menú de medidas (1/2) {.activity-slide .compact}
 
 | # | Medida | Costo (pts) |
 |---|---|---|
@@ -1462,6 +1398,16 @@ La pregunta de fondo: **¿Por qué la misma medida no sirve igual en cada lugar?
 | 2 | **Cooling centers** — climatizar 5 espacios públicos (bibliotecas, gimnasios) | 5 |
 | 3 | **Sistema de alerta SMS** — registro de adultos mayores y vulnerables | 2 |
 | 4 | **Restricción laboral** — prohibir trabajo a la intemperie sobre 35 °C | 4 |
+
+::: {.caption .small}
+Presupuesto: **15 puntos** por comuna. Elijan 3 medidas que sumen ≤ 15.
+:::
+
+
+## El menú de medidas (2/2) {.activity-slide .compact}
+
+| # | Medida | Costo (pts) |
+|---|---|---|
 | 5 | **Techos ecológicos** — subsidio para 200 viviendas | 8 |
 | 6 | **Kioscos de hidratación** — 30 puntos en plazas, escuelas, ferias | 3 |
 | 7 | **Ajuste horario escolar** — protocolo de suspensión deportiva | 1 |
@@ -1483,44 +1429,4 @@ Presupuesto: **15 puntos** por comuna. Elijan 3 medidas que sumen ≤ 15.
 4. ¿Quedó alguna medida sin elegir? ¿Por qué?
 :::
 
-::: {.box}
-**Punchline**: el calor extremo es una **amenaza nueva** para Chile, pero el marco para gestionarla **no es nuevo**. Lo que sí es nuevo es la **escala territorial** a la que podemos diagnosticar — gracias a iniciativas como **Santiago HOT**.
-:::
 
-
-## Cierre — del píxel al plan {.compact}
-
-::: {.box}
-1. **Bloque 1**: aprendimos a leer el planeta a través de **rasters** y **teledetección**
-2. **Bloque 2**: vimos cómo el **calor extremo** convierte esa lectura en **política pública**
-3. **Santiago HOT** (lidera Raquel Jiménez, UNAB / Cigiden) es el ejemplo perfecto de combinar las dos cosas: **ciencia ciudadana** + **datos satelitales** = **mapa accionable**
-4. En la próxima clase: **el Taller** — ustedes mismos van a manipular estos datos en QGIS
-:::
-
-¡Gracias!
-
-
-## Lecturas y referencias {.compact}
-
-::: columns
-::: {.column width="50%"}
-**Lectura asignada**
-
-- Gil, Asahi, Palharini & Undurraga (2023). *Calor extremo: estrategia de gestión y medidas de adaptación para la Región Metropolitana de Santiago*. Centro de Políticas Públicas UC.
-
-**Santiago HOT**
-
-- `sites.google.com/view/santiagohot`
-- Equipo: Raquel Jiménez (PI, UNAB), Cigiden, NOAA / NIHHIS, CAPA Strategies
-:::
-
-::: {.column width="50%"}
-**Recursos satelitales mencionados**
-
-- USGS EarthExplorer — `earthexplorer.usgs.gov`
-- NASA Earthdata — `earthdata.nasa.gov`
-- Copernicus Data Space — `dataspace.copernicus.eu`
-- Google Earth Engine — `code.earthengine.google.com`
-- ARCLIM Chile — `arclim.mma.gob.cl`
-:::
-:::
