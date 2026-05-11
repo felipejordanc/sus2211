@@ -1290,17 +1290,34 @@ Gil et al. (2023) compararon 17 ciudades con clima similar a Santiago:
 :::
 
 
-## Medidas estructurales — el largo plazo {.compact}
+## Medidas para el largo plazo: estructurales y complementarias {.compact}
 
+::: columns
+::: {.column width="50%"}
 ::: {.box}
+**Estructurales — largo plazo (§6.4)**
+
 1. **Plan de arbolado urbano** — el más costo-efectivo
-2. **Techos ecológicos** y techos blancos (albedo alto)
-3. **Aislación térmica** y ventilación pasiva en vivienda
-4. **Cooling centers** identificados, climatizados, accesibles
-5. **Ventanilla única** para postular a programas de adaptación de vivienda
-6. **Aseguramiento de agua potable** en plazas
+2. **Monitoreo meteorológico** reforzado (más estaciones, integración de datos)
+3. **Vigilancia sanitaria** del calor (mortalidad atribuible)
+4. **Adaptación de viviendas** vía "ventanilla única": aislación, ventilación pasiva, techos ecológicos/blancos
+:::
+:::
+
+::: {.column width="50%"}
+::: {.box}
+**Complementarias y municipales (§6.2–6.3)**
+
+5. **Cooling centers** identificados, climatizados y accesibles
+6. **Agua potable** asegurada en plazas y espacios públicos
 7. **Ajuste horario** escolar y laboral en alertas
 8. **Restricciones a eventos masivos** al aire libre en alerta roja/magenta
+:::
+:::
+:::
+
+::: {.caption}
+Fuente: Gil et al. (2023). §6.4 propone las medidas estructurales/largo plazo (arbolado, monitoreo, vigilancia, vivienda); §6.2 (sectoriales) y §6.3 (planes municipales) detallan las complementarias.
 :::
 
 
