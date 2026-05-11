@@ -1317,7 +1317,7 @@ Gil et al. (2023) compararon 17 ciudades con clima similar a Santiago:
 :::
 
 ::: {.caption}
-Fuente: Gil et al. (2023). §6.4 propone las medidas estructurales/largo plazo (arbolado, monitoreo, vigilancia, vivienda); §6.2 (sectoriales) y §6.3 (planes municipales) detallan las complementarias.
+Fuente: Gil et al. (2023).
 :::
 
 
