@@ -5328,7 +5328,7 @@ z-index: 1000;
 
 <section id="objetivo" class="level2">
 <h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
-<p>El objetivo de esta práctica es que <strong>explores la relación entre la vegetación y el calor</strong> en el Gran Santiago combinando dos fuentes de teledetección distintas: <strong>Landsat 8</strong> (NDVI y temperatura superficial, 30 m, NASA/USGS) y el <strong>proyecto Santiago HOT</strong> (temperatura ambiental modelada a 10 m, derivada de ciencia ciudadana + datos satelitales). Trabajarás con <strong>datos ráster y vectoriales</strong> para producir mapas comparativos del Gran Santiago y de una zona específica que tú elijas, e integrarás los resultados en un <strong>Mapa-Memo</strong> que reflexione sobre la distribución espacial del riesgo asociado al calor extremo.</p>
+<p>El objetivo de esta práctica es que <strong>explores la relación entre la vegetación y el calor</strong> en el Gran Santiago combinando dos fuentes de teledetección distintas: <strong>Landsat 8</strong> (NDVI y temperatura superficial, 30 m, NASA/USGS) y el <strong>proyecto Santiago HOT</strong> (temperatura ambiental modelada a 10 m, derivada de ciencia ciudadana + datos satelitales). Trabajarás con <strong>datos ráster y vectoriales</strong> para producir mapas comparativos del Gran Santiago y de una zona específica que tú elijas, que podrás usar luego en tu <strong>portafolio</strong> para reflexionar sobre la distribución espacial del riesgo asociado al calor extremo.</p>
 <p><strong>Herramientas por trabajar:</strong></p>
 <ul>
 <li>Carga y exploración de capas ráster (<code>.tif</code>) y vectoriales (<code>.shp</code>) en QGIS</li>
@@ -5403,7 +5403,7 @@ Advertencia
 <li><strong>Paso 8 — Comparación NDVI ↔︎ T° superficial.</strong> Composición lado a lado en el Compositor de impresión: ¿dónde hay menos vegetación, hay más calor?</li>
 <li><strong>Paso 9 — Comparación T° aire ↔︎ T° superficial.</strong> Composición lado a lado: ¿qué tan distinta es la temperatura <strong>que sentimos</strong> (aire) de la temperatura <strong>que ve el satélite</strong> (superficie)?</li>
 <li><strong>Paso 10 — Zoom a una zona elegida.</strong> Acercarse al Parque O’Higgins (o <strong>a tu propia comuna o barrio</strong>) a escala 1:20.000 y producir tres pares de mapas para el análisis territorial fino.</li>
-<li><strong>Mapa-Memo.</strong> Integrar los resultados en una reflexión escrita con tres preguntas guía + una pregunta personal vinculada con la actividad en clase.</li>
+<li><strong>Preguntas guía para el portafolio.</strong> Reflexionar sobre los patrones observados, la relación NDVI ↔︎ temperatura, el aporte comparado de Landsat y Santiago HOT, y la vinculación con la actividad en clase.</li>
 </ol>
 <hr>
 </section>
@@ -5435,7 +5435,7 @@ Advertencia
     A --&gt; E[&quot;📁 resultados/&quot;]
 
     B --&gt; F[&quot;📁 brutos/&lt;br&gt;🔒 datos originales&lt;br&gt;(no modificar)&quot;]
-    B --&gt; G[&quot;📁 intermedios/&lt;br&gt;datos de geoprocesamiento&quot;]
+    B --&gt; G[&quot;📁 intermedios/&lt;br&gt;pasos intermedios del flujo&quot;]
     B --&gt; H[&quot;📁 procesados/&lt;br&gt;capas finales para mapeo&quot;]
 
     E --&gt; I[&quot;📁 mapas/&lt;br&gt;mapas exportados&quot;]
@@ -5465,10 +5465,10 @@ Advertencia
 <p><strong><code>datos/</code></strong> — Todo lo relacionado con los datos geoespaciales, organizado en tres subcarpetas:</p>
 <ul>
 <li><strong><code>brutos/</code></strong> 🔒 Datos originales tal como vienen del satélite o del MINVU. <strong>Nunca se modifican ni se sobreescriben.</strong> En esta tarea: <code>Landsat8_GS_RGB.tif</code>, <code>Landsat8_GS_ST.tif</code>, <code>Landsat8_GS_NDVI.tif</code>, <code>santiago-chile_af_temp_c.tif</code> (Santiago HOT) y los archivos del shapefile <code>GS_4326.*</code> (<code>.shp</code>, <code>.shx</code>, <code>.dbf</code>, <code>.prj</code>).</li>
-<li><strong><code>intermedios/</code></strong> Resultados de operaciones humanas o de geoprocesamiento sobre los datos brutos. En esta tarea vivirá aquí el <strong>clip</strong> del Landsat RGB que generarás en el paso 4 (<code>Landsat8_GS_RGB_clip.tif</code>) — pasó por una decisión humana (qué máscara usar) sobre los datos originales, por lo que no es bruto.</li>
-<li><strong><code>procesados/</code></strong> Capas finales listas para confeccionar los mapas. En esta tarea no usaremos <code>procesados/</code>, ya que los mapas se construyen directamente sobre los rásters de <code>brutos/</code> e <code>intermedios/</code>.</li>
+<li><strong><code>intermedios/</code></strong> Archivos derivados que existen sólo como paso intermedio hacia otra capa (nada los consume directamente en el mapa o análisis final). En esta tarea no usaremos <code>intermedios/</code>: el clip del Landsat RGB que generarás en el paso 4 se carga tal cual como capa final de referencia, así que va directo a <code>procesados/</code>.</li>
+<li><strong><code>procesados/</code></strong> La última versión de cada archivo en su cadena de procesamiento — la capa que efectivamente cargas para construir los mapas. En esta tarea vivirá aquí el <strong>clip</strong> del Landsat RGB (<code>Landsat8_GS_RGB_clip.tif</code>) que generarás en el paso 4.</li>
 </ul>
-<p><strong><code>documentos/</code></strong> — Documentación de respaldo. Recomendado: un <code>Mapa-Memo.docx</code> o <code>bitacora.md</code> donde registres tus hallazgos y respondas las preguntas guía.</p>
+<p><strong><code>documentos/</code></strong> — Documentación de respaldo. Recomendado: una <code>bitacora.md</code> donde registres tus hallazgos y notas para el portafolio.</p>
 <p><strong><code>proyectos/</code></strong> — Archivos de proyecto QGIS (<code>.qgz</code>). Guarda aquí el proyecto de esta tarea, nómbralo <code>clase10.qgz</code>.</p>
 <p><strong><code>resultados/</code></strong> — Productos finales:</p>
 <ul>
@@ -5691,7 +5691,7 @@ Tip
 <li><strong>Capa de entrada:</strong> <code>Landsat8_GS_RGB</code></li>
 <li><strong>Capa de máscara:</strong> <code>GS_4326</code></li>
 <li>Mantén las casillas marcadas como vienen por defecto (en particular <strong>“Crear una banda alfa de salida”</strong> y <strong>“Ajustar la extensión del ráster cortado a la extensión de la capa de máscara”</strong>).</li>
-<li><strong>Cortado (máscara):</strong> guárdalo en <code>datos/intermedios/</code> con el nombre <code>Landsat8_GS_RGB_clip.tif</code>.</li>
+<li><strong>Cortado (máscara):</strong> guárdalo en <code>datos/procesados/</code> con el nombre <code>Landsat8_GS_RGB_clip.tif</code>.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -5709,7 +5709,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>¿Por qué <code>intermedios/</code> y no <code>procesados/</code>?</strong> Aunque el clip se calcula automáticamente, <strong>tú elegiste</strong> la máscara, los parámetros y el formato de salida. Por convención, los archivos derivados — incluso por geoprocesamiento — viven en <code>intermedios/</code>. La carpeta <code>procesados/</code> queda reservada para capas finales con campos calculados o atributos agregados.</p>
+<p><strong>¿Por qué <code>procesados/</code> y no <code>intermedios/</code>?</strong> El clip recortado <strong>es</strong> la capa RGB que cargarás para los mapas finales — nada más se construye encima de él. La regla sencilla: si el archivo es la <strong>última versión</strong> que se consume aguas abajo en el flujo, va a <code>procesados/</code>. <code>intermedios/</code> queda reservado para archivos que existen sólo como peldaño hacia otro derivado posterior.</p>
 </div>
 </div>
 <p><strong>10.</strong> Haz click en <strong>Ejecutar</strong>. El resultado debería ser una imagen RGB recortada al contorno del Gran Santiago.</p>
@@ -5777,7 +5777,7 @@ Nota
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Pausa para observar.</strong> Antes de seguir, mira el mapa con detención. ¿Qué comunas se ven más rojas? ¿Cuáles más oscuras? ¿Hay alguna relación con lo que conoces de la geografía de Santiago (cordillera, valle, sur, norte, oriente, poniente)?</p>
+<p><strong>Pausa para observar.</strong> Antes de seguir, mira el mapa con detención. Recuerda que en la rampa Magma el <strong>amarillo claro corresponde a las zonas más frescas</strong> y el <strong>rojo oscuro a las más calientes</strong>. ¿Qué comunas se ven más oscuras (más calientes)? ¿Cuáles más amarillas (más frescas)? ¿Hay alguna relación con lo que conoces de la geografía de Santiago (cordillera, valle, sur, norte, oriente, poniente)?</p>
 </div>
 </div>
 <hr>
@@ -5813,14 +5813,14 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Comparación mental.</strong> ¿Las áreas más verdes en el mapa de NDVI coinciden con las áreas más oscuras (frescas) del mapa de temperatura superficial? Anota tu primera impresión — la verificaremos formalmente en el siguiente paso.</p>
+<p><strong>Comparación mental.</strong> ¿Las áreas más verdes en el mapa de NDVI coinciden con las áreas más amarillas (frescas) del mapa de temperatura superficial? Anota tu primera impresión — la verificaremos formalmente en el siguiente paso.</p>
 </div>
 </div>
 <hr>
 </section>
 <section id="paso-8-composición-lado-a-lado-ndvi-temperatura-superficial" class="level2">
 <h2 class="anchored" data-anchor-id="paso-8-composición-lado-a-lado-ndvi-temperatura-superficial">Paso 8 | Composición lado a lado: NDVI ↔︎ Temperatura superficial</h2>
-<p>Para comparar formalmente ambos mapas, vamos a crear una <strong>composición lado a lado</strong> (side-by-side) en el <strong>Compositor de impresión</strong> de QGIS.</p>
+<p>Para comparar formalmente ambos mapas, vamos a crear una <strong>composición lado a lado</strong> (side-by-side) en el <strong>Compositor de impresión</strong> de QGIS — la misma técnica de díptico horizontal que vimos en detalle en la <strong>Clase 5</strong> y practicamos en el Paso 10 de la <strong>Tarea 5</strong>. Si necesitas refrescar los detalles (orientación apaisada, bloqueo de capas, leyenda doble), vuelve a esa tarea.</p>
 <p><strong>18.</strong> En la ventana principal de QGIS, ve a <strong>Proyecto → Nueva composición de impresión…</strong> Asígnale un título descriptivo, por ejemplo <code>NDVI_vs_T_superficial</code>.</p>
 <p><strong>19.</strong> Se abrirá una nueva ventana — el Compositor de impresión. Es una hoja en blanco donde armaremos el mapa.</p>
 <p><strong>20.</strong> En el panel izquierdo del Compositor, haz click en <strong>Añadir mapa</strong> y dibuja un rectángulo que <strong>cubra la mitad izquierda de la página</strong>. Luego repite para la <strong>mitad derecha</strong>. Tendrás dos mapas idénticos, uno al lado del otro.</p>
@@ -5908,7 +5908,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Tu zona, tu elección.</strong> Por defecto, esta guía usa el <strong>Parque O’Higgins</strong> (comuna de Santiago) como ejemplo, porque es un área verde grande rodeada de zonas densamente construidas — un caso clásico para ver el efecto del arbolado. Pero <strong>tú puedes elegir otra zona</strong> que te interese más: tu comuna, tu barrio, un parque cerca de tu casa, o una de las cuatro comunas que trabajamos en la actividad de la clase (Vitacura, Cerro Navia, Santiago Centro, La Pintana). La consigna es la misma: <strong>acércate a escala 1:20.000</strong> y produce los tres pares de mapas siguientes.</p>
+<p><strong>Tu zona, tu elección.</strong> Por defecto, esta guía usa el <strong>Parque O’Higgins</strong> (comuna de Santiago) como ejemplo, porque es un área verde grande rodeada de zonas densamente construidas — un caso clásico para ver el efecto del arbolado. Pero <strong>tú puedes elegir otra zona</strong> que te interese más: tu comuna, tu barrio, un parque cerca de tu casa, o una de las tres comunas que trabajamos en la actividad de la clase (Vitacura, Cerro Navia, Santiago Centro). La consigna es la misma: <strong>acércate a escala 1:20.000</strong> y produce los tres pares de mapas siguientes.</p>
 </div>
 </div>
 <p><strong>27.</strong> En la ventana principal de QGIS, <strong>acércate a la zona elegida</strong> usando la herramienta <strong>Zoom</strong> o escribiendo la escala manualmente en la barra inferior: <strong>1:20.000</strong>.</p>
@@ -5963,7 +5963,7 @@ Tip
 </section>
 <section id="listo" class="level2 unnumbered unlisted">
 <h2 class="unnumbered unlisted anchored" data-anchor-id="listo">¡Listo!</h2>
-<p>Has completado el análisis de temperatura y vegetación. Ahora viene la parte más importante: <strong>interpretar lo que viste y comunicarlo</strong>.</p>
+<p>Has finalizado tus mapas y ejercicios. <strong>Recuerda completar esta actividad y guardar tu carpeta para utilizarla en tu próximo portafolio.</strong></p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -5974,16 +5974,13 @@ Importante
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Mapa-Memo — entrega final</strong></p>
-<p>En <strong>Canvas</strong>, sube un documento (PDF o Word) con:</p>
+<p><strong>Elige una zona del Gran Santiago para tu portafolio</strong> (tu comuna, tu barrio, el Parque O’Higgins o una de las comunas del taller) y construye una breve narrativa a partir de los mapas que produjiste — la comparación a escala del Gran Santiago y los tres pares del zoom a 1:20.000. Considera las siguientes preguntas guía:</p>
 <ol type="1">
-<li><strong>Los tres mapas finales</strong> (Gran Santiago: NDVI vs T° superficial; T° aire vs T° superficial; y los tres pares del zoom a tu zona elegida).</li>
-<li><strong>Las respuestas a las cuatro preguntas guía</strong> (texto breve, 1–2 párrafos por pregunta):</li>
+<li>¿Qué patrones espaciales de temperatura observaste en el Gran Santiago y en tu zona elegida? ¿Qué factores urbanos (arbolado, densidad construida, pavimento, distancia a la cordillera, etc.) crees que influyen en estas diferencias?</li>
+<li>¿Cómo se relaciona la distribución de áreas verdes (NDVI) con la temperatura superficial y con la temperatura del aire? ¿Qué zonas se benefician más de la vegetación y cuáles se ven más afectadas por su ausencia?</li>
+<li>¿Qué ventajas y limitaciones tiene el uso de imágenes satelitales como <strong>Landsat 8</strong> para este tipo de análisis urbano? Comparativamente, ¿qué aporta un producto como <strong>Santiago HOT</strong> (ciencia ciudadana + satélites) frente a usar sólo datos satelitales?</li>
+<li><strong>Vinculación con la clase.</strong> En la actividad <strong>A+R “Plan Calor para tu comuna”</strong> discutimos tres comunas con perfiles muy distintos — <strong>Vitacura, Cerro Navia y Santiago Centro</strong>. Si tu grupo trabajó una de ellas (o si tu zona elegida corresponde a alguna), ¿cómo se ve esa comuna en los mapas que construiste? ¿Las <strong>tres medidas</strong> que tu grupo eligió tienen sentido a la luz de los datos territoriales que ahora ves?</li>
 </ol>
-<p><strong>Pregunta 1.</strong> ¿Qué patrones espaciales de temperatura pudiste observar en el Gran Santiago y en tu zona elegida? ¿Qué factores urbanos (arbolado, densidad construida, pavimento, distancia a la cordillera, etc.) crees que influyen en estas diferencias?</p>
-<p><strong>Pregunta 2.</strong> ¿Cómo se relaciona la distribución de áreas verdes (NDVI) con la temperatura superficial? ¿Qué zonas se benefician más de la vegetación y cuáles se ven más afectadas por su ausencia?</p>
-<p><strong>Pregunta 3.</strong> ¿Qué ventajas y limitaciones tiene el uso de imágenes satelitales como <strong>Landsat 8</strong> para este tipo de análisis urbano? Y, comparativamente, ¿qué aporta un producto como <strong>Santiago HOT</strong> (que combina ciencia ciudadana + satélites) frente a usar sólo datos satelitales?</p>
-<p><strong>Pregunta 4 — vinculación con la clase.</strong> En la actividad <strong>A+R “Plan Calor para tu comuna”</strong> discutimos cuatro comunas con perfiles muy distintos: <strong>Vitacura, Cerro Navia, Santiago Centro y La Pintana</strong>. Si tu grupo trabajó una de ellas (o si tu zona elegida en el Paso 10 corresponde a alguna), ¿cómo se ve esa comuna en los mapas que construiste? ¿Las <strong>tres medidas</strong> que tu grupo eligió tienen sentido a la luz de los datos territoriales que ahora ves? ¿Cambiarías alguna ahora que tienes el mapa en mano?</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">

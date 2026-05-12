@@ -74,7 +74,7 @@ flowchart TD
     A --> E["📁 resultados/"]
 
     B --> F["📁 brutos/<br>🔒 datos originales<br>(no modificar)"]
-    B --> G["📁 intermedios/<br>datos de geoprocesamiento"]
+    B --> G["📁 intermedios/<br>pasos intermedios del flujo"]
     B --> H["📁 procesados/<br>capas finales para mapeo"]
 
     E --> I["📁 mapas/<br>mapas exportados"]
@@ -92,8 +92,8 @@ flowchart TD
 **`datos/`** — Todo lo relacionado con los datos geoespaciales, organizado en tres subcarpetas:
 
 -   **`brutos/`** 🔒 Datos originales tal como vienen del satélite o del MINVU. **Nunca se modifican ni se sobreescriben.** En esta tarea: `Landsat8_GS_RGB.tif`, `Landsat8_GS_ST.tif`, `Landsat8_GS_NDVI.tif`, `santiago-chile_af_temp_c.tif` (Santiago HOT) y los archivos del shapefile `GS_4326.*` (`.shp`, `.shx`, `.dbf`, `.prj`).
--   **`intermedios/`** Resultados de operaciones humanas o de geoprocesamiento sobre los datos brutos. En esta tarea vivirá aquí el **clip** del Landsat RGB que generarás en el paso 4 (`Landsat8_GS_RGB_clip.tif`) — pasó por una decisión humana (qué máscara usar) sobre los datos originales, por lo que no es bruto.
--   **`procesados/`** Capas finales listas para confeccionar los mapas. En esta tarea no usaremos `procesados/`, ya que los mapas se construyen directamente sobre los rásters de `brutos/` e `intermedios/`.
+-   **`intermedios/`** Archivos derivados que existen sólo como paso intermedio hacia otra capa (nada los consume directamente en el mapa o análisis final). En esta tarea no usaremos `intermedios/`: el clip del Landsat RGB que generarás en el paso 4 se carga tal cual como capa final de referencia, así que va directo a `procesados/`.
+-   **`procesados/`** La última versión de cada archivo en su cadena de procesamiento — la capa que efectivamente cargas para construir los mapas. En esta tarea vivirá aquí el **clip** del Landsat RGB (`Landsat8_GS_RGB_clip.tif`) que generarás en el paso 4.
 
 **`documentos/`** — Documentación de respaldo. Recomendado: una `bitacora.md` donde registres tus hallazgos y notas para el portafolio.
 
@@ -228,12 +228,12 @@ Una vez visualizadas las capas, vamos a trabajar con el **shapefile** del Gran S
 -   **Capa de entrada:** `Landsat8_GS_RGB`
 -   **Capa de máscara:** `GS_4326`
 -   Mantén las casillas marcadas como vienen por defecto (en particular **"Crear una banda alfa de salida"** y **"Ajustar la extensión del ráster cortado a la extensión de la capa de máscara"**).
--   **Cortado (máscara):** guárdalo en `datos/intermedios/` con el nombre `Landsat8_GS_RGB_clip.tif`.
+-   **Cortado (máscara):** guárdalo en `datos/procesados/` con el nombre `Landsat8_GS_RGB_clip.tif`.
 
 ![Diálogo "Cortar ráster por capa de máscara" con las casillas correctas.](figures/tarea10/tarea10_010.png){fig-align="center"}
 
 ::: callout-tip
-**¿Por qué `intermedios/` y no `procesados/`?** Aunque el clip se calcula automáticamente, **tú elegiste** la máscara, los parámetros y el formato de salida. Por convención, los archivos derivados — incluso por geoprocesamiento — viven en `intermedios/`. La carpeta `procesados/` queda reservada para capas finales con campos calculados o atributos agregados.
+**¿Por qué `procesados/` y no `intermedios/`?** El clip recortado **es** la capa RGB que cargarás para los mapas finales — nada más se construye encima de él. La regla sencilla: si el archivo es la **última versión** que se consume aguas abajo en el flujo, va a `procesados/`. `intermedios/` queda reservado para archivos que existen sólo como peldaño hacia otro derivado posterior.
 :::
 
 **10.** Haz click en **Ejecutar**. El resultado debería ser una imagen RGB recortada al contorno del Gran Santiago.
@@ -272,7 +272,7 @@ El ráster recortado tiene **3 bandas**. Por defecto, QGIS asigna automáticamen
 ![Temperatura superficial del Gran Santiago, Landsat 8, 21 enero 2024. Las áreas más rojas son las más calientes — claramente concentradas en el centro y poniente de la ciudad.](figures/tarea10/tarea10_014.png){fig-align="center"}
 
 ::: callout-note
-**Pausa para observar.** Antes de seguir, mira el mapa con detención. ¿Qué comunas se ven más rojas? ¿Cuáles más oscuras? ¿Hay alguna relación con lo que conoces de la geografía de Santiago (cordillera, valle, sur, norte, oriente, poniente)?
+**Pausa para observar.** Antes de seguir, mira el mapa con detención. Recuerda que en la rampa Magma el **amarillo claro corresponde a las zonas más frescas** y el **rojo oscuro a las más calientes**. ¿Qué comunas se ven más oscuras (más calientes)? ¿Cuáles más amarillas (más frescas)? ¿Hay alguna relación con lo que conoces de la geografía de Santiago (cordillera, valle, sur, norte, oriente, poniente)?
 :::
 
 ------------------------------------------------------------------------
@@ -293,14 +293,14 @@ El ráster recortado tiene **3 bandas**. Por defecto, QGIS asigna automáticamen
 ![NDVI del Gran Santiago, Landsat 8, 21 enero 2024. Los verdes más oscuros son las zonas con vegetación más densa.](figures/tarea10/tarea10_016.png){fig-align="center"}
 
 ::: callout-tip
-**Comparación mental.** ¿Las áreas más verdes en el mapa de NDVI coinciden con las áreas más oscuras (frescas) del mapa de temperatura superficial? Anota tu primera impresión — la verificaremos formalmente en el siguiente paso.
+**Comparación mental.** ¿Las áreas más verdes en el mapa de NDVI coinciden con las áreas más amarillas (frescas) del mapa de temperatura superficial? Anota tu primera impresión — la verificaremos formalmente en el siguiente paso.
 :::
 
 ------------------------------------------------------------------------
 
 ## Paso 8 | Composición lado a lado: NDVI ↔ Temperatura superficial
 
-Para comparar formalmente ambos mapas, vamos a crear una **composición lado a lado** (side-by-side) en el **Compositor de impresión** de QGIS.
+Para comparar formalmente ambos mapas, vamos a crear una **composición lado a lado** (side-by-side) en el **Compositor de impresión** de QGIS — la misma técnica de díptico horizontal que vimos en detalle en la **Clase 5** y practicamos en el Paso 10 de la **Tarea 5**. Si necesitas refrescar los detalles (orientación apaisada, bloqueo de capas, leyenda doble), vuelve a esa tarea.
 
 **18.** En la ventana principal de QGIS, ve a **Proyecto → Nueva composición de impresión…** Asígnale un título descriptivo, por ejemplo `NDVI_vs_T_superficial`.
 
@@ -358,7 +358,7 @@ Repetimos el procedimiento del Paso 8, pero ahora para comparar las **dos fuente
 Ahora vamos a profundizar en un área específica para ver con detalle cómo la vegetación, la superficie y el aire se relacionan a **escala fina**.
 
 ::: callout-tip
-**Tu zona, tu elección.** Por defecto, esta guía usa el **Parque O'Higgins** (comuna de Santiago) como ejemplo, porque es un área verde grande rodeada de zonas densamente construidas — un caso clásico para ver el efecto del arbolado. Pero **tú puedes elegir otra zona** que te interese más: tu comuna, tu barrio, un parque cerca de tu casa, o una de las cuatro comunas que trabajamos en la actividad de la clase (Vitacura, Cerro Navia, Santiago Centro, La Pintana). La consigna es la misma: **acércate a escala 1:20.000** y produce los tres pares de mapas siguientes.
+**Tu zona, tu elección.** Por defecto, esta guía usa el **Parque O'Higgins** (comuna de Santiago) como ejemplo, porque es un área verde grande rodeada de zonas densamente construidas — un caso clásico para ver el efecto del arbolado. Pero **tú puedes elegir otra zona** que te interese más: tu comuna, tu barrio, un parque cerca de tu casa, o una de las tres comunas que trabajamos en la actividad de la clase (Vitacura, Cerro Navia, Santiago Centro). La consigna es la misma: **acércate a escala 1:20.000** y produce los tres pares de mapas siguientes.
 :::
 
 **27.** En la ventana principal de QGIS, **acércate a la zona elegida** usando la herramienta **Zoom** o escribiendo la escala manualmente en la barra inferior: **1:20.000**.
@@ -399,7 +399,7 @@ Has finalizado tus mapas y ejercicios. **Recuerda completar esta actividad y gua
 1.  ¿Qué patrones espaciales de temperatura observaste en el Gran Santiago y en tu zona elegida? ¿Qué factores urbanos (arbolado, densidad construida, pavimento, distancia a la cordillera, etc.) crees que influyen en estas diferencias?
 2.  ¿Cómo se relaciona la distribución de áreas verdes (NDVI) con la temperatura superficial y con la temperatura del aire? ¿Qué zonas se benefician más de la vegetación y cuáles se ven más afectadas por su ausencia?
 3.  ¿Qué ventajas y limitaciones tiene el uso de imágenes satelitales como **Landsat 8** para este tipo de análisis urbano? Comparativamente, ¿qué aporta un producto como **Santiago HOT** (ciencia ciudadana + satélites) frente a usar sólo datos satelitales?
-4.  **Vinculación con la clase.** En la actividad **A+R "Plan Calor para tu comuna"** discutimos cuatro comunas con perfiles muy distintos — **Vitacura, Cerro Navia, Santiago Centro y La Pintana**. Si tu grupo trabajó una de ellas (o si tu zona elegida corresponde a alguna), ¿cómo se ve esa comuna en los mapas que construiste? ¿Las **tres medidas** que tu grupo eligió tienen sentido a la luz de los datos territoriales que ahora ves?
+4.  **Vinculación con la clase.** En la actividad **A+R "Plan Calor para tu comuna"** discutimos tres comunas con perfiles muy distintos — **Vitacura, Cerro Navia y Santiago Centro**. Si tu grupo trabajó una de ellas (o si tu zona elegida corresponde a alguna), ¿cómo se ve esa comuna en los mapas que construiste? ¿Las **tres medidas** que tu grupo eligió tienen sentido a la luz de los datos territoriales que ahora ves?
 :::
 
 ::: callout-tip
