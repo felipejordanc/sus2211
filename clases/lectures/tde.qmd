@@ -102,3 +102,15 @@ Según Gil et al. (2023), ¿cuál de las siguientes afirmaciones sobre el calor 
 :::
 
 
+## Pregunta Clase 11 {.question-slide .compact}
+
+Según el informe UNEP *Spreading Like Wildfire* (2022), ¿cuál de las siguientes afirmaciones describe **correctamente** el marco de las **5R** de gestión integrada de incendios y el desbalance que el reporte señala?
+
+::: {.two-level}
+- **b)** Las 5R son **Reducir, Reusar, Reciclar, Recuperar y Regenerar**, y el reporte muestra que el gasto en gestión de incendios va mayoritariamente a recuperación.
+- **d)** Las 5R son **Revisión y análisis, Reducción del riesgo, Preparación (Readiness), Respuesta y Recuperación**, y el gasto actual se concentra fuertemente en **Respuesta** — mientras los daños totales superan con creces toda la suma invertida en las 5R.
+- **g)** Las 5R son una norma ISO de manejo forestal de adopción obligatoria en los países OCDE.
+- **j)** Las 5R corresponden a cinco regiones globales priorizadas por la FAO para la detección satelital de incendios.
+:::
+
+
