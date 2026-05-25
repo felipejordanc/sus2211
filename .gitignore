@@ -1,5 +1,6 @@
 clases/**/inputs/
 homeworks/**/inputs/
 homeworks_zips/**/inputs/
+homeworks_zips/*.zip
 .DS_Store
 .claude/settings.local.json
