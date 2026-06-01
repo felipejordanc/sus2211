@@ -68,3 +68,72 @@ html:not(.print-pdf) .reveal h3 {
 .two-level ul ul > li {
   font-size: 0.78em;
 }
+
+/* concept cards — colored callout boxes for key definitions */
+
+.concept-box {
+  border-radius: 14px;
+  padding: 1em 1.2em;
+  margin: 0.4em 0;
+  border: 2px solid;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+  box-sizing: border-box;
+}
+
+/* inside a two-column layout, stretch cards to equal height */
+.columns .concept-box {
+  height: 100%;
+}
+
+.concept-box > p:first-child {
+  font-weight: 700;
+  font-size: 1.18em;
+  margin-top: 0;
+  margin-bottom: 0.45em;
+  letter-spacing: 0.01em;
+}
+
+.cb-red {
+  background: #fcebe9;
+  border-color: #c0392b;
+}
+
+.cb-red > p:first-child {
+  color: #c0392b;
+}
+
+.cb-blue {
+  background: #e9f2fa;
+  border-color: #1a6ea8;
+}
+
+.cb-blue > p:first-child {
+  color: #1a6ea8;
+}
+
+.cb-green {
+  background: #e8f5ee;
+  border-color: #2a7f62;
+}
+
+.cb-green > p:first-child {
+  color: #2a7f62;
+}
+
+.cb-amber {
+  background: #fdf3e3;
+  border-color: #c8860d;
+}
+
+.cb-amber > p:first-child {
+  color: #b9770a;
+}
+
+.cb-purple {
+  background: #f0ebf7;
+  border-color: #7d5ba6;
+}
+
+.cb-purple > p:first-child {
+  color: #6b46a3;
+}
