@@ -114,3 +114,15 @@ Según el informe UNEP *Spreading Like Wildfire* (2022), ¿cuál de las siguient
 :::
 
 
+## Pregunta Clase 12 {.question-slide .compact}
+
+Según Gómez-González et al. (2024), ¿cuál de las siguientes afirmaciones es correcta?
+
+::: {.two-level}
+- **b)** Los autores recomiendan prohibir la actividad forestal y restaurar de inmediato todas las plantaciones a bosque nativo.
+- **e)** El balance de carbono negativo de las plantaciones se explica sobre todo por la reducción del albedo, que supera su captura fotosintética.
+- **h)** Las plantaciones operan como fuente neta de carbono por la cosecha y los incendios; el sumidero del país descansa en el bosque nativo.
+- **j)** La Ley Marco de Cambio Climático y la NDC de Chile coinciden en excluir explícitamente los monocultivos como medida de mitigación.
+:::
+
+
