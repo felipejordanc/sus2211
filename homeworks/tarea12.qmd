@@ -33,10 +33,11 @@ Trabajaremos con tres fuentes de datos sobre el mismo territorio, la Región de 
 | Capa | Tipo | Origen | Qué contiene |
 |---|---|---|---|
 | MapBiomas Chile 2022 | Ráster | Descarga (mapbiomas.cl) | Cobertura y uso de suelo de todo Chile, año 2022 |
-| Títulos de Merced | Vectorial (polígonos) | Descarga (CONADI / SIIC) | Límites históricos de las reducciones mapuche |
+| MapBiomas Chile 2000 | Ráster | Insumos (`raster2000.tif`) | Uso de suelo del año 2000, para comparar |
+| Títulos de Merced | Vectorial (polígonos) | Insumos (CONADI / SIIC) | Límites históricos de las reducciones mapuche |
 | MACEDA | CSV → puntos | Insumos (`maceda.csv`) | Eventos de conflicto georreferenciados (desde 1991) |
 | `REGION_C17` | Vectorial (polígono) | Insumos | Máscara de la Región de La Araucanía |
-| `Paleta de colores.clr` | Mapa de color | Insumos | Colores estándar de MapBiomas para el año 2000 |
+| `Paleta de colores.clr` | Mapa de color | Insumos | Colores estándar de MapBiomas |
 
 ::: callout-tip
 **¿Qué es MACEDA?** Es una base de datos de eventos de conflicto del proceso de autodeterminación Mapuche, georreferenciados y clasificados por tipo (`event_type_maceda`): *ATTACK* (ataque), *COERCE* (coerción), *LAND INVASION* (invasión de tierras) y *PROTEST* (protesta). En esta tarea analizaremos los **conflictos declarados** (ataque, coerción e invasión de tierras), no las protestas.
@@ -59,7 +60,7 @@ Trabajaremos con tres fuentes de datos sobre el mismo territorio, la Región de 
 
 ### Descarga desde Canvas
 
-**1.** Descarga el archivo `.zip` de esta tarea desde la página del curso en **Canvas** (carpeta "Clase 12"). Contiene los insumos ya organizados en la estructura estándar: la máscara `REGION_C17`, el archivo `maceda.csv`, la `Paleta de colores.clr` y las imágenes de referencia del año 2000.
+**1.** Descarga el archivo `.zip` de esta tarea desde la página del curso en **Canvas** (carpeta "Clase 12"). Contiene los insumos ya organizados en la estructura estándar: la máscara `REGION_C17`, la capa de `Títulos de Merced`, el archivo `maceda.csv`, la `Paleta de colores.clr`, el ráster de uso de suelo del año 2000 (`raster2000.tif`) y dos imágenes de referencia del año 2000.
 
 **2.** Descomprime el archivo en una ubicación dedicada a este curso. Algunas opciones:
 
@@ -79,7 +80,7 @@ flowchart TD
     A --> D["📁 proyectos/"]
     A --> E["📁 resultados/"]
 
-    B --> F["📁 brutos/<br>🔒 REGION_C17, maceda.csv,<br>Paleta de colores.clr, JPG 2000<br>+ descargas: MapBiomas, Títulos de Merced"]
+    B --> F["📁 brutos/<br>🔒 REGION_C17, Títulos de Merced, maceda.csv,<br>Paleta de colores.clr, raster2000 + PNG 2000<br>+ descarga: MapBiomas 2022"]
     B --> G["📁 intermedios/<br>ráster recortado, TDM cortado/reproyectado,<br>Buffer5000, Buffer50, maceda filtrada"]
     B --> H["📁 procesados/<br>uso de suelo 2022, áreas de influencia,<br>conflictos clasificados (capas de los mapas)"]
 
@@ -97,7 +98,7 @@ flowchart TD
 
 **`datos/`** — Todo lo geoespacial, organizado en tres subcarpetas:
 
--   **`brutos/`** 🔒 Los datos **tal como los obtuviste**, sin modificar: la máscara `REGION_C17`, `maceda.csv`, `Paleta de colores.clr`, las imágenes JPG del año 2000, y los archivos que **descargarás** (el ráster de MapBiomas 2022 y los Títulos de Merced del CONADI). **Nunca se modifican ni se sobreescriben.**
+-   **`brutos/`** 🔒 Los datos **tal como los obtuviste**, sin modificar: la máscara `REGION_C17`, la capa `Títulos de Merced`, `maceda.csv`, `Paleta de colores.clr`, el ráster de uso de suelo del año 2000 (`raster2000.tif`) y las dos imágenes de referencia del año 2000. El único archivo que **descargarás** es el ráster de MapBiomas 2022. **Nunca se modifican ni se sobreescriben.**
 -   **`intermedios/`** Archivos que existen *sólo* como paso hacia otro derivado: el ráster recortado, los Títulos cortados y reproyectados, los buffers de 5 km y 50 m, y la capa MACEDA cortada y filtrada. No aparecen en los mapas finales, pero son indispensables para producirlos.
 -   **`procesados/`** La última versión de cada capa en su cadena de procesamiento — la que efectivamente cargas en los mapas: el uso de suelo 2022 (recortado y simbolizado), las **áreas de influencia** (capa `Diferencia`) y los **conflictos clasificados**.
 
@@ -170,9 +171,9 @@ Si no recuerdas el corte por máscara, revisa la **Guía 10**. El recorte deja s
 
 ------------------------------------------------------------------------
 
-## Paso 4 | Descargar y recortar los Títulos de Merced
+## Paso 4 | Recortar los Títulos de Merced
 
-**11.** Descarga la capa de **Títulos de Merced** desde el Sistema Integrado de Información del CONADI (SIIC 2020): ingresa a [siic.conadi.gob.cl](https://siic.conadi.gob.cl/), dirígete a `Biblioteca Digital → Cubiertas Descargables` y descarga la capa de los Títulos de Merced. Guárdala en `datos/brutos/`.
+**11.** La capa de **Títulos de Merced** ya viene en `datos/brutos/` (`Titulos de Merced.shp`, provista por el CONADI / SIIC). Cárgala en QGIS.
 
 **12.** Como nos concentraremos en la Región, **corta** el shapefile de los Títulos usando `REGION_C17` como máscara: `Vectorial → Herramienta de geoproceso → Cortar` (define `REGION_C17` como capa de superposición). Guarda el resultado en `datos/intermedios/`.
 
@@ -285,7 +286,11 @@ Si no recuerdas el corte por máscara, revisa la **Guía 10**. El recorte deja s
 
 ## Paso 13 | Comparar con el año 2000
 
-**28.** Compara tus dos mapas de 2022 con las imágenes **JPG** que están en `datos/brutos/`: contienen el tipo de uso de suelo del año **2000** y los tipos de conflicto indígena. En un documento (en `documentos/` o `resultados/figuras/`), contrasta la situación territorial en ambos años, enfocándote en las **zonas aledañas** a los Títulos de Merced: ¿cómo cambió el uso de suelo entre 2000 y 2022?, ¿cambió la cantidad o la distribución de los conflictos?
+**28.** Compara tus dos mapas de 2022 con las imágenes de referencia del año **2000** que están en `datos/brutos/`: `Zonas aledañas a los TDM año 2000.png` (uso de suelo) y `Conflictos indígenas 2000.png` (conflictos). En un documento (en `documentos/` o `resultados/figuras/`), contrasta la situación territorial en ambos años, enfocándote en las **zonas aledañas** a los Títulos de Merced: ¿cómo cambió el uso de suelo entre 2000 y 2022?, ¿cambió la cantidad o la distribución de los conflictos?
+
+::: callout-tip
+En `datos/brutos/` también está el ráster de uso de suelo del año 2000 (`raster2000.tif`). Si quieres, puedes recortarlo y simbolizarlo con los mismos pasos del año 2022 para construir tú mismo el mapa de 2000, en vez de usar las imágenes de referencia.
+:::
 
 ------------------------------------------------------------------------
 

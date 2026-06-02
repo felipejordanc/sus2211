@@ -5288,7 +5288,7 @@ z-index: 1000;
   <li><a href="#paso-1-crear-el-proyecto-y-activar-el-mapa-base" id="toc-paso-1-crear-el-proyecto-y-activar-el-mapa-base" class="nav-link" data-scroll-target="#paso-1-crear-el-proyecto-y-activar-el-mapa-base">Paso 1 | Crear el proyecto y activar el mapa base</a></li>
   <li><a href="#paso-2-descargar-y-recortar-el-ráster-mapbiomas-2022" id="toc-paso-2-descargar-y-recortar-el-ráster-mapbiomas-2022" class="nav-link" data-scroll-target="#paso-2-descargar-y-recortar-el-ráster-mapbiomas-2022">Paso 2 | Descargar y recortar el ráster MapBiomas (2022)</a></li>
   <li><a href="#paso-3-aplicar-la-paleta-de-colores-de-mapbiomas" id="toc-paso-3-aplicar-la-paleta-de-colores-de-mapbiomas" class="nav-link" data-scroll-target="#paso-3-aplicar-la-paleta-de-colores-de-mapbiomas">Paso 3 | Aplicar la paleta de colores de MapBiomas</a></li>
-  <li><a href="#paso-4-descargar-y-recortar-los-títulos-de-merced" id="toc-paso-4-descargar-y-recortar-los-títulos-de-merced" class="nav-link" data-scroll-target="#paso-4-descargar-y-recortar-los-títulos-de-merced">Paso 4 | Descargar y recortar los Títulos de Merced</a></li>
+  <li><a href="#paso-4-recortar-los-títulos-de-merced" id="toc-paso-4-recortar-los-títulos-de-merced" class="nav-link" data-scroll-target="#paso-4-recortar-los-títulos-de-merced">Paso 4 | Recortar los Títulos de Merced</a></li>
   <li><a href="#paso-5-reproyectar-a-utm-epsg32718" id="toc-paso-5-reproyectar-a-utm-epsg32718" class="nav-link" data-scroll-target="#paso-5-reproyectar-a-utm-epsg32718">Paso 5 | Reproyectar a UTM (EPSG:32718)</a></li>
   <li><a href="#paso-6-crear-las-zonas-aledañas-buffers-de-5-km-y-50-m" id="toc-paso-6-crear-las-zonas-aledañas-buffers-de-5-km-y-50-m" class="nav-link" data-scroll-target="#paso-6-crear-las-zonas-aledañas-buffers-de-5-km-y-50-m">Paso 6 | Crear las zonas aledañas: buffers de 5 km y 50 m</a></li>
   <li><a href="#paso-7-áreas-de-influencia-la-diferencia-entre-buffers" id="toc-paso-7-áreas-de-influencia-la-diferencia-entre-buffers" class="nav-link" data-scroll-target="#paso-7-áreas-de-influencia-la-diferencia-entre-buffers">Paso 7 | Áreas de influencia: la diferencia entre buffers</a></li>
@@ -5379,28 +5379,34 @@ Advertencia
 <td>Cobertura y uso de suelo de todo Chile, año 2022</td>
 </tr>
 <tr class="even">
-<td>Títulos de Merced</td>
-<td>Vectorial (polígonos)</td>
-<td>Descarga (CONADI / SIIC)</td>
-<td>Límites históricos de las reducciones mapuche</td>
+<td>MapBiomas Chile 2000</td>
+<td>Ráster</td>
+<td>Insumos (<code>raster2000.tif</code>)</td>
+<td>Uso de suelo del año 2000, para comparar</td>
 </tr>
 <tr class="odd">
+<td>Títulos de Merced</td>
+<td>Vectorial (polígonos)</td>
+<td>Insumos (CONADI / SIIC)</td>
+<td>Límites históricos de las reducciones mapuche</td>
+</tr>
+<tr class="even">
 <td>MACEDA</td>
 <td>CSV → puntos</td>
 <td>Insumos (<code>maceda.csv</code>)</td>
 <td>Eventos de conflicto georreferenciados (desde 1991)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>REGION_C17</code></td>
 <td>Vectorial (polígono)</td>
 <td>Insumos</td>
 <td>Máscara de la Región de La Araucanía</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>Paleta de colores.clr</code></td>
 <td>Mapa de color</td>
 <td>Insumos</td>
-<td>Colores estándar de MapBiomas para el año 2000</td>
+<td>Colores estándar de MapBiomas</td>
 </tr>
 </tbody>
 </table>
@@ -5437,7 +5443,7 @@ Tip
 <h2 class="anchored" data-anchor-id="preparación-descarga-y-organización-del-material">Preparación: descarga y organización del material</h2>
 <section id="descarga-desde-canvas" class="level3">
 <h3 class="anchored" data-anchor-id="descarga-desde-canvas">Descarga desde Canvas</h3>
-<p><strong>1.</strong> Descarga el archivo <code>.zip</code> de esta tarea desde la página del curso en <strong>Canvas</strong> (carpeta “Clase 12”). Contiene los insumos ya organizados en la estructura estándar: la máscara <code>REGION_C17</code>, el archivo <code>maceda.csv</code>, la <code>Paleta de colores.clr</code> y las imágenes de referencia del año 2000.</p>
+<p><strong>1.</strong> Descarga el archivo <code>.zip</code> de esta tarea desde la página del curso en <strong>Canvas</strong> (carpeta “Clase 12”). Contiene los insumos ya organizados en la estructura estándar: la máscara <code>REGION_C17</code>, la capa de <code>Títulos de Merced</code>, el archivo <code>maceda.csv</code>, la <code>Paleta de colores.clr</code>, el ráster de uso de suelo del año 2000 (<code>raster2000.tif</code>) y dos imágenes de referencia del año 2000.</p>
 <p><strong>2.</strong> Descomprime el archivo en una ubicación dedicada a este curso. Algunas opciones:</p>
 <ul>
 <li><strong>Computador personal:</strong> descomprime dentro de tu carpeta <code>SUS2211/</code>.</li>
@@ -5459,7 +5465,7 @@ Tip
     A --&gt; D[&quot;📁 proyectos/&quot;]
     A --&gt; E[&quot;📁 resultados/&quot;]
 
-    B --&gt; F[&quot;📁 brutos/&lt;br&gt;🔒 REGION_C17, maceda.csv,&lt;br&gt;Paleta de colores.clr, JPG 2000&lt;br&gt;+ descargas: MapBiomas, Títulos de Merced&quot;]
+    B --&gt; F[&quot;📁 brutos/&lt;br&gt;🔒 REGION_C17, Títulos de Merced, maceda.csv,&lt;br&gt;Paleta de colores.clr, raster2000 + PNG 2000&lt;br&gt;+ descarga: MapBiomas 2022&quot;]
     B --&gt; G[&quot;📁 intermedios/&lt;br&gt;ráster recortado, TDM cortado/reproyectado,&lt;br&gt;Buffer5000, Buffer50, maceda filtrada&quot;]
     B --&gt; H[&quot;📁 procesados/&lt;br&gt;uso de suelo 2022, áreas de influencia,&lt;br&gt;conflictos clasificados (capas de los mapas)&quot;]
 
@@ -5489,7 +5495,7 @@ Tip
 <div class="callout-body-container callout-body">
 <p><strong><code>datos/</code></strong> — Todo lo geoespacial, organizado en tres subcarpetas:</p>
 <ul>
-<li><strong><code>brutos/</code></strong> 🔒 Los datos <strong>tal como los obtuviste</strong>, sin modificar: la máscara <code>REGION_C17</code>, <code>maceda.csv</code>, <code>Paleta de colores.clr</code>, las imágenes JPG del año 2000, y los archivos que <strong>descargarás</strong> (el ráster de MapBiomas 2022 y los Títulos de Merced del CONADI). <strong>Nunca se modifican ni se sobreescriben.</strong></li>
+<li><strong><code>brutos/</code></strong> 🔒 Los datos <strong>tal como los obtuviste</strong>, sin modificar: la máscara <code>REGION_C17</code>, la capa <code>Títulos de Merced</code>, <code>maceda.csv</code>, <code>Paleta de colores.clr</code>, el ráster de uso de suelo del año 2000 (<code>raster2000.tif</code>) y las dos imágenes de referencia del año 2000. El único archivo que <strong>descargarás</strong> es el ráster de MapBiomas 2022. <strong>Nunca se modifican ni se sobreescriben.</strong></li>
 <li><strong><code>intermedios/</code></strong> Archivos que existen <em>sólo</em> como paso hacia otro derivado: el ráster recortado, los Títulos cortados y reproyectados, los buffers de 5 km y 50 m, y la capa MACEDA cortada y filtrada. No aparecen en los mapas finales, pero son indispensables para producirlos.</li>
 <li><strong><code>procesados/</code></strong> La última versión de cada capa en su cadena de procesamiento — la que efectivamente cargas en los mapas: el uso de suelo 2022 (recortado y simbolizado), las <strong>áreas de influencia</strong> (capa <code>Diferencia</code>) y los <strong>conflictos clasificados</strong>.</li>
 </ul>
@@ -5592,9 +5598,9 @@ Tip
 </div>
 <hr>
 </section>
-<section id="paso-4-descargar-y-recortar-los-títulos-de-merced" class="level2">
-<h2 class="anchored" data-anchor-id="paso-4-descargar-y-recortar-los-títulos-de-merced">Paso 4 | Descargar y recortar los Títulos de Merced</h2>
-<p><strong>11.</strong> Descarga la capa de <strong>Títulos de Merced</strong> desde el Sistema Integrado de Información del CONADI (SIIC 2020): ingresa a <a href="https://siic.conadi.gob.cl/">siic.conadi.gob.cl</a>, dirígete a <code>Biblioteca Digital → Cubiertas Descargables</code> y descarga la capa de los Títulos de Merced. Guárdala en <code>datos/brutos/</code>.</p>
+<section id="paso-4-recortar-los-títulos-de-merced" class="level2">
+<h2 class="anchored" data-anchor-id="paso-4-recortar-los-títulos-de-merced">Paso 4 | Recortar los Títulos de Merced</h2>
+<p><strong>11.</strong> La capa de <strong>Títulos de Merced</strong> ya viene en <code>datos/brutos/</code> (<code>Titulos de Merced.shp</code>, provista por el CONADI / SIIC). Cárgala en QGIS.</p>
 <p><strong>12.</strong> Como nos concentraremos en la Región, <strong>corta</strong> el shapefile de los Títulos usando <code>REGION_C17</code> como máscara: <code>Vectorial → Herramienta de geoproceso → Cortar</code> (define <code>REGION_C17</code> como capa de superposición). Guarda el resultado en <code>datos/intermedios/</code>.</p>
 <hr>
 </section>
@@ -5758,7 +5764,20 @@ Nota
 </section>
 <section id="paso-13-comparar-con-el-año-2000" class="level2">
 <h2 class="anchored" data-anchor-id="paso-13-comparar-con-el-año-2000">Paso 13 | Comparar con el año 2000</h2>
-<p><strong>28.</strong> Compara tus dos mapas de 2022 con las imágenes <strong>JPG</strong> que están en <code>datos/brutos/</code>: contienen el tipo de uso de suelo del año <strong>2000</strong> y los tipos de conflicto indígena. En un documento (en <code>documentos/</code> o <code>resultados/figuras/</code>), contrasta la situación territorial en ambos años, enfocándote en las <strong>zonas aledañas</strong> a los Títulos de Merced: ¿cómo cambió el uso de suelo entre 2000 y 2022?, ¿cambió la cantidad o la distribución de los conflictos?</p>
+<p><strong>28.</strong> Compara tus dos mapas de 2022 con las imágenes de referencia del año <strong>2000</strong> que están en <code>datos/brutos/</code>: <code>Zonas aledañas a los TDM año 2000.png</code> (uso de suelo) y <code>Conflictos indígenas 2000.png</code> (conflictos). En un documento (en <code>documentos/</code> o <code>resultados/figuras/</code>), contrasta la situación territorial en ambos años, enfocándote en las <strong>zonas aledañas</strong> a los Títulos de Merced: ¿cómo cambió el uso de suelo entre 2000 y 2022?, ¿cambió la cantidad o la distribución de los conflictos?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En <code>datos/brutos/</code> también está el ráster de uso de suelo del año 2000 (<code>raster2000.tif</code>). Si quieres, puedes recortarlo y simbolizarlo con los mismos pasos del año 2022 para construir tú mismo el mapa de 2000, en vez de usar las imágenes de referencia.</p>
+</div>
+</div>
 <hr>
 </section>
 <section id="listo" class="level2 unnumbered unlisted">
