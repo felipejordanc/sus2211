@@ -126,3 +126,15 @@ Según Gómez-González et al. (2024), ¿cuál de las siguientes afirmaciones es
 :::
 
 
+## Pregunta Clase 13 {.question-slide .compact}
+
+Según Perilla y Mas (2020), ¿cuál de las siguientes afirmaciones sobre Google Earth Engine (GEE) es **correcta**?
+
+::: {.two-level}
+- **b)** El procesamiento ocurre en los servidores de Google (≈10 000 CPUs en paralelo), de modo que no consume la memoria de la computadora del usuario, pero requiere una buena conexión a internet.
+- **e)** Para analizar las imágenes satelitales el usuario debe primero descargarlas a su computador, igual que en un SIG de escritorio como QGIS.
+- **g)** Las funciones de su API son de código abierto y el usuario puede modificarlas libremente para crear análisis alternativos.
+- **i)** GEE trabaja en un sistema de coordenadas métrico, por lo que es especialmente confiable para calcular áreas y otras medidas espaciales.
+:::
+
+
